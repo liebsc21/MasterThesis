@@ -1,0 +1,115 @@
+% Differential quotients
+\newcommand{\tdfrac} [2]{\ensuremath{\frac{\mathrm{d}   #1}{\mathrm{d} {#2}}}}%
+\newcommand{\tddfrac}[2]{\ensuremath{\frac{\mathrm{d}^2 #1}{\mathrm{d} {#2}^2}}}%
+\newcommand{\pdfrac} [2]{\ensuremath{\frac{\partial     #1}{\partial   {#2}}}}%
+\newcommand{\pddfrac}[2]{\ensuremath{\frac{\partial^2   #1}{\partial   {#2}^2}}}%
+\newcommand{\varfrac} [2]{\ensuremath{\frac{\delta     #1}{\delta   {#2}}}}%
+
+% Merke-Umgebung
+\usepackage{shadethm}
+\newshadetheorem{remark_}{Merke}
+\newenvironment{remark}[1][]{%
+  \definecolor{shadethmcolor}{rgb}{.9,.9,.9}       % Farbe Hintergrund
+  \definecolor{shaderulecolor}{rgb}{1.0,0.0,0.0}   % Farbe Rahmen
+  \setlength{\shadeboxrule}{1pt}%
+  \begin{remark_}[#1]%
+}{\end{remark_}}
+
+% Einschub-Umgebung
+\newshadetheorem{insertion_}{Einschub}
+\newenvironment{insertion}{
+  \definecolor{shadethmcolor}{rgb}{0.9,0.8,.9}
+  \definecolor{shaderulecolor}{rgb}{0.0,0.0,1}
+  \setlength{\shadeboxrule}{1pt}
+  \begin{insertion_}%\hspace*{1mm}
+}{\end{insertion_}}
+
+% Nebenrechnung-Umgebung
+\newshadetheorem{auxcal_}{Nebenrechnung}
+\newenvironment{auxcal}{
+  \definecolor{shadethmcolor}{rgb}{0.7,0.9,0.9}
+  \definecolor{shaderulecolor}{rgb}{0.0,0.1,0.1}
+  \setlength{\shadeboxrule}{1pt}
+  \begin{auxcal_}%\hspace*{1mm}
+}{\end{auxcal_}}
+
+% tikz-Packete
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{fit}
+\usetikzlibrary{shadows}
+
+% eigene Befehle für tikz
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block1} = [rectangle, draw, fill=blue!20, 
+text width=10em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{block2} = [rectangle, draw, fill=red!20, 
+text width=10em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm, minimum height=2em]
+
+
+% These are examples of Feynman Diagrams using TikZ
+% Author: Flip Tanedo, 2010. pt267@cornell.edu
+%\documentclass[12pt]{article}	% Why do I use such a boring document clas?
+% THE USUAL PACKAGES
+\usepackage{amsmath,amssymb,amsfonts}	% DON'T use cite, screws with bibtex + hyperref
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{slashed}            % for slashed characters in math mode
+\usepackage{bbm}                % for \mathbbm{1} (unit matrix)
+\usepackage{xspace}				% For spacing after commands
+% TIKZ - for drawing Feynman diagrams
+% ... use with pdflatex
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{trees}
+\usetikzlibrary{matrix,arrows} 				% For commutative diagram
+											% http://www.felixl.de/commu.pdf
+\usetikzlibrary{positioning}				% For "above of=" commands
+\usetikzlibrary{calc,through}				% For coordinates
+\usetikzlibrary{decorations.pathreplacing}  % For curly braces
+% http://www.math.ucla.edu/~getreuer/tikz.html
+\usepackage{pgffor}							% For repeating patterns
+\usetikzlibrary{decorations.pathmorphing}	% For Feynman Diagrams
+\usetikzlibrary{decorations.markings}
+\tikzset{
+	% >=stealth', %%  Uncomment for more conventional arrows
+    vector/.style={decorate, decoration={snake}, draw},
+	provector/.style={decorate, decoration={snake,amplitude=2.5pt}, draw},
+	antivector/.style={decorate, decoration={snake,amplitude=-2.5pt}, draw},
+    fermion/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},   
+    fermionbar/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+    fermionnoarrow/.style={draw=black},
+    gluon/.style={decorate, draw=black,
+        decoration={coil,amplitude=4pt, segment length=5pt}},
+    scalar/.style={dashed,draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+    scalarbar/.style={dashed,draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+    scalarnoarrow/.style={dashed,draw=black},
+    electron/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+	bigvector/.style={decorate, decoration={snake,amplitude=4pt}, draw},
+	ghost/.style={dotted,draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+	ghostbar/.style={dotted,draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+}
+% TIKZ - for block diagrams, 
+% from http://www.texample.net/tikz/examples/control-system-principles/
+% \usetikzlibrary{shapes,arrows}
+\tikzstyle{block} = [draw, rectangle, 
+    minimum height=3em, minimum width=6em]
+% circled numbers
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\usepackage{hyperref}			% Has to be at the end.

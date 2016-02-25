@@ -1,0 +1,51 @@
+\section{Sparticle Production at Tree Level}
+
+
+
+\subsection{Partonic Processes}
+Using the Feynman rules in the Appendix one obtains the following sums over absolute squared Feynman amplitudes
+\begin{align}
+\sum|\mathcal{M}^B|^2(q_i q_j \to \tilde{q}\tilde{q}) &= \delta_{ij} 2\hat{g}_s^4\left[ \frac{4}{t_{\tilde{g}}^2} + \frac{4}{u_{\tilde{g}}^2} \right] (tu-m_{\tilde{q}}^4) + (1-\delta_{ij}) ??? \nonumber\\
+\sum|\mathcal{M}^B|^2(q_i\overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij} 4 \left[ g_s^4\frac{8n_f}{s^2} + \hat{g}_s^4\frac{4}{t_{\tilde{g}}^2} - g_s^2\hat{g}_s^2\frac{8}{3 t_{\tilde{g}} s} \right] (tu-m_{\tilde{q}}^2) + (1-\delta_{ij})??? \nonumber\\
+\sum|\mathcal{M}^B|^2(gg \to \tilde{q}\tilde{q}^\dagger) &= 4 n_f g_s^4 \left[ 24\left(1-2\frac{(t_{\tilde{q}}u_{\tilde{q}})}{s^2}\right)-\frac{8}{3} \right] \left[ 1-\epsilon-2\frac{s m_{\tilde{q}}^2}{t_{\tilde{q}}u_{\tilde{q}}} \left( 1-\frac{s m_{\tilde{q}}^2}{t_{\tilde{q}}u_{\tilde{q}}} \right)\right]?\nonumber\\
+\sum|\mathcal{M}^B|^2(q_i\overline{q}_j \to \tilde{g}\tilde{g}) &= \delta_{ij}\left\{ 96 g_s^4 \left[ \frac{2m_{\tilde{g}}^2 s + t_{\tilde{g}}^2 + u_{\tilde{g}}^2}{s^2} -\epsilon \right]\right.\nonumber\\
+&\ 96 g_s^2 \hat{g}_s^2\left[ \frac{m_{\tilde{g}}^2 s + t_{\tilde{g}}^2}{s t_{\tilde{q}}} + \frac{m_{\tilde{g}}^2 s + u_{\tilde{g}}^2}{su_{\tilde{q}}} + \epsilon\left( \frac{t_{\tilde{g}}}{t_{\tilde{q}}} + \frac{u_{\tilde{g}}}{u_{\tilde{q}}} \right) \right]\nonumber\\
+&\ + \left.2\hat{g}_s^4\left[ 24\left( \frac{t_{\tilde{g}}^2}{t_{\tilde{q}}^2} + \frac{u_{\tilde{g}}^2}{u_{\tilde{q}}^2} \right) + \frac{8}{3}\left( 2\frac{m_{\tilde{g}}^2 s}{t_{\tilde{q}}u_{\tilde{q}}} - \frac{t_{\tilde{g}}^2}{t_{\tilde{q}}^2} - \frac{u_{\tilde{g}}^2}{u_{\tilde{q}}^2} \right) \right]\right\} ??? \nonumber\\
+\sum|\mathcal{M}^B|^2(gg \to \tilde{g}\tilde{g}) &=  576 g_s^4 \left( 1- \frac{t_{\tilde{g}}u_{\tilde{g}}}{s^2} \right)\left[ \frac{s^2}{t_{\tilde{g}}u_{\tilde{g}}}(1-\epsilon)^2-2(1-\epsilon) + s\frac{m_{\tilde{g}}^2 s}{t_{\tilde{g}}u_{\tilde{g}}}\left(1-\frac{m_{\tilde{g}}^2 s}{t_{\tilde{g}}u_{\tilde{g}}}  \right) \right] ??? \nonumber\\
+\sum|\mathcal{M}^B|^2(qg \to \tilde{q}\tilde{g}) &=  2g_s^2\hat{g}_s^2 \left[ 24\left(1-2\frac{s u_{\tilde{q}}}{t_{\tilde{g}}^2}\right) - \frac{8}{3} \right]\left[ (-1+\epsilon)\frac{t_{\tilde{g}}}{s} + \frac{2(m_{\tilde{g}}^2-m_{\tilde{q}}^2)t_{\tilde{g}}}{s u_{\tilde{q}}}\left( 1+\frac{m_{\tilde{q}}^2}{u_{\tilde{q}}} + \frac{m_{\tilde{g}}^2}{t_{\tilde{g}}} \right) \right]???
+\end{align}
+For NLO-corrections the results are expanded up to $\mathcal{O}(\epsilon)$. Furthermore the usual Mandelstam variables $s,t,u$ and the following modifications of them are used:
+\begin{align}
+& t_{\tilde{g}} = t - m_{\tilde{g}}^2 && t_{\tilde{q}} = t- m_{\tilde{q}}^2\nonumber\\
+& u_{\tilde{g}} = u - m_{\tilde{g}}^2 && u_{\tilde{q}} = u- m_{\tilde{q}}^2
+\end{align}
+
+
+
+\subsection{Partonic Cross Sections}
+\begin{align}
+\frac{\mbox{d}^2 \sigma}{\mbox{d}t\mbox{d}u} = \frac{K_{ij}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_{\tilde{q}}^4}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_{\tilde{q}}^4) \Theta(s-4m_{\tilde{q}}^2) \delta(s+t+u-2m_{\tilde{q}}^2) \sum |\mathcal{M}^B|^2
+\end{align}
+with $S_\epsilon = (2\pi)2-2\epsilon$???
+\begin{align}
+\sigma(gg \to \tilde{q}\tilde{q}^\dagger) = \frac{n_f g_s^4}{16\pi s} \left[ \left(\frac{5}{24} + \frac{31 m_{\tilde{q}}^2}{12s}\right)\beta_{\tilde{q}} + \left( \frac{m_{\tilde{q}}^4}{3s^2} + \frac{4m_{\tilde{q}}^2}{s}\right) \ln \frac{1-\beta_{\tilde{q}}}{1+\beta_{\tilde{q}}} \right]
+\end{align}
+where the abbreviations 
+\begin{align}
+\beta_{\tilde{q}} = \sqrt{1-\frac{4 m_{\tilde{q}}^2}{s}}
+\end{align}
+are used.\cite{Beenakker}
+
+
+
+\subsection{Hadronic Cross Section}
+factorization (pictorial explanation in factorization paper chapter 1.4)
+The hadronic cross section for the production of a final state $X$, e.g. $X = \tilde{q},\tilde{q}$, can be obtained by convolving the partonic cross section with the parton density function of the initial partons.
+\begin{align}
+\sigma^B(ij \to X) = \int \mbox{d}x_1 \mbox{d}x_2\ f_i(x_1) f_j(x_2)\ \sigma^B (ij \to X, s = x_ 1x_2 S).
+\end{align}
+As the production of the final state $X$ may proceed with various initial partons one has to sum over all possible possibilities arising from the initial hadrons $H_1$ and $H_2$:
+\begin{align}
+\sigma^B(H_1 H_2 \to X) = \sum_{i,j} \sigma^B(i,j \to X).
+\end{align}
+refer to Kribs, Martin
