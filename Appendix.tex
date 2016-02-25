@@ -1,0 +1,503 @@
+\section{Appendix}
+
+
+\subsection{System of Units and Metric}
+In this thesis the natural units are used, i.e. $c= \hbar (= k_B) = 1$. Furthermore the Minkowski metric is chosen to be
+\begin{align}
+g^{\mu\nu} = \mathrm{diag}(1, -1, -1, -1).
+\end{align}
+
+
+\subsection{Colour Algebra $SU(N)$}
+[Marina von Steinkirch]\\
+Tha Casimir operator $C(R)\mathbbm{1}$ of a semi-simple Lie algebra in the irreducible representation $R$ is given by
+\begin{align}
+g^{ab} T^a(R)T^b(R) = C(R)\mathbbm{1} \label{eq:Casimir}
+\end{align}
+where $T^a(R)$ is the $a$-th generator of the matrix valued representation $R$, $g^{ab}$ is the metric of group, $C(R)$ is the Quadratic Casimir invariant of the representation $R$ and $\mathbbm{1}$ is the identity in the representation space.\\
+Apart from $C(R)$ it is common to define the Dynkin-Index $T(R)$:
+\begin{align}
+\mathrm{Tr}\left[T^a(R)T^b(R)\right] = T(R)\delta^{ab}.
+\end{align}
+The two constants are connected by
+\begin{align}
+C(R) \cdot \mathrm{dim}(R) = T(R) \cdot \mathrm{dim}(G)
+\end{align}
+where $\mathrm{dim}(G)$ is the dimension of the group and $\mathrm{dim}(R)$ is the dimension of the irreducible representation $R$.\\
+In the case of $SU(N)$ one has a diagonal metric $g^{ab} = \delta^{ab}$ and therefore \ref{eq:Casimir} turns to
+\begin{align}
+\sum_a (T^a(R))^2 = C(R)\mathbbm{1}_{\mathrm{dim}(R) \times \mathrm{dim}(R)}
+\end{align}
+and one can write down the following useful formulae for the fundamental representation $R=F$: $T^a_{ij} = \frac{\lambda^a_{ij}}{2}$ and the adjoint representation $R=A$: $(T^a_{ij})^{adj} = -if_{aij}$
+\begin{align}
+T^a_{ik} T^a_{kj} &= C(F)\mathbbm{1}_{ij} && \mbox{with}\ C(F) = \frac{N^2-1}{2N} = \frac{4}{3}\nonumber\\
+f^{abc} f^{dbc} &= C(A)\delta^{ad} && \mbox{with}\ C(A) = N = 3\nonumber\\
+\mathrm{Tr}\left[T^aT^b\right] &= T(F)\delta^{ab} && \mbox{with}\ T(F) = \frac{1}{2}
+\end{align}
+where $\lambda^a_{ij}$ are for $N_c = 3$ the Gell-Mann matrices and $f_{abc}$ are the structure constants of $SU(N_c)$.
+%\begin{tabular}{c|c|c}
+%Quadratic Casimir Invariant and $T(R)$ & $SU(N)_c$ & $SU(3)_c$\\
+%\hline
+%$C_2(3)$ & $\frac{N^2-1}{2N}$ & $\frac{4}{3}$\\
+%$C_2(8)$ & $N$ & $3$\\
+%$T(3)$ & $\frac{1}{2}$ & $\frac{1}{2}$ \\
+%$T(8)$ & $N$ & $3$ 
+%\end{tabular}
+
+
+
+\subsection{Weyl basis and 2-spinor notation}\label{sec:2spinor_notation}
+As representation of the $\gamma$-matrices the Weyl or chiral representation is chosen:
+\begin{align}
+&\gamma^\mu = \begin{pmatrix}
+0 && \sigma^\mu\\
+\overline{\sigma}^\mu && 0
+\end{pmatrix} &&
+\gamma_5 = \begin{pmatrix}
+-\mathbbm{1}_2 && 0\\
+0 && \mathbbm{1}_2
+\end{pmatrix}
+\end{align}
+with
+\begin{align}
+&\sigma^\mu = \begin{pmatrix}
+\mathbbm{1}_2 && \sigma^i
+\end{pmatrix}, &&
+\overline{\sigma}^\mu = \begin{pmatrix}
+\mathbbm{1}_2 && -\sigma^i
+\end{pmatrix},\label{eq:Pauli}
+\end{align}
+where $\sigma^i$ are the Pauli matrices and $\mathbbm{1}_n$ is the $n$x$n$ unit matrix. The left and right handed projectors are then given by
+\begin{align}
+P_L = \frac{1}{2}(\mathbbm{1}_4 - \gamma_5)\begin{pmatrix}
+\mathbbm{1}_2 && 0\\
+0 && 0
+\end{pmatrix} && 
+P_R = \frac{1}{2}(\mathbbm{1}_4 + \gamma_5)\begin{pmatrix}
+0 && 0\\
+0 && \mathbbm{1}_2
+\end{pmatrix}\label{eq:projectors}
+\end{align}
+The generator of the Lorentz group on 4-spinor space is composed of the above matrices. Because of the block form of those it is not surprising that the representation on 4-spinor space is reducible to two representations on 2-spinor (Weyl spinor) spaces. It is therefore sensible to decompose a 4 spinor into a left and a right handed Weyl spinor\footnote{The projectors in the chiral basis \ref{eq:projectors} explain the names left and right handed Weyl spinors.}
+\begin{align}
+\Psi = \begin{pmatrix}
+\psi_\alpha \\
+\overline{\chi}^{\dot{\alpha}}
+\end{pmatrix}
+\end{align}
+where $\alpha,\dot{\alpha} = 1,2$. Left handed Weyl spinors are labeled with undotted and right handed Weyl spinors with dotted indices. One distinguishes 4 different Weyl spinors:
+\begin{align}
+\psi^\alpha, \hspace{1cm} 
+\overline{\psi}^{\dot{\alpha}} = (\psi^\alpha)^\ast, \hspace{1cm} \psi_\alpha = \epsilon_{\alpha\beta}\psi^\beta, \hspace{1cm} \mathrm{and} \hspace{1cm} \psi_{\dot{\alpha}} = \epsilon_{\dot{\alpha}\dot{\beta}}\psi^{\dot{\beta}} = (\psi_\alpha)^\ast,
+\end{align}
+where $^\ast$ denotes complex conjugation and indices are lowered with the antisymmetric $\epsilon_{\alpha\beta}$ ($\epsilon_{\dot{\alpha}\dot{\beta}}$), which obeys
+\begin{align}
+\epsilon^{\alpha\beta} = \epsilon_{\beta\alpha},\ \epsilon^{\dot{\alpha}\dot{\beta}} = \epsilon_{\dot{\beta}\dot{\alpha}} \hspace{3cm} \mathrm{and} \hspace{3cm} \epsilon_{12} = \epsilon_{\dot{1}\dot{2}}= 1.
+\end{align}
+By virtue of the antisymmetry of $\epsilon$ one has for the Lorentz invariant product:
+\begin{align}
+\psi\chi &:= \psi^\alpha\chi_\alpha = -\chi_\alpha\psi^\alpha = \chi^\alpha\psi_\alpha = \chi\psi,\nonumber\\
+\overline{\psi}\overline{\chi} &:= \overline{\psi}_{\dot{\alpha}} \overline{\chi}^{\dot{\alpha}} = -\overline{\chi}^{\dot{\alpha}}\overline{\psi}_{\dot{\alpha}} = \overline{\chi}_{\dot{\alpha}}\overline{\psi}^{\dot{\alpha}} = \overline{\chi}\overline{\psi} \label{eq:Weylspinorproduct}
+\end{align}
+To make the index structure of the Pauli matrices explicit one writes $\sigma^\mu_{\alpha\dot{\alpha}}$ and $\sigma^{\mu\dot{\alpha}\alpha}$ for the formulae in \ref{eq:Pauli}. For the definition of the super algebra in ??? the generators of the Lorentz group on the left and right handed Weyl spinor space are introduced:
+\begin{align}
+\frac{1}{2}(\sigma^{\mu\nu})_\alpha^{\ \beta} := \frac{i}{4}(\sigma^\mu\overline{\sigma}^\nu - \sigma^\nu\overline{\sigma}^\mu)_\alpha^{\ \beta}\nonumber\\
+\frac{1}{2}(\overline{\sigma}^{\mu\nu})^{\dot{\alpha}}_{\ \dot{\beta}} := \frac{i}{4}(\overline{\sigma}^\mu\sigma^\nu - \overline{\sigma}^\nu\sigma^\mu)^{\dot{\alpha}}_{\ \dot{\beta}}
+\end{align}
+
+ 
+With the definition of bared and charge conjugated 4-spinors\footnote{$\Psi^T$ denotes the transpose of the spinor $\Psi$ and $\Psi^\dagger$ is the Hermitian adjoint of $\Psi$.}
+\begin{align}
+&\overline{\Psi} := \Psi^\dagger \gamma^0, && \Psi^C := i\gamma^2\gamma^0 \overline{\Psi}^T  
+\end{align}
+one obtains:
+\begin{align}
+\Psi &= \begin{pmatrix}
+\psi_\alpha \\
+\overline{\chi}^{\dot{\alpha}}
+\end{pmatrix}, && \ \ 
+\overline{\Psi} = \begin{pmatrix}
+\chi^\alpha & \overline{\psi}_{\dot{\alpha}}
+\end{pmatrix},\nonumber\\
+\Psi^C &= \begin{pmatrix}
+\chi_\alpha \\
+\overline{\psi}^{\dot{\alpha}}
+\end{pmatrix}, && 
+\overline{\Psi}^C = \begin{pmatrix}
+\psi^\alpha & \overline{\chi}_{\dot{\alpha}}
+\end{pmatrix}.
+\end{align}
+The 4-spinor of an arbitrary quark $q$ is given in terms of Weyl spinors $q_L$ and $\overline{q}_R$ by
+\begin{align}
+q = \begin{pmatrix}
+q_L \\
+\overline{q}_R
+\end{pmatrix}
+\end{align}
+whereas the 4-spinor of the Dirac gauginos is given in terms of the Weyl spinors $\lambda$ and $\overline{\chi}$\footnote{$\lambda$ is the superpartner of the gluon, called the gluino and $\overline{\chi}$ is the Weyl spinor of the chiral superfield which is associated with the gluon, called the octino.}
+\begin{align}
+\tilde{g}^a = \begin{pmatrix}
+-i \lambda^a \\
+i \overline{\chi}^a
+\end{pmatrix}
+\end{align}
+
+\subsection{Anticommuting numbers}
+Anticommuting numbers $\theta^\alpha$ are also referred to as Grassmann numbers and are defined by $\theta^\alpha\theta^\beta = -\theta^\beta\theta^\alpha$ and commute with ordinary numbers.\\
+They occur in superspace formalism in the form of 2 tuples, i.e. $\theta^\alpha$ with $\alpha=1,2$. The complex conjugate of this tuple is denoted with $\overline{\theta}^{\dot{\alpha}}$. 
+Derivatives are defined by
+\begin{align}
+\partial^\alpha \theta_\beta := \frac{\partial}{\partial \theta_\alpha} \theta_\beta := \delta^\alpha_\beta \hspace{4cm} \partial_\alpha \theta^\beta := \frac{\partial}{\partial \theta^\alpha} \theta^\beta := \delta_\alpha^\beta\nonumber\\
+\overline{\partial}^{\dot{\alpha}} \overline{\theta}_{\dot{\beta}} := \frac{\partial}{\partial \overline{\theta}_{\dot{\alpha}}} \overline{\theta}_{\dot{\beta}} := \delta^{\dot{\alpha}}_{\dot{\beta}} \hspace{4cm} \overline{\partial}_{\dot{\alpha}} \overline{\theta}^{\dot{\beta}} := \frac{\partial}{\partial \overline{\theta}^{\dot{\alpha}}} \overline{\theta}^{\dot{\beta}} := \delta_{\dot{\alpha}}^{\dot{\beta}}
+\end{align}
+whereby one needs to be cautious as these definitions imply
+\begin{align}
+\partial_\alpha = -\epsilon_{\alpha\beta}\partial^\beta \hspace{4cm} \partial_{\dot{\alpha}} = -\epsilon_{\dot{\alpha}\dot{\beta}}\partial^{\dot{\beta}}.
+\end{align}
+Integrals are defined by:
+\begin{align}
+\int\mathrm{d}\theta_\alpha\ (a+b \theta^\beta + c\theta^\beta \theta^\gamma) := b\delta_{\alpha}^{\beta} + c (\delta_\alpha^\beta \theta^\gamma - \delta_\alpha^\gamma \theta^\beta) \hspace{1cm} \mathrm{and} \hspace{1cm}
+\int\mathrm{d}\theta_\alpha\ (a\overline{\theta}^{\dot{\beta}}) := (a\overline{\theta}^{\dot{\beta}}) \int\mathrm{d}\theta_\alpha\
+\end{align}
+where the first line mirrows the claim of translation invariance. One furthermore introduces the shortcuts
+\begin{align}
+\int \mathrm{d}\theta^2 = \int\frac{1}{4}\epsilon_{\alpha\beta} \mathrm{d}\theta^\alpha\mathrm{d}\theta^\beta, \hspace{1cm}
+\int \mathrm{d}\overline{\theta}^2 = \int\frac{1}{4}\epsilon_{\dot{\alpha}\dot{\beta}} \mathrm{d}\theta^{\dot{\alpha}}\mathrm{d}\theta^{\dot{\beta}}, \hspace{1cm} \mathrm{and} \hspace{1cm}
+\int \mathrm{d}^4\theta := \int \mathrm{d}\theta^2\mathrm{d}\overline{\theta}^2
+\end{align}
+
+
+\subsection{Feynman rules for the RSQCD}
+The following Feynman rules are derived from \ref{eq:L_RSQCD}. When compared with the Feynman rules of the supersymmetric QCD the diagrams involving scalar gluons are new. In addition the gluon-quark-squark vertex is different in RSQCD for the gauginos are Dirac fermions.\\
+refer to paper cited in Beenakker(Appendix: Feynmanrules)
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.5 pt, scale=1.3]
+	\node at (-0.5,0.7) {\circled{1}};	
+	\draw[scalarnoarrow](0,0)--(1.5,0);
+	\node at (180:0.4) {$(\sigma^0)^a$};
+	\node at (0:1.9) {$(\sigma^0)^b$};
+	\node at (3.4,0) {$\hat{=}\ \frac{i}{p^2-m_{\sigma^0}^2+i\varepsilon}\delta_{ab}$};
+\begin{scope}[shift={(7,0)}]
+	\node at (-0.5,0.7) {\circled{2}};
+	\draw[scalarnoarrow](0,0)--(1.5,0);
+	\node at (180:0.4) {$(\phi^0)^a$};
+	\node at (0:1.9) {$(\phi^0)^b$};
+	\node at (3.4,0) {$\hat{=}\ \frac{i}{p^2-m_{\phi^0}^2+i\varepsilon}\delta_{ab}$};
+\end{scope}
+\begin{scope}[shift={(0,-2)}]
+	\node at (-0.5,0.7) {\circled{3}};
+	\draw[scalarbar](0,0)--(1.5,0);
+	\node at (180:0.3) {$\tilde{q}_{Ai}$};
+	\node at (0:1.8) {$\tilde{q}_{Bj}^\dagger$};
+	\node at (3,0) {$\hat{=}\ \frac{i\delta_{AB}}{p^2-m_{\tilde{q}}^2+i\varepsilon}\delta_{ij}$};
+\end{scope}
+\begin{scope}[shift={(7,-2)}]
+	\node at (-0.5,0.7) {\circled{4}};
+	\draw[fermionbar](0,0)--(1.5,0);
+	\node at (180:0.2) {$q_i$};
+	\node at (0:1.7) {$\overline{q}_j$};
+	\node at (3,0) {$\hat{=}\ i\frac{\slashed{p}+m_q}{p^2-m_q^2+i\varepsilon}\delta_{ij}$};
+\end{scope}
+\begin{scope}[shift={(0,-4)}]
+	\draw[gluon](1.5,0)--(0,0);
+	\node at (-0.5,0.7) {\circled{5}};
+	\node at (180:0.2) {$G_\mu^a$};
+	\node at (0:1.7) {$G_\nu^b$};
+	\node at (3,0) {$\hat{=}\ -i\frac{g^{\mu\nu}}{p^2+i\varepsilon}\delta_{ab}$};
+\end{scope}
+\begin{scope}[shift={(7,-4)}]
+	\node at (-0.5,0.7) {\circled{6}};
+	\draw[gluon](1.5,0)--(0,0);
+	\draw[fermionnoarrow](0,0)--(1.5,0);
+	\node at (180:0.2) {$\tilde{g}^a$};
+	\node at (0:1.7) {$\overline{\tilde{g}}^b$};
+	\node at (3,0) {$\hat{=}\ i\frac{\slashed{p}+m_{\tilde{g}}}{p^2-m_{\tilde{g}}^2+i\varepsilon}\delta_{ab}$};
+\end{scope}
+\begin{scope}[shift={(0,-6)}]
+	\node at (-0.5,0.7) {\circled{7}};
+	\draw[ghostbar](0,0)--(1.5,0);
+	\node at (180:0.3) {$c^{a}$};
+	\node at (0:1.8) {$\overline{c}^{b}$};
+	\node at (3,0) {$\hat{=}\ \frac{i}{p^2+i\varepsilon}\delta_{ab}$};
+\end{scope}
+
+\begin{scope}[shift={(1,-8)}]
+	\node at (-1.5,0.7) {\circled{8}};
+	\draw[fermion] (0,0)--(45:1);
+	\draw[fermionbar] (0,0)--(-45:1);
+	\draw[gluon] (0,0)--(180:1);
+	\node at (45:1.3) {$\overline{q}i$};
+	\node at (-45:1.3) {$q_j$};
+	\node at (180:1.3) {$G_\mu^a$};
+	\node at (2,0) {$\hat{=} -ig_s T^a_{ij}\gamma^\mu$};
+\end{scope}
+\begin{scope}[shift={(8,-8)}]
+	\node at (-1.5,0.7) {\circled{9}};
+	\draw[scalar] (0,0)--(45:1);
+	\draw[scalarbar] (0,0)--(-45:1);
+	\draw[gluon] (0,0)--(180:1);
+	\node at (45:1.4) {$\tilde{q}^\dagger_{Ai}(-p_1)$};
+	\node at (-45:1.4) {$\tilde{q}_{Bj}(p_2)$};
+	\node at (180:1.3) {$G_\mu^a$};
+	\node at (3,0) {$\hat{=} -ig_s (p_2+p_1)^\mu T^a_{ij}\delta_{AB}$};
+\end{scope}
+\begin{scope}[shift={(1,-10.5)}]
+	\node at (-1.5,0.7) {\circled{10}};
+	\draw[scalar] (0,0)--(45:1);
+	\draw[scalarbar] (0,0)--(-45:1);
+	\draw[gluon] (0,0)--(135:1);
+	\draw[gluon] (0,0)--(-135:1);
+	\node at (45:1.4) {$\tilde{q}^\dagger_{Ai}$};
+	\node at (-45:1.4) {$\tilde{q}_{Bj}$};
+	\node at (135:1.4) {$G_\mu^a$};
+	\node at (-135:1.4) {$G_\nu^b$};
+	\node at (3,0) {$\hat{=} \ ig_s^2 g^{\mu\nu} \left\{T^a,T^b\right\}_{ij}\delta_{AB}$};
+\end{scope}
+\begin{scope}[shift={(1,-13.5)}]
+	\node at (-1.5,0.7) {\circled{11}};
+	\draw[gluon] (0,0)--(45:1);
+	\draw[gluon] (0,0)--(-45:1);
+	\draw[gluon] (0,0)--(180:1);
+	\node at (45:1.4) {$G_\mu^a(p_a)$};
+	\node at (-45:1.4) {$G_\nu^b(p_b)$};
+	\node at (180:1.5) {$G_\rho^c(p_c)$};
+	\node at (5.5,0) {$\hat{=}  - g_s f_{abc} \left[ g_{\mu\nu}(p_a-p_b)^\rho +\  g_{\nu\rho}(p_b-p_c)^\mu +  g_{\rho\mu}(p_c-p_a)^\nu \right]$};
+\end{scope}
+\end{tikzpicture}
+\caption{In the Feynman diagrams of the propagators the momentum is flowing from the right to the left hand side.\newline
+In the Feynman diagrams of the vertices all momenta flow towards the vertex.\newline
+The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The indices $i,j=1,2,3$ are the color indices in the (anti)fundamental representation where $a,b,c,\hdots = 1,\hdots,8$ are the color indices of the adjoint representation. }
+\end{center}
+\end{figure}
+\newpage
+
+%The gluino-quark-squark vertex is not much different from the one in SQCD. One only must avoid replacing $\tilde{g}$ with $\tilde{g}^C$. %See for the derivation of Feynman rules for theories with fermion number violating interaction reference [a. denner, h.eck, o. hahn, j. küblbeck]
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.5 pt, scale=1.3]
+	\node at (-1.5,0.7) {\circled{12}};
+	\draw[gluon] (0,0)--(45:1);
+	\draw[gluon] (0,0)--(-45:1);
+	\draw[gluon] (0,0)--(135:1);
+	\draw[gluon] (0,0)--(-135:1);
+	\node at (45:1.4) {$G_\rho^c$};
+	\node at (-45:1.4) {$G_\sigma^d$};
+	\node at (135:1.4) {$G_\mu^a$};
+	\node at (-135:1.4) {$G_\nu^b$};
+	\node at (5.5,0) {$\hat{=} \ -ig_s^2 [f^{abe}f^{cde}(g^{\mu\rho} g^{\nu\sigma} - g^{\mu\sigma}g^{\nu\rho}) + f^{ace}f^{bde}(g^{\mu\nu} g^{\rho\sigma} - g^{\mu\sigma}g^{\nu\rho}) $};
+	\node at (8,-0.5) {$+ f^{ade}f^{bce}(g^{\mu\nu} g^{\rho\sigma} - g^{\mu\rho}g^{\nu\sigma})]$};
+\begin{scope}[shift={(0,-2.5)}]
+	\node at (-1.5,0.7) {\circled{13}};
+	\draw[gluon] (0,0)--(180:1);
+	\draw[gluon] (0,0)--(45:1);
+	\draw[gluon] (0,0)--(-45:1);
+	\draw[fermionnoarrow] (0,0)--(-45:1);
+	\draw[fermionnoarrow] (0,0)--(45:1);
+	\node at (45:1.4) {$\overline{\tilde{g}}^b$};
+	\node at (-45:1.4) {$\tilde{g}^c$};
+	\node at (180:1.5) {$G_\mu^a$};
+	\node(gbar) at (0.9,0.6) {};
+	\node(g) at (0.9,-0.6) {};
+	\path[line width=0.8pt,->] (g) edge [out=135, in=-135] (gbar);
+	\node at (2,0) {$\hat{=}  - g_s f_{abc} \gamma^\mu$};
+\end{scope}
+\begin{scope}[shift={(7,-2.5)}]
+	\node at (-1.5,0.7) {\circled{14}};
+	\draw[gluon] (0,0)--(180:1);
+	\draw[scalar] (0,0)--(45:1);
+	\draw[scalarbar] (0,0)--(-45:1);
+	\node at (40:1.4) {$\sigma^{b\dagger}(-p_1)$};
+	\node at (-40:1.4) {$\sigma^c(p_2)$};
+	\node at (180:1.5) {$G_\mu^a$};
+	\node at (3,0) {$\hat{=}  - g_s (p_1+p_2)^\mu f_{abc} $};
+\end{scope}
+\begin{scope}[shift={(0,-5)}]
+	\node at (-1.5,0.7) {\circled{15}};
+	\draw[scalar] (0,0)--(45:1);
+	\draw[scalarbar] (0,0)--(-45:1);
+	\draw[gluon] (0,0)--(135:1);
+	\draw[gluon] (0,0)--(-135:1);
+	\node at (45:1.4) {$\sigma^{\dagger c}$};
+	\node at (-45:1.4) {$\sigma^d$};
+	\node at (135:1.4) {$G_\mu^a$};
+	\node at (-135:1.4) {$G_\nu^b$};
+	\node at (3,0) {$\hat{=} \ +ig_s^2 g^{\mu\nu}[f^{aec}f^{bed}+ f^{bec}f^{aed}]$};
+\end{scope}
+\begin{scope}[shift={(0,-7.5)}]
+	\node at (-1.5,0.7) {\circled{16a}};
+	\draw[scalar] (0,0)--(45:1);
+	\draw[fermionbar] (0,0)--(-45:1);
+	\draw[fermionnoarrow] (180:1)--(0,0);
+	\draw[gluon] (180:1)--(0,0);
+	\node at (45:1.3) {$\tilde{q}_{Li}^\dagger$};
+	\node at (-45:1.3) {$\overline{q}^C_j$};
+	\node at (180:1.3) {$\tilde{g}^a$};
+	\node(g) at (-0.7,-0.3) {};
+	\node(u) at (0.4,-0.8) {};
+	\path[line width=0.8pt,->] (g) edge [out=0, in=135] (u);
+	\node at (3,0) {$\hat{=} -i\sqrt{2}g_s T^a_{ij}P_L$};
+\end{scope}
+\begin{scope}[shift={(7,-7.5)}]
+	\node at (-1.5,0.7) {\circled{16b}};
+	\draw[fermion] (0,0)--(45:1);
+	\draw[scalarbar] (0,0)--(-45:1);
+	\draw[fermionnoarrow] (180:1)--(0,0);
+	\draw[gluon] (180:1)--(0,0);
+	\node at (45:1.3) {$q^C_i$};
+	\node at (-45:1.3) {$\tilde{q}_{Lj}$};
+	\node at (180:1.3) {$\overline{\tilde{g}}^a$};
+	\node(g) at (-0.7,0.3) {};
+	\node(u) at (0.4,0.8) {};
+	\path[line width=0.8pt,->] (g) edge [out=0, in=225] (u);
+	\node at (3,0) {$\hat{=} -i\sqrt{2}g_s T^a_{ij}P_R$};
+\end{scope}
+\begin{scope}[shift={(0,-10)}]
+	\node at (-1.5,0.7) {\circled{17a}};
+	\draw[scalarbar] (0,0)--(45:1);
+	\draw[fermion] (0,0)--(-45:1);
+	\draw[fermionnoarrow] (180:1)--(0,0);
+	\draw[gluon] (180:1)--(0,0);
+	\node at (45:1.3) {$\tilde{q}_{Rj}$};
+	\node at (-45:1.3) {$\overline{q}_i$};
+	\node at (180:1.3) {$\tilde{g}^a$};
+	\node(g) at (-0.7,-0.3) {};
+	\node(u) at (0.4,-0.8) {};
+	\path[line width=0.8pt,->] (g) edge [out=0, in=135] (u);
+	\node at (3,0) {$\hat{=} +i\sqrt{2}g_s T^a_{ij}P_L$};
+\end{scope}
+\begin{scope}[shift={(7,-10)}]
+	\node at (-1.5,0.7) {\circled{17b}};
+	\draw[fermionbar] (0,0)--(45:1);
+	\draw[scalar] (0,0)--(-45:1);
+	\draw[fermionnoarrow] (180:1)--(0,0);
+	\draw[gluon] (180:1)--(0,0);
+	\node at (45:1.3) {$q_j$};
+	\node at (-45:1.3) {$\tilde{q}_{Ri}^\dagger$};
+	\node at (180:1.3) {$\overline{\tilde{g}}^a$};
+	\node(g) at (-0.7,0.3) {};
+	\node(u) at (0.4,0.8) {};
+	\path[line width=0.8pt,->] (g) edge [out=0, in=225] (u);
+	\node at (3,0) {$\hat{=} +i\sqrt{2}g_s T^a_{ij}P_R$};
+\end{scope}
+\begin{scope}[shift={(0,-12.5)}]
+	\node at (-1.5,0.7) {\circled{18a}};
+	\draw[scalar] (0,0)--(45:1);
+	\draw[fermionnoarrow] (0,0)--(-45:1);
+	\draw[gluon] (0,0)--(-45:1);
+	\draw[fermionnoarrow] (180:1)--(0,0);
+	\draw[gluon] (180:1)--(0,0);
+	\node at (45:1.3) {$\sigma^{b\dagger}$};
+	\node at (-45:1.3) {$\overline{\tilde{g}}^c$};
+	\node at (180:1.3) {$\tilde{g}^a$};
+	\node(g) at (-0.7,-0.3) {};
+	\node(u) at (0.4,-0.8) {};
+	\path[line width=0.8pt,->] (g) edge [out=0, in=135] (u);
+	\node at (3,0) {$\hat{=} -\sqrt{2}g_s f^{abc}P_L$};
+\end{scope}
+\begin{scope}[shift={(7,-12.5)}]
+	\node at (-1.5,0.7) {\circled{18b}};
+	\draw[fermionnoarrow] (0,0)--(45:1);
+	\draw[gluon] (0,0)--(45:1);
+	\draw[scalarbar] (0,0)--(-45:1);
+	\draw[fermionnoarrow] (180:1)--(0,0);
+	\draw[gluon] (180:1)--(0,0);
+	\node at (45:1.3) {$\tilde{g}^b$};
+	\node at (-45:1.3) {$\sigma^c$};
+	\node at (180:1.3) {$\overline{\tilde{g}}^a$};
+	\node(g) at (-0.7,0.3) {};
+	\node(u) at (0.4,0.8) {};
+	\path[line width=0.8pt,->] (g) edge [out=0, in=225] (u);
+	\node at (3,0) {$\hat{=} +\sqrt{2}g_s f^{abc} P_R$};
+\end{scope}
+\begin{scope}[shift={(0,-15)}]
+	\node at (-1.5,0.7) {\circled{19}};
+	\draw[scalar] (0,0)--(45:1);
+	\draw[scalarbar] (0,0)--(-45:1);
+	\draw[scalar] (0,0)--(135:1);
+	\draw[scalarbar] (0,0)--(-135:1);
+	\node at (45:1.4) {$\tilde{q}^\dagger_{Dl}$};
+	\node at (-45:1.4) {$\tilde{q}_{Bj}$};
+	\node at (135:1.4) {$\tilde{q}^\dagger_{Ck}$};
+	\node at (-135:1.4) {$\tilde{q}_{Ai}$};
+	\node at (5,0) {$\hat{=} \ -ig_s^2 [T_{ki}^a T_{lj}^a(\delta_{AL}\delta_{CL} - \delta_{AR}\delta_{CR})(\delta_{BL}\delta_{DL}-\delta_{BR}\delta_{DR})$};
+	\node at (5.6,-0.5) {$T_{kj}^a T_{li}^a(\delta_{BL}\delta_{CL} - \delta_{BR}\delta_{CR})(\delta_{AL}\delta_{DL}-\delta_{AR}\delta_{DR})]$};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\caption{The curved arrows indicate the fermion flow. The Feynman rules 16b, 17b and 18b are the complex conjugates of 16a, 17a and 18a respectively. Applying a flipping rule to a vertex one has to reverse the curved arrow, i.e. the fermion flow and replace $\Psi$ with $\bar{\Psi}^C$. In addition one has to add a minus sign for Feynman rule 13.}
+\end{figure}
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[line width=1.5 pt, scale=1.3]
+	\node at (-1.5,0.7) {\circled{20}};
+	\draw[scalar] (0,0)--(45:1);
+	\draw[scalarbar] (0,0)--(-45:1);
+	\draw[scalar] (0,0)--(135:1);
+	\draw[scalarbar] (0,0)--(-135:1);
+	\node at (45:1.4) {$\sigma^{b\dagger}$};
+	\node at (-45:1.4) {$\sigma^c$};
+	\node at (135:1.4) {$\tilde{q}^\dagger_{Aj}$};
+	\node at (-135:1.4) {$\tilde{q}_{Ai}$};
+	\node at (3,0) {$\hat{=} \ -g_s^2 T_{ij}^a f^{abc}(\delta_{AL}\delta_{CL} - \delta_{AR}\delta_{BR})$};
+\begin{scope}[shift={(0,-2.5)}]
+	\node at (-1.5,0.7) {\circled{21}};
+	\draw[scalar] (0,0)--(45:1);
+	\draw[scalarbar] (0,0)--(-45:1);
+	\draw[scalar] (180:1)--(0,0);
+	\node at (45:1.3) {$\tilde{q}^\dagger_{Ai}$};
+	\node at (-45:1.3) {$\tilde{q}_{Bj}$};
+	\node at (180:1.6) {$\sigma^a+\sigma^{a\dagger}$};
+	\node at (3,0) {$\hat{=} -i\sqrt{2}g_s m_{\tilde{g}} T^a_{ij}(\delta_{AL}\delta_{BL}-\delta_{AR}\delta_{BR})$};
+\end{scope}
+\begin{scope}[shift={(0,-5)}]
+	\node at (-1.5,0.7) {\circled{22}};
+	\draw[scalar] (0,0)--(45:1);
+	\draw[scalarbar] (0,0)--(-45:1);
+	\draw[scalar] (0,0)--(135:1);
+	\draw[scalarbar] (0,0)--(-135:1);
+	\node at (45:1.4) {$\sigma^{\dagger d}$};
+	\node at (-45:1.4) {$\sigma^e$};
+	\node at (135:1.4) {$\sigma^{\dagger b}$};
+	\node at (-135:1.4) {$\sigma^c$};
+	\node at (3,0) {$\hat{=} \ -g_s^2 (f^{abc}f^{ade} + f^{abc}f^{adc})$};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+
+\subsection{Passarino-Veltman Integrals}
+
+\begin{align}
+A_0(m^2) &= \frac{i}{16\pi^2} \int_l \frac{1}{l^2-m^2}\nonumber\\
+B_{0,\mu,\mu\nu}(p^2,m_1^2,m_2^2) &= \frac{i}{16\pi^2} \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p)^2-m_2^2]}\nonumber\\
+C_{0,\mu,\mu\nu}(p_1^2,p_2^2,m_1^2,m_2^2,m_3^2) &= \frac{i}{16\pi^2} \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p_1)^2-m_2^2][(l+p_2)^2-m_3^2]}
+\end{align}
+with the shortcut $\int_l = \mu^{2\epsilon}\int\frac{\mathrm{d}^D l}{(2\pi)^D}$. Furthermore there are supressed $\varepsilon$'s which prescripe how the poles in the complex plane are avoided. They are hidden in the infinitesimal shift of the masses: $m_i^2 \to m_i^2 - i \varepsilon$.\\
+The tensor integrals can be decomposed as
+\begin{align}
+B_\mu &= p_\mu B_1\nonumber\\
+B_{\mu\nu} &= g_{\mu\nu}B_{00} + p_\mu p_\nu B_{11}\nonumber\\
+C_\mu &= p_{1\mu}C_1 + p_{2\mu}C_2 \nonumber\\
+C_{\mu\nu} &= g_{\mu\nu}C_{00} + p_{1\mu}p_{1\nu}C_{11} + p_{2\mu}p_{2\nu}C_{22} + (p_{1\mu}p_{2\nu} + p_{2\mu}p_{1\nu})C_{12} 
+\end{align}
+\begin{align}
+A_0(m^2) = m^2\left( \Delta -\ln \frac{m^2}{\mu^2} + 1 \right) + \mathcal{O}(\epsilon)
+\end{align}
+$\Delta = \frac{1}{\epsilon} - \gamma_E+\ln 4\pi$
+\begin{align}
+B_0(0,m_1^2,m_2^2) &= \frac{A_0(m_1^2)-A_0(m_2^2)}{m_1^2-m_2^2} = \Delta + 1 -\frac{m_1^2\ln \frac{m_1^2}{\mu^2}-m_2^2\frac{m_2^2}{\mu^2}}{m_1^2-m_2^2} + \mathcal{O}(\epsilon)\\
+B_0(0,m^2,m^2) &= \frac{\partial}{\partial m^2} A_0(m^2) = \Delta -\ln \frac{m^2}{\mu^2} + 1 + \mathcal{O}(\epsilon)
+\end{align}
+
+
+%\subsection{Cross section and Phase Space Integration}
+%\begin{align}
+%\mbox{d}\sigma = \frac{1}{2E_A 2E_B |v_A-v_B|}\left( \prod_f \frac{\mbox{d}^3p_f}{(2\pi)^3}\frac{1}{2E_f} \right) \sum |\mathcal{M}(p_A,p_B \to \left\{p_f\right\})|^2 (2\pi)^4 \delta^{(4)}(p_a+p_b-\sum p_f)
+%\end{align}
+%...\\
+%\begin{align}
+%\frac{\mbox{d}^2 \sigma}{\mbox{d}t\mbox{d}u} = \frac{K_{ij}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_{\tilde{q}}^4}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_{\tilde{q}}^4) \Theta(s-4m_{\tilde{q}}^2) \delta(s+t+u-2m_{\tilde{q}}^2) \sum |\mathcal{M}^B|^2
+%\end{align}
+

@@ -1,0 +1,132 @@
+\section{The Minimal Supersymmetric Standard Model}
+
+
+\subsection{Supersymmetry as Extention of Poincaré Symmetry}
+The superalgebra is defined by
+\begin{align}
+\left\{Q_\alpha,Q_\beta\right\} = \left\{\overline{Q}_{\dot{\alpha}},\overline{Q}_{\dot{\beta}}\right\} &= 0,  \nonumber\\
+\left\{Q_\alpha,\overline{Q}_{\dot{\alpha}}\right\} &= 2\sigma^\mu_{\alpha\dot{\alpha}}, \nonumber\\
+[P^\mu,Q_\alpha] = [P^\mu,\overline{Q}_{\dot{\alpha}}] &= 0, \nonumber \\
+[Q_\alpha, J^{\mu\nu}] &= \frac{1}{2} (\sigma^{\mu\nu})_\alpha^\beta Q_\beta
+\end{align}
+A representation in the form of differential operators is given by
+\begin{align}
+P^\mu &= i\partial^\mu\nonumber\\
+J^{\mu\nu} &= i(x^\mu\partial^\nu - x^\nu\partial^\mu)\nonumber\\
+Q_\alpha &= i(\partial_\alpha + i\sigma^\mu_{\alpha\dot{\alpha}}\overline{\theta}^{\dot{\alpha}}\partial_\mu\nonumber\\
+\overline{Q}_{\dot{\alpha}} &= i(-\overline{\partial}_{\dot{\alpha}} - i \theta^\alpha \sigma^\mu_{\alpha\dot{\alpha}}\partial_\mu).
+\end{align}
+INTRODUCE AND MOTIVATE SUSY COVARIANT DERIVATIVES $\mathcal{D}_\alpha = \frac{\partial}{\partial \theta^\alpha} - i(\sigma^\mu\overline{\theta})_\alpha\partial_\mu$ is the chiral covariant derivative and $\overline{\mathcal{D}}\overline{\mathcal{D}} = \overline{\mathcal{D}}_{\dot{\alpha}}\overline{\mathcal{D}}^{\dot{\alpha}}$
+
+\subsection{A Generic Supersymmetric Model in Superspace Formulation}
+This chapter outlines the generic ingredients and terms of a supersymmetric model. To this end it is practical to work in the language of superspace and superfields.\\
+Superspace is a manifold obtained by enlarging Minkowski space, whose coordinates are label with $x^\mu$, with four anticommuting numbers: $\theta^\alpha$ and $\overline{\theta}^{\dot{\alpha}}$, where $\alpha,\ \dot{\alpha} = 1,2$. Superfields are functions on superspace.\\
+The for the MSSM relevant superfields\footnote{Superfield are throughout this thesis labeled with a hat.} are the chiral superfield $\hat{\Phi}$, the antichiral superfield $\hat{\overline{\Phi}}$ and the vector superfield $V$. Chiral superfields are defined by the restriction $\overline{\mathcal{D}}_{\dot{\alpha}}\hat{\Phi} = 0$, antichiral superfields by $\mathcal{D}_\alpha\hat{\overline{\Phi}} = 0$ and vector superfields by the condition of being real $V^\dagger = V$.\\
+Their component decomposition reads\footnote{For tho vector superfield Wess-Zumino-gauge is applied.}
+\begin{align}
+\hat{\Phi}(x,\theta,\overline{\theta}) &= A(x) + \sqrt{2}\theta\psi(x) + \theta\theta F(x) - i\theta\sigma^\mu \overline{\theta}\partial_\mu A(x) - \frac{1}{4}\theta\theta\overline{\theta}\overline{\theta}\partial_\mu\partial^\mu A(x) - \frac{i}{\sqrt{2}}\theta\theta\overline{\theta}\overline{\sigma}^\mu \partial_\mu\psi(x)\nonumber\\
+\hat{\overline{\Phi}}(x,\theta,\overline{\theta}) &= A^\dagger(x) + \sqrt{2}\overline{\theta}\overline{\psi}(x) + \overline{\theta}\overline{\theta} F^\dagger(x) + i\theta\sigma^\mu \overline{\theta}\partial_\mu A^\dagger(x) - \frac{1}{4}\theta\theta\overline{\theta}\overline{\theta}\partial_\mu\partial^\mu A^\dagger(x) - \frac{i}{\sqrt{2}}\overline{\theta}\overline{\theta}\theta\sigma^\mu \partial_\mu\overline{\psi}(x)\nonumber\\
+\hat{V}(x,\theta,\overline{\theta}) &= \theta\sigma^\mu\overline{\theta} v_\mu + i\theta\theta\overline{\theta}\overline{\lambda}(x) -i \overline{\theta}\overline{\theta}\theta\lambda(x) + \frac{1}{2}\theta\theta\overline{\theta}\overline{\theta}D(x),\label{eq:superfielddecomp}
+\end{align}
+where $A(x)$ and $F(x)$ are complex scalar fields, $\psi(x)$ and $\lambda(x)$ are left handed Weyl spinors and $D(x)$ being a real scalar field.\\
+The superfields transform under a generic gauge transformation as
+\begin{align}
+\hat{\Phi} &\to \mathrm{e}^{-2ig\Lambda}\Phi\nonumber\\
+\hat{\overline{\Phi}} &\to \hat{\overline{\Phi}}\mathrm{e}^{2ig\overline{\hat{\Lambda}}}\nonumber\\
+\mathrm{e}^{2g\hat{V}} &\to \mathrm{e}^{-2ig\hat{\overline{\Lambda}}}\mathrm{e}^{2g\hat{V}} \mathrm{e}^{2ig\hat{\Lambda}},
+\end{align}
+where $\hat{\Lambda} = \hat{\Lambda}^aT^a$ and $\hat{V} = \hat{V}^aT^a$. $\hat{\Lambda}^a$ is an arbitrary chiral superfield and the $T^a$ are the generetors of the Lie algebra, which is associated to the gauge group in question. g is the gauge coupling constant of the gauge group.\\
+One can therefore construct the important gauge invariant term $\int\mathrm{d}^4\theta\ \hat{\overline{\Phi}}\mathrm{e}^{2g\hat{V}}\hat{\Phi}$. If one introduces the gauge covariant derivative $D_\mu = \partial + ig T^a v^a_\mu$ the component decomposition reads
+\begin{align}
+\int\mathrm{d}^4\theta\hat{\overline{\Phi}}\mathrm{e}^{2g\hat{V}}\hat{\Phi} &= F^\dagger F + \left(D_\mu A\right)^\dagger \left(D^\mu A\right) + \overline{\psi}\overline{\sigma}^\mu i D_\mu \psi\nonumber \\
+&- \sqrt{2}g\left( -i(A^\dagger T^aA)\lambda^a +i\overline{\lambda}^a(AT^aA^\dagger) \right) + g(A^\dagger T^a A) D^a .\label{eq:L_matter}
+\end{align}
+Therefore this term gives rise to the kinetic terms of the components of the chiral and antichiral superfields $A,\ A^\dagger,\ \psi$ and $\overline{\psi}$, their minimal coupling to the gauge fields $v_\mu^a$ and their superpartners $\lambda^a$ and $\overline{\lambda}^a$ and terms involving the auxiliary fields $F,\ F^\dagger$ and $D$.\\
+With the field-strength chiral superfields $\hat{W}_\alpha = -\frac{1}{4}\overline{\mathcal{D}}\overline{\mathcal{D}}(\mathrm{e}^{-2gV}\mathcal{D}_\alpha\mathrm{e}^{2gV})$ one can write down a gauge invariant term yielding the kinetic terms of the gauge fields and their superpartners:
+\begin{align}
+\int\mathrm{d}^2\theta \frac{1}{16g^2 }\hat{W}^{\alpha a} \hat{W}^a_\alpha + h.c.= \frac{1}{2}D^aD^a -\frac{1}{4}F^a_{\mu\nu}F^{a\mu\nu} + \frac{i}{2}\overline{\lambda}^a\overline{\sigma}^\mu(D_\mu\lambda^a) + \frac{i}{2}\lambda^a\sigma^\mu(D_\mu\overline{\lambda}^a).\label{eq:L_gauge}
+\end{align}
+A third generic term in a supersymmetric theory arises from the superpotential $W(\hat{\Phi})$ which is a holomorphic function in the chiral superfields:
+\begin{align}
+\int\mathrm{d}^2\theta\ W(\hat{\Phi}).
+\end{align}
+A renormalizable superpotential is given by $W(\hat{\Phi}) = c_i\hat{\Phi} + \frac{m_{ij}}{2}\hat{\Phi}_i\hat{\Phi}_j + \frac{g_{ijk}}{3!}\hat{\Phi}_i\hat{\Phi}_j\hat{\Phi}_k$. The component decomposition of the corresponding terms is
+\begin{align}
+\int\mathrm{d}^2\theta\ \hat{\Phi}_1 &= F_1\nonumber\\
+\int\mathrm{d}^2\theta\ \hat{\Phi}_1\hat{\Phi}_2 &= A_1F_2 + F_1A_2-\psi_1\psi_2\nonumber\\
+\int\mathrm{d}^2\theta\ \hat{\Phi}_1\hat{\Phi}_2\hat{\Phi}_3 &= F_1A_2A_3 + A_1F_2A_3 + A_1A_2F_3 - A_1\psi_2\psi_3 - \psi_1A_2\psi_3 - \psi_1\psi_2A_3.\label{eq:L_superpot}
+\end{align}
+The Lagrangian for a supersymmetric theory is therefore given by 
+\begin{align}
+\mathcal{L}_{SUSY} &= \mathcal{L}_{matter} + \mathcal{L}_{gauge} + \mathcal{L}_{superpot}\nonumber\\
+&=\int\mathrm{d}^4\theta\hat{\overline{\Phi}}\mathrm{e}^{2g\hat{V}}\hat{\Phi} + \left(\int\mathrm{d}^2\theta \frac{1}{16g^2 }\hat{W}^{\alpha a} \hat{W}^a_\alpha + h.c. \right) +\int\mathrm{d}^2\theta\ W(\hat{\Phi})
+\end{align}
+Observing the component decomposition \ref{eq:L_matter},\ref{eq:L_gauge}, \ref{eq:L_superpot} of the 3 parts of this Lagrangian, one observes that the $F$ and $D$ fields have no kinetic term and are therefor auxiliary fields which can be eliminated by their equation of motion $\frac{\partial \mathcal{L}}{\partial\phi} = \partial_\mu\frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)}$ with $\phi = F, D$. Doing this one obtains
+\begin{align}
+\mathcal{L}_D &= \frac{1}{2} D^aD^a + g A^\dagger T^aD^a A \hspace{1cm} \Rightarrow \hspace{1cm} D^a = - A^\dagger T^a A \nonumber\\
+\mathcal{L}_D &= -\frac{1}{2}\left( A^\dagger T^a A \right)^2
+\end{align}
+and 
+\begin{align}
+\mathcal{L}_F &= F_i^\dagger F_i + \left( c_iF_i + m_{ij}F_iA_j + \frac{g_{ijk}}{2}F_iA_jA_k + h.c. \right) \hspace{1cm} \Rightarrow \hspace{1cm} F^\dagger_i = - \frac{\partial W(A)}{\partial A_i}\nonumber\\
+\mathcal{L}_F &= -\left| \frac{\partial W(A)}{\partial A_i} \right|^2
+\end{align}
+
+
+
+\subsection{The Minimal Supersymmetric Standard Model in superspace formulation}
+The Lagrangian for the MSSM\footnote{This is the Lagrangian on the classical level, i.e. there are neither gauge fixing nor ghost terms.} reads
+\begin{align}
+\mathcal{L}_{MSSM} = \int \mathrm{d}^4 \theta & \left[ \hat{\overline{Q}}\mathrm{e}^{2g^\prime \hat{V}^\prime + 2g\hat{V} + 2g_s\hat{V}_s}\hat{Q} + \hat{\overline{U}}\mathrm{e}^{2g^\prime \hat{V}^\prime + 2g\hat{V} - 2g_s\hat{V}^T_s}\hat{U} + \hat{\overline{D}}\mathrm{e}^{2g^\prime \hat{V}^\prime + 2g\hat{V} - 2g_s\hat{V}^T_s}\hat{D} \right.\nonumber\\
+ & + \hat{\overline{L}}\mathrm{e}^{2g^\prime \hat{V}^\prime + 2g\hat{V}}\hat{L} + \hat{\overline{E}}\mathrm{e}^{2g^\prime \hat{V}^\prime + 2g\hat{V}}\hat{E}\nonumber\\
+ & + \left. \hat{\overline{H}}_d\mathrm{e}^{2g^\prime \hat{V}^\prime + 2g\hat{V}}\hat{H}_d + \hat{\overline{H}}_u\mathrm{e}^{2g^\prime \hat{V}^\prime + 2g\hat{V}}\hat{H}_u \right]\nonumber\\
+ + \int \mathrm{d}^2\theta & \left[ \frac{1}{16g^{\prime 2}} \hat{W}^{\prime\alpha}\hat{W}^\prime_\alpha + \frac{1}{16g^{2}} \hat{W}^{a\alpha}\hat{W}^a_\alpha + \frac{1}{16g_s^2} \hat{W}_s^{a\alpha}\hat{W}^a_{s\alpha} \right] + h.c.\nonumber\\
+ + \int \mathrm{d}^2\theta&\ W_{MSSM} + h.c.\nonumber\\
+ +\  \mathcal{L}_{soft}.\ &\label{eq:L_MSSM}
+\end{align}
+Apart from the already discussed terms in the first 4 lines of \ref{eq:L_MSSM} there is a superpotential $W_{MSSM}$:
+\begin{align}
+W_{MSSM} &= y_d \hat{H}_d \hat{Q} \hat{D} + y_u \hat{H}_u \hat{Q} \hat U + y_e \hat{H}_d \hat{L} \hat{E} - \mu \hat{H}_d \hat{H}_u\label{eq:W_MSSM}
+\end{align}
+and terms which break supersymmetry softly, i.e. terms with coupling constants with positive mass dimension.
+\begin{align}
+\mathcal{L}_{soft} &= -M^2_{\tilde{Q}}|\tilde{q}_L|^2 - M^2_{\tilde{U}}|\tilde{u}_R|^2 - M^2_{\tilde{D}}|\tilde{d}_R|^2 \nonumber\\
+&\ \ \ - M^2_{\tilde{L}}|\tilde{l}_L|^2 - M^2_{\tilde{E}}|\tilde{e}_R|^2 - M^2_{H_d}|H_d|^2 - M^2_{H_u}|H_u|^2\nonumber\\
+&\ \ \ +\frac{1}{2}\left( M_1 \lambda\lambda + M_2 \lambda^a\lambda^a + M_3 \lambda_s^a\lambda_s^a\right) + h.c.\nonumber\\
+&\ \ \ -\left( A_d y_d H_d \tilde{q}_L \tilde{d}^\dagger_R + A_u y_u H_u \tilde{q}_L \tilde{u}^\dagger_R + A_e y_e H_d \tilde{l}_L \tilde{e}^\dagger_R -B\mu H_d H_u \right) + h.c.\label{eq:L_soft}
+\end{align}
+The field content of the MSSM is summarized in \ref{tab:MSSMfieldcontent}
+\begin{table}
+\begin{center}
+\begin{tabular}{c|c|c}\label{tab:MSSMfieldcontent}
+Superfield & Components & $SU_\mathrm{C}(3)$ $\times$ $SU_\mathrm{L}(2)$ $\times$ $U_\mathrm{Y}(1)$\\
+\hline
+$\hat{\Phi}$ & $A$, $\psi$ & \\
+$\hat{V}$ & $\lambda$, $v_\mu$ \\
+$\hat{Q}$ & $\tilde{q}_L = \begin{pmatrix}
+\tilde{u}_L \\
+\tilde{d}_L
+\end{pmatrix}$, $q_L = \begin{pmatrix}
+u_L \\
+d_L
+\end{pmatrix}$ & (3, 2, $\frac{1}{6}$)\\
+$\hat{U}$ & $\tilde{u}_R^\dagger$, $u_R$ & (3$^\ast$, 1, $-\frac{2}{3}$)\\
+$\hat{D}$ & $\tilde{d}_R^\dagger$, $d_R$ & (3$^\ast$, 1, $+\frac{1}{3}$)\\
+$\hat{L}$ & $\tilde{l}_L = \begin{pmatrix}
+\tilde{\nu}_L \\
+\tilde{e}_L
+\end{pmatrix}$, $l_L = \begin{pmatrix}
+\nu_L \\
+e_L
+\end{pmatrix}$ & (1, 2, $-\frac{1}{2}$)\\
+$\hat{E}$ & $\tilde{e}_R^\dagger$, $e_R$ & (1, 1, 1)\\
+$\hat{H}_d$ & $H_d$, $\tilde{H}_d$ & (1, 2, $-\frac{1}{2}$)\\
+$\hat{H}_u$ & $H_u$, $\tilde{H}_u$ & (1, 2, $+\frac{1}{2}$)\\
+$\hat{V}^\prime$ & $\lambda^\prime$, $B_\mu$ & (1, 1, 0)\\
+$\hat{V}^a$ & $\lambda^a$, $W_\mu^a$ & (1, 3, 0)\\
+$\hat{V}_s^a$ & $\lambda_s^a$, $G_\mu^a$ & (8, 1, 0)\\
+\end{tabular}
+\caption{The table shows the field content of the MSSM in terms of the superfields and their component decomposition. The first two lines show the decomposition of the generic superfields (cf. \ref{eq:superfielddecomp}).\newline
+The third column shows the representation (for $SU_\mathrm{C}(3)$ and $SU_\mathrm{L}(2)$) in which the fields transform and the charges of the fields for $U_\mathrm{Y}(1)$.}\label{tab:MSSMfieldcontent}
+\end{center}
+\end{table}
