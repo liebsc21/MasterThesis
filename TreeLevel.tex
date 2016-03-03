@@ -3,16 +3,22 @@
 
 
 \subsection{Partonic Processes}
-Using the Feynman rules in the Appendix one obtains the following sums over absolute squared Feynman amplitudes
+The top quark is excluded from the initial states as it is too heavy to be significantly present in hadrons. Therefore its pdf is approximately zero. For consistency reasons also the stop is excluded from the final states. One therefore deals with $n_f-1 = 5$ quark flavors. Using the Feynman rules in the Appendix one obtains the following sums over absolute squared Feynman amplitudes
 \begin{align}
-\sum|\mathcal{M}^B|^2(q_i q_j \to \tilde{q}\tilde{q}) &= \delta_{ij} 2\hat{g}_s^4\left[ \frac{4}{t_{\tilde{g}}^2} + \frac{4}{u_{\tilde{g}}^2} \right] (tu-m_{\tilde{q}}^4) + (1-\delta_{ij}) ??? \nonumber\\
-\sum|\mathcal{M}^B|^2(q_i\overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij} 4 \left[ g_s^4\frac{8n_f}{s^2} + \hat{g}_s^4\frac{4}{t_{\tilde{g}}^2} - g_s^2\hat{g}_s^2\frac{8}{3 t_{\tilde{g}} s} \right] (tu-m_{\tilde{q}}^2) + (1-\delta_{ij})??? \nonumber\\
-\sum|\mathcal{M}^B|^2(gg \to \tilde{q}\tilde{q}^\dagger) &= 4 n_f g_s^4 \left[ 24\left(1-2\frac{(t_{\tilde{q}}u_{\tilde{q}})}{s^2}\right)-\frac{8}{3} \right] \left[ 1-\epsilon-2\frac{s m_{\tilde{q}}^2}{t_{\tilde{q}}u_{\tilde{q}}} \left( 1-\frac{s m_{\tilde{q}}^2}{t_{\tilde{q}}u_{\tilde{q}}} \right)\right]?\nonumber\\
-\sum|\mathcal{M}^B|^2(q_i\overline{q}_j \to \tilde{g}\tilde{g}) &= \delta_{ij}\left\{ 96 g_s^4 \left[ \frac{2m_{\tilde{g}}^2 s + t_{\tilde{g}}^2 + u_{\tilde{g}}^2}{s^2} -\epsilon \right]\right.\nonumber\\
-&\ 96 g_s^2 \hat{g}_s^2\left[ \frac{m_{\tilde{g}}^2 s + t_{\tilde{g}}^2}{s t_{\tilde{q}}} + \frac{m_{\tilde{g}}^2 s + u_{\tilde{g}}^2}{su_{\tilde{q}}} + \epsilon\left( \frac{t_{\tilde{g}}}{t_{\tilde{q}}} + \frac{u_{\tilde{g}}}{u_{\tilde{q}}} \right) \right]\nonumber\\
-&\ + \left.2\hat{g}_s^4\left[ 24\left( \frac{t_{\tilde{g}}^2}{t_{\tilde{q}}^2} + \frac{u_{\tilde{g}}^2}{u_{\tilde{q}}^2} \right) + \frac{8}{3}\left( 2\frac{m_{\tilde{g}}^2 s}{t_{\tilde{q}}u_{\tilde{q}}} - \frac{t_{\tilde{g}}^2}{t_{\tilde{q}}^2} - \frac{u_{\tilde{g}}^2}{u_{\tilde{q}}^2} \right) \right]\right\} ??? \nonumber\\
-\sum|\mathcal{M}^B|^2(gg \to \tilde{g}\tilde{g}) &=  576 g_s^4 \left( 1- \frac{t_{\tilde{g}}u_{\tilde{g}}}{s^2} \right)\left[ \frac{s^2}{t_{\tilde{g}}u_{\tilde{g}}}(1-\epsilon)^2-2(1-\epsilon) + s\frac{m_{\tilde{g}}^2 s}{t_{\tilde{g}}u_{\tilde{g}}}\left(1-\frac{m_{\tilde{g}}^2 s}{t_{\tilde{g}}u_{\tilde{g}}}  \right) \right] ??? \nonumber\\
-\sum|\mathcal{M}^B|^2(qg \to \tilde{q}\tilde{g}) &=  2g_s^2\hat{g}_s^2 \left[ 24\left(1-2\frac{s u_{\tilde{q}}}{t_{\tilde{g}}^2}\right) - \frac{8}{3} \right]\left[ (-1+\epsilon)\frac{t_{\tilde{g}}}{s} + \frac{2(m_{\tilde{g}}^2-m_{\tilde{q}}^2)t_{\tilde{g}}}{s u_{\tilde{q}}}\left( 1+\frac{m_{\tilde{q}}^2}{u_{\tilde{q}}} + \frac{m_{\tilde{g}}^2}{t_{\tilde{g}}} \right) \right]???
+\sum|\mathcal{M}^B|^2(q_i\overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij}  \left[ 8 N_c C(F) g_s^4\frac{(n_f-1)}{s^2} + 4 N_c C(F) \hat{g}_s^4\frac{1}{t_{\tilde{g}}^2} - 8 C(F)g_s^2\hat{g}_s^2\frac{1}{ t_{\tilde{g}} s} \right] (tu-m_{\tilde{q}}^4)\nonumber\\
+ &+ (1-\delta_{ij}) 4 N_c C(F) \hat{g}_s^4\frac{tu-m_{\tilde{q}}^4}{t_{\tilde{g}}^2} \\
+\sum|\mathcal{M}^B|^2(GG \to \tilde{q}\tilde{q}^\dagger) &= 4 (n_f-1) g_s^4 \left[ 2N_c^2C(F) \left(1 - 2\frac{t_{\tilde{q}}u_{\tilde{q}}}{s^2} \right)- 2C(F) \right]\nonumber\\
+& \left[ 1 - \epsilon - 2\frac{s m_{\tilde{q}}^2}{t_{\tilde{q}}u_{\tilde{q}}} \left( 1-\frac{s m_{\tilde{q}}^2}{t_{\tilde{q}}u_{\tilde{q}}} \right)\right]\\
+\sum|\mathcal{M}^B|^2(q_i q_j \to \tilde{q}\tilde{q}) &= \delta_{ij} 2\hat{g}_s^4 N_c C(F)\left[ \frac{1}{t_{\tilde{g}}^2} + \frac{1}{u_{\tilde{g}}^2} \right] (tu-m_{\tilde{q}}^4)\nonumber\\ 
+& + (1-\delta_{ij}) 4 \hat{g}_s^4 N_c C(F) \frac{tu-m_{\tilde{q}}^4}{t_{\tilde{g}}^2}\\
+\sum|\mathcal{M}^B|^2(q\overline{q} \to \tilde{g}\overline{\tilde{g}}) &=  8 N_c^2 C(F) g_s^4 \left[ \frac{2m_{\tilde{g}}^2 s + t_{\tilde{g}}^2 + u_{\tilde{g}}^2}{s^2} -\epsilon \right]\nonumber\\
+& + 4 N_c^2 C(F) g_s^2 \hat{g}_s^2 \left[ \frac{m_{\tilde{g}}^2 s + t_{\tilde{g}}^2}{s t_{\tilde{q}}} + \frac{m_{\tilde{g}}^2 s + u_{\tilde{g}}^2}{su_{\tilde{q}}} + \epsilon\left( \frac{t_{\tilde{g}}}{t_{\tilde{q}}} + \frac{u_{\tilde{g}}}{u_{\tilde{q}}} \right) \right]\nonumber\\
+& + 2C(F)(N_c^2-1) \hat{g}^4_s \left( \frac{t_{\tilde{g}}^2}{t_{\tilde{q}}^2} + \frac{u_{\tilde{g}}^2}{u_{\tilde{q}}^2} \right)\\
+%& + 2 \hat{g}_s^4\left[ 2 N_c^2 C(F) \left( \frac{t_{\tilde{g}}^2}{t_{\tilde{q}}^2} + \frac{u_{\tilde{g}}^2}{u_{\tilde{q}}^2} \right) + 2 C(F) \left( 2\frac{m_{\tilde{g}}^2 s}{t_{\tilde{q}}u_{\tilde{q}}} - \frac{t_{\tilde{g}}^2}{t_{\tilde{q}}^2} - \frac{u_{\tilde{g}}^2}{u_{\tilde{q}}^2} \right) \right]\\
+\sum|\mathcal{M}^B|^2(GG \to \tilde{g}\overline{\tilde{g}}) &=  16 N_c^3 C(F) g_s^4 \left( 1- \frac{t_{\tilde{g}}u_{\tilde{g}}}{s^2} \right)\nonumber\\
+&\left[ \frac{s^2}{t_{\tilde{g}}u_{\tilde{g}}}(1-\epsilon)^2-2(1-\epsilon) + 4\frac{m_{\tilde{g}}^2 s}{t_{\tilde{g}}u_{\tilde{g}}}\left(1-\frac{m_{\tilde{g}}^2 s}{t_{\tilde{g}}u_{\tilde{g}}}  \right) \right]\\
+\sum|\mathcal{M}^B|^2(qg \to \tilde{q}\tilde{g}) &=  2g_s^2\hat{g}_s^2 \left[ 2 N_c^2 C(F) \left(1-2\frac{s u_{\tilde{q}}}{t_{\tilde{g}}^2}\right) - 2C(F) \right] \nonumber\\
+&\left[ (-1+\epsilon)\frac{t_{\tilde{g}}}{s} + \frac{2(m_{\tilde{g}}^2-m_{\tilde{q}}^2)t_{\tilde{g}}}{s u_{\tilde{q}}}\left( 1+\frac{m_{\tilde{q}}^2}{u_{\tilde{q}}} + \frac{m_{\tilde{g}}^2}{t_{\tilde{g}}} \right) \right]
 \end{align}
 For NLO-corrections the results are expanded up to $\mathcal{O}(\epsilon)$. Furthermore the usual Mandelstam variables $s,t,u$ and the following modifications of them are used:
 \begin{align}
@@ -24,17 +30,30 @@ For NLO-corrections the results are expanded up to $\mathcal{O}(\epsilon)$. Furt
 
 \subsection{Partonic Cross Sections}
 \begin{align}
-\frac{\mbox{d}^2 \sigma}{\mbox{d}t\mbox{d}u} = \frac{K_{ij}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_{\tilde{q}}^4}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_{\tilde{q}}^4) \Theta(s-4m_{\tilde{q}}^2) \delta(s+t+u-2m_{\tilde{q}}^2) \sum |\mathcal{M}^B|^2
+\frac{\mbox{d}^2 \sigma}{\mbox{d}t\mbox{d}u} &= \frac{K_{ij}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_{\tilde{q}}^4}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_{\tilde{q}}^4)\nonumber\\ &\ \Theta(s-4m_{\tilde{q}}^2) \delta(s+t+u-2m_{\tilde{q}}^2) \sum |\mathcal{M}^B|^2
 \end{align}
-with $S_\epsilon = (2\pi)2-2\epsilon$???
+with $S_\epsilon = (4\pi)^{-2+\epsilon}$. The leading order cross sections are
 \begin{align}
-\sigma(gg \to \tilde{q}\tilde{q}^\dagger) = \frac{n_f g_s^4}{16\pi s} \left[ \left(\frac{5}{24} + \frac{31 m_{\tilde{q}}^2}{12s}\right)\beta_{\tilde{q}} + \left( \frac{m_{\tilde{q}}^4}{3s^2} + \frac{4m_{\tilde{q}}^2}{s}\right) \ln \frac{1-\beta_{\tilde{q}}}{1+\beta_{\tilde{q}}} \right]
+\sigma(q_i \overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij}  \frac{g_s^4}{16\pi s} (n_f-1) \left[ \frac{4}{27} - \frac{16 m_{\tilde{q}}^2}{27s} \right]\nonumber\\
+&+ \delta_{ij} \frac{g_s^2\hat{g}_s^2}{16\pi s}  \left[ \left( \frac{4}{27} + \frac{8 m_-^2}{27 s} \right)\beta_{\tilde{q}}  + \left( \frac{8m_{\tilde{g}}^2}{27s} + \frac{8m_-^4}{27s^2} \right)L_1 \right]\nonumber\\
+& + \frac{\hat{g}_s^4}{16\pi s} \left[ -\frac{8}{9}\beta_{\tilde{q}} + \left( -\frac{4}{9} - \frac{8m_-^2}{9s} \right)L_1 \right]\\
+\sigma(GG \to \tilde{q}\tilde{q}^\dagger) &= \frac{(n_f-1) g_s^4}{16\pi s} \left[ \left(\frac{5}{24} + \frac{31 m_{\tilde{q}}^2}{12s}\right)\beta_{\tilde{q}} + \left( \frac{4m_{\tilde{q}}^2}{3s} + \frac{m_{\tilde{q}}^4}{3s^2} \right) \ln \frac{1-\beta_{\tilde{q}}}{1+\beta_{\tilde{q}}} \right]\\
+\sigma(q_i q_j \to \tilde{q}\tilde{q}) &= \frac{\hat{g}_s^4}{16\pi s} \left[ -\frac{8}{9}\beta_{\tilde{q}} +  \left( -\frac{4}{9} - \frac{8m_-^2}{9s} \right)L_1 \right]\\
+\sigma(q \overline{q} \to \tilde{g}\overline{\tilde{g}}) &= \frac{g_s^4}{16\pi s} \left[ \frac{16}{9} + \frac{32m_{\tilde{g}}^2}{9s} \right] \beta_{\tilde{g}}\nonumber\\
+& + \frac{\hat{g}_s^2 g_s^2}{16\pi s}  \left[ \left( -\frac{4}{3}-\frac{8m_-^2}{3s} \right)\beta_{\tilde{g}} + \left( \frac{8 m_{\tilde{g}}^2}{3s} + \frac{8m_-^4}{3s^2} \right) L_2 \right]\nonumber\\
+& + \frac{\hat{g}_s^4}{16\pi s} \left[ \left( \frac{32}{27} + \frac{32 m_-^4}{m_-^4 + m_{\tilde{q}}^2s} \right)\beta_{\tilde{g}} - \frac{64m_-^2}{27s}L_2 \right]\label{eq:qqbar_to_sgsgbar}\\
+\sigma(GG \to \tilde{g}\overline{\tilde{g}}) &= \frac{g_s^4}{16\pi s} \left[ \left( -6 - \frac{51 m_{\tilde{g}}^2}{2s} \right)\beta_{\tilde{g}} + \left( -\frac{9}{2} - \frac{18 m_{\tilde{g}}^2}{s} + \frac{18 m_{\tilde{g}}^4}{s^2} \right)\ln \frac{1-\beta_{\tilde{g}}}{1+\beta_{\tilde{g}}} \right]\\
+\sigma(q G \to \tilde{q} \tilde{g}) &= \frac{g_s^2\hat{g}_s^2}{16\pi s} \left[ \frac{\kappa}{s}\left( -\frac{7}{9} - \frac{32 m_{-}^2}{9s} \right) + \left( -\frac{8m_-^2}{9s} + \frac{2m_{\tilde{q}}^2m_-^2}{s^2} + \frac{8 m_-^4}{9s^2} \right)L_3\right.\nonumber\\
+&+\left. \left( -1-\frac{2m_-^2}{s} + \frac{2m_{\tilde{q}}m_-^2}{s^2} \right)L_4 \right]
 \end{align}
 where the abbreviations 
 \begin{align}
-\beta_{\tilde{q}} = \sqrt{1-\frac{4 m_{\tilde{q}}^2}{s}}
+&\beta_{\tilde{q}} = \sqrt{1-\frac{4 m_{\tilde{q}}^2}{s}} && \beta_{\tilde{g}} = \sqrt{1-\frac{4 m_{\tilde{g}}^2}{s}}\nonumber\\
+&m_-^2 = m_{\tilde{g}}^2 - m_{\tilde{q}}^2 && \kappa = \sqrt{(s-m_{\tilde{g}}^2-m_{\tilde{q}}^2)^2-4m_{\tilde{g}}^2m_{\tilde{q}}^2}\nonumber\\
+& L_1 = \ln \frac{s+2m_-^2 - s\beta_{\tilde{q}}}{s+2m_-^2 + s\beta_{\tilde{q}}} && L_2= \ln \frac{s - 2m_-^2 - s\beta_{\tilde{g}}}{s - 2m_-^2 + s\beta_{\tilde{g}}}\nonumber\\
+& L_3 = \ln \frac{s - m_-^2 - \kappa}{s - m_-^2 + \kappa} && L_4= \ln \frac{s + m_-^2 - \kappa}{s + m_-^2 + \kappa}
 \end{align}
-are used.\cite{Beenakker}
+are used\cite{Beenakker:1996ch}. In contrast to the MSSM no statistical factor $\frac{1}{2}$ is taken into account for gluino-antigluino production, as these particles are distinguishable in the MRSSM. Still in comparison to the MSSM cross section for the channel $q \overline{q} \to \tilde{g}\overline{\tilde{g}}$ only the first line in \ref{eq:qqbar_to_sgsgbar} is doubled up as the part associated with an $t$ ($u$) channel squark is different. In the MRSSM either $\tilde{q}_L$ or $\tilde{q}_R$ is allowed whilst in the MSSM both squarks contribute to the $t$ ($u$) channel diagram.
 
 
 
