@@ -3,6 +3,189 @@
 
 
 \subsection{Partonic Processes}
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+	\draw[fermion] (-1,0.5)--(-0.42,0);
+	\draw[fermionbar] (-1,-0.5)--(-0.42,0);
+	\draw[gluon] (-0.42,0)--(0.42,0); 
+	\draw[scalar] (0.42,0)--(1,0.5);
+	\draw[scalarbar] (0.42,0)--(1,-0.5);
+\begin{scope}[shift={(3,0)}]
+	\draw[fermion] (-1,0.5)--(0,0.5);
+	\draw[fermionbar] (-1,-0.5)--(0,-0.5);
+	\draw[fermionnoarrow] (0,0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0,-0.5); 
+	\draw[scalar] (0,0.5)--(1,0.5);
+	\draw[scalarbar] (0,-0.5)--(1,-0.5);
+\end{scope}
+\end{tikzpicture}
+\caption{Tree level diagrams for $q\overline{q} \to \tilde{q}\tilde{q}^\dagger$}
+\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+	\draw[gluon] (-1,0.5)--(-0.42,0);
+	\draw[gluon] (-1,-0.5)--(-0.42,0);
+	\draw[gluon] (-0.42,0)--(0.42,0); 
+	\draw[scalar] (0.42,0)--(1,0.5);
+	\draw[scalarbar] (0.42,0)--(1,-0.5);
+\begin{scope}[shift={(3,0)}]
+	\draw[gluon] (-1,0.5)--(0,0.5);
+	\draw[gluon] (-1,-0.5)--(0,-0.5);
+	\draw[scalarbar] (0,0.5)--(0,-0.5);
+	\draw[scalar] (0,0.5)--(1,0.5);
+	\draw[scalarbar] (0,-0.5)--(1,-0.5);
+\end{scope}
+\begin{scope}[shift={(6,0)}]
+	\draw[gluon] (-1,0.5)--(0,0.5);
+	\draw[gluon] (-1,-0.5)--(0,-0.5);
+	\draw[scalar] (0,0.5)--(0,-0.5);
+	\draw[scalarnoarrow] (0,0.5)--(0.4,0.1);
+	\draw[scalarbar] (0.6,-0.1)--(1,-0.5);
+	\draw[scalarnoarrow] (0,-0.5)--(0.5,0);
+	\draw[scalar] (0.5,0)--(1,0.5);
+\end{scope}
+\begin{scope}[shift={(9,0)}]
+	\draw[gluon] (-1,0.5)--(0,0);
+	\draw[gluon] (-1,-0.5)--(0,0);
+	\draw[scalarbar] (0,0)--(1,-0.5);
+	\draw[scalar] (0,0)--(1,0.5);
+\end{scope}
+\end{tikzpicture}
+\caption{Tree level diagrams for $GG \to \tilde{q}\tilde{q}^\dagger$}
+\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+	\draw[fermion] (-1,0.5)--(0,0.5);
+	\draw[fermion] (-1,-0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0,-0.5);
+	\draw[fermionnoarrow] (0,0.5)--(0,-0.5);
+	\draw[scalar] (0,0.5)--(1,0.5);
+	\draw[scalar] (0,-0.5)--(1,-0.5);;
+\begin{scope}[shift={(3,0)}]
+	\draw[fermion] (-1,0.5)--(0,0.5);
+	\draw[fermion] (-1,-0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0,-0.5);
+	\draw[fermionnoarrow] (0,0.5)--(0,-0.5);
+	\draw[scalarnoarrow] (0,0.5)--(0.4,0.1);
+	\draw[scalar] (0.6,-0.1)--(1,-0.5);
+	\draw[scalarnoarrow] (0,-0.5)--(0.5,0);
+	\draw[scalar] (0.5,0)--(1,0.5);
+\end{scope}
+\end{tikzpicture}
+\caption{Tree level diagrams for $qq \to \tilde{q}\tilde{q}$}
+\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+	\draw[fermion] (-1,0.5)--(-0.42,0);
+	\draw[fermionbar] (-1,-0.5)--(-0.42,0);
+	\draw[gluon] (-0.42,0)--(0.42,0); 
+	\draw[gluon] (0.42,0)--(1,0.5);
+	\draw[fermionnoarrow] (0.42,0)--(1,0.5);
+	\draw[gluon] (0.42,0)--(1,-0.5);
+	\draw[fermionnoarrow] (0.42,0)--(1,-0.5);
+\begin{scope}[shift={(3,0)}]
+	\draw[fermion] (-1,0.5)--(0,0.5);
+	\draw[fermionbar] (-1,-0.5)--(0,-0.5);
+	\draw[scalar] (0,0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(1,0.5);
+	\draw[fermionnoarrow] (0,0.5)--(1,0.5);
+	\draw[gluon] (0,-0.5)--(1,-0.5);
+	\draw[fermionnoarrow] (0,-0.5)--(1,-0.5);
+\end{scope}
+\begin{scope}[shift={(6,0)}]
+	\draw[fermion] (-1,0.5)--(0,0.5);
+	\draw[fermionbar] (-1,-0.5)--(0,-0.5);
+	\draw[scalar] (0,0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0.4,0.1);
+	\draw[fermionnoarrow] (0,0.5)--(0.4,0.1);
+	\draw[gluon] (0.6,-0.1)--(1,-0.5);
+	\draw[fermionnoarrow] (0.6,-0.1)--(1,-0.5);
+	\draw[gluon] (0,-0.5)--(1,0.5);
+	\draw[fermionnoarrow] (0,-0.5)--(1,0.5);
+\end{scope}
+\end{tikzpicture}
+\caption{Tree level diagrams for $q\overline{q} \to \tilde{g}\overline{\tilde{g}}$}
+\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+	\draw[gluon] (-1,0.5)--(-0.42,0);
+	\draw[gluon] (-1,-0.5)--(-0.42,0);
+	\draw[gluon] (-0.42,0)--(0.42,0); 
+	\draw[gluon] (0.42,0)--(1,0.5);
+	\draw[fermionnoarrow] (0.42,0)--(1,0.5);
+	\draw[gluon] (0.42,0)--(1,-0.5);
+	\draw[fermionnoarrow] (0.42,0)--(1,-0.5);
+\begin{scope}[shift={(3,0)}]
+	\draw[gluon] (-1,0.5)--(0,0.5);
+	\draw[gluon] (-1,-0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0,-0.5);	
+	\draw[fermionnoarrow] (0,0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(1,0.5);
+	\draw[fermionnoarrow] (0,0.5)--(1,0.5);
+	\draw[gluon] (0,-0.5)--(1,-0.5);
+	\draw[fermionnoarrow] (0,-0.5)--(1,-0.5);
+\end{scope}
+\begin{scope}[shift={(6,0)}]
+	\draw[gluon] (-1,0.5)--(0,0.5);
+	\draw[gluon] (-1,-0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0,-0.5);
+	\draw[fermionnoarrow] (0,0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0.4,0.1);
+	\draw[fermionnoarrow] (0,0.5)--(0.4,0.1);
+	\draw[gluon] (0.6,-0.1)--(1,-0.5);
+	\draw[fermionnoarrow] (0.6,-0.1)--(1,-0.5);
+	\draw[gluon] (0,-0.5)--(1,0.5);
+	\draw[fermionnoarrow] (0,-0.5)--(1,0.5);
+\end{scope}
+\end{tikzpicture}
+\caption{Tree level diagrams for $GG \to \tilde{g}\overline{\tilde{g}}$}
+\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+	\draw[fermion] (-1,0.5)--(-0.42,0);
+	\draw[gluon] (-1,-0.5)--(-0.42,0);
+	\draw[fermion] (-0.42,0)--(0.42,0); 
+	\draw[scalar] (0.42,0)--(1,0.5);
+	\draw[gluon] (0.42,0)--(1,-0.5);
+	\draw[fermionnoarrow] (0.42,0)--(1,-0.5);
+\begin{scope}[shift={(3,0)}]
+	\draw[fermion] (-1,0.5)--(0,0.5);
+	\draw[gluon] (-1,-0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0,-0.5);	
+	\draw[fermionnoarrow] (0,0.5)--(0,-0.5);
+	\draw[scalar] (0,0.5)--(1,0.5);
+	\draw[gluon] (0,-0.5)--(1,-0.5);
+	\draw[fermionnoarrow] (0,-0.5)--(1,-0.5);
+\end{scope}
+\begin{scope}[shift={(6,0)}]
+	\draw[fermion] (-1,0.5)--(0,0.5);
+	\draw[gluon] (-1,-0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0,-0.5);
+	\draw[fermionnoarrow] (0,0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0.4,0.1);
+	\draw[fermionnoarrow] (0,0.5)--(0.4,0.1);
+	\draw[gluon] (0.6,-0.1)--(1,-0.5);
+	\draw[fermionnoarrow] (0.6,-0.1)--(1,-0.5);
+	\draw[gluon] (0.6,-0.1)--(1,-0.5);
+	\draw[fermionnoarrow] (0.6,-0.1)--(1,-0.5);
+	\draw[scalarnoarrow] (0,-0.5)--(0.5,0);
+	\draw[scalar] (0.5,0)--(1,0.5);
+\end{scope}
+\end{tikzpicture}
+\caption{Tree level diagrams for $qG \to \tilde{q}\tilde{g}$}
+\end{center}
+\end{figure}
 The top quark is excluded from the initial states as it is too heavy to be significantly present in hadrons. Therefore its pdf is approximately zero. For consistency reasons also the stop is excluded from the final states. One therefore deals with $n_f-1 = 5$ quark flavors. Using the Feynman rules in the Appendix one obtains the following sums over absolute squared Feynman amplitudes
 \begin{align}
 \sum|\mathcal{M}^B|^2(q_i\overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij}  \left[ 8 N_c C(F) g_s^4\frac{(n_f-1)}{s^2} + 4 N_c C(F) \hat{g}_s^4\frac{1}{t_{\tilde{g}}^2} - 8 C(F)g_s^2\hat{g}_s^2\frac{1}{ t_{\tilde{g}} s} \right] (tu-m_{\tilde{q}}^4)\nonumber\\
@@ -29,10 +212,7 @@ For NLO-corrections the results are expanded up to $\mathcal{O}(\epsilon)$. Furt
 
 
 \subsection{Partonic Cross Sections}
-\begin{align}
-\frac{\mbox{d}^2 \sigma}{\mbox{d}t\mbox{d}u} &= \frac{K_{ij}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_{\tilde{q}}^4}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_{\tilde{q}}^4)\nonumber\\ &\ \Theta(s-4m_{\tilde{q}}^2) \delta(s+t+u-2m_{\tilde{q}}^2) \sum |\mathcal{M}^B|^2
-\end{align}
-with $S_\epsilon = (4\pi)^{-2+\epsilon}$. The leading order cross sections are
+The leading order cross sections are
 \begin{align}
 \sigma(q_i \overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij}  \frac{g_s^4}{16\pi s} (n_f-1) \left[ \frac{4}{27} - \frac{16 m_{\tilde{q}}^2}{27s} \right]\nonumber\\
 &+ \delta_{ij} \frac{g_s^2\hat{g}_s^2}{16\pi s}  \left[ \left( \frac{4}{27} + \frac{8 m_-^2}{27 s} \right)\beta_{\tilde{q}}  + \left( \frac{8m_{\tilde{g}}^2}{27s} + \frac{8m_-^4}{27s^2} \right)L_1 \right]\nonumber\\

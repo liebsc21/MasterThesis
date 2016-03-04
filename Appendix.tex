@@ -466,7 +466,7 @@ The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The in
 \end{center}
 \end{figure}
 
-
+\newpage
 \subsection{Passarino-Veltman Integrals}
 
 \begin{align}
@@ -492,12 +492,53 @@ B_0(0,m^2,m^2) &= \frac{\partial}{\partial m^2} A_0(m^2) = \Delta -\ln \frac{m^2
 \end{align}
 
 
-%\subsection{Cross section and Phase Space Integration}
-%\begin{align}
-%\mbox{d}\sigma = \frac{1}{2E_A 2E_B |v_A-v_B|}\left( \prod_f \frac{\mbox{d}^3p_f}{(2\pi)^3}\frac{1}{2E_f} \right) \sum |\mathcal{M}(p_A,p_B \to \left\{p_f\right\})|^2 (2\pi)^4 \delta^{(4)}(p_a+p_b-\sum p_f)
-%\end{align}
-%...\\
-%\begin{align}
-%\frac{\mbox{d}^2 \sigma}{\mbox{d}t\mbox{d}u} = \frac{K_{ij}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_{\tilde{q}}^4}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_{\tilde{q}}^4) \Theta(s-4m_{\tilde{q}}^2) \delta(s+t+u-2m_{\tilde{q}}^2) \sum |\mathcal{M}^B|^2
-%\end{align}
+\subsection{Cross section and Phase Space Integration}
+Once the Feynman amplitude $\mathcal{M}$ for a $2 \to N$ body scattering\footnote{with kinematics $k_a + k_b \to p_1 + \hdots p_N$} is computed one can calculate physical observables with it. The differential cross section for $2 \to N$ scattering is given by
+\begin{align}
+\mbox{d}\sigma = \frac{1}{F}\mathrm{d}\Phi_N |\mathcal{M}|^2.
+\end{align}
+The flux factor is defined by $F = 4\sqrt{(k_a\cdot k_b)^2 - (m_am_b)^2}$ which equals $F = 2s$ for massless initial state particles. The differential for the $N$ body phase space in $D$ dimensions is given by
+\begin{align}
+\mathrm{d}\Phi_N = \left( \mu^{2\epsilon} \right)^{N-1} \left( \prod_{f=1}^N \frac{\mbox{d}^{D-1}p_f}{(2\pi)^{D-1}}\frac{1}{2E_f} \right)  (2\pi)^D \delta^{(D)}(k_a+k_b-\sum_{f=1}^N p_f).
+\end{align} 
+The factor $\mu^{2\epsilon}$ is included to maintain the mass dimension of the cross section. In this thesis the sum of $|\mathcal{M}|^2$ over helicities and colors $\sum |\mathcal{M}|^2$ has been calculated. Furthermore initial state particles are considered as massless. This gives
+\begin{align}
+\mathrm{d}\sigma = \frac{1}{2s} \mathrm{d}\Phi_2 K_{ab} \sum |\mathcal{M}|^2
+\end{align} 
+where $K_{ab}$ encodes the averaging over initial state helicities and colors. Specifying to the center-of-mass frame and assuming that $\sum|\mathcal{M}|^2$ is only a function of the modulus of one of the final state particle's 3-momentum $ |\vec{p}_i|$ and the angle $\theta$ between $\vec{k}_a$ and $\vec{p}_1$ one can write
+\begin{align}
+\int \mathrm{d}\Phi_2 &= \frac{1}{s} \mu^{2\epsilon} \int \frac{\mathrm{d}|\vec{p}_1|\mathrm{d}\Omega^{D-1}_1}{(2\pi)^{D-2}} |\vec{p}_1|^{D-2} \delta \left(k_a^0 + k_b^0 - \sqrt{m_1^2 + |\vec{p}_1|^2} - \sqrt{m_2^2 + |\vec{p}_2|^2} \right)\nonumber\\
+&= \frac{1}{s} \frac{1}{(2\pi)^{D-2}}\frac{2\pi^{\frac{D}{2}-1}}{\Gamma(\frac{D}{2}-1)} \mu^{2\epsilon} \int_0^\infty\mathrm{d}|\vec{p}_1| \int_0^\pi \mathrm{d} \cos\theta p_1^{D-2}\sin^{D-4}\theta\nonumber\\
+&\ \ \delta \left(k_a^0 + k_b^0 - \sqrt{m_1^2 + |\vec{p}_1|^2} - \sqrt{m_2^2 + |\vec{p}_2|^2} \right).\label{eq:DPhi2}
+\end{align}
+In the second line the integral over the D-dimensional hypersphere 
+\begin{align}
+\int \mathrm{d}\Omega^D = \int_0^{2\pi} \mathrm{d}\phi \prod_{i=1}^{D-2}\int_0^\pi \sin^i\theta_i \mathrm{d}\theta_i = \frac{2\pi^{\frac{D}{2}}}{\Gamma(\frac{D}{2})}
+\end{align}
+was used. Because $\sum|\mathcal{M}|^2$ is calculated in terms of Mandelstam variables 
+\begin{align}
+t &= (k_a-p_1)^2  \nonumber\\
+t &= -2\left(|\vec{k}_a| \sqrt{m_1^2 + |\vec{p}_1|^2} - |\vec{k}_a||\vec{p}_1| \cos\theta\right) + m_1^2\label{eq:t} \\
+u &= (k_b-p_1)^2\nonumber\\
+u &= -2\left(|\vec{k}_a| \sqrt{m_1^2 + |\vec{p}_1|^2} + |\vec{k}_b||\vec{p}_1| \cos\theta\right) + m_1^2\label{eq:u}
+\end{align}
+it is useful to perform a change of coordinates yielding
+\begin{align}
+\mathrm{d}|\vec{p}_1|\ \mathrm{d}\cos\theta = -\frac{\sqrt{m_1^2+|\vec{p}_1|^2}}{8|\vec{k}_a|^2|\vec{p}_1|^2}\mathrm{d}u\ \mathrm{d}t.\label{eq:PhaseTrafo}
+\end{align}
+Inserting \ref{eq:PhaseTrafo} into \ref{eq:DPhi2} and using $|\vec{k}_a| = \frac{\sqrt{s}}{2}$ gives
+\begin{align}
+\int \mathrm{d}\Phi_2 = & \frac{1}{s} \frac{\pi^{-\frac{D}{2}+1}}{2^{D-3}\Gamma(\frac{D}{2}-1)} \int \mathrm{d}u\ \mathrm{d}t\ \left( \frac{tu-m_1^2m_2^2}{\mu^{2\epsilon} s} \right)^{\frac{D-4}{2}} \nonumber\\
+&\frac{1}{4}\Theta(tu-4m_1^2m_2^2)\delta \left(s+t+u-m_1^2-m_2^2\right)
+\end{align}
+where the $\Theta$-function comes from the bounds of $|\vec{p}_1|$ and $\theta$ visible in \ref{eq:DPhi2} and the combination of \ref{eq:t} and \ref{eq:u}. Working in $D=4-2\epsilon$ dimensions and inserting $\Theta(s-4m^2)$ with $m = \frac{m_1 + m_2}{2}$ to account for the production threshold one finds
+\begin{align}
+\frac{\mbox{d}^2 \sigma}{\mbox{d}t\mbox{d}u} =& \frac{K_{ab}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_1^2m_2^2}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_1^2m_2^2)\nonumber\\
+&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum |\mathcal{M}|^2
+\end{align}
+where $S_\epsilon = (4\pi)^{-2+\epsilon}$ as defined in \cite{Beenakker:1996ch}.
+The averaging factors $K_{ab}$ are given by
+\begin{align}
+K_{qq} = \frac{1}{4N_c^2} \hspace{1.5cm}K_{GG} = \frac{1}{4(1-\epsilon)^2(N_c^2-1)^2} \hspace{1.5cm}K_{qG} = \frac{1}{4(1-\epsilon)N_c(N_c^2-1)}.
+\end{align}
 
