@@ -1,8 +1,8 @@
 \section{Sparticle Production at Tree Level}
+In this chapter the production of strongly interacting supersymmetric particles\footnote{The production of sgluons is excluded from the analysis as their mass will be chosen to be too large to produce them.} in the MRSSM is considered.
 
 
-
-\subsection{Partonic Processes}
+\subsection{Partonic Processes} 
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.0 pt, scale=1.3]
@@ -20,12 +20,14 @@
 	\draw[scalarbar] (0,-0.5)--(1,-0.5);
 \end{scope}
 \end{tikzpicture}
-\caption{Tree level diagrams for $q\overline{q} \to \tilde{q}\tilde{q}^\dagger$}
+%\caption{Tree level diagrams for $q\overline{q} \to \tilde{q}\tilde{q}^\dagger$}
 \end{center}
-\end{figure}
-\begin{figure}[!htbp]
+%\end{figure}
+%\begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+    \node at (0,0) {};
+\begin{scope}[shift={(0,-1)}]
 	\draw[gluon] (-1,0.5)--(-0.42,0);
 	\draw[gluon] (-1,-0.5)--(-0.42,0);
 	\draw[gluon] (-0.42,0)--(0.42,0); 
@@ -53,13 +55,16 @@
 	\draw[scalarbar] (0,0)--(1,-0.5);
 	\draw[scalar] (0,0)--(1,0.5);
 \end{scope}
+\end{scope}
 \end{tikzpicture}
-\caption{Tree level diagrams for $GG \to \tilde{q}\tilde{q}^\dagger$}
+%\caption{Tree level diagrams for $GG \to \tilde{q}\tilde{q}^\dagger$}
 \end{center}
-\end{figure}
-\begin{figure}[!htbp]
+%\end{figure}
+%\begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+    \node at (0,0) {};
+\begin{scope}[shift={(0,-1)}]
 	\draw[fermion] (-1,0.5)--(0,0.5);
 	\draw[fermion] (-1,-0.5)--(0,-0.5);
 	\draw[gluon] (0,0.5)--(0,-0.5);
@@ -76,13 +81,16 @@
 	\draw[scalarnoarrow] (0,-0.5)--(0.5,0);
 	\draw[scalar] (0.5,0)--(1,0.5);
 \end{scope}
+\end{scope}
 \end{tikzpicture}
-\caption{Tree level diagrams for $qq \to \tilde{q}\tilde{q}$}
+%\caption{Tree level diagrams for $qq \to \tilde{q}\tilde{q}$}
 \end{center}
-\end{figure}
-\begin{figure}[!htbp]
+%\end{figure}
+%\begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+    \node at (0,0) {};
+\begin{scope}[shift={(0,-1)}]
 	\draw[fermion] (-1,0.5)--(-0.42,0);
 	\draw[fermionbar] (-1,-0.5)--(-0.42,0);
 	\draw[gluon] (-0.42,0)--(0.42,0); 
@@ -110,13 +118,16 @@
 	\draw[gluon] (0,-0.5)--(1,0.5);
 	\draw[fermionnoarrow] (0,-0.5)--(1,0.5);
 \end{scope}
+\end{scope}
 \end{tikzpicture}
-\caption{Tree level diagrams for $q\overline{q} \to \tilde{g}\overline{\tilde{g}}$}
+%\caption{Tree level diagrams for $q\overline{q} \to \tilde{g}\overline{\tilde{g}}$}
 \end{center}
-\end{figure}
-\begin{figure}[!htbp]
+%\end{figure}
+%\begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+    \node at (0,0) {};
+\begin{scope}[shift={(0,-1)}]
 	\draw[gluon] (-1,0.5)--(-0.42,0);
 	\draw[gluon] (-1,-0.5)--(-0.42,0);
 	\draw[gluon] (-0.42,0)--(0.42,0); 
@@ -146,13 +157,16 @@
 	\draw[gluon] (0,-0.5)--(1,0.5);
 	\draw[fermionnoarrow] (0,-0.5)--(1,0.5);
 \end{scope}
+\end{scope}
 \end{tikzpicture}
-\caption{Tree level diagrams for $GG \to \tilde{g}\overline{\tilde{g}}$}
+%\caption{Tree level diagrams for $GG \to \tilde{g}\overline{\tilde{g}}$}
 \end{center}
-\end{figure}
-\begin{figure}[!htbp]
+%\end{figure}
+%\begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+    \node at (0,0) {};
+\begin{scope}[shift={(0,-1)}]
 	\draw[fermion] (-1,0.5)--(-0.42,0);
 	\draw[gluon] (-1,-0.5)--(-0.42,0);
 	\draw[fermion] (-0.42,0)--(0.42,0); 
@@ -182,8 +196,9 @@
 	\draw[scalarnoarrow] (0,-0.5)--(0.5,0);
 	\draw[scalar] (0.5,0)--(1,0.5);
 \end{scope}
+\end{scope}
 \end{tikzpicture}
-\caption{Tree level diagrams for $qG \to \tilde{q}\tilde{g}$}
+\caption{Tree level diagrams for squark and gluino production at tree level in the MRSSM. The processes $GG \to \tilde{q}\overline{\tilde{q}}$ and $qG \to \tilde{q}\tilde{g}$ are identical to those of the MSSM. The processes $q\overline{q} \to \tilde{q}\tilde{\overline{q}}$ and $qq \to \tilde{q}\tilde{q}$ involve the production of less chiralities than in the MSSM. Also in the $q\tilde{q} \to \tilde{g}\overline{\tilde{g}}$ channel only half of the t-channel squark chiralities occur in the MRSSM.(Anti-)Gluino production via initial gluons $GG \to \tilde{g}\overline{\tilde{g}}$ proceeds via the same diagrams like in the MSSM but its cross section is twice as much in the MRSSM for gluino and antigluino are distinguishable particles.}
 \end{center}
 \end{figure}
 The top quark is excluded from the initial states as it is too heavy to be significantly present in hadrons. Therefore its pdf is approximately zero. For consistency reasons also the stop is excluded from the final states. One therefore deals with $n_f-1 = 5$ quark flavors. Using the Feynman rules in the Appendix one obtains the following sums over absolute squared Feynman amplitudes
@@ -203,15 +218,21 @@ The top quark is excluded from the initial states as it is too heavy to be signi
 \sum|\mathcal{M}^B|^2(qg \to \tilde{q}\tilde{g}) &=  2g_s^2\hat{g}_s^2 \left[ 2 N_c^2 C(F) \left(1-2\frac{s u_{\tilde{q}}}{t_{\tilde{g}}^2}\right) - 2C(F) \right] \nonumber\\
 &\left[ (-1+\epsilon)\frac{t_{\tilde{g}}}{s} + \frac{2(m_{\tilde{g}}^2-m_{\tilde{q}}^2)t_{\tilde{g}}}{s u_{\tilde{q}}}\left( 1+\frac{m_{\tilde{q}}^2}{u_{\tilde{q}}} + \frac{m_{\tilde{g}}^2}{t_{\tilde{g}}} \right) \right]
 \end{align}
-For NLO-corrections the results are expanded up to $\mathcal{O}(\epsilon)$. Furthermore the usual Mandelstam variables $s,t,u$ and the following modifications of them are used:
+For NLO-corrections the results are given in $D = 4 - 2\epsilon$ dimensions. Furthermore the usual Mandelstam variables $s,t,u$ and the following modifications of them are used:
 \begin{align}
 & t_{\tilde{g}} = t - m_{\tilde{g}}^2 && t_{\tilde{q}} = t- m_{\tilde{q}}^2\nonumber\\
 & u_{\tilde{g}} = u - m_{\tilde{g}}^2 && u_{\tilde{q}} = u- m_{\tilde{q}}^2
 \end{align}
+In view of the renormalization to be performed at the 1-loop level it has been distinguished between the gauge coupling $g_s$ from the gluon-quark-quark vertex and its supersymmetric analogue $\hat{g}_s$ from the gluino-squark-quark vertex.
 
 
 
 \subsection{Partonic Cross Sections}
+Having calculated the absolute squared Feynman amplitudes one obtains the partonic cross section via
+\begin{align}
+\frac{\mbox{d}^2 \sigma}{\mbox{d}t\ \mbox{d}u} =& \frac{K_{ab}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_1^2m_2^2}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_1^2m_2^2)\nonumber\\
+&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum |\mathcal{M}|^2
+\end{align}
 The leading order cross sections are
 \begin{align}
 \sigma(q_i \overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij}  \frac{g_s^4}{16\pi s} (n_f-1) \left[ \frac{4}{27} - \frac{16 m_{\tilde{q}}^2}{27s} \right]\nonumber\\
@@ -238,7 +259,7 @@ are used\cite{Beenakker:1996ch}. In contrast to the MSSM no statistical factor $
 
 
 \subsection{Hadronic Cross Section}
-factorization (pictorial explanation in factorization paper chapter 1.4)
+factorization (pictorial explanation in factorization paper chapter 1.4 and Dissertori and Seymour, Marx page 24 below)
 The hadronic cross section for the production of a final state $X$, e.g. $X = \tilde{q},\tilde{q}$, can be obtained by convolving the partonic cross section with the parton density function of the initial partons.
 \begin{align}
 \sigma^B_{\mathrm{Had}}(ij \to X) = \int \mbox{d}x_1 \mbox{d}x_2\ f_i(x_1) f_j(x_2)\ \sigma^B_{\mathrm{Part}} (ij \to X, s = x_ 1x_2 S).

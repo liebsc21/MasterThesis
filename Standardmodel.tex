@@ -1,38 +1,59 @@
 \section{The Standard Model}
-The standard model(SM) is a relativistic quantum field theory. 
-It contains different fields, whose quantized excitations are interpreted as particles.\\
+The Standard Model of particle physics is the commonly accepted theory describing the world's fundamental particles and their interactions. It is a gauge quantum field theory which is characterized by its invariance under different symmetry groups. The Standard Model contains different fields, whose quantized excitations are interpreted as particles.\\
 %The different fields defined on Minkowski space are Dirac spinors describing matter fields (leptons and quarks), gauge vectors describing force mediators and a scalar field (the Higgs) which accounts for the masses of particles.\\
 %More formally a particle state is said to give rise to an irreducible representation of the Poincaré group
 
 
 \subsection{Symmetries and Transformations}
-\paragraph{Space-Time Symmetries:}
-The SM is defined on Minkowski space, whose coordinates are label with $x^\mu$ $\mu = 0,1,2,4$. As a relativistic theory it is invariant under Poincaré transformations, i.e. it is invariant under Lorentz-transformations (with generators $J^{\mu\nu}$) and translations (with generators $P^\mu$) in spacetime. The set of all Poincaré transformations form the Poincaré group, which is a Lie group. Its generators obey the Poincaré-algebra
+\subsubsection*{Spacetime Symmetries}
+The Standard Model is defined on Minkowski space, whose coordinates are label with $x^\mu$ $\mu = \left\{0,1,2,4\right\}$. As a relativistic theory it is invariant under Poincaré transformations, i.e. it is invariant under Lorentz-transformations (with generators $J^{\mu\nu}$) and translations (with generators $P^\mu$) in spacetime. The set of all Poincaré transformations form the Poincaré group, which is a Lie group. Its generators obey the Poincaré-algebra
 \begin{align}
 [P^\mu,P^\nu] &= 0\nonumber\\
 [P^\mu,J^{\nu\rho}] &= i(g^{\mu\nu} P^\rho - g^{\mu\rho}P^\nu)\nonumber\\
 [J^{\mu\nu},J^{\rho\sigma}] &= i(g^{\nu\rho}J^{\mu\rho} + g^{\mu\sigma}J^{\nu\rho} - g^{\mu\rho}J^{\nu\sigma} - g^{\nu\sigma}J^{\mu\rho}).
 \end{align}
-The fields of the SM transform in different representations of the Poincaré-group.
+The fields of the Standard Model transform in different representations of the Poincaré-group \cite{book:17018}. 
 
-\paragraph{Gauge Symmetries:} In order to describe interactions of matter particles one uses gauge theories. In the SM which is such a theory matter fields are described by Dirac spinors. The Lagrangian of a free Dirac field reads
+
+\subsubsection*{Gauge Symmetries} 
+In order to describe interactions of matter particles one uses gauge theories. In the Standard Model matter fields are described by Dirac spinors. The Lagrangian of a free Dirac field reads
 \begin{align}
 \mathcal{L}_{Dirac} = \overline{\Psi} ( i\slashed{\partial} - m)\Psi.\label{eq:DiracLagrangian}
 \end{align}
 To include interactions one imposes a local group symmetry (gauge symmetry) upon this Lagrangian. A spinor transforms under a generic gauge transformation like 
 \begin{align}
-\psi(x) \to U(x)\psi(x),
+\Psi(x) \to U(x)\Psi(x),
 \end{align}
-where $U(x)$ is an element of the gauge group in question. Because the gauge group is a unitary matrix Lie group it can be written in the form $U(x)=\mathrm{exp}(-igT^a\theta^a(x))$. Here $T^a$ are the self-adjoint generators of the associated Lie algebra, $g$ is the coupling constant of the gauge group and $\theta^a(x)$ are local parameters. The structure constants $f_{abc}$ of a Lie algebra are defined by $[T^a,T^b] = if_{abc}T^c$.\\
-Because the parameters of the gauge group are local the derivative in \ref{eq:DiracLagrangian} spoils the gauge invariance. In order to rectify gauge invariance of the Lagrangian one has to introduce a further field for each index $a$ of the generators - the gauge vector $G^{a\mu}$. The matrix valued gauge vector $G^\mu := G^{a\mu}T^a$ transforms as 
+where $U(x)$ is an element of the gauge group in question. Because the gauge group is a unitary matrix Lie group it can be written in the form $U(x)=\mathrm{exp}(-igT^a\theta^a(x))$. Here $T^a$ are the self-adjoint generators of the associated Lie algebra which obey
 \begin{align}
-G^{\mu}(x) \to U(x)G^\mu(x)U^{-1}(x) + \frac{i}{g}U(x)\partial^\mu U^{-1}(x)
+[T^a,T^b] = if_{abc}T^c
 \end{align}
-One then obtains the gauge invariant Lagrangian for a non-abelian gauge theory first found by Yang and Mills [cite original paper]
+where $f_{abc}$ are the structure constants of a Lie algebra, $g$ is the coupling constant of the gauge group and $\theta^a(x)$ are local parameters.\\
+Because the parameters of the gauge group are local the derivative in \ref{eq:DiracLagrangian} spoils the gauge invariance. In order to rectify gauge invariance of the Lagrangian one can introduce a further field for each index $a$ of the generators - the gauge vector $G^{a\mu}$. Defining the transformation of the matrix valued gauge vector $G^\mu := G^{a\mu}T^a$ as 
+\begin{align}
+G^{\mu}(x) \to U(x) \left( G^\mu(x) + \frac{i}{g}\partial^\mu \right) U^{-1}(x)
+\end{align}
+and introducing the gauge covariant derivative
+\begin{align}
+D^\mu = \partial^\mu + igT^aG^{a\mu}
+\end{align}
+one finds that the expression $D_\mu \Psi(x)$ transforms as
+\begin{align}
+D_\mu \Psi(x) \to U(x) D_\mu \Psi(x) \label{eq:CovDerivative}
+\end{align}
+Therefore gauge invariance in \ref{eq:DiracLagrangian} is restored by replacing $\partial_\mu$ with $D_\mu$. But if the gauge vector is interpreted as a physical field there must apart from the so far introduced interaction term also be a kinetic term associated with it. Using \ref{eq:CovDerivative} one defines the field strength tensor\footnote{An alternative construction makes use of the gauge invariant Wilson loop. This gives some insights into the geometry of gauge transformations \cite{Peskin}.} $F^{a\mu\nu}$ whose matrix valued form
+\begin{align}
+F^{\mu\nu} = F^{a\mu\nu}T^a = \frac{1}{ig}[D^\mu,D^\nu] = \partial^\mu G^\nu - \partial^\nu G^\mu - i f_{abc}....
+\end{align}
+transforms as $F^{\mu\nu} \to U(x)F^{\mu\nu}U^{-1}(x)$. Using the cyclic property of the trace and the Dynkin index $T(F)$ defined in the appendix \ref{eq:DynkinIndex}  one can write down a gauge invariant kinetic term for the gauge vector:
+\begin{align}
+\mathcal{L}_{\mathrm{gauge}} = - \frac{1}{2} \mathrm{Tr} \left( F^{\mu\nu}F_{\mu\nu} \right) = -\frac{T(F)}{2} F^{a\mu\nu}F^a_{\mu\nu}
+\end{align}
+This completes the construction of a Lagrangian which is invariant under non-abelian gauge group transformations. The result is the famous Yang and Mills Lagrangian[cite original paper]
 \begin{align}
 \mathcal{L}_{Yang-Mills} = \overline{\Psi}i\slashed{D}\Psi - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}
 \end{align}
-In comparison to the Dirac-Lagrangian \ref{eq:DiracLagrangian} the partial derivative is replaced with the gauge covariant derivative $D^\mu = \partial^\mu + igT^aG^{a\mu}$ and the gauge invariant kinetic term for the gauge fields is added. This comprises the field strenth-tensor $F^{a\mu\nu}$ which is in its matrix valued form defined by $F^{\mu\nu} = F^{a\mu\nu}T^a = \frac{1}{ig}[D^\mu,D^\nu]$. In fact one has little choice for kinetic terms of the gauge fields for thy must be gauge invariant and therefore be functions of the Wilson loop \cite{Peskin}...\\
+This Lagragian gives rise to spin-$\frac{1}{2}$ (matter) particles which interact with spin-1 (force mediator) particles with each other. Furthermore if the gauge group is non-abelian, i.e. $f_{abc} \neq 0$, there are self interactions among the spin-1 particles.\\
 The gauge group of the SM is a direct product ??? of the three gauge groups: $U_Y(1)$, $SU_L(2)$ and $SU_C(3)$\footnote{The subscript stands for the associated charge of the groups respectively: $Y$ for hypercharge, $L$ for left handedness (weak Isospin $I_3$) and $C$ for color}. The elements $U(x)$ of those and the infinitesimal transformations of the spinors and gauge vectors are given in table \ref{tab:SM_transformations}.\\
 These gauge groups give rise to 3 forces: the strong force, the weak force and the electromagnetic force.
 \begin{table}[H]
@@ -89,9 +110,9 @@ The hypercharge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of th
 
 
 \newpage
-\subsection{The particles of the SM}
-In the SM different matter particles take part in different interactions, i.e. their corresponding spinor couples to different gauge vectors.\\
-If a spinor couples to a certain gauge vector it transforms  non trivially (like indicated in table \ref{tab:SM_transformations}) under the gauge group which is associated with this gauge vector\footnote{In the SM all matter particles transform in the fundamental (or trivial) representation of the gauge group in question.}. This means if a particle couples to a certain force its charge which is associated with this force is nonzero.\\
+\subsection{The Particles of the Standard Model}
+In the Standard Model different matter particles take part in different interactions, i.e. their corresponding spinor couples to different gauge vectors.\\
+If a spinor couples to a certain gauge vector it transforms  non trivially (like indicated in table \ref{tab:SM_transformations}) under the gauge group which is associated with this gauge vector\footnote{In the Standard Model all matter particles transform in the fundamental (or trivial) representation of gauge groups.}. This means if a particle couples to a certain force its charge which is associated with this force is nonzero.\\
 The charges of particles for a force are defined as the eigenvalues of the generators which correspond to the force.
 \subsubsection*{The Quarks:}
 Quarks are strongly interacting fermions, which means their spinors transform non trivially under $SU_C(3)$. Because they transform in the fundamental representation of $SU_C(3)$ this means a quark spinor is built up by 3 spinors each carrying another color. This splitting of the quark spinor in colors is often suppressed for the sake of simplicity. This convention is adopted throughout this thesis.\\
@@ -239,15 +260,15 @@ where $y^e$, $y^d$, $y^u$ are 3$\times$3 matrices in generation space. The fermi
 \begin{align}
 m^e_{ij} = \frac{y^e_{ij}}{\sqrt{2}} v  \hspace{4cm} m^d_{ij} = \frac{y^d_{ij}}{\sqrt{2}} v \hspace{4cm} m^u_{ij} = \frac{y^u_{ij}}{\sqrt{2}} v.
 \end{align}
-The quark mass matrices are not diagonal. One therefore has to distinguish between interaction and mass eigenstates of the quark. The corresponding transformation matrix is the well known CKM-matrix [quote (original paper)].\\
+The quark mass matrices are not diagonal (origin of CP - invariance). One therefore has to distinguish between interaction and mass eigenstates of the quark. The corresponding transformation matrix is the well known CKM-matrix [quote (original paper)].\\
 The upshot of EWSB are masses for all matter particles except for the neutrinos and masses for the gauge bosons $W^\pm$ and $Z^0$.
 
 \subsection{Quantization}
 The Quantization of Spin 0 and Spin $\frac{1}{2}$ fields yield no complication in the Lagrangian formalism. To quantize Spin 1 fields it turns out that the usual gauge invariance needs to be replaced by the so called BRST invariance. This results in 2 extra terms in the Lagrangian. Firstly there is the gauge fixing term
 \begin{align}
-\mathcal{L}_{R_\xi} = -\frac{1}{2\xi_A} (\partial^\mu A_\mu)^2  - \frac{1}{2\xi_W} |\partial^\mu W_\mu^+ - m_W \xi_W \phi^+|^2 - \frac{1}{2\xi_Z} (\partial^\mu Z_\mu - m_Z \xi_Z \sigma)^2 CHECK!
+\mathcal{L}_{R_\xi} = -\frac{1}{2\xi_A} (\partial^\mu A_\mu)^2  - \frac{1}{2\xi_W} |\partial^\mu W_\mu^+ - m_W \xi_W \phi^+|^2 - \frac{1}{2\xi_Z} (\partial^\mu Z_\mu - m_Z \xi_Z \sigma)^2 
 \end{align}
-Here $R_\xi$ is chosen, where the parameters $\xi_i$ specify the gauge. The last 2 terms are modified with the Goldstone bosons from section \ref{sec:EWSB} because of the massiveness of the $W^\pm$ an $Z^0$ bosons.\\
+Here $R_\xi$ is chosen, where the parameters $\xi_i$ specify the gauge. The last 2 terms are modified with the Goldstone bosons from section \ref{sec:EWSB} because of the massiveness of the $W^\pm$ an $Z^0$ bosons.\cite{book:811554}\\%page 622
 Secondly there is a ghost Lagrangian
 \begin{align}
 \mathcal{L}_{ghost} = 

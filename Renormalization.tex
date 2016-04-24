@@ -1,4 +1,4 @@
-\section{Renormalization of the MRSSM}
+\section{UV-Divergences and Renormalization of the MRSSM}
 In order to improve the prediction of the cross section of the previous chapter one has to take quantum corrections into account. These are associated with loops in the corresponding Feynman diagrams. Computing these loop diagrams one might encounter infinities which arise from certain momentum configurations of the unspecified loop momentum. These infinities can be classified due to their origin. Infinities which are associated with loop momenta which tend to infinity are referred to as ultraviolet(UV) divergences. Infinities arising from loop momenta approaching zero can occur in loops with massless particles and are called infrared(IR) singularities. Furthermore there are collinear singularities with occur when a massless particle splits into two massless collinear particles.\\
 These infinities are not physical and must therefore be removed to get sensible predictions. To this end one regularizes them to extract them from the quantity in question. UV-divergences can be removed by means of renormalization, i.e. counterterms are inserted into the Lagrangian to cancel UV-divergences. Infrared and collinear divergenves are removed by adding up all possible contributions which give rise to the considered observable.
 
@@ -312,7 +312,7 @@ As for the quark there are constant terms amid the Passarino-Veltman integrals. 
 \begin{align}
 \delta Z_{\tilde{g}}^{A\ \mathrm{trans}} = \delta Z_{\tilde{g}}^{A\ \mathrm{DREG}} - \delta Z_{\tilde{g}}^{A\ \mathrm{DRED}} = C(A) \frac{g_s^2}{16\pi^2}\label{eq:GluinoSC}
 \end{align}
-for $A = L,R$. The gluino mass counterterm is ascertained by the condition
+for $A \in \left\{L,R\right\}$. The gluino mass counterterm is ascertained by the condition
 \begin{align}
 \left[ \Re (\Gamma^{\mathrm{1L}}_{\tilde{g}^a \overline{\tilde{g}}^b}) + \Gamma^{\mathrm{1L,ct}}_{\tilde{g}^a \overline{\tilde{g}}^b}  \right]_{\slashed{p} = m_{\tilde{g}}} = 0
 \end{align}
@@ -334,27 +334,28 @@ Again there is a transition counterterm
 
 
 \subsection{Renormalization of the Gauge Coupling}
-The gauge coupling $g_s$ is renormalized in the $\overline{\mathrm{MS}}$-scheme with the modification that additional logarithms are substracted. This is to decouple heavy particles from the running of $\alpha_s = \frac{g_s^2}{4\pi}$. This renormalization procedure allows to adopt the experimental values of $\alpha_s$ from the PDF's. The running due to effects of heavy particles is then encoded in the logarithms of $\delta g_s$.\\
-Extracting $\delta g_s$ from the quark-quark-gluon vertex requires not only the computation of $i\Gamma^{1L}_{q_i\overline{q}_jG^a}$ but also the (re)evaluation  of the auxiliary field renormalization constants $\delta Z_q^{\mathrm{aux}}$ and $\delta Z_G^{\mathrm{aux}}$. These will not be the same as the on-shell field renormalization.
+The gauge coupling $g_s$ is renormalized in the $\overline{\mathrm{MS}}$-scheme with the modification that additional logarithms are subtracted, i.e. light particles are treated in the $\overline{\mathrm{MS}}$-scheme and heavy particles in the zero-momentum subtraction scheme. This is to decouple heavy particles from the running of $\alpha_s = \frac{g_s^2}{4\pi}$. This renormalization procedure allows to adopt the experimental values of $\alpha_s$ from the PDF's. The running due to effects of heavy particles is then encoded in the logarithms of $\delta g_s$.\\
+Extracting $\delta g_s$ from the quark-quark-gluon vertex requires not only the computation of $i\Gamma^{\mathrm{1L}}_{q_i\overline{q}_jG^\mu_a}$ but also the (re)evaluation of auxiliary field renormalization constants $\delta Z_q^{\mathrm{aux}}$ and $\delta Z_G^{\mathrm{aux}}$ in the above mentioned scheme. These will not be the same as the on-shell scheme.
 
 \subsubsection{The Quark Self-Energy Revisited}
-The quark self-energy has two contribution which are shown in figure \ref{fig:QuarkSelfEnergy}. The first one corresponds to light particles the second one to heavy particles: $i\Gamma^{\mathrm{1L}}_{q_i\overline{q}_j} = i\Gamma^{\mathrm{1L,light}}_{q_i\overline{q}_j} + i\Gamma^{\mathrm{1L,heavy}}_{q_i\overline{q}_j}$. For light particles only the UV-divergent part is kept. For heavy particles also the $\mu$-dependent terms are kept:
+The quark self-energy has two contribution which are shown in figure \ref{fig:QuarkSelfEnergy}. The first one corresponds to light particles the second one to heavy particles: $i\Gamma^{\mathrm{1L}}_{q_i\overline{q}_j} = i\Gamma^{\mathrm{1L,light}}_{q_i\overline{q}_j} + i\Gamma^{\mathrm{1L,heavy}}_{q_i\overline{q}_j}$. For light particles only the UV-divergent\footnote{In contrast to the MS-scheme in the $\overline{\mathrm{MS}}$-scheme not only the pure ultraviolet divergence but also two additional transcendent numbers are subtracted. It is therefore common to define $\Delta_\epsilon = \frac{1}{\epsilon} -\gamma_{\mathrm{E}} + \ln 4\pi$.} part is kept. 
+The self energy corresponding to the heavy particles is taken at zero momentum $p^2=0$.
 \begin{align}
-i\Gamma^{\mathrm{1L,light}}_{q_i\overline{q}_j}|_{\mathrm{UV-div}} &= i \frac{g_s^2}{16\pi^2}\delta_{ij} \slashed{p} C(F) \frac{1}{\epsilon_{\mathrm{UV}}}\\
-i\Gamma^{\mathrm{1L,heavy}}_{q_i\overline{q}_j}|_{\mathrm{UV-div,\mu-dep}} &= i \frac{g_s^2}{16\pi^2}\delta_{ij} \slashed{p} C(F)\left( \frac{1}{\epsilon_{\mathrm{UV}}} -\ln\frac{m_{\tilde{q}}^2}{\mu^2} \right)
+\left.i\Gamma^{\mathrm{1L,light}}_{q_i\overline{q}_j}\right|_{\mathrm{UV-div}} &= i C(F) \frac{g_s^2}{16\pi^2} \Delta_\epsilon \slashed{p} \delta_{ij}\\
+i\Gamma^{\mathrm{1L,heavy}}_{q_i\overline{q}_j}(p^2=0) &= -i C(F) \frac{g_s^2}{16\pi^2} 2B_1(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\slashed{p}\delta_{ij}
 \end{align}
 The renormalization constant for the evaluation of $\delta g_s$ is determined by the condition
 \begin{align}
-\frac{\partial}{\partial \slashed{p}} \left[  \Gamma^{\mathrm{1L,light}}_{q_i\overline{q}_j}|_{\mathrm{UV-div}} + \Gamma^{\mathrm{1L,heavy}}_{q_i\overline{q}_j}|_{\mathrm{UV-div,\mu-dep}} + \Gamma^{\mathrm{1L,ct}}_{q_i\overline{q}_j}  \right]_{p^2 = 0} = 0
+\frac{\partial}{\partial \slashed{p}} \left[  \left.\Gamma^{\mathrm{1L,light}}_{q_i\overline{q}_j}\right|_{\mathrm{UV-div}} + \Gamma^{\mathrm{1L,heavy}}_{q_i\overline{q}_j}(p^2=0) + \Gamma^{\mathrm{1L,ct}}_{q_i\overline{q}_j}  \right] = 0
 \end{align}
 and computes to
 \begin{align}
-\delta Z_q^{\mathrm{aux}} = -\frac{g_s^2}{16\pi^2} C(F)\left[\left( \frac{1}{\epsilon_{\mathrm{UV}}} \right) + \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln\frac{m_{\tilde{q}}^2}{\mu^2} \right) \right]
+\delta Z_q^{\mathrm{aux}} = -\frac{g_s^2}{16\pi^2} C(F)\left[ \Delta_\epsilon + B_1(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right] .
 \end{align}
-The first curved bracket corresponds to contributions from light particles in the loop whereas the second curved bracket corresponds to contributions from heavy particles in the loop.
+
 
 \subsubsection{The Gluon Self-Energy}
-As for the quark self-energy there are again contributions to the self-energy originating from light and heavy particles. As for the quark only specific terms are kept in calculating the auxiliary renormalization constants.  
+As for the quark self-energy there are again contributions to the self-energy originating from light and heavy particles. Again these are differently dealt with.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -398,13 +399,13 @@ As for the quark self-energy there are again contributions to the self-energy or
 	\draw[gluon](0:0.5)--(0:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{contribution to the self-energy of the gluon originating from light particles}\label{fig:lightGluonSelfEnergy}
+\caption{Contribution to the self-energy of the gluon originating from light particles}\label{fig:lightGluonSelfEnergy}
 \end{center}
 \end{figure}
 \begin{align}
-i\Gamma^{\mathrm{1L,light}}_{G_\mu^a G_\nu^b}|_{\mathrm{UV-div}} &= i\frac{g_s^2}{16\pi^2 \epsilon_{\mathrm{UV}}}\delta_{ab} \left[ 0 - \frac{4 (n_{f}-1)}{3} T(F) (p^2g^{\mu\nu}-p^\mu p^\nu) + \frac{C(A)}{12}(p^2g^{\mu\nu} + 2 p^\mu p^\nu) \right.\nonumber\\
-&+\left. \frac{C(A)}{12}(19 p^2g^{\mu\nu} - 22 p^\mu p^\nu) \right]\nonumber\\
-&=i\frac{g_s^2}{16\pi^2 \epsilon_{\mathrm{UV}}}\delta_{ab} \left[ - \frac{4 (n_{f}-1)}{3} T(F) + \frac{5}{3} C(A) \right](p^2g^{\mu\nu}-p^\mu p^\nu)
+\left.i\Gamma^{\mathrm{1L,light}}_{G_\mu^a G_\nu^b}\right|_{\mathrm{UV-div}} &= i\frac{g_s^2}{16\pi^2}\Delta_\epsilon \left[ 0 - \frac{4 (n_{f}-1)}{3} T(F) (p^2g^{\mu\nu}-p^\mu p^\nu) + \frac{C(A)}{12}(p^2g^{\mu\nu} + 2 p^\mu p^\nu) \right.\nonumber\\
+&+\left. \frac{C(A)}{12}(19 p^2g^{\mu\nu} - 22 p^\mu p^\nu) \right]\delta_{ab}\nonumber\\
+&=i\frac{g_s^2}{16\pi^2} \Delta\epsilon \left[ - \frac{4 (n_{f}-1)}{3} T(F) + \frac{5}{3} C(A) \right](p^2g^{\mu\nu}-p^\mu p^\nu)\delta_{ab}
 \end{align}
 \begin{figure}[!htbp]
 \begin{center}
@@ -499,7 +500,7 @@ The counterterm Feynman rule for the gluon propagator is\\
 \end{tikzpicture}\\
 The renormalization condition for $\delta Z^{\mathrm{aux}}_G$ reads
 \begin{align}
- \Gamma^{\mathrm{1L,light}}_{G_\mu^a G_\nu^b}|_{\mathrm{UV-div}} + \Gamma^{\mathrm{1L,heavy}}_{G_\mu^a G_\nu^b}|_{\mathrm{UV-div,\mu-dep}} - \delta Z_G^{\mathrm{aux}}\left(p^2 g^{\mu\nu} - p^\mu p^\nu \right)\delta_{ab} = 0
+ \left.\Gamma^{\mathrm{1L,light}}_{G_\mu^a G_\nu^b}\right|_{\mathrm{UV-div}} + \Gamma^{\mathrm{1L,heavy}}_{G_\mu^a G_\nu^b}(p^2=0) - \delta Z_G^{\mathrm{aux}}\left(p^2 g^{\mu\nu} - p^\mu p^\nu \right)\delta_{ab} = 0
 \end{align}
 and yields
 \begin{align}
@@ -511,6 +512,7 @@ and yields
 
 
 \subsubsection{The $q\overline{q}G$ Vertex Correction}
+As for the self energies the vertex correction constitutes of loops from light particles which correspond to the Standard Model and additional heavy particle loops.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -546,12 +548,15 @@ and yields
 	\draw[fermionbar](-45:0.5)--(-45:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{contribution from light particles to the $q\overline{q}G$ vertex correction}\label{fig:GaugeCouplingCorrection}
+\caption{Contribution from light (Standard Model) particles to the $q\overline{q}G$ vertex. correction}\label{fig:GaugeCouplingCorrection}
 \end{center}
 \end{figure}
 \begin{align}
-i\Gamma^{\mathrm{1L,light}}_{q_i \overline{q}_j G_\mu^a}|_{\mathrm{UV-div}} &= -i g_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2 \epsilon_{\mathrm{UV}}} \left[ \left(C(F) -\frac{C(A)}{2}\right) + \frac{3}{2} C(A) \right]
+\left.i\Gamma^{\mathrm{1L,light}}_{q_i \overline{q}_j G_\mu^a}\right|_{\mathrm{UV-div}} &= - ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \left[\left(C(F) -\frac{C(A)}{2}\right)2(B_0(0, 0, 0) - 2C_{00}(0,0,0,0,0)) \right.\nonumber\\
+&\left.+ C(A)(B_0(0, 0, 0) + 2C_{00}(0,0,0,0,0))\right]\nonumber\\
+&= -i g_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \Delta_\epsilon \left[ \left(C(F) -\frac{C(A)}{2}\right) + \frac{3}{2} C(A) \right]\label{eq:qqGlight}
 \end{align}
+The term in the curved brackets of eq. \ref{eq:qqGlight} corresponds to the first diagram in fig. \ref{fig:GaugeCouplingCorrection} whereas the last term in the squared brackets corresponds to the second diagram.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -590,20 +595,21 @@ i\Gamma^{\mathrm{1L,light}}_{q_i \overline{q}_j G_\mu^a}|_{\mathrm{UV-div}} &= -
 	\draw[fermionbar](-45:0.5)--(-45:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{contribution from heavy particles to the $q\overline{q}G$ vertex correction}
+\caption{Contribution from heavy particles to the $q\overline{q}G$ vertex correction.}
 \end{center}
 \end{figure}
 \begin{align}
-i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}|_{\mathrm{UV-div,\mu-dep}} = -i g_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} &\left[ \left(C(F) -\frac{C(A)}{2}\right) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) \right.\nonumber\\
-&+ \left.\frac{1}{2} C(A)\left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) \right]
+i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) = - -g_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} &\left[ \left(C(F) -\frac{C(A)}{2}\right) 4C_{00}(0, 0, m_{\tilde{g}}^2, m_{\tilde{q}}^2, m_{\tilde{q}}^2) \right.\nonumber\\
+&+ \left. C(A)\left( B_0(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2) -2C_{00}(0, 0, m_{\tilde{g}}^2, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right) \right]
 \end{align}
+The argument $p_i^2=0$ of the vertex function denotes, that all external particles are taken on shell, i.e. at zero momentum.
 The sum of the 1-loop corrections and the counterterm should be set to zero:
 \begin{align}
-i\Gamma^{\mathrm{1L,light}}_{q_i \overline{q}_j G_\mu^a}|_{\mathrm{UV-div}} + i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}|_{\mathrm{UV-div,\mu-dep}} + \left[ -ig_s T^a_{ij}\gamma^\mu\left( \frac{\delta g_s}{g_s} + \delta Z_q^{\mathrm{aux}} + \frac{\delta Z_G^{\mathrm{aux}}}{2} \right)\right] = 0.
+\left.i\Gamma^{\mathrm{1L,light}}_{q_i \overline{q}_j G_\mu^a}\right|_{\mathrm{UV-div}} + i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) + \left[ -ig_s T^a_{ij}\gamma^\mu\left( \frac{\delta g_s}{g_s} + \delta Z_q^{\mathrm{aux}} + \frac{\delta Z_G^{\mathrm{aux}}}{2} \right)\right] = 0.
 \end{align}
 Finally one can read off the $\frac{\delta g_s}{g_s}$
 \begin{align}
-\frac{\delta g_s}{g_s} &= \frac{g_s^2}{16\pi^2} \left[ \left( \frac{2}{3}T(F)(n_f-1) - \frac{11}{6}C(A) \right) \frac{1}{\epsilon_{\mathrm{UV}}} + \left( \frac{5}{6}C(A) + \frac{2}{3}T(F) + \frac{1}{3}T(F)n_f \right)\frac{1}{\epsilon_{\mathrm{UV}}}  \right.\nonumber\\
+\frac{\delta g_s}{g_s} &= \frac{g_s^2}{16\pi^2} \left[ \left( \frac{2}{3}T(F)(n_f-1) - \frac{11}{6}C(A) \right) \Delta_\epsilon + \left( \frac{5}{6}C(A) + \frac{2}{3}T(F) + \frac{1}{3}T(F)n_f \right)\Delta_\epsilon  \right.\nonumber\\
 &- \frac{2}{3} C(A) \ln \frac{m_{\tilde{g}}^2}{\mu^2} - \frac{1}{3}T(F)n_f \ln \frac{m_{\tilde{q}}^2}{\mu^2} - \frac{2}{3}T(F) \ln \frac{m_t^2}{\mu^2}-\frac{1}{12} C(A) \left( \ln \frac{m_{\phi^0}^2}{\mu^2} + \ln \frac{m_{\sigma^0}^2}{\mu^2} \right)\label{eq:deltaGs}
 \end{align}
 
@@ -633,6 +639,7 @@ one finds
 \beta(g_s) &= \frac{g_s^3}{16\pi^2} \beta_0^L + \mathcal{O}(\mathrm{2-loop}).
 \end{align}
 This is the beta function from QCD first found by [Gross, Politzer, Wil]
+
 
 
 \subsection{Supersymmetry Restoring Counterterm}
@@ -671,7 +678,7 @@ The supersymmetry restoring corrections to the Yukawa coupling origin from the b
 	\draw[fermionnoarrow](180:0.5)--(-45:0.5);
 	\draw[gluon](180:0.5)--(-45:0.5);
 	\node at (0,-0.5) {$\tilde{g}$};
-	\draw[scalar](45:0.5)--(-45:0.5);
+	\draw[fermion](45:0.5)--(-45:0.5);
 	\node at (0.7,0) {$q$};
 	\draw[fermionbar](45:0.5)--(45:1.3);
 	\draw[scalarbar](-45:0.5)--(-45:1.3);
@@ -696,5 +703,15 @@ In short this means that the gauge coupling $g_s$ is renormalized with $\delta g
 The finite correction $g_s^{\mathrm{restore}}$ is the same as in supersymmetric QCD which should not surprise too much as all its contributions origin from loops with gluons. So there are no new contributions in RSQCD with respect to SQCD. 
 
 
-\subsection{$\overline{\mathrm{MS}}$ - Renormalization}
-To check for UV-finiteness it might prove useful to summarize the UV-divergent part of all renormalization constants. In order to obtain these the Passarino-Veltman integrals need to be substituted by their $\frac{1}{\epsilon}$ coefficient. These  had been taken from \cite{Denner} and checked with \texttt{FeynArts} and \texttt{FormCalc} \cite{Hahn:2000}, \cite{Nejad2013}, \cite{Hahn:2000}.
+\subsection{$\overline{\mathrm{MS}}$ - Renormalization}\label{sec:MSRen}
+To quickly check for UV-finiteness of a Greenfunction or a physical observable it is useful to have the extracted UV-divergences of the renormalization constants at hand. How these are obtained is described in \ref{sec:Passarino}.\\
+(In order to obtain these the Passarino-Veltman integrals need to be substituted by their $\frac{1}{\epsilon}$ coefficient. These  had been taken from \cite{Denner} and checked with \texttt{FeynArts} and \texttt{FormCalc} \cite{Hahn:2000}, \cite{Nejad2013}, \cite{Hahn:2000}.)
+\begin{align}
+& \delta Z_{\tilde{g}}^L = -\frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}} 2\left[ T(F) n_f + C(A) \right] &&  \delta Z_{\tilde{g}}^R = -\frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}} 2 C(A)\nonumber\\
+& \delta m_{\tilde{g}} = \frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}} \left[ T(F) n_f - 2C(A) \right] m_{\tilde{g}}\nonumber\\
+& \delta Z_{\tilde{q}} = 0 && \delta m_{\tilde{q}}^2 = 0\nonumber\\
+&\frac{\delta g_s}{g_s} = \frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}}\left[ T(F) n_f - C(A) \right]\nonumber\\
+& \delta Z_{\phi^0} = 0 && \delta m_{\phi^0}^2 = -\frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}}\left[ 8T(F)n_f - 16C(A) \right]m_{\tilde{g}}^2\nonumber\\
+& \delta Z_{\sigma^0} = 0 && \delta m_{\sigma^0}^2 = 0\nonumber\\
+& \delta Z_{G} = -\frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}} 2T(F) n_f
+\end{align}

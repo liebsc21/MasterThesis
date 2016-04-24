@@ -8,7 +8,7 @@ g^{\mu\nu} = \mathrm{diag}(1, -1, -1, -1).
 \end{align}
 
 
-\subsection{Colour Algebra $SU(N)$}
+\subsection{Constants of the Colour Algebra $SU(N)$}
 [Marina von Steinkirch]\\
 Tha Casimir operator $C(R)\mathbbm{1}$ of a semi-simple Lie algebra in the irreducible representation $R$ is given by
 \begin{align}
@@ -32,7 +32,7 @@ and one can write down the following useful formulae for the fundamental represe
 \begin{align}
 T^a_{ik} T^a_{kj} &= C(F)\mathbbm{1}_{ij} && \mbox{with}\ C(F) = \frac{N^2-1}{2N} = \frac{4}{3}\nonumber\\
 f^{abc} f^{dbc} &= C(A)\delta^{ad} && \mbox{with}\ C(A) = N = 3\nonumber\\
-\mathrm{Tr}\left[T^aT^b\right] &= T(F)\delta^{ab} && \mbox{with}\ T(F) = \frac{1}{2}
+\mathrm{Tr}\left[T^aT^b\right] &= T(F)\delta^{ab} && \mbox{with}\ T(F) = \frac{1}{2}\label{eq:DynkinIndex}
 \end{align}
 where $\lambda^a_{ij}$ are for $N_c = 3$ the Gell-Mann matrices and $f_{abc}$ are the structure constants of $SU(N_c)$.
 %\begin{tabular}{c|c|c}
@@ -273,7 +273,7 @@ The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The in
 \newpage
 
 %The gluino-quark-squark vertex is not much different from the one in SQCD. One only must avoid replacing $\tilde{g}$ with $\tilde{g}^C$. %See for the derivation of Feynman rules for theories with fermion number violating interaction reference [a. denner, h.eck, o. hahn, j. küblbeck]
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
 	\node at (-1.5,0.7) {\circled{12}};
@@ -427,7 +427,7 @@ The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The in
 \end{center}
 \caption{The curved arrows indicate the fermion flow. The Feynman rules 16b, 17b and 18b are the complex conjugates of 16a, 17a and 18a respectively. Applying a flipping rule to a vertex one has to reverse the curved arrow, i.e. the fermion flow and replace $\Psi$ with $\bar{\Psi}^C$. In addition one has to add a minus sign for Feynman rule 13.}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
 	\node at (-1.5,0.7) {\circled{20}};
@@ -466,30 +466,56 @@ The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The in
 \end{center}
 \end{figure}
 
-\newpage
-\subsection{Passarino-Veltman Integrals}
 
+\subsection{Passarino-Veltman Integrals}\label{sec:Passarino}
+The definition of the Passarino-Veltman integrals in this thesis agrees with the one from \texttt{Looptools} \cite{Hahn:1998} convention. The original paper \cite{Passarino:1978jh} uses slightly different conventions. A pedagogical introduction to the evaluation of one-loop integrals can be found in \cite{Ellis:2011cr}
 \begin{align}
-A_0(m^2) &= \frac{i}{16\pi^2} \int_l \frac{1}{l^2-m^2}\nonumber\\
-B_{0,\mu,\mu\nu}(p^2,m_1^2,m_2^2) &= \frac{i}{16\pi^2} \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p)^2-m_2^2]}\nonumber\\
-C_{0,\mu,\mu\nu}(p_1^2,p_2^2,m_1^2,m_2^2,m_3^2) &= \frac{i}{16\pi^2} \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p_1)^2-m_2^2][(l+p_2)^2-m_3^2]}
+\frac{i}{16\pi^2} A_0(m^2) &= \int_l \frac{1}{l^2-m^2}\nonumber\\
+\frac{i}{16\pi^2} B_{0,\mu,\mu\nu}(p^2,m_1^2,m_2^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p)^2-m_2^2]}\\
+\frac{i}{16\pi^2} C_{0,\mu,\mu\nu}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p_1)^2-m_2^2][(l+p_1+p_2)^2-m_3^2]}\nonumber
 \end{align}
 with the shortcut $\int_l = \mu^{2\epsilon}\int\frac{\mathrm{d}^D l}{(2\pi)^D}$. Furthermore there are supressed $\varepsilon$'s which prescripe how the poles in the complex plane are avoided. They are hidden in the infinitesimal shift of the masses: $m_i^2 \to m_i^2 - i \varepsilon$.\\
 The tensor integrals can be decomposed as
 \begin{align}
-B_\mu &= p_\mu B_1\nonumber\\
-B_{\mu\nu} &= g_{\mu\nu}B_{00} + p_\mu p_\nu B_{11}\nonumber\\
-C_\mu &= p_{1\mu}C_1 + p_{2\mu}C_2 \nonumber\\
-C_{\mu\nu} &= g_{\mu\nu}C_{00} + p_{1\mu}p_{1\nu}C_{11} + p_{2\mu}p_{2\nu}C_{22} + (p_{1\mu}p_{2\nu} + p_{2\mu}p_{1\nu})C_{12} 
+B_\mu &:= p_\mu B_1\nonumber\\
+B_{\mu\nu} &:= g_{\mu\nu}B_{00} + p_\mu p_\nu B_{11}\nonumber\\
+C_\mu &= p_{1\mu}C_1 + p_{2\mu}C_2\\
+C_{\mu\nu} &:= g_{\mu\nu}C_{00} + p_{1\mu}p_{1\nu}C_{11} + p_{2\mu}p_{2\nu}C_{22} + (p_{1\mu}p_{2\nu} + p_{2\mu}p_{1\nu})C_{12}\nonumber
 \end{align}
+In the the special case of vanishing momenta the integrals take a succinct form. %The following formulae show some of these special cases.
 \begin{align}
-A_0(m^2) = m^2\left( \Delta -\ln \frac{m^2}{\mu^2} + 1 \right) + \mathcal{O}(\epsilon)
+A_0(m^2) = m^2\left( \Delta_\epsilon -\ln \frac{m^2}{\mu^2} + 1 \right) + \mathcal{O}(\epsilon)
 \end{align}
-$\Delta = \frac{1}{\epsilon} - \gamma_E+\ln 4\pi$
+where the typical UV-divergent constant $\Delta_\epsilon = \frac{1}{\epsilon} - \gamma_E+\ln 4\pi$ is defined. It comprises the Euler-Mascheroni constant $\gamma_{\mathrm{E}}$.
 \begin{align}
-B_0(0,m_1^2,m_2^2) &= \frac{A_0(m_1^2)-A_0(m_2^2)}{m_1^2-m_2^2} = \Delta + 1 -\frac{m_1^2\ln \frac{m_1^2}{\mu^2}-m_2^2\frac{m_2^2}{\mu^2}}{m_1^2-m_2^2} + \mathcal{O}(\epsilon)\\
-B_0(0,m^2,m^2) &= \frac{\partial}{\partial m^2} A_0(m^2) = \Delta -\ln \frac{m^2}{\mu^2} + 1 + \mathcal{O}(\epsilon)
+B_0(0,m_1^2,m_2^2) &= \frac{A_0(m_1^2)-A_0(m_2^2)}{m_1^2-m_2^2} = \Delta_\epsilon + 1 -\frac{m_1^2\ln \frac{m_1^2}{\mu^2}-m_2^2\ln \frac{m_2^2}{\mu^2}}{m_1^2-m_2^2} + \mathcal{O}(\epsilon)\\
+B_0(0,m^2,m^2) &= \frac{\partial}{\partial m^2} A_0(m^2) = \Delta_\epsilon -\ln \frac{m^2}{\mu^2} + \mathcal{O}(\epsilon)\\
+B_0(0,0,0) &= 0\\
+B_1(0,m_1^2,m_2^2) &= -\frac{\Delta_\epsilon}{2} + \frac{1}{2}\ln \frac{m_1^2}{\mu^2} + \frac{-3+4t-t^2-4t \ln t +2t^2 \ln t}{4(t-1)^2} + \mathcal{O}(\epsilon)\label{eq:B1}\\
+B_1(0,0,0) &= 0
 \end{align}
+The scaleless integrals are defined to be zero. The parameter $t$ is given by $\frac{m_2^2}{m_1^2}$. As can be seen from \ref{eq:B1} $B_1$ is in contrast to $B_0$ not symmetric in its masses but it can be shown [Romao] that
+\begin{align}
+B_1(p^2,m_1^2,m_2^2) = -(B_0(p^2,m_2^2,m_1^2) + B_1(p^2,m_2^2,m_1^2))
+\end{align}
+It can further be shown that
+\begin{align}
+C_{00}(0,0,0,m_1^2, m_1^2, m_2^2) = -\frac{1}{2}B_1(0, m_1^2, m_2^2)
+\end{align} and that $C_{00}(0,0,0,m_1^2, m_1^2, m_2^2)$ is a symmetric function of its masses.\\
+From the generic $\epsilon$-expansion of the $B_0$ integral \cite{Denner}
+\begin{align}
+B_0(p^2,m_1^2,m_2^2) = \Delta_\epsilon - \int_0^1\mathrm{d}x\ \ln \frac{-x(1-x)p^2 + xm_2^2 + (1-x)m_1^2}{\mu^2}
+\end{align} 
+and Passarino-Veltman decomposition \cite{Passarino:1978jh} one can determine the UV-divergent part of all $B$ and $C$ integrals. In chapter \ref{sec:MSRen} this was necessary in order to obtain the renormalization constants in the $\overline{\mathrm{MS}}$-scheme. Infrared and collinear singularities arise from the special case where one or multiple masses tend to zero. These poles are either regularized in terms of a small mass cutoff $\Lambda$ or also dimensionally as $\epsilon$-poles. In the later case the integral first needs to undergo the limit to zero masses and than being evaluated.\\
+The following list shows all necessary integrals needed to determine the renormalization constants in \ref{sec:MSRen}.
+\begin{align}
+\left.A_0(m^2)\right|_{\mathrm{UV-div}} &= m^2 \Delta_\epsilon\\
+\left.B_0(p^2,m_1^2,m_2^2)\right|_{\mathrm{UV-div}} &= \Delta_\epsilon\\
+\left.B_1(p^2,m_1^2,m_2^2)\right|_{\mathrm{UV-div}} &= -\frac{1}{2}\Delta_\epsilon\\
+\left.C_{00}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2)\right|_{\mathrm{UV-div}} &= \frac{1}{4}\Delta_\epsilon
+\end{align}
+The UV-divergent part of $C_{11}$, $C_{22}$, $C_{12}$ equals zero. As can be seen already from the superficial degree of divergence also $C_i|_{\mathrm{UV-div}} = 0$ for $i \in \left\{ 0, 1, 2 \right\}$ .
+
 
 
 \subsection{Cross section and Phase Space Integration}
@@ -501,32 +527,32 @@ The flux factor is defined by $F = 4\sqrt{(k_a\cdot k_b)^2 - (m_am_b)^2}$ which 
 \begin{align}
 \mathrm{d}\Phi_N = \left( \mu^{2\epsilon} \right)^{N-1} \left( \prod_{f=1}^N \frac{\mbox{d}^{D-1}p_f}{(2\pi)^{D-1}}\frac{1}{2E_f} \right)  (2\pi)^D \delta^{(D)}(k_a+k_b-\sum_{f=1}^N p_f).
 \end{align} 
-The factor $\mu^{2\epsilon}$ is included to maintain the mass dimension of the cross section. In this thesis the sum of $|\mathcal{M}|^2$ over helicities and colors $\sum |\mathcal{M}|^2$ has been calculated. Furthermore initial state particles are considered as massless. This gives
+The factor $\mu^{2\epsilon}$ is included to maintain the mass dimension of the cross section. As in this thesis the sum of $|\mathcal{M}|^2$ over helicities and colors $\sum |\mathcal{M}|^2$ has been calculated one can write
 \begin{align}
 \mathrm{d}\sigma = \frac{1}{2s} \mathrm{d}\Phi_2 K_{ab} \sum |\mathcal{M}|^2
 \end{align} 
 where $K_{ab}$ encodes the averaging over initial state helicities and colors. Specifying to the center-of-mass frame and assuming that $\sum|\mathcal{M}|^2$ is only a function of the modulus of one of the final state particle's 3-momentum $ |\vec{p}_i|$ and the angle $\theta$ between $\vec{k}_a$ and $\vec{p}_1$ one can write
 \begin{align}
-\int \mathrm{d}\Phi_2 &= \frac{1}{s} \mu^{2\epsilon} \int \frac{\mathrm{d}|\vec{p}_1|\mathrm{d}\Omega^{D-1}_1}{(2\pi)^{D-2}} |\vec{p}_1|^{D-2} \delta \left(k_a^0 + k_b^0 - \sqrt{m_1^2 + |\vec{p}_1|^2} - \sqrt{m_2^2 + |\vec{p}_2|^2} \right)\nonumber\\
-&= \frac{1}{s} \frac{1}{(2\pi)^{D-2}}\frac{2\pi^{\frac{D}{2}-1}}{\Gamma(\frac{D}{2}-1)} \mu^{2\epsilon} \int_0^\infty\mathrm{d}|\vec{p}_1| \int_0^\pi \mathrm{d} \cos\theta p_1^{D-2}\sin^{D-4}\theta\nonumber\\
-&\ \ \delta \left(k_a^0 + k_b^0 - \sqrt{m_1^2 + |\vec{p}_1|^2} - \sqrt{m_2^2 + |\vec{p}_2|^2} \right).\label{eq:DPhi2}
+\int \mathrm{d}\Phi_2 &= \mu^{2\epsilon} \int \frac{\mathrm{d}|\vec{p}_1|\mathrm{d}\Omega^{D-1}_1}{(2\pi)^{D-2} 4 E_1 E_2} |\vec{p}_1|^{D-2} \delta \left(k_a^0 + k_b^0 - \sqrt{m_1^2 + |\vec{p}_1|^2} - \sqrt{m_2^2 + |\vec{p}_1|^2} \right)\nonumber\\
+&= \frac{1}{(2\pi)^{D-2}}\frac{2\pi^{\frac{D}{2}-1}}{\Gamma(\frac{D}{2}-1)} \mu^{2\epsilon} \int_0^\infty\mathrm{d}|\vec{p}_1| \int_0^\pi \mathrm{d} \cos\theta \frac{1}{4 E_1 E_2} p_1^{D-2}\sin^{D-4}\theta\nonumber\\
+&\ \ \delta \left(k_a^0 + k_b^0 - \sqrt{m_1^2 + |\vec{p}_1|^2} - \sqrt{m_2^2 + |\vec{p}_1|^2} \right).\label{eq:DPhi2}
 \end{align}
 In the second line the integral over the D-dimensional hypersphere 
 \begin{align}
 \int \mathrm{d}\Omega^D = \int_0^{2\pi} \mathrm{d}\phi \prod_{i=1}^{D-2}\int_0^\pi \sin^i\theta_i \mathrm{d}\theta_i = \frac{2\pi^{\frac{D}{2}}}{\Gamma(\frac{D}{2})}
 \end{align}
-was used. Because $\sum|\mathcal{M}|^2$ is calculated in terms of Mandelstam variables 
+has been used. Because $\sum|\mathcal{M}|^2$ is calculated in terms of Mandelstam variables 
 \begin{align}
 t &= (k_a-p_1)^2  \nonumber\\
 t &= -2\left(|\vec{k}_a| \sqrt{m_1^2 + |\vec{p}_1|^2} - |\vec{k}_a||\vec{p}_1| \cos\theta\right) + m_1^2\label{eq:t} \\
-u &= (k_b-p_1)^2\nonumber\\
-u &= -2\left(|\vec{k}_a| \sqrt{m_1^2 + |\vec{p}_1|^2} + |\vec{k}_b||\vec{p}_1| \cos\theta\right) + m_1^2\label{eq:u}
+u &= (k_a-p_2)^2\nonumber\\
+u &= -2\left(|\vec{k}_a| \sqrt{m_2^2 + |\vec{p}_1|^2} + |\vec{k}_a||\vec{p}_1| \cos\theta\right) + m_2^2\label{eq:u}
 \end{align}
 it is useful to perform a change of coordinates yielding
 \begin{align}
-\mathrm{d}|\vec{p}_1|\ \mathrm{d}\cos\theta = -\frac{\sqrt{m_1^2+|\vec{p}_1|^2}}{8|\vec{k}_a|^2|\vec{p}_1|^2}\mathrm{d}u\ \mathrm{d}t.\label{eq:PhaseTrafo}
+\mathrm{d}|\vec{p}_1|\ \mathrm{d}\cos\theta = -\frac{E_1 E_2}{4|\vec{k}_a|^2|\vec{p}_1|^2(E_1+E_2)}\mathrm{d}u\ \mathrm{d}t.\label{eq:PhaseTrafo}
 \end{align}
-Inserting \ref{eq:PhaseTrafo} into \ref{eq:DPhi2} and using $|\vec{k}_a| = \frac{\sqrt{s}}{2}$ gives
+Inserting \ref{eq:PhaseTrafo} into \ref{eq:DPhi2} and using $2|\vec{k}_a| = \sqrt{s} = E_1 + E_2$ gives
 \begin{align}
 \int \mathrm{d}\Phi_2 = & \frac{1}{s} \frac{\pi^{-\frac{D}{2}+1}}{2^{D-3}\Gamma(\frac{D}{2}-1)} \int \mathrm{d}u\ \mathrm{d}t\ \left( \frac{tu-m_1^2m_2^2}{\mu^{2\epsilon} s} \right)^{\frac{D-4}{2}} \nonumber\\
 &\frac{1}{4}\Theta(tu-4m_1^2m_2^2)\delta \left(s+t+u-m_1^2-m_2^2\right)
