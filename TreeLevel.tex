@@ -1,16 +1,24 @@
-\section{Sparticle Production at Tree Level}
-In this chapter the production of strongly interacting supersymmetric particles\footnote{The production of sgluons is excluded from the analysis as their mass will be chosen to be too large to produce them.} in the MRSSM is considered.
+\section{Squark and Gluino Production at Tree Level}
+In this chapter the production of strongly interacting supersymmetric particles\footnote{The production of sgluons is excluded from the analysis for their mass is chosen to be too large to significantly produce them.} in the MRSSM is considered. The various processes and their associated cross section is compared to their analogues in the MSSM.
 
 
 \subsection{Partonic Processes} 
 \begin{figure}[!htbp]
 \begin{center}
-\begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+\begin{tikzpicture}[line width=1.0 pt, scale=1.3, arrow/.style={thick,->,shorten >=2pt,shorten <=2pt,>=stealth}]
 	\draw[fermion] (-1,0.5)--(-0.42,0);
 	\draw[fermionbar] (-1,-0.5)--(-0.42,0);
 	\draw[gluon] (-0.42,0)--(0.42,0); 
 	\draw[scalar] (0.42,0)--(1,0.5);
 	\draw[scalarbar] (0.42,0)--(1,-0.5);
+	\draw[arrow] (-1,0.7)--(-0.5,0.26);
+	\node at (-0.75,0.8) {$k_a$};
+	\draw[arrow] (-1,-0.7)--(-0.5,-0.26);
+	\node at (-0.75,-0.8) {$k_b$};
+	\draw[arrow] (0.5,0.26)--(1,0.7);
+	\node at (0.75,0.8) {$p_1$};
+	\draw[arrow] (0.5,-0.26)--(1,-0.7);
+	\node at (0.75,-0.8) {$p_2$};
 \begin{scope}[shift={(3,0)}]
 	\draw[fermion] (-1,0.5)--(0,0.5);
 	\draw[fermionbar] (-1,-0.5)--(0,-0.5);
@@ -185,8 +193,7 @@ In this chapter the production of strongly interacting supersymmetric particles\
 \begin{scope}[shift={(6,0)}]
 	\draw[fermion] (-1,0.5)--(0,0.5);
 	\draw[gluon] (-1,-0.5)--(0,-0.5);
-	\draw[gluon] (0,0.5)--(0,-0.5);
-	\draw[fermionnoarrow] (0,0.5)--(0,-0.5);
+	\draw[scalar] (0,0.5)--(0,-0.5);
 	\draw[gluon] (0,0.5)--(0.4,0.1);
 	\draw[fermionnoarrow] (0,0.5)--(0.4,0.1);
 	\draw[gluon] (0.6,-0.1)--(1,-0.5);
@@ -198,10 +205,11 @@ In this chapter the production of strongly interacting supersymmetric particles\
 \end{scope}
 \end{scope}
 \end{tikzpicture}
-\caption{Tree level diagrams for squark and gluino production at tree level in the MRSSM. The processes $GG \to \tilde{q}\overline{\tilde{q}}$ and $qG \to \tilde{q}\tilde{g}$ are identical to those of the MSSM. The processes $q\overline{q} \to \tilde{q}\tilde{\overline{q}}$ and $qq \to \tilde{q}\tilde{q}$ involve the production of less chiralities than in the MSSM. Also in the $q\tilde{q} \to \tilde{g}\overline{\tilde{g}}$ channel only half of the t-channel squark chiralities occur in the MRSSM.(Anti-)Gluino production via initial gluons $GG \to \tilde{g}\overline{\tilde{g}}$ proceeds via the same diagrams like in the MSSM but its cross section is twice as much in the MRSSM for gluino and antigluino are distinguishable particles.}
+\caption{Tree level diagrams for squark and gluino production at tree level in the MRSSM. The processes $GG \to \tilde{q}\overline{\tilde{q}}$ and $qG \to \tilde{q}\tilde{g}$ are identical to those in the MSSM. The processes $q\overline{q} \to \tilde{q}\overline{\tilde{q}}$ and $qq \to \tilde{q}\tilde{q}$ involve the production of less chiralities than in the MSSM. Also in the $q\tilde{q} \to \tilde{g}\overline{\tilde{g}}$ channel only half of the t-channel squark chiralities occur in the MRSSM. (Anti-)Gluino production via initial gluons $GG \to \tilde{g}\overline{\tilde{g}}$ proceeds via the same diagrams like in the MSSM but its cross section is twice as much in the MRSSM for gluino and antigluino are distinguishable particles.}\label{fig:TreeDiagrams}
 \end{center}
 \end{figure}
-The top quark is excluded from the initial states as it is too heavy to be significantly present in hadrons. Therefore its pdf is approximately zero. For consistency reasons also the stop is excluded from the final states. One therefore deals with $n_f-1 = 5$ quark flavors. Using the Feynman rules in the Appendix one obtains the following sums over absolute squared Feynman amplitudes
+For the calculation the top quark is excluded from the initial state as it is too heavy to be significantly present in hadrons. %Therefore its pdf is approximately zero. 
+For consistency reasons also the stop is excluded from the final states. One therefore deals with $n_f-1 = 5$ quark flavors. Using the Feynman rules in the Appendix one obtains the following sums over absolute squared Feynman amplitudes.
 \begin{align}
 \sum|\mathcal{M}^B|^2(q_i\overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij}  \left[ 8 N_c C(F) g_s^4\frac{(n_f-1)}{s^2} + 4 N_c C(F) \hat{g}_s^4\frac{1}{t_{\tilde{g}}^2} - 8 C(F)g_s^2\hat{g}_s^2\frac{1}{ t_{\tilde{g}} s} \right] (tu-m_{\tilde{q}}^4)\nonumber\\
  &+ (1-\delta_{ij}) 4 N_c C(F) \hat{g}_s^4\frac{tu-m_{\tilde{q}}^4}{t_{\tilde{g}}^2} \\
@@ -218,33 +226,35 @@ The top quark is excluded from the initial states as it is too heavy to be signi
 \sum|\mathcal{M}^B|^2(qg \to \tilde{q}\tilde{g}) &=  2g_s^2\hat{g}_s^2 \left[ 2 N_c^2 C(F) \left(1-2\frac{s u_{\tilde{q}}}{t_{\tilde{g}}^2}\right) - 2C(F) \right] \nonumber\\
 &\left[ (-1+\epsilon)\frac{t_{\tilde{g}}}{s} + \frac{2(m_{\tilde{g}}^2-m_{\tilde{q}}^2)t_{\tilde{g}}}{s u_{\tilde{q}}}\left( 1+\frac{m_{\tilde{q}}^2}{u_{\tilde{q}}} + \frac{m_{\tilde{g}}^2}{t_{\tilde{g}}} \right) \right]
 \end{align}
-For NLO-corrections the results are given in $D = 4 - 2\epsilon$ dimensions. Furthermore the usual Mandelstam variables $s,t,u$ and the following modifications of them are used:
+In view of the renormalization to be performed at the 1-loop level the results are given in $D = 4 - 2\epsilon$ dimensions and it has been distinguished between the gauge coupling $g_s$ from the gluon-quark-quark vertex and its supersymmetric analogue $\hat{g}_s$ from the gluino-squark-quark vertex. The usual Mandelstam variables $s,t,u$ and the following modifications of them are used\footnote{The kinematics of the process is like denoted in fig. \ref{fig:TreeDiagrams}.}
 \begin{align}
+& s = (k_a + k_b)^2 = (p_1 + p_2)^2\nonumber\\
+& t = (k_a - p_1)^2 = (k_b - p_2)^2\nonumber\\
+& u = (k_a - p_2)^2 = (k_a - p_2)^2\nonumber\\
 & t_{\tilde{g}} = t - m_{\tilde{g}}^2 && t_{\tilde{q}} = t- m_{\tilde{q}}^2\nonumber\\
 & u_{\tilde{g}} = u - m_{\tilde{g}}^2 && u_{\tilde{q}} = u- m_{\tilde{q}}^2
 \end{align}
-In view of the renormalization to be performed at the 1-loop level it has been distinguished between the gauge coupling $g_s$ from the gluon-quark-quark vertex and its supersymmetric analogue $\hat{g}_s$ from the gluino-squark-quark vertex.
 
 
 
 \subsection{Partonic Cross Sections}
-Having calculated the absolute squared Feynman amplitudes one obtains the partonic cross section via
+Having calculated the absolute squared Feynman amplitudes one obtains the partonic cross sections (see Appendix \ref{sec:cross_section}) via
 \begin{align}
-\frac{\mbox{d}^2 \sigma}{\mbox{d}t\ \mbox{d}u} =& \frac{K_{ab}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_1^2m_2^2}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_1^2m_2^2)\nonumber\\
-&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum |\mathcal{M}|^2
+\frac{\mbox{d}^2 \sigma^B}{\mbox{d}t\ \mbox{d}u} =& \frac{K_{ab}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_1^2m_2^2}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_1^2m_2^2)\nonumber\\
+&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum |\mathcal{M}^B|^2
 \end{align}
 The leading order cross sections are
 \begin{align}
-\sigma(q_i \overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij}  \frac{g_s^4}{16\pi s} (n_f-1) \left[ \frac{4}{27} - \frac{16 m_{\tilde{q}}^2}{27s} \right]\nonumber\\
+\sigma^B(q_i \overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij}  \frac{g_s^4}{16\pi s} (n_f-1) \left[ \frac{4}{27} - \frac{16 m_{\tilde{q}}^2}{27s} \right]\nonumber\\
 &+ \delta_{ij} \frac{g_s^2\hat{g}_s^2}{16\pi s}  \left[ \left( \frac{4}{27} + \frac{8 m_-^2}{27 s} \right)\beta_{\tilde{q}}  + \left( \frac{8m_{\tilde{g}}^2}{27s} + \frac{8m_-^4}{27s^2} \right)L_1 \right]\nonumber\\
 & + \frac{\hat{g}_s^4}{16\pi s} \left[ -\frac{8}{9}\beta_{\tilde{q}} + \left( -\frac{4}{9} - \frac{8m_-^2}{9s} \right)L_1 \right]\\
-\sigma(GG \to \tilde{q}\tilde{q}^\dagger) &= \frac{(n_f-1) g_s^4}{16\pi s} \left[ \left(\frac{5}{24} + \frac{31 m_{\tilde{q}}^2}{12s}\right)\beta_{\tilde{q}} + \left( \frac{4m_{\tilde{q}}^2}{3s} + \frac{m_{\tilde{q}}^4}{3s^2} \right) \ln \frac{1-\beta_{\tilde{q}}}{1+\beta_{\tilde{q}}} \right]\\
-\sigma(q_i q_j \to \tilde{q}\tilde{q}) &= \frac{\hat{g}_s^4}{16\pi s} \left[ -\frac{8}{9}\beta_{\tilde{q}} +  \left( -\frac{4}{9} - \frac{8m_-^2}{9s} \right)L_1 \right]\\
-\sigma(q \overline{q} \to \tilde{g}\overline{\tilde{g}}) &= \frac{g_s^4}{16\pi s} \left[ \frac{16}{9} + \frac{32m_{\tilde{g}}^2}{9s} \right] \beta_{\tilde{g}}\nonumber\\
+\sigma^B(GG \to \tilde{q}\tilde{q}^\dagger) &= \frac{(n_f-1) g_s^4}{16\pi s} \left[ \left(\frac{5}{24} + \frac{31 m_{\tilde{q}}^2}{12s}\right)\beta_{\tilde{q}} + \left( \frac{4m_{\tilde{q}}^2}{3s} + \frac{m_{\tilde{q}}^4}{3s^2} \right) \ln \frac{1-\beta_{\tilde{q}}}{1+\beta_{\tilde{q}}} \right]\\
+\sigma^B(q_i q_j \to \tilde{q}\tilde{q}) &= \frac{\hat{g}_s^4}{16\pi s} \left[ -\frac{8}{9}\beta_{\tilde{q}} +  \left( -\frac{4}{9} - \frac{8m_-^2}{9s} \right)L_1 \right]\\
+\sigma^B(q \overline{q} \to \tilde{g}\overline{\tilde{g}}) &= \frac{g_s^4}{16\pi s} \left[ \frac{16}{9} + \frac{32m_{\tilde{g}}^2}{9s} \right] \beta_{\tilde{g}}\nonumber\\
 & + \frac{\hat{g}_s^2 g_s^2}{16\pi s}  \left[ \left( -\frac{4}{3}-\frac{8m_-^2}{3s} \right)\beta_{\tilde{g}} + \left( \frac{8 m_{\tilde{g}}^2}{3s} + \frac{8m_-^4}{3s^2} \right) L_2 \right]\nonumber\\
-& + \frac{\hat{g}_s^4}{16\pi s} \left[ \left( \frac{32}{27} + \frac{32 m_-^4}{m_-^4 + m_{\tilde{q}}^2s} \right)\beta_{\tilde{g}} - \frac{64m_-^2}{27s}L_2 \right]\label{eq:qqbar_to_sgsgbar}\\
-\sigma(GG \to \tilde{g}\overline{\tilde{g}}) &= \frac{g_s^4}{16\pi s} \left[ \left( -6 - \frac{51 m_{\tilde{g}}^2}{2s} \right)\beta_{\tilde{g}} + \left( -\frac{9}{2} - \frac{18 m_{\tilde{g}}^2}{s} + \frac{18 m_{\tilde{g}}^4}{s^2} \right)\ln \frac{1-\beta_{\tilde{g}}}{1+\beta_{\tilde{g}}} \right]\\
-\sigma(q G \to \tilde{q} \tilde{g}) &= \frac{g_s^2\hat{g}_s^2}{16\pi s} \left[ \frac{\kappa}{s}\left( -\frac{7}{9} - \frac{32 m_{-}^2}{9s} \right) + \left( -\frac{8m_-^2}{9s} + \frac{2m_{\tilde{q}}^2m_-^2}{s^2} + \frac{8 m_-^4}{9s^2} \right)L_3\right.\nonumber\\
+& + \frac{\hat{g}_s^4}{16\pi s} \left[ \left( \frac{32}{27} + \frac{32 m_-^4}{27(m_-^4 + m_{\tilde{q}}^2s)} \right)\beta_{\tilde{g}} - \frac{64m_-^2}{27s}L_2 \right]\label{eq:qqbar_to_sgsgbar}\\
+\sigma^B(GG \to \tilde{g}\overline{\tilde{g}}) &= \frac{g_s^4}{16\pi s} \left[ \left( -6 - \frac{51 m_{\tilde{g}}^2}{2s} \right)\beta_{\tilde{g}} + \left( -\frac{9}{2} - \frac{18 m_{\tilde{g}}^2}{s} + \frac{18 m_{\tilde{g}}^4}{s^2} \right)\ln \frac{1-\beta_{\tilde{g}}}{1+\beta_{\tilde{g}}} \right]\\
+\sigma^B(q G \to \tilde{q} \tilde{g}) &= \frac{g_s^2\hat{g}_s^2}{16\pi s} \left[ \frac{\kappa}{s}\left( -\frac{7}{9} - \frac{32 m_{-}^2}{9s} \right) + \left( -\frac{8m_-^2}{9s} + \frac{2m_{\tilde{q}}^2m_-^2}{s^2} + \frac{8 m_-^4}{9s^2} \right)L_3\right.\nonumber\\
 &+\left. \left( -1-\frac{2m_-^2}{s} + \frac{2m_{\tilde{q}}m_-^2}{s^2} \right)L_4 \right]
 \end{align}
 where the abbreviations 
@@ -254,13 +264,32 @@ where the abbreviations
 & L_1 = \ln \frac{s+2m_-^2 - s\beta_{\tilde{q}}}{s+2m_-^2 + s\beta_{\tilde{q}}} && L_2= \ln \frac{s - 2m_-^2 - s\beta_{\tilde{g}}}{s - 2m_-^2 + s\beta_{\tilde{g}}}\nonumber\\
 & L_3 = \ln \frac{s - m_-^2 - \kappa}{s - m_-^2 + \kappa} && L_4= \ln \frac{s + m_-^2 - \kappa}{s + m_-^2 + \kappa}
 \end{align}
-are used\cite{Beenakker:1996ch}. In contrast to the MSSM no statistical factor $\frac{1}{2}$ is taken into account for gluino-antigluino production, as these particles are distinguishable in the MRSSM. Still in comparison to the MSSM cross section for the channel $q \overline{q} \to \tilde{g}\overline{\tilde{g}}$ only the first line in \ref{eq:qqbar_to_sgsgbar} is doubled up as the part associated with an $t$ ($u$) channel squark is different. In the MRSSM either $\tilde{q}_L$ or $\tilde{q}_R$ is allowed whilst in the MSSM both squarks contribute to the $t$ ($u$) channel diagram.
+are used\cite{Beenakker:1996ch}. 
 
+\subsubsection*{The process $q_i \overline{q}_j \to \tilde{q}\tilde{q}^\dagger$}
+The production of a squark and an antisquark through a quark and an antiquark in the initial state origins from two diagrams. The first one with an $s$-channel gluon is the same in MSSM and MRSSM whereas the second one exhibits a difference due to the gluino which is no Majorana particle in the MRSSM. As the consequence contributions from this diagram are suppressed in comparison to the MSSM. One can also think of the difference as a result of the conservation of R-charge. As left handed squarks have R-charge +1 they must be produced with a right handed squark which carries R-charge -1 in order to meet the total R-charge of 0 zero in the initial state.
+
+\subsubsection*{The process $GG \to \tilde{q}\tilde{q}^\dagger$}
+This process has the same cross section in the MRSSM and in the MSSM for also in the MSSM only like chirality squark and antisquark $\tilde{q}_A\tilde{q}_A^\dagger$ with $A \in {L,R}$ can be produced
+
+\subsubsection*{The process $q_i q_j \to \tilde{q}\tilde{q}$}
+In the MRSSM only the production of unlike chirality squarks $\tilde{q}_L + \tilde{q}_R$ is allowed whilst in the MSSM also like chirality squarks can be produced. This is again a consequence of the conservation of R-charge. The upshot of this is a suppression of squark production in the MRSSM in comparison to the MSSM. To be more explicit the suppression of squark production in the MRSSM grows with the gluino mass. This can be understood as follows: As in the MRSSM a left handed squark needs to be produced with a right handed squark one can read off from the Feynman rules given in Appendix ??? that the gluino propagator $i\frac{\slashed{p}+m_{\tilde{g}}}{p^2-m_{\tilde{g}}^2}$ is sandwiched between the projectors $P_L$ and $P_R$ which leads to the cancellation of the gluino mass in the numerator. Therefore for small momenta of the gluino one gets for $\mathcal{M}$ a $\sim \frac{1}{m_{\tilde{g}}^2}$ suppression in the MRSSM while in the MSSM one finds a $\frac{1}{m_{\tilde{g}}}$ suppression.\\
+Furthermore because of the absence of chirality like squarks in the final state in the MRSSM the cross section of flavor like and unlike squarks is the same, i.e. on the partonic level $\sigma^B(\tilde{u}_L\tilde{u}_R) = \sigma^B(\tilde{u}_L\tilde{d}_R)$. That is however not true in the MSSM. 
+
+\subsubsection*{The process $q \overline{q} \to \tilde{g}\overline{\tilde{g}}$}
+In contrast to the MSSM no statistical factor of $\frac{1}{2}$ is taken into account when turning from $|\mathcal{M}|^2$ to $\sigma$. This is because gluino and antigluino are distinguishable particles. Still in comparison to the MSSM cross section only the first line in \ref{eq:qqbar_to_sgsgbar} is doubled up as the other two lines origin from an $t$ or $u$ channel squark which occurs in only one instead of two chiralities. Furthermore an interference term from the $t$ or $u$ channel diagram which occurs in the MSSM is absent in the MRSSM.
+% this interference term causes a huge difference, that's been checked by Philip via Madgraph
+
+\subsubsection*{The process $GG \to \tilde{g}\overline{\tilde{g}}$}
+As in the previous process the MRSSM cross section for $GG \to \tilde{g}\overline{\tilde{g}}$ receives no statistical factor of $\frac{1}{2}$. As there are no further differences between MSSM and MRSSM in this channel, the MRSSM cross section is simply twice as large as in the MSSM.
+
+\subsubsection*{The process $q G \to \tilde{q} \tilde{g}$}
+This process is exactly the same in the MSSM and MRSSM.
 
 
 \subsection{Hadronic Cross Section}
-factorization (pictorial explanation in factorization paper chapter 1.4 and Dissertori and Seymour, Marx page 24 below)
-The hadronic cross section for the production of a final state $X$, e.g. $X = \tilde{q},\tilde{q}$, can be obtained by convolving the partonic cross section with the parton density function of the initial partons.
+factorization (pictorial explanation in factorization paper chapter 1.4 and Dissertori and Seymour, Marx page 24 below)\\
+The hadronic cross section for the production of a final state $X$, e.g. $X = \tilde{q} \tilde{q}$, can be obtained by convolving the partonic cross section with the parton density function of the initial partons.
 \begin{align}
 \sigma^B_{\mathrm{Had}}(ij \to X) = \int \mbox{d}x_1 \mbox{d}x_2\ f_i(x_1) f_j(x_2)\ \sigma^B_{\mathrm{Part}} (ij \to X, s = x_ 1x_2 S).
 \end{align}
@@ -268,22 +297,46 @@ As the production of the final state $X$ may proceed with various initial parton
 \begin{align}
 \sigma^B_{\mathrm{Had}}(H_1 H_2 \to X) = \sum_{i,j} \sigma^B_{\mathrm{Had}}(i,j \to X).
 \end{align}
+To get an intuitive idea of the factorization consider the hadrons as extended objects consisting of partons\footnote{The proton is considered as composed of three valence quarks: Two up-quarks and one down-quark. In addition there are gluons and seaquarks, i.e. virtual quark-antiquark pairs.} which are permanently interacting which each other. Now consider two colliding hadrons in their center-of-mass frame. Due to Lorentz contraction the hadrons appear as thin discs. Furthermore the parton's mutual interactions are time-delayed. This effectively means that a hadron at the time of collision is virtually frozen.\\
+\begin{figure}[!htpb]
+\begin{center}
+\includegraphics[scale=.45]{figures/MRSSM:q+q->sq+sq_mr=2_seperated}
+\caption{Hadronic cross section for squark production in the MRSSM at the LHC at $\sqrt{S} = \unit[13]{GeV}$. The ratio of gluino and squark mass is fixed to 1.5. The parton densities used are $\mathtt{MMHT2014}$ LO with $\alpha_s(M_Z) = 0.135$ in the 5-flavor scheme \cite{Harland-Lang:2014zoa}. As renormalization and factorization scale $\mu_R = \mu_F = \frac{m_1 + m_2}{2}$ has been chosen, where $m_i$ are the final state particle masses.} \label{fig:TreeXsection}
+\end{center}
+\end{figure}
+refer to paper in Peskin on how to get pdf's
+\\
 refer to Kribs, Martin
 \begin{figure}[!htpb]
 \begin{center}
-\includegraphics[scale=.45]{figures/mr=0,9_MSSM+MRSSM}
-\includegraphics[scale=.45]{figures/mr=2_MSSM+MRSSM}
+\includegraphics[scale=.4]{figures/mr=0,9_MSSM+MRSSM}
+\includegraphics[scale=.4]{figures/mr=2_MSSM+MRSSM}
+\caption{Hadronic cross section for squark and gluino production in the MSSM (left-hand side) and MRSSM (right-hand side) at the LHC at $\sqrt{S} = \unit[13]{GeV}$. The ratio of gluino and squark mass is fixed to 0.9 (first row) and 2 (second row). In the final state it has been summed over all squark flavors expect for staus. For the channels $qq \to \tilde{q}\tilde{q}$ and $qG \to \tilde{q}\tilde{G}$ also the charge conjugated process is included. The parton densities used are $\mathtt{MMHT2014}$ LO with $\alpha_s(M_Z) = 0.135$ in the 5-flavor scheme \cite{Harland-Lang:2014zoa}. As renormalization and factorization scale $\mu_R = \mu_F = \frac{m_1 + m_2}{2}$ has been chosen, where $m_i$ are the final state particle masses.} \label{fig:TreeXsection}
 \end{center}
 \end{figure}
+
 \begin{figure}[!htpb]
 \begin{center}
 \includegraphics[scale=.45]{figures/rel_weights_mr=0,9_MSSM+MRSSM}
 \includegraphics[scale=.45]{figures/rel_weights_mr=2_MSSM+MRSSM}
+\caption{Relative contributions of the indicated final states on the total hadronic cross section in the MSSM (left-hand side) and MRSSM (right-hand side) at the LHC at $\sqrt{S} = \unit[13]{GeV}$. The ratio of gluino and squark mass is fixed to 0.9 (first row) and 2 (second row). In the final state it has been summed over all squark flavors expect for staus. For the channels $qq \to \tilde{q}\tilde{q}$ and $qG \to \tilde{q}\tilde{G}$ also the charge conjugated process is included. The parton densities and the renormalization and factorization scale are chosen as in fig. \ref{fig:TreeXsection}.}
 \end{center}
 \end{figure}
+
 \begin{figure}[!htpb]
 \begin{center}
-\includegraphics[scale=.45]{figures/mr=5_MSSM+MRSSM}
+\includegraphics[scale=.4]{figures/mr=5_MSSM+MRSSM}
 \includegraphics[scale=.45]{figures/rel_weights_mr=5_MSSM+MRSSM}
+\caption{Hadronic cross section for squark and gluino production (in the first row) and relative contributions of the indicated final states on the total hadronic cross section in the MSSM (left-hand side) and MRSSM (right-hand side) at the LHC at $\sqrt{S} = \unit[13]{GeV}$. The ratio of gluino and squark mass is fixed to 5. In the final state it has been summed over all squark flavors expect for staus. For the channels $qq \to \tilde{q}\tilde{q}$ and $qG \to \tilde{q}\tilde{G}$ also the charge conjugated process is included. The parton densities and the renormalization and factorization scale are chosen as in fig. \ref{fig:TreeXsection}.}
+\end{center}
+\end{figure}
+
+discussion of channels, maybe copy from above\\
+refer to Vernoica Sanz: How many SUpersymmetries?
+
+\begin{figure}[!htpb]
+\begin{center}
+\includegraphics[scale=.6]{figures/contour_MRSSM_squarks}
+\caption{}
 \end{center}
 \end{figure}

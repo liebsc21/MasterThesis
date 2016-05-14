@@ -1,4 +1,4 @@
-\section{UV-Divergences and Renormalization of the MRSSM}
+\section{Renormalization of the MRSSM}\label{sec:renMRSSM}
 In order to improve the prediction of the cross section of the previous chapter one has to take quantum corrections into account. These are associated with loops in the corresponding Feynman diagrams. Computing these loop diagrams one might encounter infinities which arise from certain momentum configurations of the unspecified loop momentum. These infinities can be classified due to their origin. Infinities which are associated with loop momenta which tend to infinity are referred to as ultraviolet(UV) divergences. Infinities arising from loop momenta approaching zero can occur in loops with massless particles and are called infrared(IR) singularities. Furthermore there are collinear singularities with occur when a massless particle splits into two massless collinear particles.\\
 These infinities are not physical and must therefore be removed to get sensible predictions. To this end one regularizes them to extract them from the quantity in question. UV-divergences can be removed by means of renormalization, i.e. counterterms are inserted into the Lagrangian to cancel UV-divergences. Infrared and collinear divergenves are removed by adding up all possible contributions which give rise to the considered observable.
 
@@ -35,7 +35,7 @@ Fortunately a supersymmetry conserving regularization scheme (at 1-loop level) i
 \end{align}
 Setting also the finite terms in $\Gamma^{(1),ct,sym}$ equal in DRED and DREG the choice of the supersymmetry restoring counterterms is fixed by:
 \begin{align}
-\Gamma^{(1),ct,restore}_{DREG} = \Gamma^{(\leq 1)}_{DRED} - \Gamma^{(\leq 1)}_{DREG}.\label{eq:GammaCtRestore}
+\Gamma^{\mathrm{(1),ct,restore}}_{\mathrm{DREG}} = \Gamma^{(\leq 1)}_{\mathrm{DREG}} - \Gamma^{(\leq 1)}_{\mathrm{DREG}}.\label{eq:GammaCtRestore}
 \end{align} 
 This way supersymmetry is preserved by the renormalization constants.\\ 
 In the case of the MRSSM it will turn out that the only supersymmetry violation comes from correction associated with the gluon as already alluded to in \ref{sec:RegSchemes}. However supersymmetry restoring is always already included in $\delta Z^{\mathrm{DREG}}$. This is $\delta Z^{\mathrm{DREG}} = \delta Z^{\mathrm{DREG,sym}} + \delta Z^{\mathrm{trans}}$ where $\delta Z^{\mathrm{trans}} = \delta Z^{\mathrm{DREG}} - \delta Z^{\mathrm{DRED}}$ is the supersymmetry restoring renormalization constant. The only point where particularly care is required is the coupling: The  gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$ receive different supersymmetry restoring counterterms. Therefore one has to make a difference between these couplings at 1-loop level. In order to match $g_s$ to the experimentally measured coupling it is renormalized in $\overline{\mathrm{MS}}$. The Yukawa coupling $\hat{g}_s$ therefore needs to be added with the difference of the supersymmetry restoring counterterms at 1-loop in order to be renormalized the same way.
@@ -104,7 +104,7 @@ and the on-shell renormalization condition
 \end{align}
 where $\Re (\hdots)$ denotes the real part of $\hdots$ one finds
 \begin{align}
-\delta Z_q = 2 C(F) \frac{g_s^2}{16\pi^2} \Re \left[ B_1(p^2,m_{\tilde{g}}^2,m_{\tilde{q}}^2) + \frac{1}{2} \right].
+\delta Z_q = 2 C(F) \frac{g_s^2}{16\pi^2} \Re \left[ B_1(0 ,m_{\tilde{g}}^2,m_{\tilde{q}}^2) + \frac{1}{2}??? \right].
 \end{align}
 Doing the same calculation in DRED one finds that the second term in the squared brackets is absent. Therefore the transition counterterm between DREG and DRED is given by
 \begin{align}
@@ -405,8 +405,9 @@ As for the quark self-energy there are again contributions to the self-energy or
 \begin{align}
 \left.i\Gamma^{\mathrm{1L,light}}_{G_\mu^a G_\nu^b}\right|_{\mathrm{UV-div}} &= i\frac{g_s^2}{16\pi^2}\Delta_\epsilon \left[ 0 - \frac{4 (n_{f}-1)}{3} T(F) (p^2g^{\mu\nu}-p^\mu p^\nu) + \frac{C(A)}{12}(p^2g^{\mu\nu} + 2 p^\mu p^\nu) \right.\nonumber\\
 &+\left. \frac{C(A)}{12}(19 p^2g^{\mu\nu} - 22 p^\mu p^\nu) \right]\delta_{ab}\nonumber\\
-&=i\frac{g_s^2}{16\pi^2} \Delta\epsilon \left[ - \frac{4 (n_{f}-1)}{3} T(F) + \frac{5}{3} C(A) \right](p^2g^{\mu\nu}-p^\mu p^\nu)\delta_{ab}
+&=i\frac{g_s^2}{16\pi^2} \Delta_\epsilon \left[ - \frac{4 (n_{f}-1)}{3} T(F) + \frac{5}{3} C(A) \right](p^2g^{\mu\nu}-p^\mu p^\nu)\delta_{ab}
 \end{align}
+Both contributions the one from the gluon loop and the one from the ghost loop are not proportional to $(p^2g^{\mu\nu}-p^\mu p^\nu)$ but their sum is.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -472,19 +473,25 @@ As for the quark self-energy there are again contributions to the self-energy or
 \caption{contribution to the self-energy of the gluon originating from heavy particles, in the last diagram either $\phi^0$ or $\sigma^0$ are running in the loop}
 \end{center}
 \end{figure}
-The heavy particle contributions are given by\\
+The heavy particle contributions are calculated in the zero-momentum subtraction
 \begin{align}
-i\Gamma^{\mathrm{1L,heavy}}_{G_\mu^a G_\nu^b}|_{\mathrm{UV-div, \mu-dep}} &= i\frac{g_s^2}{16\pi^2}\delta_{ab} \left[ - 4 T(F)n_f \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{q}}^2}{\mu2} \right)m_{\tilde{q}}^2 g^{\mu\nu} - C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)m_{\phi^0}^2 g^{\mu\nu} \right.\nonumber\\
-&- C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\sigma^0}^2}{\mu2} \right)m_{\sigma^0}^2 g^{\mu\nu} - \frac{4}{3}T(F)\left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_t^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)\nonumber\\
-& - \frac{4}{3} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{g}}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)\nonumber\\
-& -\frac{2}{3}T(F) n_f \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{q}}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) + 4T(F)n_f \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{q}}^2}{\mu2} \right)m_{\tilde{q}}^2 g^{\mu\nu} \nonumber\\
-&-\frac{1}{6} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) + C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)m_{\phi^0}^2 g^{\mu\nu} \nonumber\\
-&\left.-\frac{1}{6} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) + C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)m_{\phi^0}^2 g^{\mu\nu}\right]\nonumber\\
-&= i\frac{g_s^2}{16\pi^2}\delta_{ab} \left[- \frac{4}{3}T(F)\left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_t^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)\right.\nonumber\\
-& - \frac{4}{3} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{g}}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)\nonumber\\
-& -\frac{2}{3}T(F) n_f \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{q}}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) \nonumber\\
-&-\frac{1}{6} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)  \nonumber\\
-&\left.-\frac{1}{6} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) \right]
+%i\Gamma^{\mathrm{1L,heavy}}_{G_\mu^a G_\nu^b}|_{\mathrm{UV-div, \mu-dep}} &= i\frac{g_s^2}{16\pi^2}\delta_{ab} \left[ - 4 T(F)n_f A_0(m_{\tilde{q}}^2) g^{\mu\nu} - C(A) A_0(m_{\phi^0}^2) g^{\mu\nu} - C(A) A_0(m_{\sigma^0}^2) g^{\mu\nu} \right.\nonumber\\
+%&- T(F)\left(\left( \frac{1}{4} A_0(m_t^2) - \frac{1}{2}B_{00}(p^2,m_t^2,m_t^2) \right)g^{\mu\nu} - \frac{1}{2} B_{11}(p^2,m_t^2,m_t^2)p^\mu p^\nu + \frac{1}{4} B_1(p^2,m_t^2,m_t^2)(p^2 g^{\mu\nu} - 2p^\mu p^\nu)  \right)\nonumber\\
+%& - \frac{4}{3} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{g}}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)\nonumber\\
+%& -\frac{2}{3}T(F) n_f \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{q}}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) + 4T(F)n_f \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{q}}^2}{\mu2} \right)m_{\tilde{q}}^2 g^{\mu\nu} \nonumber\\
+%&-\frac{1}{6} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) + C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)m_{\phi^0}^2 g^{\mu\nu} \nonumber\\
+%&\left.-\frac{1}{6} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) + C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu2} \right)m_{\phi^0}^2 g^{\mu\nu}\right]\nonumber\\
+i\Gamma^{\mathrm{1L,heavy}}_{G_\mu^a G_\nu^b}(p^2 = 0)&= i\frac{g_s^2}{16\pi^2}\delta_{ab} \left[ - 4 T(F)n_f \left( \Delta_\epsilon - \ln \frac{m_{\tilde{q}}^2}{\mu^2} \right)m_{\tilde{q}}^2 g^{\mu\nu} - C(A) \left( \Delta_\epsilon - \ln \frac{m_{\phi^0}^2}{\mu^2} \right)m_{\phi^0}^2 g^{\mu\nu} \right.\nonumber\\
+&- C(A) \left( \Delta_\epsilon - \ln \frac{m_{\sigma^0}^2}{\mu^2} \right)m_{\sigma^0}^2 g^{\mu\nu} - \frac{4}{3}T(F)\left( \Delta_\epsilon - \ln \frac{m_t^2}{\mu^2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)\nonumber\\
+& - \frac{4}{3} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)\nonumber\\
+& -\frac{2}{3}T(F) n_f \left( \Delta_\epsilon - \ln \frac{m_{\tilde{q}}^2}{\mu^2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) + 4T(F)n_f \left( \Delta_\epsilon - \ln \frac{m_{\tilde{q}}^2}{\mu^2} \right)m_{\tilde{q}}^2 g^{\mu\nu} \nonumber\\
+&-\frac{1}{6} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\phi^0}^2}{\mu^2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) + C(A) \left( \Delta_\epsilon - \ln \frac{m_{\phi^0}^2}{\mu^2} \right)m_{\phi^0}^2 g^{\mu\nu} \nonumber\\
+&\left.-\frac{1}{6} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\phi^0}^2}{\mu^2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) + C(A) \left( \Delta_\epsilon - \ln \frac{m_{\phi^0}^2}{\mu^2} \right)m_{\phi^0}^2 g^{\mu\nu}\right]\nonumber\\
+&= i\frac{g_s^2}{16\pi^2}\delta_{ab} \left[- \frac{4}{3}T(F)\left( \Delta_\epsilon - \ln \frac{m_t^2}{\mu^2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)\right.\nonumber\\
+& - \frac{4}{3} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)\nonumber\\
+& -\frac{2}{3}T(F) n_f \left( \Delta_\epsilon - \ln \frac{m_{\tilde{q}}^2}{\mu^2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) \nonumber\\
+&-\frac{1}{6} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\phi^0}^2}{\mu^2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu)  \nonumber\\
+&\left.-\frac{1}{6} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\phi^0}^2}{\mu^2} \right)(p^2g^{\mu\nu}-p^\mu p^\nu) \right]
 \end{align}
 The counterterm Feynman rule for the gluon propagator is\\
 \\
@@ -504,9 +511,9 @@ The renormalization condition for $\delta Z^{\mathrm{aux}}_G$ reads
 \end{align}
 and yields
 \begin{align}
-\delta Z^{aux}_G &= \frac{g_s^2}{16\pi^2} \left\{\left[-\frac{4}{3}T(F)(n_f-1) + \frac{5}{3} C(A) \right] \frac{1}{\epsilon_{\mathrm{UV}}} + \left[ - \frac{4}{3}T(F) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_t^2}{\mu^2} \right)  \right.\right.\nonumber\\
-&- \frac{4}{3} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) -\frac{2}{3}T(F) n_f \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\tilde{q}}^2}{\mu^2} \right)\nonumber\\
-& - \frac{1}{6} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\phi^0}^2}{\mu^2} \right) - \frac{1}{6} C(A) \left( \frac{1}{\epsilon_{\mathrm{UV}}} - \ln \frac{m_{\sigma^0}^2}{\mu^2} \right).
+\delta Z^{aux}_G &= \frac{g_s^2}{16\pi^2} \left\{\left[-\frac{4}{3}T(F)(n_f-1) + \frac{5}{3} C(A) \right] \Delta_\epsilon + \left[ - \frac{4}{3}T(F) \left( \Delta_\epsilon - \ln \frac{m_t^2}{\mu^2} \right)  \right.\right.\nonumber\\
+&- \frac{4}{3} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) -\frac{2}{3}T(F) n_f \left( \Delta_\epsilon - \ln \frac{m_{\tilde{q}}^2}{\mu^2} \right)\nonumber\\
+& - \frac{1}{6} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\phi^0}^2}{\mu^2} \right) - \frac{1}{6} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\sigma^0}^2}{\mu^2} \right).
 \end{align}
 
 
@@ -599,11 +606,12 @@ The term in the curved brackets of eq. \ref{eq:qqGlight} corresponds to the firs
 \end{center}
 \end{figure}
 \begin{align}
-i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) = - -g_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} &\left[ \left(C(F) -\frac{C(A)}{2}\right) 4C_{00}(0, 0, m_{\tilde{g}}^2, m_{\tilde{q}}^2, m_{\tilde{q}}^2) \right.\nonumber\\
-&+ \left. C(A)\left( B_0(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2) -2C_{00}(0, 0, m_{\tilde{g}}^2, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right) \right]
+i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) &= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \left[ \left(C(F) -\frac{C(A)}{2}\right) 4C_{00}(0, 0, m_{\tilde{g}}^2, m_{\tilde{q}}^2, m_{\tilde{q}}^2) \right.\nonumber\\
+&\hspace{3.3cm} + \left. C(A)\left( B_0(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2) -2C_{00}(0, 0, m_{\tilde{g}}^2, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right) \right]\nonumber\\
+&= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \left[ \left(C(F) -\frac{C(A)}{2}\right) \left( \Delta_\epsilon - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) \right.\nonumber\\
+&\hspace{3.3cm} + \left.\frac{C(A)}{2} \left( \Delta_\epsilon - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) \right]
 \end{align}
-The argument $p_i^2=0$ of the vertex function denotes, that all external particles are taken on shell, i.e. at zero momentum.
-The sum of the 1-loop corrections and the counterterm should be set to zero:
+The argument $p_i^2=0$ of the vertex function denotes, that all external particles are taken on shell, i.e. at zero momentum. In the second line identities from \ref{sec:Passarino} have been used. The renormalization condition for the counterterm of the gauge coupling $\delta g_s$ reads
 \begin{align}
 \left.i\Gamma^{\mathrm{1L,light}}_{q_i \overline{q}_j G_\mu^a}\right|_{\mathrm{UV-div}} + i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) + \left[ -ig_s T^a_{ij}\gamma^\mu\left( \frac{\delta g_s}{g_s} + \delta Z_q^{\mathrm{aux}} + \frac{\delta Z_G^{\mathrm{aux}}}{2} \right)\right] = 0.
 \end{align}

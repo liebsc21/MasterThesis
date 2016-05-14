@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/master/!svn/ver/120/trunk/Master/9.+10.%20Semester/WARB-talk/Figures/relative_weights/5_g+g-%3Esg+sg
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/master/!svn/ver/120/trunk/Master/9.+10.%20Semester/WARB-talk/Figures/relative_weights/5_g+g-%3Esg+sg/Makefile
+END
+had_cros_g+g->sg+sg_bar_mr=0.8_large_m.txt
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/master/!svn/ver/120/trunk/Master/9.+10.%20Semester/WARB-talk/Figures/relative_weights/5_g+g-%3Esg+sg/had_cros_g+g-%3Esg+sg_bar_mr=0.8_large_m.txt
+END
+mstwpdf.cc
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/master/!svn/ver/120/trunk/Master/9.+10.%20Semester/WARB-talk/Figures/relative_weights/5_g+g-%3Esg+sg/mstwpdf.cc
+END
+hadronic_sgsgbar_from_gluons_crosssection_cpp
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/master/!svn/ver/120/trunk/Master/9.+10.%20Semester/WARB-talk/Figures/relative_weights/5_g+g-%3Esg+sg/hadronic_sgsgbar_from_gluons_crosssection_cpp
+END
+mstwpdf.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/master/!svn/ver/120/trunk/Master/9.+10.%20Semester/WARB-talk/Figures/relative_weights/5_g+g-%3Esg+sg/mstwpdf.h
+END
+hadronic_sgsgbar_from_gluons_crosssection.cc
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/master/!svn/ver/120/trunk/Master/9.+10.%20Semester/WARB-talk/Figures/relative_weights/5_g+g-%3Esg+sg/hadronic_sgsgbar_from_gluons_crosssection.cc
+END
+alphaS.f
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/master/!svn/ver/120/trunk/Master/9.+10.%20Semester/WARB-talk/Figures/relative_weights/5_g+g-%3Esg+sg/alphaS.f
+END
+had_cros_g+g->sg+sg_bar_mr=1.6_large_m.txt
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/master/!svn/ver/120/trunk/Master/9.+10.%20Semester/WARB-talk/Figures/relative_weights/5_g+g-%3Esg+sg/had_cros_g+g-%3Esg+sg_bar_mr=1.6_large_m.txt
+END

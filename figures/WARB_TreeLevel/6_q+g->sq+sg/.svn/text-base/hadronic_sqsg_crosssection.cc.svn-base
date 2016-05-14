@@ -1,0 +1,151 @@
+/* This code is for the calculation of the hadronic cross-sections of 
+   the partons q + g -> sq +sg with protons.
+   The partonic cross-section is inserted with the function sigma.
+   The pdf's from MMHT2014 at q=(m_sq+m_sg)/2 are read and the code
+   does a 2D integration of these pdf's with the partonic cross section.
+   The had. cross sections are stored in a txt-file for varying
+   values of squark masses with a fixed m_gluino/m_squark ratio.
+   The cross sections in MSSM and MRSSM are identical. */
+#include <cmath>
+#include <iostream>
+#include <fstream>
+#include "mstwpdf.h"
+
+
+double alphas(double q, double MZ, double alphas_MZ)
+/* running of the strong gauge coupling, variables: renormalization 
+   scale, Z mass, gauge couling at Z mass*/
+{
+return 1./(1./alphas_MZ + 23./(6.*M_PI)*log(q/MZ));
+}
+
+
+double sigma(double s, double mr, double mq)
+/* partonic cross-section, variables: center-of-mass energy of partons,
+   mass ratio m_sq/m_sg, squark mass */
+{
+double sigma;
+double mg = mq*mr; // gluino mass
+if(s>=pow(mq+mg,2.))
+{
+    double kappa = sqrt(pow(s-mg*mg-mq*mq,2.)-4.*mg*mg*mq*mq);
+    double L3 = log((s-(mg*mg-mq*mq)-kappa)/(s-(mg*mg-mq*mq)+kappa));
+    double L4 = log((s+(mg*mg-mq*mq)-kappa)/(s+(mg*mg-mq*mq)+kappa));
+    sigma = M_PI/s*(kappa/s*(-7./9.-32./9.*(mg*mg-mq*mq)/s)+(-8./9.*(mg*mg-mq*mq)/s+2*mq*mq*(mg*mg-mq*mq)/(s*s)+8.*pow(mg*mg-mq*mq,2.)/(9*s*s))*L3+(-1-2*(mg*mg-mq*mq)/s+2*mq*mq*(mg*mg-mq*mq)/(s*s))*L4);
+}
+else 
+{
+    sigma = 0;
+}
+return sigma;
+}
+
+
+
+double simpson_integration(double f1, double f2, double f3)
+/* hight of rectangles in numerical integration with
+   Simpson method */
+{
+return (f1+4*f2+f3)/6.;
+}
+
+
+
+double integration(c_mstwpdf *pdf,double q, int N, double s, double x1, double x2, double mr, double msq, int F1, int F2)
+/* integration routine for 2D-integration for hadronic cross 
+   section in  with variables: pdf, factorization scale,
+   grid points of array x for pdf's, squared center-of-mass energy of
+   protons, x values for second parton, mass ratio: m_gs/m_sq,
+   squark mass m_sq, parton flavor*/
+{
+int count = 0;
+double x[N];
+x[0] = pow(10.,-7.);
+double integral = 0;
+while(count<=N-1)
+    {
+    x[count+1] = pow(10.,-7.+7.*(count+1)/N);
+    double delta_x = x[count+1]-x[count];
+    integral = integral + delta_x * simpson_integration(pdf->parton(F1,x[count],q)/x[count]*sigma(s*x[count]*x1, mr, msq), pdf->parton(F1,(x[count+1]+x[count])/2.,q)/((x[count+1]+x[count])/2.)*sigma(s*(x[count]+x[count+1])/2.*(x1+x2)/2., mr, msq),pdf->parton(F1,x[count+1],q)/x[count+1] * sigma(s*x[count+1]*x2, mr, msq))*pdf->parton(F2,(x1+x2)/2.,q)/((x1+x2)/2.);
+    count = count + 1;
+    }
+return integral;
+}
+
+
+
+int main (void)
+{
+/* refer to leading order pdf */
+c_mstwpdf *pdf = new c_mstwpdf("/media/ntfs/sebastian/pdfs/mmht2014code/mmht2014grids/mmht2014lo135/mmht2014lo135.00.dat");
+
+/* number of grid point for integration */
+int N = 100;
+double MZ = 91.18;
+double alphas_MZ = 0.135;
+/* sqrt(s)=13TeV */
+double s = 13000.*13000.;
+
+///* calculate number of up and ubar quarks in proton at q=500GeV */
+//double number_upv = integration((c_mstwpdf*)pdf, q, N);
+//cout << "number of up valence-quarks in proton at q=500GeV: " << number_upv << endl;
+
+/* array of squark masses */
+int num = 100;
+double m_sq[num];
+m_sq[0] = 100.;
+for(int i=0;i<=num-2;i++)
+{
+    m_sq[i+1] = m_sq[0] + 1900.*(i+2)/num;
+}
+double mr = 1./1.6;         // mass ratio: m_sg/m_sq
+
+/* open file to store cross section there */
+ofstream myfile;
+char filename[] = "had_cros_q+g->sq+sg_mr=1.6_large_m.txt";
+myfile.open(filename);
+myfile << "m_sq,gd,gu,gs,gc,gb,at_factorization_and_renorm_scale:q=(m_sq+m_sg)/2\n";
+
+/* do 2-D integration over partonic cross-section and pdf's of
+   colliding partons */
+double x[N];        // x for pdf's
+x[0] = pow(10.,-7.);
+for(int i=0; i<=N-2;i++)
+{
+    x[i+1] = pow(10.,-7.+7.*(i+2)/N);
+}
+
+/*Sigma is cross section of protons*/
+double Sigma;
+
+cout << "Calculate cross section and write in file " << filename << endl;
+/* loop over squark masses */
+for(int j=0; j<=num-1;j++)
+{
+    myfile << m_sq[j];
+    /* renormalization scale */
+    double q = (m_sq[j]+m_sq[j]*mr)/2.;
+    double alpha_s = alphas(q, MZ, alphas_MZ);
+    /* loop over parton flavors */
+    int f1 = 0;
+    for(int f2 = 1; f2<=5; f2++)
+    {
+        Sigma = 0;
+        /* loop over pdf-grid */
+        for(int i=0; i<=N-2; i++)
+        {
+            Sigma = Sigma + (x[i+1]-x[i]) * integration((c_mstwpdf*)pdf, q, N, s, x[i], x[i+1], mr, m_sq[j], f1, f2);
+            Sigma = Sigma + (x[i+1]-x[i]) * integration((c_mstwpdf*)pdf, q, N, s, x[i], x[i+1], mr, m_sq[j], f1, -f2);
+        }
+        /* Sigma in femtobarn */
+        Sigma = pow(alpha_s,2.) * Sigma*3.89*pow(10,-4.)*pow(10.,12.);
+        myfile << "      " << Sigma; 
+    }
+    myfile << "\n";
+    cout << (j+1.)/num*100. << " % done with alphas = " << alpha_s << endl;
+}
+
+myfile.close();
+
+return (0);
+}
