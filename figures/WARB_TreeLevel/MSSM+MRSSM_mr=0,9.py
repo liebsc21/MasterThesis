@@ -353,17 +353,17 @@ f_MRSSM6.close()
 sigma_MRSSM = sigma1_MRSSM+sigma2_MRSSM+sigma3_MRSSM+sigma4_MRSSM+sigma5_MRSSM+sigma6_MRSSM
 
 
-sigma_min = 10**(-5)
-sigma_max = 10**(5)
+sigma_min = 10**(-2)
+sigma_max = 10**(8)
 
 fig = plt.figure(1,figsize=(17, 9))
 #fig.suptitle(r'LO cross-sections for sparticle production at the LHC at $\sqrt{s}=13$TeV', fontsize=25)
 
 
 first_window = plt.subplot(121)
-plt.title("MSSM", size = 22)
+#plt.title("MSSM", size = 22)
 plt.xlabel(r"$m_{\tilde{q}}$ in GeV", size = 22)
-plt.ylabel(r"$\sigma_{MSSM}$ in pb", size = 22)
+plt.ylabel(r"$\sigma^{\mathrm{B}}_{\mathrm{MSSM}}$ in fb", size = 22)
 plt.xticks(fontsize = 20)
 plt.yticks(fontsize = 20)
 
@@ -376,26 +376,26 @@ plt.axes(first_window)
 
 first_window.xaxis.set_major_formatter(FormatStrFormatter('%0.0f'))
 
-plt.plot(m_squark, sigma1_MSSM, lw=2, ls="--", c='orange', label = r"$q\overline{q} \to \tilde{q}\tilde{q}^\dagger$")
-plt.plot(m_squark, sigma2_MSSM, lw=2, ls="--", c='red', label = r"$GG \to \tilde{q}\tilde{q}^\dagger$")
-plt.plot(m_squark, sigma3_MSSM, lw=2, ls="-", c='green', label = r"$qq \to \tilde{q}\tilde{q}$")
-plt.plot(m_squark, sigma4_MSSM, lw=2, ls=":", c='deepskyblue', label = r"$q\overline{q} \to \tilde{g}\tilde{g}$")
-plt.plot(m_squark, sigma5_MSSM, lw=2, ls=":", c='darkblue', label = r"$GG \to \tilde{g}\tilde{g}$")
-plt.plot(m_squark, sigma6_MSSM, lw=2, ls="-.", c='black', label = r"$qG \to \tilde{q}\tilde{g}$")
+plt.plot(m_squark, sigma1_MSSM*10**3, lw=2, ls="--", c='orange', label = r"$q\overline{q} \to \tilde{q}\tilde{q}^\dagger$")
+plt.plot(m_squark, sigma2_MSSM*10**3, lw=2, ls="--", c='red', label = r"$GG \to \tilde{q}\tilde{q}^\dagger$")
+plt.plot(m_squark, sigma3_MSSM*10**3, lw=2, ls="-", c='green', label = r"$qq \to \tilde{q}\tilde{q}$")
+plt.plot(m_squark, sigma4_MSSM*10**3, lw=2, ls=":", c='deepskyblue', label = r"$q\overline{q} \to \tilde{g}\tilde{g}$")
+plt.plot(m_squark, sigma5_MSSM*10**3, lw=2, ls=":", c='darkblue', label = r"$GG \to \tilde{g}\tilde{g}$")
+plt.plot(m_squark, sigma6_MSSM*10**3, lw=2, ls="-.", c='black', label = r"$qG \to \tilde{q}\tilde{g}$")
 
 
 plt.legend(loc='best',prop={'size':22})
 
 props = dict(boxstyle='round', facecolor='w', alpha=0.5)
-first_window.text(600, 10000, r"$\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9$", fontsize=22,
+first_window.text(600, 10**7, r"$\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9$", fontsize=22,
         verticalalignment='top', bbox=props)
 
 
 
 second_window = plt.subplot(122)
-plt.title(r"MRSSM", size = 22)
+#plt.title(r"MRSSM", size = 22)
 plt.xlabel(r"$m_{\tilde{q}}$ in GeV", size = 22)
-plt.ylabel(r"$\sigma_{MRSSM}$ in pb", size = 22)
+plt.ylabel(r"$\sigma^{\mathrm{B}}_{\mathrm{MRSSM}}$ in fb", size = 22)
 plt.xticks(fontsize = 20)
 plt.yticks(fontsize = 20)
 
@@ -408,19 +408,19 @@ plt.axes(second_window)
 
 second_window.xaxis.set_major_formatter(FormatStrFormatter('%0.0f'))
 
-plt.plot(m_squark, sigma1_MRSSM, lw=2, ls="--", c='orange', label = r"$q\overline{q} \to \tilde{q}\tilde{q}^\dagger$")
-plt.plot(m_squark, sigma2_MRSSM, lw=2, ls="--", c='red', label = r"$GG \to \tilde{q}\tilde{q}^\dagger$")
-plt.plot(m_squark, sigma3_MRSSM, lw=2, ls="-", c='green', label = r"$qq \to \tilde{q}\tilde{q}$")
-plt.plot(m_squark, sigma4_MRSSM, lw=2, ls=":", c='deepskyblue', label = r"$q\overline{q} \to \tilde{g}\overline{\tilde{g}}$")
-plt.plot(m_squark, sigma5_MRSSM, lw=2, ls=":", c='darkblue', label = r"$GG \to \tilde{g}\overline{\tilde{g}}$")
-plt.plot(m_squark, sigma6_MRSSM, lw=2, ls="-.", c='black', label = r"$qG \to \tilde{q}\tilde{g}$")
+plt.plot(m_squark, sigma1_MRSSM*10**3, lw=2, ls="--", c='orange', label = r"$q\overline{q} \to \tilde{q}\tilde{q}^\dagger$")
+plt.plot(m_squark, sigma2_MRSSM*10**3, lw=2, ls="--", c='red', label = r"$GG \to \tilde{q}\tilde{q}^\dagger$")
+plt.plot(m_squark, sigma3_MRSSM*10**3, lw=2, ls="-", c='green', label = r"$qq \to \tilde{q}\tilde{q}$")
+plt.plot(m_squark, sigma4_MRSSM*10**3, lw=2, ls=":", c='deepskyblue', label = r"$q\overline{q} \to \tilde{g}\overline{\tilde{g}}$")
+plt.plot(m_squark, sigma5_MRSSM*10**3, lw=2, ls=":", c='darkblue', label = r"$GG \to \tilde{g}\overline{\tilde{g}}$")
+plt.plot(m_squark, sigma6_MRSSM*10**3, lw=2, ls="-.", c='black', label = r"$qG \to \tilde{q}\tilde{g}$")
 
 
 
 plt.legend(loc='best',prop={'size':21})
 
 props = dict(boxstyle='round', facecolor='w', alpha=0.5)
-second_window.text(600, 10000, r"$\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9$", fontsize=22,
+second_window.text(600, 10**7, r"$\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9$", fontsize=22,
         verticalalignment='top', bbox=props)
 
 plt.subplots_adjust(wspace = 0.3, top=0.85)

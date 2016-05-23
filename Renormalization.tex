@@ -48,7 +48,7 @@ In the case of the MRSSM it will turn out that the only supersymmetry violation 
 \subsection{On-Shell Renormalization}\label{sec:QuarkSE}
 A part of the computation of NLO processes is the calculation of renormalization constants. The field and mass renormalization constants have been calculated in DREG in the on-shell scheme. This has the advantaged that when turning to the cross section no manipulation of the Green function to the S-matrix element has to be done. 
 
-\subsubsection{The Quark Self-Energy}
+\subsubsection*{The Quark Self-Energy}
 The quark self-energy splits into contribution from the SM as well as a supersymmetric analogue which is already present in the MSSM.
 \begin{figure}[!htbp]
 \begin{center}
@@ -111,7 +111,7 @@ Doing the same calculation in DRED one finds that the second term in the squared
 \delta Z_q^{\mathrm{trans}} = \delta Z_q^{\mathrm{DREG}} - \delta Z_q^{\mathrm{DRED}} = C(F) \frac{g_s^2}{16\pi^2}.\label{eq:QuarkSC}
 \end{align}
 
-\subsubsection{The Squark Self-Energy}
+\subsubsection*{The Squark Self-Energy}
 The contributions to the self-energy of the left- and right-handed squark are the same. Therefore to avoid unnecessary labeling $\Gamma_{\tilde{q}\tilde{q}^\dagger}$ stands in the following for $\Gamma_{\tilde{q}_L\tilde{q}_L^\dagger} = \Gamma_{\tilde{q}_R\tilde{q}_R^\dagger}$.
 \begin{figure}[!htbp]
 \begin{center}
@@ -203,7 +203,7 @@ The squark self-energy exhibits no regularization dependence. The transition cou
 \delta Z_{\tilde{q}}^{\mathrm{trans}} = \delta m_{\tilde{q}}^{2\ \mathrm{trans}} = 0. \label{eq:SquarkSC}
 \end{align}
 
-\subsubsection{The Glunio Self-Energy}
+\subsubsection*{The Glunio Self-Energy}
 The 4-spinor of the gluino comprises two Weyl spinors which describe very different particles.
 \begin{align}
 \tilde{g}^a = \begin{pmatrix}
@@ -337,7 +337,7 @@ Again there is a transition counterterm
 The gauge coupling $g_s$ is renormalized in the $\overline{\mathrm{MS}}$-scheme with the modification that additional logarithms are subtracted, i.e. light particles are treated in the $\overline{\mathrm{MS}}$-scheme and heavy particles in the zero-momentum subtraction scheme. This is to decouple heavy particles from the running of $\alpha_s = \frac{g_s^2}{4\pi}$. This renormalization procedure allows to adopt the experimental values of $\alpha_s$ from the PDF's. The running due to effects of heavy particles is then encoded in the logarithms of $\delta g_s$.\\
 Extracting $\delta g_s$ from the quark-quark-gluon vertex requires not only the computation of $i\Gamma^{\mathrm{1L}}_{q_i\overline{q}_jG^\mu_a}$ but also the (re)evaluation of auxiliary field renormalization constants $\delta Z_q^{\mathrm{aux}}$ and $\delta Z_G^{\mathrm{aux}}$ in the above mentioned scheme. These will not be the same as the on-shell scheme.
 
-\subsubsection{The Quark Self-Energy Revisited}
+\subsubsection*{The Quark Self-Energy Revisited}
 The quark self-energy has two contribution which are shown in figure \ref{fig:QuarkSelfEnergy}. The first one corresponds to light particles the second one to heavy particles: $i\Gamma^{\mathrm{1L}}_{q_i\overline{q}_j} = i\Gamma^{\mathrm{1L,light}}_{q_i\overline{q}_j} + i\Gamma^{\mathrm{1L,heavy}}_{q_i\overline{q}_j}$. For light particles only the UV-divergent\footnote{In contrast to the MS-scheme in the $\overline{\mathrm{MS}}$-scheme not only the pure ultraviolet divergence but also two additional transcendent numbers are subtracted. It is therefore common to define $\Delta_\epsilon = \frac{1}{\epsilon} -\gamma_{\mathrm{E}} + \ln 4\pi$.} part is kept. 
 The self energy corresponding to the heavy particles is taken at zero momentum $p^2=0$.
 \begin{align}
@@ -354,7 +354,7 @@ and computes to
 \end{align}
 
 
-\subsubsection{The Gluon Self-Energy}
+\subsubsection*{The Gluon Self-Energy}
 As for the quark self-energy there are again contributions to the self-energy originating from light and heavy particles. Again these are differently dealt with.
 \begin{figure}[!htbp]
 \begin{center}
@@ -518,7 +518,7 @@ and yields
 
 
 
-\subsubsection{The $q\overline{q}G$ Vertex Correction}
+\subsubsection*{The $q\overline{q}G$ Vertex Correction}
 As for the self energies the vertex correction constitutes of loops from light particles which correspond to the Standard Model and additional heavy particle loops.
 \begin{figure}[!htbp]
 \begin{center}
@@ -621,11 +621,11 @@ Finally one can read off the $\frac{\delta g_s}{g_s}$
 &- \frac{2}{3} C(A) \ln \frac{m_{\tilde{g}}^2}{\mu^2} - \frac{1}{3}T(F)n_f \ln \frac{m_{\tilde{q}}^2}{\mu^2} - \frac{2}{3}T(F) \ln \frac{m_t^2}{\mu^2}-\frac{1}{12} C(A) \left( \ln \frac{m_{\phi^0}^2}{\mu^2} + \ln \frac{m_{\sigma^0}^2}{\mu^2} \right)\label{eq:deltaGs}
 \end{align}
 
-\subsubsection{The Beta Function}
+\subsection{The Beta Function}
 The beta function describes the dependence of the gauge coupling $g_s$ upon the energy scale $\mu$.\\
 Writing down the action of a theory in $D$ dimensions one needs to introduce an energy scale $\mu$ in order to keep the action dimensionless. But $\mu$ is no physical parameter and can be absorped into the fields and parameters. To this end one defines
 \begin{align}
-g_{sB} = \mu^\epsilon g_s \left( 1 + \frac{\delta g_s}{g_s} \right)
+g_{sB}(g_s, \mu) = \mu^\epsilon g_s \left( 1 + \frac{\delta g_s}{g_s} \right)
 \end{align}
 which must not depend upon the unphysical scale $\mu$, ergo
 \begin{align}
