@@ -5,20 +5,74 @@ Reason validity of perturbation theory in this context.
 
 
 \subsection{Virtual Correction}
-According to quantum field theory the $\mathcal{O}(\alpha_s)$ correction to a tree level process includes the computation of one-loop diagrams such as shown in fig. ???. To yield $\mathcal{O}(\alpha_s)$ corrections in the cross section the interference term between the one-loop amplitude $\mathcal{M}^{\mathrm{1L}}$ and the Born amplitude $\mathcal{M}^{\mathrm{B}}$ needs to be considered. However the virtual amplitude 
+According to quantum field theory the $\mathcal{O}(\alpha_s)$ correction to a tree level process includes the computation of one-loop diagrams such as shown in fig. \ref{fig:1loopdiagrams}. To yield $\mathcal{O}(\alpha_s)$ corrections in the cross section the interference term between the one-loop amplitude $\mathcal{M}^{\mathrm{1L}}$ and the Born amplitude $\mathcal{M}^{\mathrm{B}}$ needs to be considered. However the virtual amplitude 
 \begin{align}
 \mathcal{M}^{\mathrm{V}} = \mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast} + \mathcal{M}^{\mathrm{1L}} \mathcal{M}^{\mathrm{B}\ast} = 2 \Re \left( \mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast} \right)
 \end{align}
-contains divergences. These come from integrals over undetermined momentum and energy of particles running in loops. Due to their origin these divergences are referred to as ultraviolet and infrared divergences.
+contains divergences. These come from integrals over undetermined momentum and energy of particles running in loops.
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[line width=1.5 pt, scale=1.3]
+	\draw[fermion](-1.5,1)--(0,1);
+	\draw[scalar](0,1)--(1.5,1);
+	\draw[gluon](0,1)--(0,0.5);
+	\draw[fermionnoarrow](0,1)--(0,0.5);
+	\draw[scalar] (0,0.5) arc (90:-90:.5);
+	\draw[fermion] (0,-0.5) arc (90:-90:-.5);
+	\draw[gluon](0,-1)--(0,-0.5);
+	\draw[fermionnoarrow](0,-1)--(0,-0.5);
+	\draw[fermion](-1.5,-1)--(0,-1);
+	\draw[scalar](0,-1)--(1.5,-1);
+\begin{scope}[shift={(5,0)}]
+	\draw[fermion](-1.5,1)--(0,1);
+	\draw[scalar](0,1)--(1.5,1);
+	\draw[gluon](0,1)--(0,0);
+	\draw[fermionnoarrow](0,1)--(0,0);
+	\draw[fermion](-1.5,-1)--(-0.5,-1);
+	\draw[scalar](-0.5,-1)--(0,0);
+	\draw[fermion](0,0)--(0.5,-1);
+	\draw[gluon](-0.5,-1)--(0.5,-1);
+	\draw[scalar](0.5,-1)--(1.5,-1);
+\end{scope}
+\begin{scope}[shift={(-0.5,-3.5)}]
+	\draw[fermion](-1,1)--(0,1);
+	\draw[gluon](0,1)--(0,-1);
+	\draw[fermionnoarrow](0,1)--(0,-1);
+	\draw[fermion](-1,-1)--(0,-1);
+	\draw[scalar](0,-1)--(1,0);
+	\draw[scalar](0,1)--(1,0);
+	\draw[black,fill=black] (1,0) circle (.03cm);
+	\draw[scalar](1,0)--(2,1);
+	\draw[scalar](1,0)--(2,-1);
+\end{scope}
+\begin{scope}[shift={(5,-3.5)}]
+	\draw[fermion](-1.5,0.5)--(-0.5,0.5);
+	\draw[scalar](-0.5,0.5)--(0.5,0.5);
+	\draw[scalar](0.5,0.5)--(1.5,0.5);
+	\draw[gluon](-0.5,0.5)--(-0.5,-0.5);
+	\draw[fermionnoarrow](-0.5,0.5)--(-0.5,-0.5);
+	\draw[scalarnoarrow](0.5,0.5)--(0.5,-0.5);
+	\draw[fermion](-1.5,-0.5)--(-0.5,-0.5);
+	\draw[scalar](-0.5,-0.5)--(0.5,-0.5);
+	\draw[scalar](0.5,-0.5)--(1.5,-0.5);
+\end{scope}
+\end{tikzpicture}
+\caption{A selection of diagrams contributing to the 1-loop matrix element for squark production. Each diagram is a representative of a certain diagram type. In the first line an example for a self-energy and a vertex-correction diagram is shown. The second line lists typical box-diagrams: a three-point box and a four-point box.}\label{fig:1loopdiagrams}
+\end{center}
+\end{figure}
+Due to their origin these divergences are referred to as ultraviolet and infrared divergences.
 Ultraviolet divergences occur when the loop momenta and energy tend to infinity which corresponds to arbitrary short distance interactions. However, these divergences are cured by first regularizing them and then introducing appropriate counterterms\footnote{These counterterms have to be of the same $\mathcal{O}(\hbar)$ as the loop diagrams they are constructed to cancel. NOCHMAL IN LAHIRI / PAL NACHSCHAUEN.} in the Lagrangian to cancel the extracted singularities. The second step is called renormalization and can be understood as a redefinition or rescaling of parameters and fields in the Lagrangian in the first place:
 \begin{align}
-\tilde{q}_{L/R} \to \sqrt{Z_{\tilde{q}_{L/R}}} \tilde{q}_{L/R}\\
-...
+& \phi^0 / \sigma^0 \to \sqrt{Z_{\phi^0 / \sigma^0}}\phi^0 / \sigma^0 && \tilde{q}_{L/R} \to \sqrt{Z_{\tilde{q}_{L/R}}}\tilde{q}_{L/R}\nonumber\\
+& P_L \tilde{g} \to \sqrt{Z_{\tilde{g}}^L} P_L \tilde{g} && P_R \tilde{g} \to \sqrt{Z_{\tilde{g}}^R} P_R \tilde{g}\nonumber\\
+& q \to \sqrt{Z_q}q && G_\mu \to \sqrt{Z_G} G_\mu && \\
+& g_s \to g_{s\ \mathrm{bare}} && m_{\tilde{q}}^2 \to m_{\tilde{q}\ \mathrm{bare}}^2\nonumber\\
+&  m_{\sigma}^2 \to m_{\sigma\ \mathrm{bare}}^2 && m_{\tilde{g}} \to m_{\tilde{g}\ \mathrm{bare}}
 \end{align}
-This procedure will be discussed in detail in section \label{sec:renMRSSM}.\\
+This procedure will be discussed in detail in section \ref{sec:renMRSSM} and \ref{sec:LSZ}.\\
 Having removed the ultraviolet divergences one performs the 2-body phase space integration to arrive at an ultraviolet-finite cross section. However, this cross section is not free of divergences as it comprises infrared divergences. These split into soft and collinear (or mass) singularities\footnote{The names differ in the literature. Often infrared divergences are used as a synonym for soft divergences.} which cannot be removed by means of renormalization.
 
 
 \subsection{Real Corrections}
-Kinoshita-Lee-Naunberg-Theorem\\
+Kinoshita-Lee-Naunberg-Theorem \cite{1962JMP.....3..650K},\cite{PhysRev.133.B1549}\\
 At the end: scheme of real and virtual corrections from WARB-talk

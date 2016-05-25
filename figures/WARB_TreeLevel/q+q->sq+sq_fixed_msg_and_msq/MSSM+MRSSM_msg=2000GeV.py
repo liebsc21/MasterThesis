@@ -52,11 +52,16 @@ sigma3_MRSSM_cb = np.array([], dtype=float);
 
 sigma3_MRSSM_bb = np.array([], dtype=float);
 
-# arrays for errors (all flavors are already summed over)
+# arrays for errors (all flavors are summed over already)
 sigma3_MRSSM_maxPdf = np.array([], dtype=float);
 sigma3_MRSSM_minPdf = np.array([], dtype=float);
 sigma3_MRSSM_maxScale = np.array([], dtype=float);
 sigma3_MRSSM_minScale = np.array([], dtype=float);
+
+sigma3_MSSM_maxPdf = np.array([], dtype=float);
+sigma3_MSSM_minPdf = np.array([], dtype=float);
+sigma3_MSSM_maxScale = np.array([], dtype=float);
+sigma3_MSSM_minScale = np.array([], dtype=float);
 
 
 f_MSSM = open('had_cros_MSSM_q+q->sq+sq_msg=2000GeV.txt', 'r')
@@ -143,6 +148,31 @@ sigma_MRSSM_min = np.sqrt((sigma_MRSSM*10**3 - sigma3_MRSSM_minPdf)**2
 sigma_MRSSM_max = np.sqrt((sigma_MRSSM*10**3 - sigma3_MRSSM_maxPdf)**2
  + (sigma_MRSSM*10**3 - sigma3_MRSSM_maxScale)**2)
 
+f_MSSM_maxPdf = open('Errors/qq_to_sqsq_MSSM_with_antiquarks_maxPdfError_msg=2000GeV.txt', 'r')
+for lines in f_MSSM_maxPdf.readlines():
+    sigma3_MSSM_maxPdf = np.append(sigma3_MSSM_maxPdf, float(lines))
+f_MSSM_maxPdf.close()
+
+f_MSSM_minPdf = open('Errors/qq_to_sqsq_MSSM_with_antiquarks_minPdfError_msg=2000GeV.txt', 'r')
+for lines in f_MSSM_minPdf.readlines():
+    sigma3_MSSM_minPdf = np.append(sigma3_MSSM_minPdf, float(lines))
+f_MSSM_minPdf.close()
+
+f_MSSM_maxScale = open('Errors/qq_to_sqsq_MSSM_with_antiquarks_maxScaleError_msg=2000GeV.txt', 'r')
+for lines in f_MSSM_maxScale.readlines():
+    sigma3_MSSM_maxScale = np.append(sigma3_MSSM_maxScale, float(lines))
+f_MSSM_maxScale.close()
+
+f_MSSM_minScale = open('Errors/qq_to_sqsq_MSSM_with_antiquarks_minScaleError_msg=2000GeV.txt', 'r')
+for lines in f_MSSM_minScale.readlines():
+    sigma3_MSSM_minScale = np.append(sigma3_MSSM_minScale, float(lines))
+f_MSSM_minScale.close()
+
+sigma_MSSM_min = np.sqrt((sigma_MSSM*10**3 - sigma3_MSSM_minPdf)**2
+ + (sigma_MSSM*10**3 - sigma3_MSSM_minScale)**2)
+sigma_MSSM_max = np.sqrt((sigma_MSSM*10**3 - sigma3_MSSM_maxPdf)**2
+ + (sigma_MSSM*10**3 - sigma3_MSSM_maxScale)**2)
+
 
 sigma_min = 10**(-1)
 sigma_max = 10**(5)
@@ -165,9 +195,11 @@ plt.axes(first_window)
 
 first_window.xaxis.set_major_formatter(FormatStrFormatter('%0.0f'))
 
+first_window.fill_between(m_squark, sigma_MSSM*10**3 - sigma_MSSM_min, sigma_MSSM*10**3 + sigma_MSSM_max, facecolor=[80./100,80./100,1], color =[1,80./100,80./100], linestyle="-")
 first_window.fill_between(m_squark, sigma_MRSSM*10**3 - sigma_MRSSM_min, sigma_MRSSM*10**3 + sigma_MRSSM_max, facecolor=[1,80./100,80./100], color =[1,80./100,80./100], linestyle="-")
 plt.plot(m_squark, sigma_MSSM*10**3, lw=2, ls="-", c='blue', label = "MSSM")
 plt.plot(m_squark, sigma_MRSSM*10**3, lw=2, ls="-", c='red', label = "MRSSM")
+
 
 plt.legend(loc='best',prop={'size':22})
 
