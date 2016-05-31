@@ -112,4 +112,16 @@ text width=10em, text centered, rounded corners, minimum height=4em]
 % circled numbers
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+%% selbst definierte Befehle für tikz
+\tikzstyle{block1a} = [rectangle, draw, fill=blue!20, 
+text width=10em, text centered, rounded corners, minimum height=1cm]
+\tikzstyle{block2a} = [rectangle, draw, fill=red!20, 
+text width=10em, text centered, rounded corners, minimum height=1cm]
+\tikzstyle{block1b} = [rectangle, draw, fill=blue!40, 
+text width=10em, text centered, rounded corners, minimum height=1cm]
+\tikzstyle{block2b} = [rectangle, draw, fill=red!40, 
+text width=10em, text centered, rounded corners, minimum height=1cm]
+\tikzstyle{block3} = [rectangle, draw, fill=green!40, 
+text width=10em, text centered, rounded corners, minimum height=1cm]
+\tikzstyle{line} = [draw, -latex']       
 \usepackage{hyperref}			% Has to be at the end.

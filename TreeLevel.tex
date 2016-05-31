@@ -242,7 +242,7 @@ In view of the renormalization to be performed at the 1-loop level the results a
 Having calculated the absolute squared Feynman amplitudes one obtains the partonic cross sections (see Appendix \ref{sec:cross_section}) via
 \begin{align}
 \frac{\mbox{d}^2 \sigma^B}{\mbox{d}t\ \mbox{d}u} =& \frac{K_{ab}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_1^2m_2^2}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_1^2m_2^2)\nonumber\\
-&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum |\mathcal{M}^B|^2
+&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum |\mathcal{M}^B|^2\label{eq:sigma_tree}
 \end{align}
 The leading order cross sections are
 \begin{align}
@@ -299,31 +299,238 @@ refer to Kribs, Martin
 \end{center}
 \end{figure}
 
-\begin{figure}[!htpb]
-\begin{center}
-\includegraphics[scale=.45]{figures/rel_weights_mr=0,9_MSSM+MRSSM}
-\includegraphics[scale=.45]{figures/rel_weights_mr=2_MSSM+MRSSM}
-\caption{Relative contributions of the indicated final states on the total hadronic cross section in the MSSM (left-hand side) and MRSSM (right-hand side) at the LHC at $\sqrt{S} = \unit[13]{GeV}$. The ratio of gluino and squark mass is fixed to 0.9 (first row) and 2 (second row). In the final state it has been summed over all squark flavors expect for staus. For the channels $qq \to \tilde{q}\tilde{q}$ and $qG \to \tilde{q}\tilde{G}$ also the charge conjugated process is included. The parton densities and the renormalization and factorization scale are chosen as in fig. \ref{fig:TreeXsection}.}
-\end{center}
-\end{figure}
-
-\begin{figure}[!htpb]
-\begin{center}
-\includegraphics[scale=.4]{figures/mr=5_MSSM+MRSSM}
-\includegraphics[scale=.45]{figures/rel_weights_mr=5_MSSM+MRSSM}
-\caption{Hadronic cross section for squark and gluino production (in the first row) and relative contributions of the indicated final states on the total hadronic cross section in the MSSM (left-hand side) and MRSSM (right-hand side) at the LHC at $\sqrt{S} = \unit[13]{GeV}$. The ratio of gluino and squark mass is fixed to 5. In the final state it has been summed over all squark flavors expect for staus. For the channels $qq \to \tilde{q}\tilde{q}$ and $qG \to \tilde{q}\tilde{G}$ also the charge conjugated process is included. The parton densities and the renormalization and factorization scale are chosen as in fig. \ref{fig:TreeXsection}.}
-\end{center}
-\end{figure}
 
 \subsubsection*{The process $q_i \overline{q}_j \to \tilde{q}\tilde{q}^\dagger$}
-The production of a squark and an antisquark through a quark and an antiquark in the initial state origins from two diagrams. The first one with an $s$-channel gluon is the same in MSSM and MRSSM whereas the second one exhibits a difference due to the gluino which is no Majorana particle in the MRSSM. As the consequence contributions from this diagram are suppressed in comparison to the MSSM. One can also think of the difference as a result of the conservation of R-charge. As left handed squarks have R-charge +1 they must be produced with a right handed squark which carries R-charge -1 in order to meet the total R-charge of 0 zero in the initial state.
+The production of a squark and an antisquark through a quark and an antiquark in the initial state originates from two types of Feynman diagrams. The first one has an $s$-channel gluon and is the same in the MSSM and in the MRSSM. The second one exhibits a difference due to the $t$-channel gluino which is no Majorana particle in the MRSSM. 
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.0 pt, scale=1.3]
+	\draw[fermion] (-1,0.5)--(-0.42,0);
+	\draw[fermionbar] (-1,-0.5)--(-0.42,0);
+	\draw[gluon] (-0.42,0)--(0.42,0); 
+	\draw[scalar] (0.42,0)--(1,0.5);
+	\draw[scalarbar] (0.42,0)--(1,-0.5);
+\begin{scope}[shift={(3,0)}]
+	\draw[fermion] (-1,0.5)--(0,0.5);
+	\draw[fermionbar] (-1,-0.5)--(0,-0.5);
+	\draw[fermionnoarrow] (0,0.5)--(0,-0.5);
+	\draw[gluon] (0,0.5)--(0,-0.5); 
+	\draw[scalar] (0,0.5)--(1,0.5);
+	\draw[scalarbar] (0,-0.5)--(1,-0.5);
+\end{scope}
+\end{tikzpicture}
+\caption{Tree level diagrams for $q\overline{q} \to \tilde{q}\tilde{q}^\dagger$}
+\end{center}
+\end{figure}
+To see this one can either just apply the Feynman rules in Appendix \ref{sec:FeynmanRules} or think of the conservation of R-charge: Left handed squarks have R-charge +1 and right handed squarks have R-charge -1. Antiparticles have the opposite R-charge of their corresponding particles. The final state particles have to meet the total R-charge zero from the initial state. Because of this one only has $\tilde{q}_L \overline{\tilde{q}}_L$ and $\tilde{q}_R \overline{\tilde{q}}_R$ as the final states in the MRSSM whereas in the MSSM one actually has four instead of two t-channel diagrams: The corresponding final states are $\tilde{q}_L \overline{\tilde{q}}_L$, $\tilde{q}_R \overline{\tilde{q}}_R$, $\tilde{q}_L \overline{\tilde{q}}_R$ and $\overline{\tilde{q}}_R \tilde{q}_L$. Consequently contributions from the $t$-channel diagrams are suppressed in the MRSSM in comparison to the MSSM. As visible in fig. \ref{fig:TreeXsection} this suppression grows with the masses. The reason for this lies in the gluino mass dependence of the $t$-channel diagrams which is explained in the discussion of squark production.\\
+If the initial state quarks are of different flavor the $s$-channel diagram is absent.
 
 \subsubsection*{The process $GG \to \tilde{q}\tilde{q}^\dagger$}
 This process has the same cross section in the MRSSM and in the MSSM for also in the MSSM only like chirality squark and antisquark $\tilde{q}_A\tilde{q}_A^\dagger$ with $A \in {L,R}$ can be produced
 
 \subsubsection*{The process $q_i q_j \to \tilde{q}\tilde{q}$}
-In the MRSSM only the production of unlike chirality squarks $\tilde{q}_L + \tilde{q}_R$ is allowed whilst in the MSSM also like chirality squarks can be produced. This is again a consequence of the conservation of R-charge. The upshot of this is a suppression of squark production in the MRSSM in comparison to the MSSM. To be more explicit the suppression of squark production in the MRSSM grows with the gluino mass. This can be understood as follows: As in the MRSSM a left handed squark needs to be produced with a right handed squark one can read off from the Feynman rules given in Appendix ??? that the gluino propagator $i\frac{\slashed{p}+m_{\tilde{g}}}{p^2-m_{\tilde{g}}^2}$ is sandwiched between the projectors $P_L$ and $P_R$ which leads to the cancellation of the gluino mass in the numerator. Therefore for small momenta of the gluino one gets for $\mathcal{M}$ a $\sim \frac{1}{m_{\tilde{g}}^2}$ suppression in the MRSSM while in the MSSM one finds a $\frac{1}{m_{\tilde{g}}}$ suppression.\\
-Furthermore because of the absence of chirality like squarks in the final state in the MRSSM the cross section of flavor like and unlike squarks is the same, i.e. on the partonic level $\sigma^B(\tilde{u}_L\tilde{u}_R) = \sigma^B(\tilde{u}_L\tilde{d}_R)$. That is however not true in the MSSM. 
+In the MRSSM only the production of unlike chirality squarks $\tilde{q}_L \tilde{q}_R$ is allowed whilst in the MSSM also like chirality squarks can be produced. This is again a consequence of the conservation of R-charge. The upshot of this is a suppression of squark production in the MRSSM in comparison to the MSSM. To be more explicit the suppression of squark production in the MRSSM grows with the gluino mass. This can be understood as follows: As in the MRSSM a left handed squark needs to be produced with a right handed squark one can read off from the Feynman rules given in Appendix \ref{sec:FeynmanRules} that the gluino propagator $i\frac{\slashed{p}+m_{\tilde{g}}}{p^2-m_{\tilde{g}}^2}$ is sandwiched between the projectors $P_L$ and $P_R$ which leads to the cancellation of the gluino mass in the numerator. Therefore for small momenta of the gluino compared to the gluino mass one gets $\mathcal{M}$ $\sim \frac{1}{m_{\tilde{g}}^2}$ in the MRSSM while in the MSSM one finds a suppression proportional to $\frac{1}{m_{\tilde{g}}}$.\\
+When considering squark production one has to sum over all $|\mathcal{M}|^2$ with different helicity. The diagrams for those different final state helicities are shown for flavor like squark production in tab. \ref{tab:squark_likeflavor} and for flavor unlike squark production in tab. \ref{tab:squark_unlikeflavor} for the MSSM and the MRSSM. To avoid double counting one needs to weight $|\mathcal{M}|^2(qq\to \tilde{q}_L\tilde{q}_L)$ and $|\mathcal{M}|^2(qq\to \tilde{q}_R\tilde{q}_R)$ with a statistical factor of $\frac{1}{2}$ as one integrates over all momenta of both particles to arrive at the cross section.\footnote{Alternatively one could discard the $u$-channel (or $t$-channel) diagram and omit the weighting with $\frac{1}{2}$.}
+\begin{table}[!htpb]
+\begin{center}
+\begin{tabular}{c|c}
+MSSM & MRSSM \\
+\hline
+\begin{tikzpicture}[line width=1.0 pt, scale=0.7]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,0)--(2,0);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$u$};
+	\node at (2.2,1) {$\tilde{u}_L^\dagger$};
+	\node at (2.2,0) {$\tilde{u}_R^\dagger$};
+\begin{scope}[shift={(4,0)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(1.5,0.5);
+	\draw[scalar] (1.5,0.5)--(2,0);
+	\draw[scalar] (1,0)--(1.4,0.4);
+	\draw[scalar] (1.6,0.6)--(2,1);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$u$};
+	\node at (2.2,1) {$\tilde{u}_L^\dagger$};
+	\node at (2.2,0) {$\tilde{u}_R^\dagger$};
+\end{scope}
+\begin{scope}[shift={(0,-2)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,0)--(2,0);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$u$};
+	\node at (2.2,1) {$\tilde{u}_L^\dagger$};
+	\node at (2.2,0) {$\tilde{u}_L^\dagger$};
+\end{scope}
+\begin{scope}[shift={(4,-2)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(1.5,0.5);
+	\draw[scalar] (1.5,0.5)--(2,0);
+	\draw[scalar] (1,0)--(1.4,0.4);
+	\draw[scalar] (1.6,0.6)--(2,1);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$u$};
+	\node at (2.2,1) {$\tilde{u}_L^\dagger$};
+	\node at (2.2,0) {$\tilde{u}_L^\dagger$};
+\end{scope}
+\begin{scope}[shift={(0,-4)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,0)--(2,0);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$u$};
+	\node at (2.2,1) {$\tilde{u}_R^\dagger$};
+	\node at (2.2,0) {$\tilde{u}_R^\dagger$};
+\end{scope}
+\begin{scope}[shift={(4,-4)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(1.5,0.5);
+	\draw[scalar] (1.5,0.5)--(2,0);
+	\draw[scalar] (1,0)--(1.4,0.4);
+	\draw[scalar] (1.6,0.6)--(2,1);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$u$};
+	\node at (2.2,1) {$\tilde{u}_R^\dagger$};
+	\node at (2.2,0) {$\tilde{u}_R^\dagger$};
+\end{scope}
+\end{tikzpicture} & \begin{tikzpicture}[line width=1.0 pt, scale=0.7]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,0)--(2,0);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$u$};
+	\node at (2.2,1) {$\tilde{u}_L^\dagger$};
+	\node at (2.2,0) {$\tilde{u}_R^\dagger$};
+\begin{scope}[shift={(4,0)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(1.5,0.5);
+	\draw[scalar] (1.5,0.5)--(2,0);
+	\draw[scalar] (1,0)--(1.4,0.4);
+	\draw[scalar] (1.6,0.6)--(2,1);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$u$};
+	\node at (2.2,1) {$\tilde{u}_L^\dagger$};
+	\node at (2.2,0) {$\tilde{u}_R^\dagger$};
+\end{scope}
+\begin{scope}[shift={(0,-4.3)}]
+\node at (0,0) {};
+\end{scope}
+\end{tikzpicture} 
+\end{tabular}
+\caption{All Feynman diagrams contributing to flavor like squark production in the MSSM and the MRSSM for the example of $u$-quarks. For the MSSM the absolute squared Feynman amplitudes from the diagrams with chirality like squarks need to be weighted with a factor of $\frac{1}{2}$.}\label{tab:squark_likeflavor}
+\end{center}
+\end{table}
+\begin{table}[!htpb]
+\begin{center}
+\begin{tabular}{c|c}
+MSSM & MRSSM \\
+\hline
+\begin{tikzpicture}[line width=1.0 pt, scale=0.7]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,0)--(2,0);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$d$};
+	\node at (2.2,1) {$\tilde{u}_L^\dagger$};
+	\node at (2.2,0) {$\tilde{d}_R^\dagger$};
+\begin{scope}[shift={(4,0)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,0)--(2,0);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$d$};
+	\node at (2.2,1) {$\tilde{u}_R^\dagger$};
+	\node at (2.2,0) {$\tilde{d}_L^\dagger$};
+\end{scope}
+\begin{scope}[shift={(0,-2)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,0)--(2,0);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$d$};
+	\node at (2.2,1) {$\tilde{u}_L^\dagger$};
+	\node at (2.2,0) {$\tilde{d}_L^\dagger$};
+\end{scope}
+\begin{scope}[shift={(0,-4)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,0)--(2,0);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$d$};
+	\node at (2.2,1) {$\tilde{u}_R^\dagger$};
+	\node at (2.2,0) {$\tilde{d}_R^\dagger$};
+\end{scope}
+\end{tikzpicture} & \begin{tikzpicture}[line width=1.0 pt, scale=0.7]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,0)--(2,0);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$d$};
+	\node at (2.2,1) {$\tilde{u}_L^\dagger$};
+	\node at (2.2,0) {$\tilde{d}_R^\dagger$};
+\begin{scope}[shift={(4,0)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,0)--(1,0);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,0)--(2,0);
+	\node at (-0.2,1) {$u$};
+	\node at (-0.2,0) {$d$};
+	\node at (2.2,1) {$\tilde{u}_R^\dagger$};
+	\node at (2.2,0) {$\tilde{d}_L^\dagger$};
+\end{scope}
+\begin{scope}[shift={(0,-4.3)}]
+\node at (0,0) {};
+\end{scope}
+\end{tikzpicture} 
+\end{tabular}
+\caption{All Feynman diagrams contributing to flavor unlike squark production in the MSSM and the MRSSM for the example of $u$- and $d$-quarks.}\label{tab:squark_unlikeflavor}
+\end{center}
+\end{table}\\
+Because of the absence of chirality like squarks in the final state in the MRSSM (and a missing interference of the two diagrams in tab. \ref{tab:squark_likeflavor} in the MRSSM) the cross section of flavor like and unlike squarks is the same in the MRSSM, i.e. on the partonic level:\\ $\sigma^{\mathrm{B}}_{\mathrm{Part,\ MRSSM}}(\tilde{u}_L\tilde{u}_R) = \sigma^{\mathrm{B}}_{\mathrm{Part,\ MRSSM}}(\tilde{u}_L\tilde{d}_R)$. That is however not true in the MSSM. 
+
 
 \subsubsection*{The process $q \overline{q} \to \tilde{g}\overline{\tilde{g}}$}
 In contrast to the MSSM no statistical factor of $\frac{1}{2}$ is taken into account when turning from $|\mathcal{M}|^2$ to $\sigma$. This is because gluino and antigluino are distinguishable particles. Still in comparison to the MSSM cross section only the first line in \ref{eq:qqbar_to_sgsgbar} is doubled up as the other two lines origin from an $t$ or $u$ channel squark which occurs in only one instead of two chiralities. Furthermore an interference term from the $t$ or $u$ channel diagram which occurs in the MSSM is absent in the MRSSM.
@@ -336,6 +543,23 @@ As in the previous process the MRSSM cross section for $GG \to \tilde{g}\overlin
 This process is exactly the same in the MSSM and MRSSM.
 \\
 refer to Vernoica Sanz: How many SUpersymmetries?
+
+\begin{figure}[!htpb]
+\begin{center}
+\includegraphics[scale=.45]{figures/rel_weights_mr=0,9_MSSM+MRSSM}
+\includegraphics[scale=.45]{figures/rel_weights_mr=2_MSSM+MRSSM}
+\caption{Relative contributions of the indicated final states on the total hadronic cross section in the MSSM (left-hand side) and MRSSM (right-hand side) at the LHC at $\sqrt{S} = \unit[13]{GeV}$. The ratio of gluino and squark mass is fixed to 0.9 (first row) and 2 (second row). In the final state it has been summed over all squark flavors expect for staus. For the channels $qq \to \tilde{q}\tilde{q}$ and $qG \to \tilde{q}\tilde{G}$ also the charge conjugated process is included. The parton densities and the renormalization and factorization scale are chosen as in fig. \ref{fig:TreeXsection}.}\label{fig:TreeLevelSigma_0,9_2}
+\end{center}
+\end{figure}
+
+\begin{figure}[!htpb]
+\begin{center}
+\includegraphics[scale=.4]{figures/mr=5_MSSM+MRSSM}
+\includegraphics[scale=.45]{figures/rel_weights_mr=5_MSSM+MRSSM}
+\caption{Hadronic cross section for squark and gluino production (in the first row) and relative contributions of the indicated final states on the total hadronic cross section in the MSSM (left-hand side) and MRSSM (right-hand side) at the LHC at $\sqrt{S} = \unit[13]{GeV}$. The ratio of gluino and squark mass is fixed to 5. In the final state it has been summed over all squark flavors expect for staus. For the channels $qq \to \tilde{q}\tilde{q}$ and $qG \to \tilde{q}\tilde{G}$ also the charge conjugated process is included. The parton densities and the renormalization and factorization scale are chosen as in fig. \ref{fig:TreeXsection}.}
+\end{center}
+\end{figure}
+
 
 \begin{figure}[!htpb]
 \begin{center}

@@ -10,7 +10,7 @@ According to quantum field theory the $\mathcal{O}(\alpha_s)$ correction to a tr
 \mathcal{M}^{\mathrm{V}} = \mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast} + \mathcal{M}^{\mathrm{1L}} \mathcal{M}^{\mathrm{B}\ast} = 2 \Re \left( \mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast} \right)
 \end{align}
 contains divergences. These come from integrals over undetermined momentum and energy of particles running in loops.
-\begin{figure}
+\begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
 	\draw[fermion](-1.5,1)--(0,1);
@@ -69,10 +69,126 @@ Ultraviolet divergences occur when the loop momenta and energy tend to infinity 
 & g_s \to g_{s\ \mathrm{bare}} && m_{\tilde{q}}^2 \to m_{\tilde{q}\ \mathrm{bare}}^2\nonumber\\
 &  m_{\sigma}^2 \to m_{\sigma\ \mathrm{bare}}^2 && m_{\tilde{g}} \to m_{\tilde{g}\ \mathrm{bare}}
 \end{align}
-This procedure will be discussed in detail in section \ref{sec:renMRSSM} and \ref{sec:LSZ}.\\
-Having removed the ultraviolet divergences one performs the 2-body phase space integration to arrive at an ultraviolet-finite cross section. However, this cross section is not free of divergences as it comprises infrared divergences. These split into soft and collinear (or mass) singularities\footnote{The names differ in the literature. Often infrared divergences are used as a synonym for soft divergences.} which cannot be removed by means of renormalization.
+In this thesis the computation is performed in $D = 4-2\epsilon$ dimensions in order to regularize it. Ultraviolet divergences show then up as single poles in $\epsilon$. This procedure will be discussed in detail in section \ref{sec:renMRSSM} and \ref{sec:LSZ}.\\
+Having removed the ultraviolet divergences the matrix element is not free of divergences as it comprises infrared divergences. These split into soft and collinear (or mass) singularities\footnote{The names differ in the literature. Often infrared divergences are used as a synonym for soft divergences.} which cannot be removed by means of renormalization. These additional singularities show up as single and double poles of $\epsilon$ in the matrix element $\mathcal{M^{\mathrm{1L}}}$ and the virtual cross section which is obtained after performing the 2-body phase space  integration as in eq. \ref{eq:sigma_tree} but over $\left|\mathcal{M^{\mathrm{V}}}\right|^2$:
+\begin{align}
+\frac{\mbox{d}^2 \sigma^{\mathrm{V}}}{\mbox{d}t\ \mbox{d}u} =& \frac{K_{ab}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_1^2m_2^2}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_1^2m_2^2)\nonumber\\
+&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum |\mathcal{M}^{\mathrm{V}}|^2.
+\end{align}
+The single poles correspond to soft or collinear divergences whereas the double poles correspond to the coincidence of soft and collinear divergences.
 
 
 \subsection{Real Corrections}
-Kinoshita-Lee-Naunberg-Theorem \cite{1962JMP.....3..650K},\cite{PhysRev.133.B1549}\\
-At the end: scheme of real and virtual corrections from WARB-talk
+A crucial thing to recognize in the calculation of the $\mathcal{O}(\alpha_s)$ correction to the squark production cross section is that not only virtual corrections but also real corrections give rise to this physical observable. This is because one does not measure the final state partons but the jets in which they hadronize in due to confinement. This means that a radiation of a massless particle whose energy tends to zero or the radiation of a  particle which is collinear to one of the final state particles is in experiment measured as a two jet event even though there are three particles in the final state of the calculation. However real corrections also contain divergences. Including these contributions to the cross section causes the cancellation of singles poles coming from soft divergences and the cancellation of double poles. At this point the only singularities which are left in the cross section are the collinear ones.\\
+To see how these are removed consider diagram the second digram in fig. \ref{fig:RealGluon}. The propagator of the quark which radiates off a gluon is giving a contribution of the form
+\begin{align}
+\frac{1}{(p_q + p_g)^2 - m_q^2} = \frac{1}{p_q \cdot p_g} = \frac{1}{2E_qE_g(1-\beta_q \cos \theta_{qg})} \hspace{2cm} \mathrm{with}\ \beta_q = \frac{\vec{p}_q}{E_q}
+\end{align}
+to the the diagram in question. Where $p_q$, $p_g$ ($E_q$, $E_g$) are the quark's and gluon's four-momentum (energy) and $\theta_{qg}$ is the angle between the quark's and gluon's three-momentum. One observes two potentially singular limits
+\begin{align}
+\mathrm{soft\ gluon:}& \hspace{1cm} E_g \to 0\\
+%& \hspace{1cm} E_q \to 0 \hspace{1cm} \mathrm{if}\ m_q \to 0\\
+\mathrm{collinear\ particles:}& \hspace{1cm} \theta_{qg} \to 0 \hspace{1cm} \mathrm{if}\ m_q \to 0.
+\end{align}
+Within these limits the inner quark can almost be considered as on-shell which means that it may travel a long distance between the emission of a gluon and taking part in the actual interaction. This suggest that some divergences may come from the incoming hadron and are actually not associated with the interaction. In fact this turns out to be the case: The remaining collinear divergences can be absorbed in to a redefinition of the parton density functions. This procedure is referred to as mass factorization. Figure \ref{fig:DivergenceSummary} summarizes the required steps to render the next-to-leading-order cross section finite.\\
+In fact the Kinoshita-Lee-Naunberg-Theorem \cite{1962JMP.....3..650K},\cite{PhysRev.133.B1549} guarantees the finiteness of sufficiently inclusive observables.
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}
+	\node [block1a] (Mvirt) {$\mathcal{M}^{\mathrm{1L}}$ is UV- and  IR-divergent};
+	\node [block2a] at (6,0) (Mreal) {$\mathcal{M}^{\mathrm{real}}$ is IR-divergent};
+	\node [block1a] at (0,-2) (Mvirtren) {$\mathcal{M}^{\mathrm{1L}}$ is IR-divergent};
+	\path [line, line width = 1] (Mvirt) --node[right] {renormalize} (Mvirtren);
+	\node [block1b] at (0,-4) (svirtren) {$\sigma^{\mathrm{virt}}$ is IR-divergent};
+	\node [block2b] at (6,-4) (sreal) {$\sigma^{\mathrm{real}}$ is IR-divergent};
+	\path [line, line width = 1] (Mvirtren) --node[right] {integrate phase space} (svirtren);
+	\path [line, line width = 1] (Mreal) --node[right] {integrate phase space} (sreal);
+	\node [block2b] at (6, -6) (srealfac) {$\sigma^{\mathrm{real}}$ is IR-divergent};
+	\path [line, line width = 1] (sreal) --node[right] {mass factorization} (srealfac);
+	\node [block3] at (3,-8) (snlo) {$\sigma^{\mathrm{NLO}} = \sigma^{\mathrm{virt}} + \sigma^{\mathrm{real}}$ is finite};
+	\path [line, line width = 1] (srealfac) -- (snlo);
+	\path [line, line width = 1] (svirtren) -- (snlo);
+\end{tikzpicture}
+\caption{This scheme illustrates the necessary steps in the computation of the next-to-leading order cross section which are required to render it finite. }\label{fig:DivergenceSummary}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Real Gluon Radiation}
+Representative Feynman-diagrams for real gluon emission are shown in fig. \ref{fig:RealGluon}. In order to extract the singularities the so called two-cut method has been adopted. This is the phase space has been divided into different regimes: a soft part, a hard collinear part and a hard non-collinear part.\\
+In the soft part the energy of the outgoing gluon is only integrated up to  $\delta_s \frac{\sqrt{s}}{2}$ where $\delta_s$ is a cut on which the final result must not depend on.
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.5 pt, scale=1.3]
+	\draw[fermion] (0,1)--(1,1);	
+	\draw[fermion] (0,-0.5)--(1,-0.5);
+	\draw[fermionnoarrow] (1,1)--(1,-0.5);
+	\draw[gluon] (1,1)--(1,-0.5);
+	\draw[scalar] (1,1)--(2.75,1);
+	\draw[scalar] (1,-0.5)--(2,-0.5);
+	\draw[gluon] (2,-0.5)--(2.75,0.25);
+	\draw[scalar] (2,-0.5)--(2.75,-1.25);
+\begin{scope}[shift={(4,0)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,-1)--(1,-1);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[fermion] (1,-1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[gluon] (1,-1)--(2,-1);
+	\draw[scalar] (1,0)--(2,0);
+\end{scope}
+\begin{scope}[shift={(8,0)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[fermion] (0,-1)--(1,-1);
+	\draw[fermionnoarrow] (1,1)--(1,-1);
+	\draw[gluon] (1,1)--(1,-1);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[scalar] (1,-1)--(2,-1);
+	\draw[gluon] (1,0)--(2,0);
+\end{scope}
+\end{tikzpicture}
+\caption{A selection of real gluon emission diagrams contributing to squark production. Again each diagram is a representative of a certain diagram type. The first one is final state gluon emission, the second one initial state gluon radiation and the third one is the radiation of a gluon from a virtual particle within the diagram.}\label{fig:RealGluon}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Real Quark Radiation}
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}[line width=1.5 pt, scale=1.3]
+\begin{scope}[shift={(0,0.25)}]
+	\draw[fermion] (-1.25,0.75)--(-0.5,0);
+	\draw[gluon] (-1.25,-0.75)--(-0.5,0);
+	\draw[fermion] (-0.5,0)--(0.5,0); 
+	\draw[scalar] (0.5,0)--(1.25,0.75);
+	\draw[gluon] (0.5,0)--(1.25,-0.75);
+	\draw[fermionnoarrow] (0.5,0)--(1.25,-0.75);
+	\draw[scalar] (1.25,-0.75)--(2,0);
+	\draw[fermion] (2,-1.5)--(1.25,-0.75);
+	\end{scope}
+\begin{scope}[shift={(3,0)}]
+	\draw[fermion] (0,1)--(1,1);	
+	\draw[gluon] (0,-0.5)--(1,-0.5);
+	\draw[fermionnoarrow] (1,1)--(1,-0.5);
+	\draw[gluon] (1,1)--(1,-0.5);
+	\draw[scalar] (1,1)--(2.75,1);
+	\draw[fermionnoarrow] (1,-0.5)--(2,-0.5);
+	\draw[gluon] (1,-0.5)--(2,-0.5);
+	\draw[scalar] (2,-0.5)--(2.75,0.25);
+	\draw[fermion] (2.75,-1.25)--(2,-0.5);
+\end{scope}
+\begin{scope}[shift={(7,0)}]
+	\draw[fermion] (0,1)--(1,1);
+	\draw[gluon] (0,-1)--(1,-1);
+	\draw[fermionnoarrow] (1,1)--(1,0);
+	\draw[gluon] (1,1)--(1,0);
+	\draw[fermion] (1,-1)--(1,0);
+	\draw[scalar] (1,1)--(2,1);
+	\draw[fermion] (2,-1)--(1,-1);
+	\draw[scalar] (1,0)--(2,0);
+\end{scope}
+\end{tikzpicture}
+\caption{A selection of real quark emission diagrams contributing to squark production. The first two diagrams have a gluino propagator which may go on-shell. In this regime of phase space these diagrams should not be included in the correction to squark-production but to a tree-level contribution to squark-gluino-production.}\
+\end{center}
+\end{figure}

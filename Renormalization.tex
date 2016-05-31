@@ -17,23 +17,23 @@ maybe refer to Collins: Renormalization
 
 
 \subsection{Regularization Scheme Dependences}\label{sec:RegSchemeDep}
-It is useful to introduce the effective action $\Gamma$ to discuss the subject of this and ensuing subchapters. A formal introduction of $\Gamma$ can be found in~\cite{Peskin}. In short $\Gamma$ can be viewed as a modification of the classical action $\Gamma_{cl} = \int \mathcal{L}_{cl}$ by quantum effects:
+It is useful to introduce the effective action $\Gamma$ to discuss the subject of this and ensuing subchapters. A formal introduction of $\Gamma$ can be found in~\cite{Peskin}. In short $\Gamma$ can be viewed as a modification of the classical action $\Gamma_{\mathrm{cl}} = \int \mathcal{L}_{\mathrm{cl}}$ by quantum effects:
 \begin{align}
-\Gamma = \Gamma_{cl} + \mathcal{O}(\hbar)
+\Gamma = \Gamma_{\mathrm{cl}} + \mathcal{O}(\hbar)
 \end{align}
 This means that in addition to the vertices in the classical Lagrangian new vertices arise due to loop effects. As already suggested loop corrections might a priori not be finite and then need to be made finite by the addition of counterterms. For $\mathcal{O}(\hbar)$ corrections one writes
 \begin{align}
-\Gamma^{(\leq 1)} \to \Gamma^{(\leq 1)} + \Gamma^{(1),ct}
+\Gamma^{(\leq 1)} \to \Gamma^{(\leq 1)} + \Gamma^{(1),\ \mathrm{ct}}
 \end{align} 
-These counterterms depend on the regularization (and renormalization) scheme. If one chooses to work with DREG supersymmetry will not be preserved at 1-loop order, i.e. $\Gamma^{(\leq 1)}_{DREG}$ is not supersymmetric. To maintain supersymmetry invariance of the renormalized effective action the counterterms will not only consist of supersymmetric counterterms $\Gamma^{(1),ct,sym}_{DREG}$ but also of counterterms restoring supersymmetry $\Gamma^{(1),ct,restore}_{DREG}$. 
+These counterterms depend on the regularization (and renormalization) scheme. If one chooses to work with DREG supersymmetry will not be preserved at 1-loop order, i.e. $\Gamma^{(\leq 1)}_{\mathrm{DREG}}$ is not supersymmetric. To maintain supersymmetry invariance of the renormalized effective action the counterterms will not only consist of supersymmetric counterterms $\Gamma^{(1),\ \mathrm{ct,\ sym}}_{\mathrm{DREG}}$ but also of counterterms restoring supersymmetry $\Gamma^{(1),\ \mathrm{ct,\ restore}}_{\mathrm{DREG}}$. 
 \begin{align}
-\Gamma^{(1),ct}_{DREG} = \Gamma^{(1),ct,sym}_{DREG} + \Gamma^{(1),ct,restore}_{DREG}
+\Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DREG}} = \Gamma^{(1),\ \mathrm{ct,\ sym}}_{\mathrm{DREG}} + \Gamma^{(1),\ \mathrm{ct,\ restore}}_{\mathrm{DREG}}
 \end{align}
 Fortunately a supersymmetry conserving regularization scheme (at 1-loop level) is given by DRED \cite{Hollik:2001cz}. One way to acquire supersymmetry restoring counterterms is therefore given by
 \begin{align}
-\Gamma^{(\leq 1)}_{DRED} + \Gamma^{(1),ct}_{DRED} \overset{!}{=} \Gamma^{(\leq 1)}_{DREG} + \Gamma^{(1),ct}_{DREG}.
+\Gamma^{(\leq 1)}_{\mathrm{DRED}} + \Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DRED}} \overset{!}{=} \Gamma^{(\leq 1)}_{\mathrm{DREG}} + \Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DREG}}.
 \end{align}
-Setting also the finite terms in $\Gamma^{(1),ct,sym}$ equal in DRED and DREG the choice of the supersymmetry restoring counterterms is fixed by:
+Setting also the finite terms in $\Gamma^{(1),\ \mathrm{ct,\ sym}}$ equal in DRED and DREG the choice of the supersymmetry restoring counterterms is fixed by:
 \begin{align}
 \Gamma^{\mathrm{(1),ct,restore}}_{\mathrm{DREG}} = \Gamma^{(\leq 1)}_{\mathrm{DREG}} - \Gamma^{(\leq 1)}_{\mathrm{DREG}}.\label{eq:GammaCtRestore}
 \end{align} 
@@ -646,7 +646,7 @@ one finds
 \beta(g_s,\epsilon) &= -\epsilon g_s \left( 1 + \frac{g_s^2}{16\pi^2} L \right) + \beta(g_s) + \mathcal{O}(\mathrm{2-loop})\\
 \beta(g_s) &= \frac{g_s^3}{16\pi^2} \beta_0^L + \mathcal{O}(\mathrm{2-loop}).
 \end{align}
-This is the beta function from QCD first found by [Gross, Politzer, Wil]
+This is the beta function of QCD first found by [Gross, Politzer, Wil]
 
 
 
