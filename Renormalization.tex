@@ -17,11 +17,11 @@ maybe refer to Collins: Renormalization
 
 
 \subsection{Regularization Scheme Dependences}\label{sec:RegSchemeDep}
-It is useful to introduce the effective action $\Gamma$ to discuss the subject of this and ensuing subchapters. A formal introduction of $\Gamma$ can be found in~\cite{Peskin}. In short $\Gamma$ can be viewed as a modification of the classical action $\Gamma_{\mathrm{cl}} = \int \mathcal{L}_{\mathrm{cl}}$ by quantum effects:
+It is useful to introduce the effective action $\Gamma$ to discuss the subject of this and ensuing subsections. A formal introduction of $\Gamma$ can be found in~\cite{Peskin}. In short $\Gamma$ can be viewed as a modification of the classical action $\Gamma_{\mathrm{cl}} = \int \mathcal{L}_{\mathrm{cl}}$ by quantum effects:
 \begin{align}
 \Gamma = \Gamma_{\mathrm{cl}} + \mathcal{O}(\hbar)
 \end{align}
-This means that in addition to the vertices in the classical Lagrangian new vertices arise due to loop effects. As already suggested loop corrections might a priori not be finite and then need to be made finite by the addition of counterterms. For $\mathcal{O}(\hbar)$ corrections one writes
+This means that in addition to the vertices in the classical Lagrangian new vertices arise due to loop effects. As already alluded to loop corrections might a priori not be finite and then need to be rendered finite by the addition of counterterms. For $\mathcal{O}(\hbar)$ corrections one writes
 \begin{align}
 \Gamma^{(\leq 1)} \to \Gamma^{(\leq 1)} + \Gamma^{(1),\ \mathrm{ct}}
 \end{align} 
@@ -33,12 +33,12 @@ Fortunately a supersymmetry conserving regularization scheme (at 1-loop level) i
 \begin{align}
 \Gamma^{(\leq 1)}_{\mathrm{DRED}} + \Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DRED}} \overset{!}{=} \Gamma^{(\leq 1)}_{\mathrm{DREG}} + \Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DREG}}.
 \end{align}
-Setting also the finite terms in $\Gamma^{(1),\ \mathrm{ct,\ sym}}$ equal in DRED and DREG the choice of the supersymmetry restoring counterterms is fixed by:
+Equating also the finite terms in $\Gamma^{(1),\ \mathrm{ct,\ sym}}$ in DRED and DREG the choice of the supersymmetry restoring counterterms is fixed by:
 \begin{align}
 \Gamma^{\mathrm{(1),ct,restore}}_{\mathrm{DREG}} = \Gamma^{(\leq 1)}_{\mathrm{DREG}} - \Gamma^{(\leq 1)}_{\mathrm{DREG}}.\label{eq:GammaCtRestore}
 \end{align} 
 This way supersymmetry is preserved by the renormalization constants.\\ 
-In the case of the MRSSM it will turn out that the only supersymmetry violation comes from correction associated with the gluon as already alluded to in \ref{sec:RegSchemes}. However supersymmetry restoring is always already included in $\delta Z^{\mathrm{DREG}}$. This is $\delta Z^{\mathrm{DREG}} = \delta Z^{\mathrm{DREG,sym}} + \delta Z^{\mathrm{trans}}$ where $\delta Z^{\mathrm{trans}} = \delta Z^{\mathrm{DREG}} - \delta Z^{\mathrm{DRED}}$ is the supersymmetry restoring renormalization constant. The only point where particularly care is required is the coupling: The  gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$ receive different supersymmetry restoring counterterms. Therefore one has to make a difference between these couplings at 1-loop level. In order to match $g_s$ to the experimentally measured coupling it is renormalized in $\overline{\mathrm{MS}}$. The Yukawa coupling $\hat{g}_s$ therefore needs to be added with the difference of the supersymmetry restoring counterterms at 1-loop in order to be renormalized the same way.
+In the case of the MRSSM it will turn out that the only supersymmetry violation comes from corrections associated with the gluon as already alluded to in section \ref{sec:RegSchemes}. However supersymmetry restoring will always already be included in $\delta Z^{\mathrm{DREG}}$. This is $\delta Z^{\mathrm{DREG}} = \delta Z^{\mathrm{DREG,sym}} + \delta Z^{\mathrm{trans}}$ where $\delta Z^{\mathrm{trans}} = \delta Z^{\mathrm{DREG}} - \delta Z^{\mathrm{DRED}}$ is the supersymmetry restoring renormalization constant. The only point where particularly care is required is the coupling: The  gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$ receive different supersymmetry restoring counterterms due to different loop diagrams. Therefore one has to make a difference between these couplings at 1-loop level. In order to match $g_s$ to the experimentally measured coupling it is renormalized in the  $\overline{\mathrm{MS}}$-scheme (with an additional manipulation for heavy particles, which will be explained in section \ref{sec:RenGaugeCoupling}). The Yukawa coupling $\hat{g}_s$ therefore needs to be added with the difference of the supersymmetry restoring counterterms from the $q\tilde{q}^\dagger\tilde{g}$ vertex and the $q\overline{q}G$ vertex at 1-loop in order to be renormalized the same way.
 
 
 %An alternative procedure is used in \cite{Beenakker:1996ch}, where only one supersymmetry restoring counterterm, which translates between the renormalized gauge coupling $g_s$ and the renormalized Yukawa coupling $\hat{G}_s$ is needed. That is possible because the only supersymmetry violation comes from the gauge sector. For a comprehensive discussion of this issue see [Philipp Vasros Diplomarbeit and the paper with Dominik]\\
@@ -78,12 +78,12 @@ The quark self-energy splits into contribution from the SM as well as a supersym
 	\draw[fermionbar](0:0.5)--(0:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{diagrammatic contributions to the self-energy of the quark at 1-loop level}\label{fig:QuarkSelfEnergy}
+\caption{Feynman diagrams contributing to the self-energy of the quark at 1-loop level}\label{fig:QuarkSelfEnergy}
 \end{center}
 \end{figure}\\
 The 1-PI diagrams evaluate to
 \begin{align}
-i\Gamma^{1L}_{q_i\overline{q}_j} = i \frac{g_s^2}{16\pi^2}\delta_{ij} C(F) \left[ 2 \left( B_0(p^2,0,0) + B_1(p^2,0,0)-\frac{1}{2}\right)\slashed{p} - 2 B_1(p^2,m_{\tilde{g}}^2,m_{\tilde{q}}^2)\slashed{p}\right].
+i\Gamma^{1L}_{q_i\overline{q}_j} = i \frac{g_s^2}{16\pi^2}\delta_{ij} C(F) \left[ 2 \left( B_0(p^2,0,0) + B_1(p^2,0,0)-\frac{1}{2}\right)\slashed{p} - 2 B_1(p^2,m_{\tilde{g}}^2,m_{\tilde{q}}^2)\slashed{p}\right].\label{eq:QuarkSE}
 \end{align}
 With the counterterm Feynman rule\\
 \\
@@ -104,9 +104,10 @@ and the on-shell renormalization condition
 \end{align}
 where $\Re (\hdots)$ denotes the real part of $\hdots$ one finds
 \begin{align}
-\delta Z_q = 2 C(F) \frac{g_s^2}{16\pi^2} \Re \left[ B_1(0 ,m_{\tilde{g}}^2,m_{\tilde{q}}^2) + \frac{1}{2}??? \right].
+\delta Z_q = 2 C(F) \frac{g_s^2}{16\pi^2} \Re \left[ B_1(0 ,m_{\tilde{g}}^2,m_{\tilde{q}}^2) \right].
 \end{align}
-Doing the same calculation in DRED one finds that the second term in the squared brackets is absent. Therefore the transition counterterm between DREG and DRED is given by
+Note that the term $\frac{1}{2}$ from eq. \ref{eq:QuarkSE} has vanished because the self energy is taken on-shell which means that this factor is absorbed into the on-shell $B_0$ function which is in DREG defined to be zero if it has no mass scale.\\
+Doing the same calculation in DRED one finds that this very term $\frac{1}{2}$ is absent. Therefore the transition counterterm between DREG and DRED is given by
 \begin{align}
 \delta Z_q^{\mathrm{trans}} = \delta Z_q^{\mathrm{DREG}} - \delta Z_q^{\mathrm{DRED}} = C(F) \frac{g_s^2}{16\pi^2}.\label{eq:QuarkSC}
 \end{align}
@@ -164,14 +165,14 @@ The contributions to the self-energy of the left- and right-handed squark are th
 	\draw[scalarbar](0:0.5)--(0:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{diagrammatic contributions to the self-energy of the squark at 1-loop level}
+\caption{Diagrammatic contributions to the self-energy of the squark at 1-loop level}
 \end{center}
 \end{figure}\\
 \begin{align}
 i\Gamma^{1L}_{\tilde{q}_{i}\tilde{q}^\dagger_j} &= i \frac{g_s^2}{16\pi^2}\delta_{ij}C(F) \left[  A_0(m_{\tilde{q}}^2) + 0 - \left( 4A_0(m_{\tilde{g}}^2) + 4B_1(p^2,0,m_{\tilde{g}}^2)p^2 \right) \right.\nonumber\\
 & \left.+ 4m_{\tilde{g}}^2B_0(p^2,m_{\phi^0}^2,m_{\tilde{q}}^2) - \left(2B_1(p^2,0,m_{\tilde{q}}^2)p^2 + B_0(p^2,0,m_{\tilde{q}}^2)(m_{\tilde{q}}^2+3p^2) \right) \right].
 \end{align}
-Suppressing $\delta_{AB}$ with $A,B = L,R$ which is present in the tree level propagator the counterterm Feynman rule is given by\\
+Suppressing $\delta_{AB}$ with $A,B \in \left\{ L,R \right\}$ which is present in the tree level propagator (see fig. \ref{fig:firstFeynmanRules}) the counterterm Feynman rule is given by\\
 \\
 \begin{tikzpicture}[line width=1.0 pt, scale=0.8]
 	\node at (-2.5,-0.1) {$i\Gamma^{1L,ct}_{q_i\overline{q}_j}\ \hat{=}\ i$};
@@ -211,7 +212,7 @@ The 4-spinor of the gluino comprises two Weyl spinors which describe very differ
 \overline{\chi}^a
 \end{pmatrix}
 \end{align}
-The left-handed part $\lambda^a$ is associated with the superpartner of the gluon and therefore the "actual" gluino whereas the right-handed part $\overline{\chi}^a$ was introduced to assign a Dirac-mass to the gluino and is referred to as the octino.\\
+The left-handed part $\lambda^a$ is associated with the superpartner of the gluon and therefore the "actual" gluino whereas the right-handed part $\overline{\chi}^a$ was introduced to assign a Dirac-mass to the gluino and may be referred to as the octino.\\
 From the Lagrangian \ref{eq:L_RSQCD} one can see that the couplings of the two particles are quite distinct. This is reflected by different field renormalization constants of the left- and right-handed part of the gluino.
 \begin{figure}[!htbp]
 \begin{center}
@@ -283,11 +284,11 @@ The counterterm Feynman rule reads\\
 \end{tikzpicture}\\
 The on-shell renormalization conditions for the fields are
 \begin{align}
-& \frac{\partial}{\partial (P_L\slashed{p})} \left[ \Re (\Gamma^{\mathrm{1L}}_{\tilde{g}^a \overline{\tilde{g}}^b}) + \Gamma^{\mathrm{1L,ct}}_{\tilde{g}^a \overline{\tilde{g}}^b}  \right]_{\slashed{p} = m_{\tilde{g}}} = 0
+& \frac{\partial}{\partial (P_L\slashed{p})} \left[ \Re (\Gamma^{\mathrm{1L}}_{\tilde{g}^a \overline{\tilde{g}}^b}) + \Gamma^{\mathrm{1L,ct}}_{\tilde{g}^a \overline{\tilde{g}}^b}  \right]_{\slashed{p} = m_{\tilde{g}}} = 0,
 && \frac{\partial}{\partial (P_R\slashed{p})} \left[ \Re (\Gamma^{\mathrm{1L}}_{\tilde{g}^a \overline{\tilde{g}}^b}) + \Gamma^{\mathrm{1L,ct}}_{\tilde{g}^a \overline{\tilde{g}}^b}  \right]_{\slashed{p} = m_{\tilde{g}}} = 0
 \end{align}
 where the derivative of $\Sigma = \Sigma^{VL}P_L\slashed{p} + \Sigma^{VR}P_R\slashed{p} + \Sigma^{SL}P_L + \Sigma^{SR}P_R$ with respect to $P_A\slashed{p}$ \\
-($A = L,R$) is defined by
+($A \in \left\{ L,R \right\}$) is defined by
 \begin{align}
 \left.\frac{\partial}{\partial (P_A\slashed{p})} \Sigma\right|_{\slashed{p} = m} = \Sigma^{VA} + \frac{\partial}{\partial p^2} \left( m^2 \Sigma^{VL} + m^2 \Sigma^{VR} + m \Sigma^{SL} + m \Sigma^{SR}\right).
 \end{align}
@@ -333,8 +334,8 @@ Again there is a transition counterterm
 \end{align}
 
 
-\subsection{Renormalization of the Gauge Coupling}
-The gauge coupling $g_s$ is renormalized in the $\overline{\mathrm{MS}}$-scheme with the modification that additional logarithms are subtracted, i.e. light particles are treated in the $\overline{\mathrm{MS}}$-scheme and heavy particles in the zero-momentum subtraction scheme. This is to decouple heavy particles from the running of $\alpha_s = \frac{g_s^2}{4\pi}$. This renormalization procedure allows to adopt the experimental values of $\alpha_s$ from the PDF's. The running due to effects of heavy particles is then encoded in the logarithms of $\delta g_s$.\\
+\subsection{Renormalization of the Gauge Coupling}\label{sec:RenGaugeCoupling}
+The gauge coupling $g_s$ is renormalized in the $\overline{\mathrm{MS}}$-scheme with the modification that additional logarithms are subtracted, i.e. light particles are treated in the $\overline{\mathrm{MS}}$-scheme and heavy particles in the zero-momentum subtraction scheme. This is to decouple heavy particles from the running of $\alpha_s = \frac{g_s^2}{4\pi}$. This renormalization procedure allows to adopt the experimental values of $\alpha_s$ from the parton density functions. The running due to effects of heavy particles is then encoded in the logarithms of $\delta g_s$.\\
 Extracting $\delta g_s$ from the quark-quark-gluon vertex requires not only the computation of $i\Gamma^{\mathrm{1L}}_{q_i\overline{q}_jG^\mu_a}$ but also the (re)evaluation of auxiliary field renormalization constants $\delta Z_q^{\mathrm{aux}}$ and $\delta Z_G^{\mathrm{aux}}$ in the above mentioned scheme. These will not be the same as the on-shell scheme.
 
 \subsubsection*{The Quark Self-Energy Revisited}
@@ -354,8 +355,6 @@ and computes to
 \end{align}
 
 
-\subsubsection*{The Gluon Self-Energy}
-As for the quark self-energy there are again contributions to the self-energy originating from light and heavy particles. Again these are differently dealt with.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -402,12 +401,16 @@ As for the quark self-energy there are again contributions to the self-energy or
 \caption{Contribution to the self-energy of the gluon originating from light particles}\label{fig:lightGluonSelfEnergy}
 \end{center}
 \end{figure}
+
+
+\subsubsection*{The Gluon Self-Energy}
+As for the quark self-energy there are again contributions to the self-energy originating from light and heavy particles. Again these are differently dealt with.
 \begin{align}
 \left.i\Gamma^{\mathrm{1L,light}}_{G_\mu^a G_\nu^b}\right|_{\mathrm{UV-div}} &= i\frac{g_s^2}{16\pi^2}\Delta_\epsilon \left[ 0 - \frac{4 (n_{f}-1)}{3} T(F) (p^2g^{\mu\nu}-p^\mu p^\nu) + \frac{C(A)}{12}(p^2g^{\mu\nu} + 2 p^\mu p^\nu) \right.\nonumber\\
 &+\left. \frac{C(A)}{12}(19 p^2g^{\mu\nu} - 22 p^\mu p^\nu) \right]\delta_{ab}\nonumber\\
 &=i\frac{g_s^2}{16\pi^2} \Delta_\epsilon \left[ - \frac{4 (n_{f}-1)}{3} T(F) + \frac{5}{3} C(A) \right](p^2g^{\mu\nu}-p^\mu p^\nu)\delta_{ab}
 \end{align}
-Both contributions the one from the gluon loop and the one from the ghost loop are not proportional to $(p^2g^{\mu\nu}-p^\mu p^\nu)$ but their sum is.
+Both the contribution from the gluon loop and the one from the ghost loop are not proportional to $(p^2g^{\mu\nu}-p^\mu p^\nu)$ but their sum is.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -470,7 +473,7 @@ Both contributions the one from the gluon loop and the one from the ghost loop a
 	\draw[gluon](0:0.5)--(0:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{contribution to the self-energy of the gluon originating from heavy particles, in the last diagram either $\phi^0$ or $\sigma^0$ are running in the loop}
+\caption{Contribution to the self-energy of the gluon originating from heavy particles, in the last diagram either $\phi^0$ or $\sigma^0$ are running in the loop}
 \end{center}
 \end{figure}
 The heavy particle contributions are calculated in the zero-momentum subtraction
@@ -555,15 +558,16 @@ As for the self energies the vertex correction constitutes of loops from light p
 	\draw[fermionbar](-45:0.5)--(-45:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{Contribution from light (Standard Model) particles to the $q\overline{q}G$ vertex. correction}\label{fig:GaugeCouplingCorrection}
+\caption{Contribution from light (Standard Model) particles to the $q\overline{q}G$ vertex correction}\label{fig:GaugeCouplingCorrection}
 \end{center}
 \end{figure}
+The contributions from Standard Model particles to the $q\overline{q}G$ yield
 \begin{align}
 \left.i\Gamma^{\mathrm{1L,light}}_{q_i \overline{q}_j G_\mu^a}\right|_{\mathrm{UV-div}} &= - ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \left[\left(C(F) -\frac{C(A)}{2}\right)2(B_0(0, 0, 0) - 2C_{00}(0,0,0,0,0)) \right.\nonumber\\
 &\left.+ C(A)(B_0(0, 0, 0) + 2C_{00}(0,0,0,0,0))\right]\nonumber\\
-&= -i g_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \Delta_\epsilon \left[ \left(C(F) -\frac{C(A)}{2}\right) + \frac{3}{2} C(A) \right]\label{eq:qqGlight}
+&= -i g_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \Delta_\epsilon \left[ \left(C(F) -\frac{C(A)}{2}\right) + \frac{3}{2} C(A) \right].\label{eq:qqGlight}
 \end{align}
-The term in the curved brackets of eq. \ref{eq:qqGlight} corresponds to the first diagram in fig. \ref{fig:GaugeCouplingCorrection} whereas the last term in the squared brackets corresponds to the second diagram.
+The term in the curved brackets of eq. \ref{eq:qqGlight} corresponds to the first diagram in fig. \ref{fig:GaugeCouplingCorrection} whereas the term with the prefactor $C(A)$ corresponds to the second diagram. 
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -605,21 +609,25 @@ The term in the curved brackets of eq. \ref{eq:qqGlight} corresponds to the firs
 \caption{Contribution from heavy particles to the $q\overline{q}G$ vertex correction.}
 \end{center}
 \end{figure}
+The 3-point-function with only heavy particles running in the loop evaluates to
 \begin{align}
 i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) &= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \left[ \left(C(F) -\frac{C(A)}{2}\right) 4C_{00}(0, 0, m_{\tilde{g}}^2, m_{\tilde{q}}^2, m_{\tilde{q}}^2) \right.\nonumber\\
 &\hspace{3.3cm} + \left. C(A)\left( B_0(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2) -2C_{00}(0, 0, m_{\tilde{g}}^2, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right) \right]\nonumber\\
 &= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \left[ \left(C(F) -\frac{C(A)}{2}\right) \left( \Delta_\epsilon - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) \right.\nonumber\\
 &\hspace{3.3cm} + \left.\frac{C(A)}{2} \left( \Delta_\epsilon - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) \right]
 \end{align}
-The argument $p_i^2=0$ of the vertex function denotes, that all external particles are taken on shell, i.e. at zero momentum. In the second line identities from \ref{sec:Passarino} have been used. The renormalization condition for the counterterm of the gauge coupling $\delta g_s$ reads
+The argument $p_i^2=0$ of the vertex function denotes, that all external particles are taken on shell, i.e. at zero momentum.\\
+insert $B_1$ function in order to cancel contribution from quark ren.const\\
+In the second line identities from \ref{sec:Passarino} have been used. The renormalization condition for the counterterm of the gauge coupling $\delta g_s$ reads
 \begin{align}
 \left.i\Gamma^{\mathrm{1L,light}}_{q_i \overline{q}_j G_\mu^a}\right|_{\mathrm{UV-div}} + i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) + \left[ -ig_s T^a_{ij}\gamma^\mu\left( \frac{\delta g_s}{g_s} + \delta Z_q^{\mathrm{aux}} + \frac{\delta Z_G^{\mathrm{aux}}}{2} \right)\right] = 0.
 \end{align}
-Finally one can read off the $\frac{\delta g_s}{g_s}$
+Finally one can read off $\frac{\delta g_s}{g_s}$
 \begin{align}
 \frac{\delta g_s}{g_s} &= \frac{g_s^2}{16\pi^2} \left[ \left( \frac{2}{3}T(F)(n_f-1) - \frac{11}{6}C(A) \right) \Delta_\epsilon + \left( \frac{5}{6}C(A) + \frac{2}{3}T(F) + \frac{1}{3}T(F)n_f \right)\Delta_\epsilon  \right.\nonumber\\
-&- \frac{2}{3} C(A) \ln \frac{m_{\tilde{g}}^2}{\mu^2} - \frac{1}{3}T(F)n_f \ln \frac{m_{\tilde{q}}^2}{\mu^2} - \frac{2}{3}T(F) \ln \frac{m_t^2}{\mu^2}-\frac{1}{12} C(A) \left( \ln \frac{m_{\phi^0}^2}{\mu^2} + \ln \frac{m_{\sigma^0}^2}{\mu^2} \right)\label{eq:deltaGs}
+&- \frac{2}{3} C(A) \ln \frac{m_{\tilde{g}}^2}{\mu^2} - \frac{1}{3}T(F)n_f \ln \frac{m_{\tilde{q}}^2}{\mu^2} - \frac{2}{3}T(F) \ln \frac{m_t^2}{\mu^2}-\frac{1}{12} C(A) \left( \ln \frac{m_{\phi^0}^2}{\mu^2} + \ln \frac{m_{\sigma^0}^2}{\mu^2} \right).\label{eq:deltaGs}
 \end{align}
+Note the only difference to the MSSM is the appearence of the sgluon masses as well as a factor of two in front of the logarithm of the gluino mass which is due to twice as much degrees of freedom of the gluino in the MRSSM.
 
 \subsection{The Beta Function}
 The beta function describes the dependence of the gauge coupling $g_s$ upon the energy scale $\mu$.\\
@@ -651,8 +659,8 @@ This is the beta function of QCD first found by [Gross, Politzer, Wil]
 
 
 \subsection{Supersymmetry Restoring Counterterm}
-As already discussed in section \ref{sec:RegSchemeDep} care is required in terms of supersymmetry restoring when renormalizing  the gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$. In doing so one needs the already calculated supersymmetry restoring counterterms of the quark, squark and gluino from \ref{eq:QuarkSC}, \ref{eq:SquarkSC} and \ref{eq:GluinoSC}
-as well as the supersymmetry restoring counterterm of the gluon.
+As already discussed in section \ref{sec:RegSchemeDep} care is required in terms of supersymmetry restoring when renormalizing  the gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$. In doing so one needs the already calculated transition counterterms of the quark, squark and gluino from \ref{eq:QuarkSC}, \ref{eq:SquarkSC} and \ref{eq:GluinoSC}
+as well as the transition counterterm of the gluon.
 \subsubsection*{The Gluon Self-Energy Revisited}
 The only regularization dependence of the gluon self-energy arises from the gluon loop, i.e. the last diagram in figure \ref{fig:lightGluonSelfEnergy}. With the definition of $\Gamma^{\mathrm{(1),ct,restore}}_{\mathrm{DREG}}$ in \ref{eq:GammaCtRestore} one obtains
 \begin{align}
@@ -664,18 +672,18 @@ which translates to the transition counterterm
 \end{align}
 
 \subsubsection*{The $q\overline{q}G$ Vertex Correction Revisited}
-The supersymmetry restoring contributions to the gauge coupling correction are shown in figure \ref{fig:GaugeCouplingCorrection} and evaluate to
+The diagrams from which the supersymmetry restoring contributions to the gauge coupling correction come from are shown in figure \ref{fig:GaugeCouplingCorrection} and evaluate to
 \begin{align}
 i\Gamma^{\mathrm{(1),ct,restore}}_{\mathrm{DREG}, q_i\overline{q}_jG_\mu^a} &= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2}\left[ \left( C(F) - \frac{C(A)}{2} \right) + \frac{C(A)}{2} \right]\\
 &= -ig_s T^a_{ij} \gamma^\mu \left[ \frac{\delta g_s^{\mathrm{trans}}}{g_s} + \delta Z^{\mathrm{trans}}_q + \frac{\delta Z^{\mathrm{trans}}_G}{2} \right]
 \end{align}
-where in the second line the equation with the supersymmetry restoring counterterms has been performed. This yields
+where the second line shows the supersymmetry restoring counterterms. This yields
 \begin{align}
 \frac{\delta g_s^{\mathrm{trans}}}{g_s} = -\frac{C(A)}{6} \frac{g_s^2}{16\pi^2}.
 \end{align}
 
 \subsubsection*{The $q\tilde{q}^\dagger\tilde{g}$ Vertex Correction}
-The supersymmetry restoring corrections to the Yukawa coupling origin from the below diagram 
+The supersymmetry restoring corrections to the Yukawa coupling origin from the diagram below.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -694,7 +702,7 @@ The supersymmetry restoring corrections to the Yukawa coupling origin from the b
 \caption{diagram of the supersymmetry restoring correction of  the $q\tilde{q}\tilde{g}$ vertex}
 \end{center}
 \end{figure}
-The supersymmetry restoring part is
+The supersymmetry restoring part is given by
 \begin{align}
 i\Gamma^{\mathrm{(1),ct,restore}}_{\mathrm{DREG}, q_i\tilde{q}_j\tilde{g}^a} &= -ig_s \sqrt{2} P_L T^a_{ij}  \frac{g_s^2}{16\pi^2}C(A)\\
 &= -ig_s \sqrt{2} P_L T^a_{ij}  \left[ \frac{\delta \hat{g}_s^{\mathrm{trans}}}{g_s} + \frac{\delta Z^{\mathrm{trans}}_q + \delta Z^{\mathrm{trans}}_{\tilde{q}} + \delta Z^{\mathrm{trans}}_{\tilde{g}}}{2} \right].
@@ -703,12 +711,12 @@ The supersymmetry restoring part of the Yukawa renormalization constants is ther
 \begin{align}
 \frac{\delta \hat{g}_s^{\mathrm{trans}}}{g_s} = -\frac{C(F)-C(A)}{2} \frac{g_s^2}{16\pi^2}.
 \end{align}
-As a consequence of the two different supersymmetry restoring parts of the coupling renormalization constants an additional renormalization constant $\delta g_s^{\mathrm{restore}}$ needs to be introduced. As described in section \label{sec:RegSchemeDep} it is given by
+As a consequence of the two different supersymmetry restoring parts of the coupling renormalization constants an additional renormalization constant $\delta g_s^{\mathrm{restore}}$ needs to be introduced. As described in section \ref{sec:RegSchemeDep} it is given by
 \begin{align}
 \frac{\delta g_s^{\mathrm{restore}}}{g_s} = \frac{\delta \hat{g}_s^{\mathrm{trans}}}{g_s} -\frac{\delta g_s^{\mathrm{trans}}}{g_s} = \frac{g_s^2}{16\pi^2}\left( \frac{2C(A)}{3} - \frac{C(F)}{2} \right).
 \end{align}
 In short this means that the gauge coupling $g_s$ is renormalized with $\delta g_s$ given in \ref{eq:deltaGs} and the Yukawa coupling $\hat{g}_s$ is renormilzed with $\delta \hat{g}_s = \delta g_s + \delta g_s^{\mathrm{restore}}$.\\
-The finite correction $g_s^{\mathrm{restore}}$ is the same as in supersymmetric QCD which should not surprise too much as all its contributions origin from loops with gluons. So there are no new contributions in RSQCD with respect to SQCD. 
+The finite correction $\delta g_s^{\mathrm{restore}}$ is the same as in supersymmetric QCD which should not surprise too much as all its contributions originate from loops with gluons.% So there are no new contributions in RSQCD with respect to SQCD. 
 
 
 \subsection{$\overline{\mathrm{MS}}$ - Renormalization}\label{sec:MSRen}
