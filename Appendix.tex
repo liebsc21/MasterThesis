@@ -67,7 +67,7 @@ with
 \mathbbm{1}_2 && -\sigma^i
 \end{pmatrix},\label{eq:Pauli}
 \end{align}
-where $\sigma^i$ are the Pauli matrices and $\mathbbm{1}_n$ is the $n$x$n$ unit matrix. The left and right handed projectors are then given by
+where $\sigma^i$ are the Pauli matrices and $\mathbbm{1}_n$ is the $n \times n$ unit matrix. The left and right handed projectors are then given by
 \begin{align}
 P_L = \frac{1}{2}(\mathbbm{1}_4 - \gamma_5)\begin{pmatrix}
 \mathbbm{1}_2 && 0\\
@@ -78,14 +78,14 @@ P_R = \frac{1}{2}(\mathbbm{1}_4 + \gamma_5)\begin{pmatrix}
 0 && \mathbbm{1}_2
 \end{pmatrix}\label{eq:projectors}
 \end{align}
-The generator of the Lorentz group on 4-spinor space is composed of the above matrices. Because of the block form of those it is not surprising that the representation on 4-spinor space is reducible to two representations on 2-spinor (Weyl spinor) spaces. It is therefore sensible to decompose a 4 spinor into a left and a right handed Weyl spinor\footnote{The projectors in the chiral basis \ref{eq:projectors} explain the names left and right handed Weyl spinors.}
+The representation of generators of the Lorentz group on 4-spinor space are composed of the above matrices. Because of the block form of those it is not surprising that the representation on 4-spinor space is reducible to two representations on 2-spinor (Weyl spinor) spaces. It is therefore sensible to decompose a 4 spinor into a left and a right handed Weyl spinor\footnote{The projectors in the chiral basis (eq. \ref{eq:projectors}) explain the names left and right handed Weyl spinors.}
 \begin{align}
 \Psi = \begin{pmatrix}
 \psi_\alpha \\
 \overline{\chi}^{\dot{\alpha}}
 \end{pmatrix}
 \end{align}
-where $\alpha,\dot{\alpha} = 1,2$. Left handed Weyl spinors are labeled with undotted and right handed Weyl spinors with dotted indices. One distinguishes 4 different Weyl spinors:
+where $\alpha,\dot{\alpha} \in \left\{ 1,2 \right\}$. Left handed Weyl spinors are labeled with undotted and right handed Weyl spinors with dotted indices. One distinguishes 4 different Weyl spinors:
 \begin{align}
 \psi^\alpha, \hspace{1cm} 
 \overline{\psi}^{\dot{\alpha}} = (\psi^\alpha)^\ast, \hspace{1cm} \psi_\alpha = \epsilon_{\alpha\beta}\psi^\beta, \hspace{1cm} \mathrm{and} \hspace{1cm} \psi_{\dot{\alpha}} = \epsilon_{\dot{\alpha}\dot{\beta}}\psi^{\dot{\beta}} = (\psi_\alpha)^\ast,
@@ -94,12 +94,12 @@ where $^\ast$ denotes complex conjugation and indices are lowered with the antis
 \begin{align}
 \epsilon^{\alpha\beta} = \epsilon_{\beta\alpha},\ \epsilon^{\dot{\alpha}\dot{\beta}} = \epsilon_{\dot{\beta}\dot{\alpha}} \hspace{3cm} \mathrm{and} \hspace{3cm} \epsilon_{12} = \epsilon_{\dot{1}\dot{2}}= 1.
 \end{align}
-By virtue of the antisymmetry of $\epsilon$ one has for the Lorentz invariant product:
+By virtue of the antisymmetry of $\epsilon$ one finds the Lorentz invariant products:
 \begin{align}
 \psi\chi &:= \psi^\alpha\chi_\alpha = -\chi_\alpha\psi^\alpha = \chi^\alpha\psi_\alpha = \chi\psi,\nonumber\\
 \overline{\psi}\overline{\chi} &:= \overline{\psi}_{\dot{\alpha}} \overline{\chi}^{\dot{\alpha}} = -\overline{\chi}^{\dot{\alpha}}\overline{\psi}_{\dot{\alpha}} = \overline{\chi}_{\dot{\alpha}}\overline{\psi}^{\dot{\alpha}} = \overline{\chi}\overline{\psi} \label{eq:Weylspinorproduct}
 \end{align}
-To make the index structure of the Pauli matrices explicit one writes $\sigma^\mu_{\alpha\dot{\alpha}}$ and $\sigma^{\mu\dot{\alpha}\alpha}$ for the formulae in \ref{eq:Pauli}. For the definition of the super algebra in ??? the generators of the Lorentz group on the left and right handed Weyl spinor space are introduced:
+To make the index structure of the Pauli matrices explicit one writes $\sigma^\mu_{\alpha\dot{\alpha}}$ and $\sigma^{\mu\dot{\alpha}\alpha}$ for the formulae in \ref{eq:Pauli}. For the definition of the super algebra in section \ref{sec:SUSYalgebra} the representation of the generators of the Lorentz group on the left and right handed Weyl spinor space are introduced:
 \begin{align}
 \frac{1}{2}(\sigma^{\mu\nu})_\alpha^{\ \beta} := \frac{i}{4}(\sigma^\mu\overline{\sigma}^\nu - \sigma^\nu\overline{\sigma}^\mu)_\alpha^{\ \beta}\nonumber\\
 \frac{1}{2}(\overline{\sigma}^{\mu\nu})^{\dot{\alpha}}_{\ \dot{\beta}} := \frac{i}{4}(\overline{\sigma}^\mu\sigma^\nu - \overline{\sigma}^\nu\sigma^\mu)^{\dot{\alpha}}_{\ \dot{\beta}}

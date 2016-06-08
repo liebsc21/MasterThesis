@@ -26,7 +26,7 @@ def contourdata():
     # note reverse ordering for yi and xi because of the way   
     # shape works in numpy                                                  
     sigma = nans((len(mass),len(mass)))  
-    myfile = open('qq_to_sqsq_MRSSM_with_antiquarks.tex', 'r')     
+    myfile = open('MSSM_1_qqbar_sqsqdagger.txt', 'r')     
     i = 0
     for line in myfile:
         data = line.split()

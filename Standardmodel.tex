@@ -213,7 +213,7 @@ For the other force particles in the Standard Model - the $W^\pm$ bosons, the $Z
 For the moment being the coupling constants and gauge fields before and after this mixing are quoted in table \ref{tab:force_particles}.\bigbreak
 The Lagrangian of the SM is built up by qualitatively different terms. Firstly there are the kinetic and minimal coupling terms of the matter fields 
 \begin{align}
-\mathcal{L}_{\mathrm{matter}} =  \sum_{i=1}^3 \left( \overline{\ell}_{iL} i \slashed{D} l_{iL} + \overline{e}_{iR} i \slashed{D} e_{iR} + \overline{q}_{iL} i \slashed{D} q_{iL} + \overline{u}_{iR} i \slashed{D} u_{iR} \right)
+\mathcal{L}_{\mathrm{matter}} =  \sum_{i=1}^3 \left( \overline{\ell}_{iL} i \slashed{D} l_{iL} + \overline{e}_{iR} i \slashed{D} e_{iR} + \overline{q}_{iL} i \slashed{D} q_{iL} + \overline{u}_{iR} i \slashed{D} u_{iR} + \overline{d}_{iR} i \slashed{D} d_{iR} \right)
 \end{align}
 where $i \in \left\{1,2,3\right\}$ labels the generations of matter. The gauge covariant derivative is given by
 \begin{align}
@@ -222,33 +222,33 @@ D_\mu = \partial_\mu + i g_Y\frac{\hat{Y}}{2} +ig_w \vec{\tau}\cdot \vec{W}^\mu 
 where for each field the corresponding representation (fundamental or trivial) of the gauge group is to be inserted (see table \ref{tab:SMfieldcontent}). The hyper charge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of the field it is applied to. These can also be found in table \ref{tab:SMfieldcontent}.
 The kinetic terms of the gauge fields are given by
 \begin{align}
-\mathcal{L}_{gauge} = -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} - \frac{1}{4}W^{a\mu\nu}W^a_{\mu\nu} - \frac{1}{4}G^{a\mu\nu}G^a_{\mu\nu}.
+\mathcal{L}_{\mathrm{gauge}} = -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} - \frac{1}{4}W^{a\mu\nu}W^a_{\mu\nu} - \frac{1}{4}G^{a\mu\nu}G^a_{\mu\nu}.
 \end{align}
 
 
 \subsection{Electroweak Symmetry Breaking}\label{sec:EWSB}
-So far no mass terms like in the Dirac Lagrangian \ref{eq:DiracLagrangian} have been introduced. The reason for that is that they are not gauge invariant. The same argument forbids terms like $-\frac{m^2}{2}A^\mu A_\mu$ for a generic gauge boson. EWSB gives masses to these particles while maintaining gauge invariance. To this end one considers a complex scalar doublet
+So far no mass terms like in the Dirac Lagrangian \ref{eq:DiracLagrangian} have been introduced. The reason for this is that they are not gauge invariant for left- and right-handed spinors transform differently. The same argument forbids terms like $-\frac{m^2}{2}A^\mu A_\mu$ for a generic gauge boson. Electroweak symmetry breaking (EWSB) ascribes masses to those particles \cite{Higgs:1964ia}, \cite{Higgs:1964pj}, \cite{Higgs:1966ev}, \cite{Englert:1964et}, \cite{Guralnik:1964eu}, \cite{Kibble:1967sv}, \cite{Bernstein:1974rd}. To this end one considers a complex scalar doublet
 \begin{align}
 \Phi = \begin{pmatrix}
 \phi^+ \\ 
 \phi^0
 \end{pmatrix}
 \end{align}
-which acquires a vacuum expectation value (VEV) $\langle \Phi \rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}
+which receives a vacuum expectation value (VEV) $\langle \Phi \rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}
 0 \\ v
 \end{pmatrix}$ by the Higgs potential
 \begin{align}
 V(\Phi^\dagger\Phi) = -\mu^2 \Phi^\dagger\Phi + \lambda (\Phi^\dagger\Phi)^2
 \end{align}
 where $\mu^2,\lambda > 0$.
-The Higgs sector of the SM reads
+The Higgs sector of the Standard Model reads
 \begin{align}
 &\mathcal{L}_{Higgs} = (D_\mu \Phi)^\dagger (D^\mu \Phi) - V(\Phi^\dagger\Phi).
 \end{align}
-The Higgs doublet couples to the gauge fields of $SU_L(2)$ and $U_Y(1)$ in the fundamental representation. Inserting an expansion\footnote{The complex $\phi^+(x)$ and the real $\sigma(x)$ are so called massless Goldstone bosons. These degrees of freedom can be absorbed in the longitudinal polarized degrees of freedom of the arising gauge bosons $W^\pm$ and $Z^0$. The real $H(x)$ is the Higgs field, whose excitation is the Higgs boson.} around the VEV $\Phi = \begin{pmatrix}
+The Higgs doublet couples to the gauge fields of $SU_L(2)$ and $U_Y(1)$ in the fundamental representation. Inserting an expansion\footnote{The complex $\phi^+(x)$ and the real $\sigma(x)$ are the fields of the so called massless Goldstone bosons. These degrees of freedom can be absorbed in the longitudinally polarized degrees of freedom of the arising gauge bosons $W^\pm$ and $Z^0$. This is referred to as unitary gauge\cite{book:811554}. The real $H(x)$ is the Higgs field, whose excitation is the Higgs boson.} around the VEV $\Phi = \begin{pmatrix}
 \phi^+(x) \\
 \frac{1}{\sqrt{2}} (v + H(x) + i\sigma(x))
-\end{pmatrix}$ one obtains quadratic terms, i.e. mass terms, in the gauge fields in question. In order to get mass eigenstates for the gauge bosons one performs the transformation
+\end{pmatrix}$ one obtains quadratic terms, i.e. mass terms, for the gauge fields in question. In order to obtain mass eigenstates out of $B_\mu$ and $W_\mu^3$ and charge eigenstates for $Q$ and $I_3$ out of $W_\mu^1$ and $W_\mu^2$ one performs the transformation
 \begin{align}
 &\begin{pmatrix}
 A_\mu \\
@@ -260,40 +260,41 @@ Z^0_\mu
 B_\mu \\
 W^3_\mu
 \end{pmatrix}
-&& W^{\pm}_\mu = \frac{1}{\sqrt{2}}(W^1_\mu \mp W^2_\mu),
+&& W^{\pm}_\mu = \frac{1}{\sqrt{2}}(W^1_\mu \mp i W^2_\mu),
 \end{align}
-where the electroweak mixing angle is given by $\cos\theta_w = \frac{g_w}{\sqrt{g_w^2 + g_Y^2}}$
+where the electroweak mixing angle is given by $\cos\theta_w = \frac{g_w}{\sqrt{g_w^2 + g_Y^2}}$.
 These gauge fields acquire masses:
 \begin{align}
-& m_W = \frac{g_w}{2} v \hspace{4cm} m_Z = \frac{\sqrt{g_w^2+g_Y^2}}{2} v \hspace{4cm} m_A = 0.
+& m_W = \frac{g_w}{2} v \hspace{3cm} m_Z = \frac{\sqrt{g_w^2+g_Y^2}}{2} v \hspace{3cm} m_A = 0.
 \end{align}
-Apart from the massive  $W^\pm_\mu$ and $Z^0_\mu(x)$ bosons one obtains the massless photon $A_\mu$. As the photon is massless it is still associated with a gauge symmetry called $U_{em}(1)$. One therefore often writes EWSB as the braeking of the gauge group $SU_L(2) \times U_Y(1)$ to $U_Y(1)$.\\
-Matter particles acquire mass via Yukawa coulings to the Higgs doublet. For up-type-quarks one uses that the charge conjugate of $\Phi$: $\Phi^C = i \sigma^2 \Phi^\ast$ transform as $\Phi$.
+Apart from the massive bosons $W^\pm_\mu$ and $Z^0_\mu$ one obtains the massless photon $A_\mu$. As the photon is massless it is still associated with a gauge symmetry called $U_{em}(1)$. One therefore often writes EWSB as the breaking of the gauge group $SU_L(2) \times U_Y(1)$ to $U_{em}(1)$.\\
+Matter particles acquire mass via Yukawa coulings to the Higgs doublet. For up-type-quarks one uses that the charge conjugate of $\Phi$: $\Phi^C = i \sigma^2 \Phi^\ast$ also transform as $\Phi$.
 \begin{align}
-\mathcal{L}_{Yukawa} = \sum_{i,j=1}^3 \left( y_{ij}^e \overline{\ell}_L \Phi e_R  + y_{ij}^d \overline{q}_L \Phi d_R + y_{ij}^u \overline{q}_L \Phi^C u_R\right) + h.c. 
+\mathcal{L}_{\mathrm{Yukawa}} = \sum_{i,j=1}^3 \left( y_{ij}^e \overline{\ell}_L \Phi e_R  + y_{ij}^d \overline{q}_L \Phi d_R + y_{ij}^u \overline{q}_L \Phi^C u_R\right) + h.c. 
 \end{align}
 where $y^e$, $y^d$, $y^u$ are 3$\times$3 matrices in generation space. The fermion mass matrices are therefore:
 \begin{align}
 m^e_{ij} = \frac{y^e_{ij}}{\sqrt{2}} v  \hspace{4cm} m^d_{ij} = \frac{y^d_{ij}}{\sqrt{2}} v \hspace{4cm} m^u_{ij} = \frac{y^u_{ij}}{\sqrt{2}} v.
 \end{align}
-The quark mass matrices are not diagonal (origin of CP - invariance). One therefore has to distinguish between interaction and mass eigenstates of the quark. The corresponding transformation matrix is the well known CKM-matrix [quote (original paper)].\\
+The quark mass matrices are not diagonal, which is the preconditionof the violation of CP-invariance. \footnote{The actual CP-violating term is the coupling term from quarks to the $W$-bosons.} One therefore has to distinguish between interaction and mass eigenstates of the quarks. The corresponding transformation matrix is the well known CKM-matrix \cite{Cabbibo:1964zsa}, \cite{Kobayashi:1973fv}. Throughout this thesis, the CKM-matrix is approximated with the unit matrix as it will have a minor influence upon the results\\
 The upshot of EWSB are masses for all matter particles except for the neutrinos and masses for the gauge bosons $W^\pm$ and $Z^0$.
 
 \subsection{Quantization}
-The Quantization of Spin 0 and Spin $\frac{1}{2}$ fields yield no complication in the Lagrangian formalism. To quantize Spin 1 fields it turns out that the usual gauge invariance needs to be replaced by the so called BRST invariance. This results in 2 extra terms in the Lagrangian. Firstly there is the gauge fixing term
+The Quantization of Spin 0 and Spin $\frac{1}{2}$ fields yield no complication in the Lagrangian formalism. To quantize Spin 1 fields it turns out that the usual gauge invariance needs to be replaced by the so called BRST invariance \cite{Becchi:1974xu},\cite{Becchi:1974md}, \cite{Becchi:1975nq}. This results in two extra contributions in the Lagrangian. Firstly there are the gauge fixing terms:
 \begin{align}
-\mathcal{L}_{R_\xi} = -\frac{1}{2\xi_A} (\partial^\mu A_\mu)^2  - \frac{1}{2\xi_W} |\partial^\mu W_\mu^+ - m_W \xi_W \phi^+|^2 - \frac{1}{2\xi_Z} (\partial^\mu Z_\mu - m_Z \xi_Z \sigma)^2 
+\mathcal{L}_{R_\xi} = -\frac{1}{2\xi_A} (\partial^\mu A_\mu)^2  - \frac{1}{\xi_W} |\partial^\mu W_\mu^+ - im_W \xi_W \phi^+|^2 - \frac{1}{2\xi_Z} (\partial^\mu Z_\mu - m_Z \xi_Z \sigma)^2 - \frac{1}{2\xi_G}(\partial^\mu G_\mu^a)^2.
 \end{align}
-Here $R_\xi$ is chosen, where the parameters $\xi_i$ specify the gauge. The last 2 terms are modified with the Goldstone bosons from section \ref{sec:EWSB} because of the massiveness of the $W^\pm$ an $Z^0$ bosons.\cite{book:811554}\\%page 622
+Here $R_\xi$-gauge is chosen, where the parameters $\xi_i$ specify the gauge further. The two terms in the middle are modified with the Goldstone bosons from section \ref{sec:EWSB}. This is to cancel terms of the form $V_\mu \partial^\mu \phi$ up to a total derivative arising from EWSB which would lead to non-diagonal propagators, where $V$ stands for a gauge boson $W^\pm$ or $Z^0$ and $\phi$ for a Goldstone boson.\\%\cite{book:811554}page 622
 Secondly there is a ghost Lagrangian
 \begin{align}
-\mathcal{L}_{ghost} = 
+\mathcal{L}_{\mathrm{ghost}} = -\overline{c}_a \partial^\mu \left( \partial_\mu c_a + g_s f_{abc} c_b G_{c \mu} \right) + \mathcal{L}_{\mathrm{weak\ ghosts}}.\label{eq:GhostLagrangian}
 \end{align}
-see [Denner Gauge Theories S622]
+The ghost Lagrangian corresponding to the electroweak sector is not needed within this thesis and due to its lengthy form not quoted here. It can found in \cite{book:811554}. %[S622]
+In eq. \ref{eq:GhostLagrangian} $c_a$ and $\overline{c}_a$ are the Faddeev-Popov ghost and antighosts. This fields do not correspond to physical particles because they violate the spin–statistics theorem, i.e. they anticommute while being spin 0 fields. Ghost fields are an elegant way of accounting for an additional term in the Lagrangian of non-abelian gauge fields which is best seen in the path integral quantization\cite{Peskin}.
 
-\subsection{Lagrangian of the SM}
-The complete Lagrangian of the SM reads
+\subsection{Lagrangian of the Standard Model}
+The complete Lagrangian of the Standard Model reads
 \begin{align}
-\mathcal{L}_{SM} = \mathcal{L}_{matter} + \mathcal{L}_{gauge} + \mathcal{L}_{Higgs} + \mathcal{L}_{Yukawa} + \mathcal{L}_{R_\xi} + \mathcal{L}_{ghost}
+\mathcal{L}_{\mathrm{SM}} = \mathcal{L}_{\mathrm{matter}} + \mathcal{L}_{\mathrm{gauge}} + \mathcal{L}_{\mathrm{Higgs}} + \mathcal{L}_{\mathrm{Yukawa}} + \mathcal{L}_{R_\xi} + \mathcal{L}_{\mathrm{ghost}}
 \end{align}
-with the corresponding parts of the previous chapters
+with the corresponding parts of the previous chapters. For further reading and the electroweak Lagrangian given completely in terms of physical fields, see \cite{book:811554}.
