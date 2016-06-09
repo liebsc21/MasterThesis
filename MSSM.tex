@@ -1,14 +1,17 @@
 \section{The Minimal Supersymmetric Standard Model}
-
+Even though the Standard Model is a very well working machinery which has partially been tested to an impressive accuracy it is not the ultimate theory of nature. To name some problems or at least flaws of the Standard Model there is no dark matter incorporated in it. This is that astrophysical observations \cite{Adam:2015rua} indicate that only 4.9\% of the universe's mass energy consist of ordinary matter while the majority is represented by 26.8\% of dark matter and 68.3\% of dark energy. Another puzzle is the hierarchy problem which questions the large discrepancy between the Higgs boson mass and its quantum correction, see \cite{Martin:1997ns}. Finally the gauge groups of the Standard Model cannot be unified to a theoretically appealing single gauge group at some high energy scale for the three gauge couplings do not meet at any renormalization scale \cite{Martin:1997ns}. There are other problems like the absence of gravity in the Standard Model but they are not mentioned here\\
+Supersymmetric extensions of the Standard Model constitute a mathematically very aesthetic solution of these problems. This section explains briefly the mechanism of supersymmetry and the minimal supersymmetric extension of the Standard Model (MSSM).
 
 \subsection{Supersymmetry as Extention of Poincaré Symmetry}\label{sec:SUSYalgebra}
-....The superalgebra is defined by
+As already seen in the previous chapter symmetries are of vital importance when studying particle physics. Coleman and Mandula \cite{Coleman:1967ad} found that for any reasonable quantum field theory space-time symmetries and internal (gauge) symmetries cannot by combined in any but the trivial way. Ergo the symmetry groups of the Standard Model are the most general ones.\\
+This statement was corrected by the Haag Lopuszanski-Sohnius theorem \cite{Haag:1974qh} which weakened the condition of the quantum field theory by also allowing for anticommuting symmetry generators. This is by introducing the generators $Q_\alpha$ and $Q_{\dot{\alpha}}$ the Poincare-algebra can by nontrivially extended to the so called superalgebra :
 \begin{align}
 \left\{Q_\alpha,Q_\beta\right\} = \left\{\overline{Q}_{\dot{\alpha}},\overline{Q}_{\dot{\beta}}\right\} &= 0,  \nonumber\\
 \left\{Q_\alpha,\overline{Q}_{\dot{\alpha}}\right\} &= 2\sigma^\mu_{\alpha\dot{\alpha}} P_\mu, \nonumber\\
 [P^\mu,Q_\alpha] = [P^\mu,\overline{Q}_{\dot{\alpha}}] &= 0, \nonumber \\
-[Q_\alpha, J^{\mu\nu}] &= \frac{1}{2} (\sigma^{\mu\nu})_\alpha^{\ \beta} Q_\beta
+[Q_\alpha, J^{\mu\nu}] &= \frac{1}{2} (\sigma^{\mu\nu})_\alpha^{\ \beta} Q_\beta.\label{eq:SUSYalgebra}
 \end{align}
+The superalgebra eq. \ref{eq:SUSYalgebra} is actually the smallest extension of the Poincare-algebra as it is possible to introduce further anticommuting symmetry generators. Their maximal number is fixed to $N = 8$. The MSSM deals only with one set of anticommuting symmetry generators and is therefore referred to be a $N = 1$ supersymmetric theory.
 A representation in the form of differential operators is given by
 \begin{align}
 P^\mu &= i\partial^\mu\nonumber\\
