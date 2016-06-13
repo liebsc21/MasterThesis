@@ -579,20 +579,39 @@ When raising the gluino squark mass ratio further to $\frac{m_{\tilde{g}}}{m_{\t
 \caption{Hadronic cross section for squark and gluino production (in the first row) and relative contributions of the indicated final states on the total hadronic cross section (in the second row) in the MSSM (left-hand side) and MRSSM (right-hand side) at the LHC which $\sqrt{S} = \unit[13]{GeV}$. The ratio of gluino and squark mass is fixed to 5. In the final state it has been summed over all squark flavors expect for staus. For the channels $qq \to \tilde{q}\tilde{q}$ and $qG \to \tilde{q}\tilde{G}$ also the charge conjugated process is included. The parton densities and the renormalization and factorization scale are chosen as in fig. \ref{fig:TreeXsection}.}\label{fig:TreeXsection5}
 \end{center}
 \end{figure}
-The following contour plots underline the already announced difference between squark production in the MRSSM and the MSSM. The main difference is a suppression of the cross section for higher gluino masses in the MRSSM.
+The contour plots \ref{fig:ContourTree} underline the already announced difference between squark production in the MRSSM and the MSSM. The main difference is a suppression of the cross section for higher gluino masses in the MRSSM.
 \begin{figure}[!htpb]
 \begin{center}
 \includegraphics[scale=.6]{figures/contour_MRSSM_squarks}
 \includegraphics[scale=.6]{figures/contour_MSSM_squarks}
-\caption{}
+\caption{Contour plot for squark production cross section including all possible flavors (also charged ) in the MRSSM (top) and MSSM (bottom) }\label{fig:ContourTree}
 \end{center}
 \end{figure}
-
+Fig.\ref{fig:TreeXsection_fixed_m} shows the Born cross section of squark production including all possible flavors for a fixed mass of the gluino $m_{\tilde{g}} = \unit[2000]{GeV}$ (top) and the squark $m_{\tilde{q}} = \unit[1000]{GeV}$ (bottom). The figure includes errors of the calculation which come from the parton density functions and the renormalization and factorization scale.\\
+The 68\% uncertainty from the central value pdf-set is obtained by performing the calculation with all eigenvector sets of the central value and taking the minimum and maximum at each point as deviations from the calculation with the central set.\\
+The error from the renormalization scale $\mu_R$ and the factorization scale $\mu_F$ is obtained by varying both parameters with a factor of $\frac{1}{2}$ and two. For each parameter combination the cross section has been calculated. Out of these nine numbers for each point the minimum and maximum has been chosen to estimate the error originating from the scale.\\
+The total error is then obtained by Gauß's propagation of uncertainties:
+\begin{align}
+\Delta \sigma = \sqrt{(\Delta \sigma_{\mathrm{pdf}})^2 + (\Delta \sigma_{\mathrm{scale}})^2}.
+\end{align}
+The uncertainty coming from the scale variation has been found much greater than the one from the parton density functions. The error from the phase space integration is negligible, i.e. $\Delta \sigma_{\mathrm{int}} < 1\text{\textperthousand}$.
+\begin{table}
+\begin{center}
+\begin{tabular}{c|c|c|c}\label{tab:MSSMfieldcontent}
+$m_{\tilde{g}}$ \textbackslash $m_{\tilde{q}}$ & 500 & 1000 & 1500\\
+\hline
+1000 &  &  & \\
+1500 &  &  & \\
+2000 &  &  & \\
+\end{tabular}
+\caption{Table}
+\end{center}
+\end{table}
 \begin{figure}[!htpb]
 \begin{center}
 \includegraphics[scale=.5]{figures/MSSM+MRSSM_msg=2000}
 \includegraphics[scale=.5]{figures/MSSM+MRSSM_msq=1000}
-\caption{add error bars}\ref{fig:TreeXsection_fixed_m}
+\caption{add error bars}\label{fig:TreeXsection_fixed_m}
 \end{center}
-\end{figure}
-As a summary of the comparison between MSSM and MRSSM gluino production one can say, that the gluino production is enhanced in the MRSSM due to distinguishable gluino and antigluino. In order to meet missing experimental evidence for supersymmerty this suggests that gluinos might be heavier than squarks in the MRSSM. Focusing on $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} \geq 2$ the most significant change between the considered models is the growing suppression of squark production for a increasing gluino mass. This is why this channel is going to be investigated at next-to-leading order in the ensuing sections.
+\end{figure}\\
+As a summary of the comparison between MSSM and MRSSM gluino production one can say, that the gluino production is enhanced in the MRSSM due to distinguishable gluino and antigluino. In order to meet missing experimental evidence for supersymmerty this suggests that gluinos might be heavier than squarks in the MRSSM. Focusing on $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} \geq 2$ the most significant change between the considered models is the growing suppression of squark production for a increasing gluino mass. This is why this channel is going to be investigated at next-to-leading order within this thesis. The ensuing sections provide the prerequisites for this calculation.
