@@ -15,7 +15,7 @@ def nans(shape, dtype=float):
     return a
 
 # grid size
-N = 50 
+N = 40 
 
 def contourdata():
     """
@@ -27,13 +27,13 @@ def contourdata():
     # shape works in numpy                                                  
     sigma = nans((len(mass),len(mass)))  
     #myfile = open('MSSM_1_qqbar_sqsqdagger.txt', 'r')     
-    myfile = open('MSSM_MRSSM_2_GG_sqsqdagger.txt', 'r')
+    myfile = open('MRSSM_4_qqbar_ggbar.txt', 'r')
     i = 0
     for line in myfile:
         data = line.split()
         for j in range(0,N):
-            #sigma[j][i] = data[j]
-            sigma[j][i] = 9/(8**2)*data[j]
+            sigma[j][i] = data[j]
+            #sigma[j][i] = 9/(8**2)*data[j]
         i += 1   
     myfile.close()
     

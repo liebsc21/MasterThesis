@@ -351,7 +351,7 @@ The renormalization constant for the evaluation of $\delta g_s$ is determined by
 \end{align}
 and computes to
 \begin{align}
-\delta Z_q^{\mathrm{aux}} = -\frac{g_s^2}{16\pi^2} C(F)\left[ \Delta_\epsilon + B_1(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right] .
+\delta Z_q^{\mathrm{aux}} = \frac{g_s^2}{16\pi^2} C(F)\left[ -\Delta_\epsilon + 2B_1(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right] .
 \end{align}
 
 
@@ -516,8 +516,9 @@ and yields
 \begin{align}
 \delta Z^{aux}_G &= \frac{g_s^2}{16\pi^2} \left\{\left[-\frac{4}{3}T(F)(n_f-1) + \frac{5}{3} C(A) \right] \Delta_\epsilon + \left[ - \frac{4}{3}T(F) \left( \Delta_\epsilon - \ln \frac{m_t^2}{\mu^2} \right)  \right.\right.\nonumber\\
 &- \frac{4}{3} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) -\frac{2}{3}T(F) n_f \left( \Delta_\epsilon - \ln \frac{m_{\tilde{q}}^2}{\mu^2} \right)\nonumber\\
-& - \frac{1}{6} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\phi^0}^2}{\mu^2} \right) - \frac{1}{6} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\sigma^0}^2}{\mu^2} \right).
+& - \frac{1}{6} C(A) \left( \Delta_\epsilon - \ln \frac{m_{\phi^0}^2}{\mu^2} \right) - \frac{1}{6} C(A) \left.\left.\left( \Delta_\epsilon - \ln \frac{m_{\sigma^0}^2}{\mu^2} \right)\right]\right\}
 \end{align}
+where the first squared brackets come from light and the second one from heavy particles running in the loop.
 
 
 
@@ -611,13 +612,11 @@ The term in the curved brackets of eq. \ref{eq:qqGlight} corresponds to the firs
 \end{figure}
 The 3-point-function with only heavy particles running in the loop evaluates to
 \begin{align}
-i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) &= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \left[ \left(C(F) -\frac{C(A)}{2}\right) 4C_{00}(0, 0, m_{\tilde{g}}^2, m_{\tilde{q}}^2, m_{\tilde{q}}^2) \right.\nonumber\\
-&\hspace{3.3cm} + \left. C(A)\left( B_0(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2) -2C_{00}(0, 0, m_{\tilde{g}}^2, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right) \right]\nonumber\\
-&= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \left[ \left(C(F) -\frac{C(A)}{2}\right) \left( \Delta_\epsilon - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) \right.\nonumber\\
-&\hspace{3.3cm} + \left.\frac{C(A)}{2} \left( \Delta_\epsilon - \ln \frac{m_{\tilde{g}}^2}{\mu^2} \right) \right]
+i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) &= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \left[ \left(C(F) -\frac{C(A)}{2}\right) 4C_{00}(0, 0, 0, m_{\tilde{g}}^2, m_{\tilde{q}}^2, m_{\tilde{q}}^2) \right.\nonumber\\
+&\hspace{3.3cm} + \left. C(A)\left( B_0(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2) -2C_{00}(0, 0, 0, m_{\tilde{g}}^2, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right) \right]\nonumber\\
+&= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} 2C(F)\left[ B_0(0,m_{\tilde{g}}^2,m_{\tilde{q}}^2) + B_1(0,m_{\tilde{g}}^2,m_{\tilde{q}}^2) \right]
 \end{align}
 The argument $p_i^2=0$ of the vertex function denotes, that all external particles are taken on shell, i.e. at zero momentum.\\
-insert $B_1$ function in order to cancel contribution from quark ren.const\\
 In the second line identities from \ref{sec:Passarino} have been used. The renormalization condition for the counterterm of the gauge coupling $\delta g_s$ reads
 \begin{align}
 \left.i\Gamma^{\mathrm{1L,light}}_{q_i \overline{q}_j G_\mu^a}\right|_{\mathrm{UV-div}} + i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) + \left[ -ig_s T^a_{ij}\gamma^\mu\left( \frac{\delta g_s}{g_s} + \delta Z_q^{\mathrm{aux}} + \frac{\delta Z_G^{\mathrm{aux}}}{2} \right)\right] = 0.
@@ -627,7 +626,7 @@ Finally one can read off $\frac{\delta g_s}{g_s}$
 \frac{\delta g_s}{g_s} &= \frac{g_s^2}{16\pi^2} \left[ \left( \frac{2}{3}T(F)(n_f-1) - \frac{11}{6}C(A) \right) \Delta_\epsilon + \left( \frac{5}{6}C(A) + \frac{2}{3}T(F) + \frac{1}{3}T(F)n_f \right)\Delta_\epsilon  \right.\nonumber\\
 &- \frac{2}{3} C(A) \ln \frac{m_{\tilde{g}}^2}{\mu^2} - \frac{1}{3}T(F)n_f \ln \frac{m_{\tilde{q}}^2}{\mu^2} - \frac{2}{3}T(F) \ln \frac{m_t^2}{\mu^2}-\frac{1}{12} C(A) \left( \ln \frac{m_{\phi^0}^2}{\mu^2} + \ln \frac{m_{\sigma^0}^2}{\mu^2} \right).\label{eq:deltaGs}
 \end{align}
-Note the only difference to the MSSM is the appearence of the sgluon masses as well as a factor of two in front of the logarithm of the gluino mass which is due to twice as much degrees of freedom of the gluino in the MRSSM.
+Note the only difference to the MSSM\cite{Beenakker:1996ch} is the appearence of the sgluon masses as well as a factor of two in front of the logarithm of the gluino mass which is due to twice as much degrees of freedom of the gluino in the MRSSM.
 
 \subsection{The Beta Function}
 The beta function describes the dependence of the gauge coupling $g_s$ upon the energy scale $\mu$.\\

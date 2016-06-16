@@ -6,7 +6,7 @@ This chapter summarizes the most important aspects of the Standard Model.
 
 
 \subsection{Symmetries and Transformations}
-\subsubsection*{Spacetime Symmetries}
+\subsubsection*{Space-time Symmetries}
 The Standard Model is defined on Minkowski space, whose coordinates are label with $x^\mu$ $\mu \in \left\{0,1,2,4\right\}$. As a relativistic theory it is invariant under Poincaré transformations, i.e. it is invariant under Lorentz-transformations (with generators $J^{\mu\nu}$) and translations (with generators $P^\mu$) in spacetime. The set of all Poincaré transformations form the Poincaré group, which is a Lie group. Its generators obey the Poincaré-algebra
 \begin{align}
 [P^\mu,P^\nu] &= 0\nonumber\\
@@ -52,7 +52,7 @@ transforms as $F^{\mu\nu} \to U(x)F^{\mu\nu}U^{-1}(x)$. Using the cyclic propert
 \end{align}
 This completes the construction of a Lagrangian which is invariant under non-abelian gauge group transformations. The result is the famous Yang and Mills Lagrangian \cite{PhysRev.96.191}
 \begin{align}
-\mathcal{L}_{Yang-Mills} = \overline{\Psi}i\slashed{D}\Psi - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}
+\mathcal{L}_{\mathrm{Yang-Mills}} = \overline{\Psi}i\slashed{D}\Psi - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}
 \end{align}
 This Lagragian gives rise to spin-$\frac{1}{2}$ (matter) particles which interact with spin-1 (force mediator) particles. Furthermore if the gauge group is non-abelian, i.e. $f_{abc} \neq 0$, there are self interactions among the spin-1 particles.\\
 The gauge group of the Standard Model is a direct product of the three gauge groups\footnote{The subscript stands for the associated charge of the groups respectively: $Y$ for hypercharge, $L$ for left handedness (weak Isospin $I_3$) and $C$ for color}: $U_Y(1)$, $SU_L(2)$ and $SU_C(3)$. The elements $U(x)$ of those are given in table \ref{tab:SM_transformations}.\\
@@ -227,7 +227,7 @@ The kinetic terms of the gauge fields are given by
 
 
 \subsection{Electroweak Symmetry Breaking}\label{sec:EWSB}
-So far no mass terms like in the Dirac Lagrangian \ref{eq:DiracLagrangian} have been introduced. The reason for this is that they are not gauge invariant for left- and right-handed spinors transform differently. The same argument forbids terms like $-\frac{m^2}{2}A^\mu A_\mu$ for a generic gauge boson. Electroweak symmetry breaking (EWSB) ascribes masses to those particles \cite{Higgs:1964ia}, \cite{Higgs:1964pj}, \cite{Higgs:1966ev}, \cite{Englert:1964et}, \cite{Guralnik:1964eu}, \cite{Kibble:1967sv}, \cite{Bernstein:1974rd}. To this end one considers a complex scalar doublet
+So far no mass terms like in the Dirac Lagrangian \ref{eq:DiracLagrangian} have been introduced. The reason for this is that they are not gauge invariant for left- and right-handed spinors transform differently. The same argument forbids terms like $-\frac{m^2}{2}A^\mu A_\mu$ for a generic gauge boson. Electroweak symmetry breaking (EWSB) ascribes masses to those particles \cite{Higgs:1964ia, Higgs:1964pj, Higgs:1966ev, Englert:1964et, Guralnik:1964eu, Kibble:1967sv, Bernstein:1974rd}. To this end one considers a complex scalar doublet
 \begin{align}
 \Phi = \begin{pmatrix}
 \phi^+ \\ 
@@ -243,7 +243,7 @@ V(\Phi^\dagger\Phi) = -\mu^2 \Phi^\dagger\Phi + \lambda (\Phi^\dagger\Phi)^2
 where $\mu^2,\lambda > 0$.
 The Higgs sector of the Standard Model reads
 \begin{align}
-&\mathcal{L}_{Higgs} = (D_\mu \Phi)^\dagger (D^\mu \Phi) - V(\Phi^\dagger\Phi).
+&\mathcal{L}_{\mathrm{Higgs}} = (D_\mu \Phi)^\dagger (D^\mu \Phi) - V(\Phi^\dagger\Phi).
 \end{align}
 The Higgs doublet couples to the gauge fields of $SU_L(2)$ and $U_Y(1)$ in the fundamental representation. Inserting an expansion\footnote{The complex $\phi^+(x)$ and the real $\sigma(x)$ are the fields of the so called massless Goldstone bosons. These degrees of freedom can be absorbed in the longitudinally polarized degrees of freedom of the arising gauge bosons $W^\pm$ and $Z^0$. This is referred to as unitary gauge\cite{book:811554}. The real $H(x)$ is the Higgs field, whose excitation is the Higgs boson.} around the VEV $\Phi = \begin{pmatrix}
 \phi^+(x) \\
@@ -270,17 +270,17 @@ These gauge fields acquire masses:
 Apart from the massive bosons $W^\pm_\mu$ and $Z^0_\mu$ one obtains the massless photon $A_\mu$. As the photon is massless it is still associated with a gauge symmetry called $U_{em}(1)$. One therefore often writes EWSB as the breaking of the gauge group $SU_L(2) \times U_Y(1)$ to $U_{em}(1)$.\\
 Matter particles acquire mass via Yukawa coulings to the Higgs doublet. For up-type-quarks one uses that the charge conjugate of $\Phi$: $\Phi^C = i \sigma^2 \Phi^\ast$ also transform as $\Phi$.
 \begin{align}
-\mathcal{L}_{\mathrm{Yukawa}} = \sum_{i,j=1}^3 \left( y_{ij}^e \overline{\ell}_L \Phi e_R  + y_{ij}^d \overline{q}_L \Phi d_R + y_{ij}^u \overline{q}_L \Phi^C u_R\right) + h.c. 
+\mathcal{L}_{\mathrm{Yukawa}} = -\sum_{i,j=1}^3 \left( y_{ij}^e \overline{\ell}_L \Phi e_R  + y_{ij}^d \overline{q}_L \Phi d_R + y_{ij}^u \overline{q}_L \Phi^C u_R\right) + h.c. \label{eq:LYukawa}
 \end{align}
 where $y^e$, $y^d$, $y^u$ are 3$\times$3 matrices in generation space. The fermion mass matrices are therefore:
 \begin{align}
 m^e_{ij} = \frac{y^e_{ij}}{\sqrt{2}} v  \hspace{4cm} m^d_{ij} = \frac{y^d_{ij}}{\sqrt{2}} v \hspace{4cm} m^u_{ij} = \frac{y^u_{ij}}{\sqrt{2}} v.
 \end{align}
-The quark mass matrices are not diagonal, which is the precondition of the violation of CP-invariance. \footnote{The actual CP-violating term is the coupling term from quarks to the $W$-bosons.} One therefore has to distinguish between interaction and mass eigenstates of the quarks. The corresponding transformation matrix is the well known CKM-matrix \cite{Cabbibo:1964zsa}, \cite{Kobayashi:1973fv}. Throughout this thesis, the CKM-matrix is approximated with the unit matrix as it will have a minor influence upon the results\\
+The quark mass matrices are not diagonal, which is the precondition of the violation of CP-invariance. \footnote{The actual CP-violating term is the coupling term from quarks to the $W$-bosons.} One therefore has to distinguish between interaction and mass eigenstates of the quarks. The corresponding transformation matrix is the well known CKM-matrix \cite{Cabbibo:1964zsa, Kobayashi:1973fv}. Throughout this thesis, the CKM-matrix is approximated with the unit matrix as it will have a minor influence upon the results\\
 The upshot of EWSB are masses for all matter particles except for the neutrinos and masses for the gauge bosons $W^\pm$ and $Z^0$.
 
 \subsection{Quantization}
-The Quantization of Spin 0 and Spin $\frac{1}{2}$ fields yield no complication in the Lagrangian formalism. To quantize Spin 1 fields it turns out that the usual gauge invariance needs to be replaced by the so called BRST invariance \cite{Becchi:1974xu},\cite{Becchi:1974md}, \cite{Becchi:1975nq}. This results in two extra contributions in the Lagrangian. Firstly there are the gauge fixing terms:
+The Quantization of Spin 0 and Spin $\frac{1}{2}$ fields yield no complication in the Lagrangian formalism. To quantize Spin 1 fields it turns out that the usual gauge invariance needs to be replaced by the so called BRST invariance \cite{Becchi:1974xu, Becchi:1974md, Becchi:1975nq}. This results in two extra contributions in the Lagrangian. Firstly there are the gauge fixing terms:
 \begin{align}
 \mathcal{L}_{R_\xi} = -\frac{1}{2\xi_A} (\partial^\mu A_\mu)^2  - \frac{1}{\xi_W} |\partial^\mu W_\mu^+ - im_W \xi_W \phi^+|^2 - \frac{1}{2\xi_Z} (\partial^\mu Z_\mu - m_Z \xi_Z \sigma)^2 - \frac{1}{2\xi_G}(\partial^\mu G_\mu^a)^2.
 \end{align}
