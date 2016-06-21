@@ -177,8 +177,8 @@ By construction they are supersymmetry invariant, i.e. they fulfill the followin
 
 
 \subsection{Feynman rules for the RSQCD}\label{sec:FeynmanRules}
-The following Feynman rules are derived from \ref{eq:L_RSQCD}. When compared with the Feynman rules of the supersymmetric QCD the diagrams involving scalar gluons are new. In addition the gluon-quark-squark vertex is different in RSQCD for the gauginos are Dirac fermions.\\
-refer to paper cited in Beenakker(Appendix: Feynmanrules)
+The following Feynman rules are derived from the Lagrangian of the R-symmetric supersymmetric quantum chromodynamics (RSQCD) eq. \ref{eq:L_RSQCD}. When compared with the Feynman rules of the supersymmetric QCD the diagrams involving scalar gluons are new. In addition the gluon-quark-squark vertex is different in RSQCD for the gauginos are Dirac fermions. Note that for calculations involving fermions one needs to go in the opposite direction of the fermion flow which is given by a curved arrow next to the diagrams in fig. \ref{fig:secondFeynmanRules} and does not always agree with the flow of fermion number given by the direction of the Dirac propagator. This renders the evaluation of fermion number violating processes like $qq \to \tilde{q}\tilde{q}$ unambiguous, cf. \cite{Beenakker:1996ch}.
+%refer to paper cited in Beenakker(Appendix: Feynmanrules)
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -275,8 +275,8 @@ refer to paper cited in Beenakker(Appendix: Feynmanrules)
 \end{scope}
 \end{tikzpicture}
 \caption{In the Feynman diagrams of the propagators the momentum is flowing from the right to the left hand side.\newline
-In the Feynman diagrams of the vertices all momenta flow towards the vertex.\newline
-The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The indices $i,j=1,2,3$ are the color indices in the (anti)fundamental representation where $a,b,c,\hdots = 1,\hdots,8$ are the color indices of the adjoint representation.}\label{fig:firstFeynmanRules}
+In the Feynman diagrams of the vertices all momenta flow towards the vertex, i.e. in diagram 9 $-p_1$ is flowing towards the vertex.\newline
+The indices $A,B \in \left\{ L,R \right\}$ label the left/right "handedness" of the squarks. The indices $i,j=1,2,3$ are the color indices in the (anti)fundamental representation where $a,b,c,\hdots = 1,\hdots,8$ are the color indices of the adjoint representation.}\label{fig:firstFeynmanRules}
 \end{center}
 \end{figure}
 \newpage
@@ -308,7 +308,7 @@ The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The in
 	\node at (180:1.5) {$G_\mu^a$};
 	\node(gbar) at (0.9,0.6) {};
 	\node(g) at (0.9,-0.6) {};
-	\path[line width=0.8pt,->] (g) edge [out=135, in=-135] (gbar);
+	\path[line width=0.8pt,<-] (g) edge [out=135, in=-135] (gbar);
 	\node at (2,0) {$\hat{=}  - g_s f_{abc} \gamma^\mu$};
 \end{scope}
 \begin{scope}[shift={(7,-2.5)}]
@@ -344,7 +344,7 @@ The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The in
 	\node at (180:1.3) {$\tilde{g}^a$};
 	\node(g) at (-0.7,-0.3) {};
 	\node(u) at (0.4,-0.8) {};
-	\path[line width=0.8pt,->] (g) edge [out=0, in=135] (u);
+	\path[line width=0.8pt,<-] (g) edge [out=0, in=135] (u);
 	\node at (3,0) {$\hat{=} -i\sqrt{2}g_s T^a_{ij}P_L$};
 \end{scope}
 \begin{scope}[shift={(7,-7.5)}]
@@ -372,7 +372,7 @@ The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The in
 	\node at (180:1.3) {$\tilde{g}^a$};
 	\node(g) at (-0.7,-0.3) {};
 	\node(u) at (0.4,-0.8) {};
-	\path[line width=0.8pt,->] (g) edge [out=0, in=135] (u);
+	\path[line width=0.8pt,<-] (g) edge [out=0, in=135] (u);
 	\node at (3,0) {$\hat{=} +i\sqrt{2}g_s T^a_{ij}P_L$};
 \end{scope}
 \begin{scope}[shift={(7,-10)}]
@@ -401,7 +401,7 @@ The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The in
 	\node at (180:1.3) {$\tilde{g}^a$};
 	\node(g) at (-0.7,-0.3) {};
 	\node(u) at (0.4,-0.8) {};
-	\path[line width=0.8pt,->] (g) edge [out=0, in=135] (u);
+	\path[line width=0.8pt,<-] (g) edge [out=0, in=135] (u);
 	\node at (3,0) {$\hat{=} -\sqrt{2}g_s f^{abc}P_L$};
 \end{scope}
 \begin{scope}[shift={(7,-12.5)}]
@@ -434,7 +434,7 @@ The indices $A,B = L,R$ label the right/left-"handedness" of the squarks. The in
 \end{scope}
 \end{tikzpicture}
 \end{center}
-\caption{The curved arrows indicate the fermion flow. The Feynman rules 16b, 17b and 18b are the complex conjugates of 16a, 17a and 18a respectively. Applying a flipping rule to a vertex one has to reverse the curved arrow, i.e. the fermion flow and replace $\Psi$ with $\bar{\Psi}^C$. In addition one has to add a minus sign for Feynman rule 13.}
+\caption{The curved arrows indicate the fermion flow. The Feynman rules 16b, 17b and 18b are the complex conjugates of 16a, 17a and 18a respectively. Applying a flipping rule to a vertex one has to reverse the curved arrow, i.e. the fermion flow and replace $\Psi$ with $\bar{\Psi}^C$. In addition one has to add a minus sign for Feynman rule 13.}\label{fig:secondFeynmanRules}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
@@ -503,7 +503,7 @@ B_0(0,0,0) &= 0\\
 B_1(0,m_1^2,m_2^2) &= -\frac{\Delta_\epsilon}{2} + \frac{1}{2}\ln \frac{m_1^2}{\mu^2} + \frac{-3+4t-t^2-4t \ln t +2t^2 \ln t}{4(t-1)^2} + \mathcal{O}(\epsilon)\label{eq:B1}\\
 B_1(0,0,0) &= 0
 \end{align}
-The scaleless integrals are defined to be zero. The parameter $t$ is given by $\frac{m_2^2}{m_1^2}$. As can be seen from \ref{eq:B1} $B_1$ is in contrast to $B_0$ not symmetric in its masses but it can be shown [Romao] that
+The scaleless integrals are defined to be zero due to their definition  on how they scale in $D$ dimensions\cite{Collins:105730}. The parameter $t$ is given by $\frac{m_2^2}{m_1^2}$. As can be seen from \ref{eq:B1} $B_1$ is in contrast to $B_0$ not symmetric in its masses but it can be shown [Romao] that
 \begin{align}
 B_1(p^2,m_1^2,m_2^2) = -(B_0(p^2,m_2^2,m_1^2) + B_1(p^2,m_2^2,m_1^2))
 \end{align}

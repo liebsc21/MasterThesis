@@ -58,7 +58,7 @@ plt.plot(m_sgluon, sigma_NLO_1L/sigma_LO_Tree, lw=2, ls="-", c='red')
 plt.legend(loc=4,prop={'size':22})
 
 props = dict(boxstyle='round', facecolor='w', alpha=0.5)
-first_window.text(10000, 0.8, r"$m_{\tilde{g}} = 2000$ GeV", fontsize=22,
+first_window.text(10000, 0.8, r"$m_{\tilde{g}} = 2000$ GeV, $m_{\tilde{q}} = 1000$ GeV", fontsize=22,
         verticalalignment='top', bbox=props)
 
 

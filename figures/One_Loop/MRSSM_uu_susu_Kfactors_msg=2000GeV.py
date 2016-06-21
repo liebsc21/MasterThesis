@@ -13,8 +13,6 @@ m_squark = np.array([], dtype=float);
 # arrays for XSection
 sigma_LO_Tree = np.array([], dtype=float);
 sigma_NLO_Tree = np.array([], dtype=float);
-sigma_NLO_Virt_withoutPrefactors = np.array([], dtype=float);
-sigma_NLO_Real_withoutPrefactors = np.array([], dtype=float);
 sigma_NLO_1L   = np.array([], dtype=float);
 
 
@@ -32,9 +30,7 @@ discard = f_1L.readline()
 for lines in f_1L.readlines():
     discard = np.append(m_squark, float(lines.split()[0]))
     sigma_NLO_Tree = np.append(sigma_NLO_Tree, float(lines.split()[1]))
-    sigma_NLO_Virt_withoutPrefactors = np.append(sigma_NLO_Virt_withoutPrefactors, float(lines.split()[2]))
-    sigma_NLO_Real_withoutPrefactors = np.append(sigma_NLO_Real_withoutPrefactors, float(lines.split()[3]))
-    sigma_NLO_1L = np.append(sigma_NLO_1L, float(lines.split()[4]))    
+    sigma_NLO_1L = np.append(sigma_NLO_1L, float(lines.split()[2]))    
 f_1L.close()
 
 K_min = 0
@@ -66,9 +62,6 @@ first_window.fill_between(m_squark, sigma_NLO_Tree/sigma_LO_Tree, sigma_NLO_1L/s
 facecolor=[1,90./100,90./100], color =[1,80./100,80./100], linestyle="-", label = "Real and virtual corrections")
 
 plt.plot(m_squark, sigma_NLO_1L/sigma_LO_Tree, lw=2, ls="-", c='red')#, label = "1L")
-#plt.plot(m_squark, sigma_NLO_Tree/sigma_LO_Tree, lw=2, ls="--", c='blue')#, label = "1L")
-#plt.plot(m_squark, sigma_NLO_Virt/sigma_LO_Tree, lw=2, ls="--", c='red')#, label = "1L")
-#plt.plot(m_squark, sigma_NLO_Real/sigma_LO_Tree, lw=2, ls="--", c='green')#, label = "1L")
 
 plt.legend(loc='best',prop={'size':22})
 
