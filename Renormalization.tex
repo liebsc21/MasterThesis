@@ -3,7 +3,7 @@ In order to improve the prediction of cross sections one has to take quantum cor
 These infinities are not physical and must therefore be removed to get sensible predictions. To this end one regularizes them to extract them from the quantity in question. UV-divergences can be removed by means of renormalization, i.e. counterterms are inserted into the Lagrangian to cancel UV-divergences. Infrared and collinear divergenves are removed by adding up all possible contributions which give rise to the considered observable.
 
 \subsection{Regularization Schemes}\label{sec:RegSchemes}
-\subsubsection*{Dimensional Regularization(DREG)}
+\subsubsection*{Dimensional Regularization (DREG)}
 Dimensional regularization(DREG) is a very common procedure for regularizing infinities which was devised by t'Hooft and Veltman~\cite{'tHooft:1972fi}. In this scheme loop momenta, gamma- and epsilon-tensors, phase space and fields are defined in $D$ dimensions. As in every regularization scheme a parameter with mass dimension needs to be introduced. In DREG that is the $\mu$ parameter which ensures that the loop integrals still have mass dimension 4:
 \begin{align}
 \int \frac{\mbox{d}^4p}{(2\pi)^4} \to \mu^{4-D} \int \frac{\mbox{d}^Dp}{(2\pi)^D}.
@@ -346,14 +346,16 @@ Again there is a transition counterterm
 \begin{align}
 \delta m_{\tilde{g}}^{\mathrm{trans}} = \delta m_{\tilde{g}}^{\mathrm{DREG}} - \delta m_{\tilde{g}}^{\mathrm{DRED}} = C(A) \frac{g_s^2}{16\pi^2} m_{\tilde{g}}.
 \end{align}
-Apart from the renormalization constant of the gauge coupling and the supersymmetry restoring counterterm these are all renormalization constants needed from squark production at next to leading order. In fact the field renormalization constants of the gluino are not needed as they drop out when summing up all three counterterm Feynman diagrams. This can be seen when writing down the matrix amplitudes for the counterterm Feynman diagrams:
+Apart from the renormalization constant of the gauge coupling and the supersymmetry restoring counterterm these are all renormalization constants needed from squark production at next to leading order. In fact the field renormalization constants of the gluino are not needed as they drop out when summing up all three counterterm Feynman diagrams. This can be seen when writing down the matrix amplitudes for the counterterm Feynman diagrams shown in fig. \ref{fig:CounterTerm}:
 \begin{align}
-\mathcal{M}^{\mathrm{B}} &= -2g_s^2 \frac{\left\langle v2 |P_R \slashed{k}_3|u1\right\rangle}{t_{\tilde{g}}} T^a_{13} T^a_{24} + 2g_s^2 \frac{\left\langle v2 |P_L \slashed{k}_3|u1\right\rangle}{u_{\tilde{g}}} T^a_{14} T^a_{23}\\
-\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}} &= 2 \mathcal{M}^B  \left( \frac{\delta \hat{g}_s}{\hat{g}_s} \frac{\delta Z_q}{2} + \frac{\delta Z^L_{\tilde{g}}}{2} + \frac{\delta Z_{\tilde{q}}}{2} \right)\\
-\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}} &= \hdots = 
-\mathcal{M}^B \left[ \frac{-(t_{\tilde{g}})\delta Z_{\tilde{g}}^L + 2 \delta m_{\tilde{g}}m_{\tilde{g}}}{t_{\tilde{g}}}\right.\\
-&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \left. \frac{-(u_{\tilde{g}})\delta Z_{\tilde{g}}^L + 2 \delta m_{\tilde{g}}m_{\tilde{g}}}{u_{\tilde{g}}}\right]
+\mathcal{M}^{\mathrm{B}} &= -2g_s^2 \frac{\left\langle v_2 |P_R \slashed{k}_3|u_1\right\rangle}{t_{\tilde{g}}} T^a_{\delta \beta} T^a_{\gamma \alpha} + 2g_s^2 \frac{\left\langle v_2 |P_L \slashed{k}_3|u_1\right\rangle}{u_{\tilde{g}}} T^a_{\gamma\beta} T^a_{\delta\alpha}\\
+\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}} &= 2 \mathcal{M}^B  \left( \frac{\delta \hat{g}_s}{\hat{g}_s} + \frac{\delta Z_q}{2} + \frac{\delta Z^L_{\tilde{g}}}{2} + \frac{\delta Z_{\tilde{q}}}{2} \right)\\
+\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}} &= 2g_s^2 \left\langle v_2 \left| P_R\ i\frac{\slashed{p}+m_{\tilde{g}}}{t_{\tilde{g}}} \left[  i(\delta Z_{\tilde{g}}^L P_L + \delta Z_{\tilde{g}}^L P_L)\slashed{p}  \right.\right.\right.\nonumber\\
+& \hspace{2cm}\left.\left.\left.\left. -i\left( \frac{\delta Z_{\tilde{g}}^L + \delta Z_{\tilde{g}}^R}{2}m_{\tilde{g}} + \delta m_{\tilde{g}} \right) \right]i\frac{\slashed{p}+m_{\tilde{g}}}{t_{\tilde{g}}} P_L \right|u_1\right\rangle\right|_{p = p_1-p_3} + \mathrm{u-channel}\nonumber\\
+&= -\mathcal{M}^B  \delta Z_{\tilde{g}}^L + 2  \frac{ m_{\tilde{g}}}{t_{\tilde{g}}} \left( -2g_s^2 \frac{\left\langle v_2 |P_R \slashed{k}_3|u_1\right\rangle}{t_{\tilde{g}}} T^a_{\delta \beta} T^a_{\gamma \alpha} \right)\delta m_{\tilde{g}}\nonumber\\ 
+& \hspace{2cm}+ 2 \frac{ m_{\tilde{g}}}{u_{\tilde{g}}} \left( 2g_s^2 \frac{\left\langle v_2 |P_L \slashed{k}_3|u_1\right\rangle}{u_{\tilde{g}}} T^a_{\gamma\beta} T^a_{\delta\alpha} \right)\delta m_{\tilde{g}}.
 \end{align}
+Where $\delta Z^R_{\tilde{g}}$ drops out already in $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ as the octino does neither couple to quarks nor to squarks the renormalization constant for the actual gluino $\delta Z^L_{\tilde{g}}$ drops out when $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ and $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}}$ are added. This is also true in a more general case, i.e. the renormalization constants of virtual particles do always drop out.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1 pt, scale=1]
@@ -365,10 +367,10 @@ Apart from the renormalization constant of the gauge coupling and the supersymme
 	\draw[gluon] (4,0.5)--(4,-0.5);
 	\draw[scalar] (4,0.5)--(5,0.5);
 	\draw[scalar] (4,-0.5)--(5,-0.5);
-	\node at (2.8,0.5) {$u$};
-	\node at (2.8,-0.5) {$u$};
-	\node at (5.2,0.5) {$\tilde{u}_L^\dagger$};
-	\node at (5.2,-0.5) {$\tilde{u}_R^\dagger$};
+	\node at (2.7,0.5) {$u_\alpha$};
+	\node at (2.7,-0.5) {$u_\beta$};
+	\node at (5.4,0.5) {$\tilde{u}_{L\gamma}^\dagger$};
+	\node at (5.4,-0.5) {$\tilde{u}_{R\delta}^\dagger$};
 	\node at (6,0) {+};
 	\draw[fermion] (7,0.5)--(8,0.5);
 	\draw[fermion] (7,-0.5)--(8,-0.5);
@@ -378,10 +380,10 @@ Apart from the renormalization constant of the gauge coupling and the supersymme
 	\draw[gluon] (8,0.5)--(8,-0.5);
 	\draw[scalar] (8,0.5)--(9,0.5);
 	\draw[scalar] (8,-0.5)--(9,-0.5);
-	\node at (6.8,0.5) {$u$};
-	\node at (6.8,-0.5) {$u$};
-	\node at (9.2,0.5) {$\tilde{u}_L^\dagger$};
-	\node at (9.2,-0.5) {$\tilde{u}_R^\dagger$};
+	\node at (6.7,0.5) {$u_\alpha$};
+	\node at (6.7,-0.5) {$u_\beta$};
+	\node at (9.4,0.5) {$\tilde{u}_{L\gamma}^\dagger$};
+	\node at (9.4,-0.5) {$\tilde{u}_{R\delta}^\dagger$};
 \begin{scope}[shift={(8,0)}]	
 	\node at (2,0) {+};
 	\draw[fermion] (3,0.5)--(4,0.5);
@@ -392,14 +394,14 @@ Apart from the renormalization constant of the gauge coupling and the supersymme
 	\draw[gluon] (4,0.5)--(4,-0.5);
 	\draw[scalar] (4,0.5)--(5,0.5);
 	\draw[scalar] (4,-0.5)--(5,-0.5);
-	\node at (2.8,0.5) {$u$};
-	\node at (2.8,-0.5) {$u$};
-	\node at (5.2,0.5) {$\tilde{u}_L^\dagger$};
-	\node at (5.2,-0.5) {$\tilde{u}_R^\dagger$};
-	\node at (6.9,) {+\ \ u-channel};
+	\node at (2.6,0.5) {$u_\alpha$};
+	\node at (2.6,-0.5) {$u_\beta$};
+	\node at (5.3,0.5) {$\tilde{u}_{L\gamma}^\dagger$};
+	\node at (5.3,-0.5) {$\tilde{u}_{R\delta}^\dagger$};
+	\node at (6.9,0) {+\ \ u-channel};
 \end{scope}
 \end{tikzpicture}
-\caption{1-Loop-Level Counterterm Feynman diagrams for squark production in the MRSSM}
+\caption{1-Loop-level counterterm Feynman diagrams for squark production in the MRSSM. The Greek latters label the particle's color.}\label{fig:CounterTerm}
 \end{center}
 \end{figure}
 
