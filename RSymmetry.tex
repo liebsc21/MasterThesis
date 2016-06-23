@@ -1,17 +1,17 @@
-\section{R-Symmetry}
-R-symmetry is an additional continuous symmetry which extends  supersymmetry in a non-trivial way. This is actually covered in the Haag-Lopuszanski-Sohnius theorem \cite{Haag:1974qh} but often concealed.\\
-This section introduces R-symmetry and discusses briefly a minimal viable extension of the MSSM including R-symmetry, the MRSSM. Thereby some general features of the model are mentioned before the focus is laid on the strongly interacting sector which is the central topic of the thesis. 
+\section{$R$-Symmetry}
+$R$-symmetry is an additional continuous symmetry which extends  supersymmetry in a non-trivial way. This is actually covered in the Haag-Lopuszanski-Sohnius theorem \cite{Haag:1974qh} but often concealed.\\
+This section introduces $R$-symmetry and discusses briefly a minimal viable extension of the MSSM including $R$-symmetry, the MRSSM. Thereby some general features of the model are mentioned before the focus is laid on the strongly interacting sector which is the central topic of the thesis. 
 
 
-\subsection{R-Symmetry Transformation}
-R-symmetry is a global $U(1)$ symmetry. It must not be confused with R-parity which is a discrete $\mathbb{Z}_2$ symmetry. A continuous global symmetry implies according to Noether's theorem a conserved charge. In the case of R-symmetry it is called R-charge and one therefore refers to R-symmetry as $U_R(1)$.\\
+\subsection{$R$-Symmetry Transformation}
+For a $N=1$ supersymmetric theory, $R$-symmetry is a global $U(1)$ symmetry. It must not be confused with $R$-parity which is a discrete $\mathbb{Z}_2$ symmetry. A continuous global symmetry implies according to Noether's theorem a conserved charge. In the case of $R$-symmetry it is called $R$-charge and one therefore refers to $R$-symmetry as $U_R(1)$.\\
 The defining property of $U_R(1)$ is that the anticommuting coordinates $\theta^\alpha$ and $\overline{\theta}^{\dot{\alpha}}$ transform like
 \begin{align}
-&\theta \to \mathrm{e}^{i\alpha}\theta && \overline{\theta} \to \mathrm{e}^{-i\alpha}\overline{\theta},
+&\theta \to \mathrm{e}^{i\tau}\theta, && \overline{\theta} \to \mathrm{e}^{-i\tau}\overline{\theta},
 \end{align}
-where $\alpha$ parametrizes the transformation. This in turn implies that the supersymmetry generators (see eq. \ref{{eq:SUSYGen}}) transform like
+where $\tau$ parametrizes the transformation. This in turn implies that the supersymmetry generators (see eq. \ref{{eq:SUSYGen}}) transform like
 \begin{align}
-& Q \to \mathrm{e}^{-i\alpha} Q && \overline{Q} \to \mathrm{e}^{i\alpha}\overline{Q}
+& Q \to \mathrm{e}^{-i\tau} Q && \overline{Q} \to \mathrm{e}^{i\tau}\overline{Q}
 \end{align}
 and R-symmetry does not commute with supersymmetry 
 \begin{align}
@@ -19,15 +19,15 @@ and R-symmetry does not commute with supersymmetry
 \end{align}
 meaning that superpartners do not have the same R-charge. The transformation of chiral and vector superfields reads
 \begin{align}
-& \hat{\Phi}(x,\theta,\overline{\theta}) \to \mathrm{e}^{ir_{\hat{\Phi}}\alpha}\ \hat{\Phi}(x,\mathrm{e}^{i\alpha}\theta,\mathrm{e}^{-i\alpha}\overline{\theta})\nonumber\\
-&\hat{V}(x,\theta,\overline{\theta}) \to  \hat{V}(x,\mathrm{e}^{i\alpha}\theta,\mathrm{e}^{-i\alpha}\overline{\theta}),
+& \hat{\Phi}(x,\theta,\overline{\theta}) \to \mathrm{e}^{ir_{\hat{\Phi}}\tau}\ \hat{\Phi}(x,\mathrm{e}^{i\tau}\theta,\mathrm{e}^{-i\tau}\overline{\theta}),\nonumber\\
+&\hat{V}(x,\theta,\overline{\theta}) \to  \hat{V}(x,\mathrm{e}^{i\tau}\theta,\mathrm{e}^{-i\tau}\overline{\theta}),
 \end{align}
-i.e. the chiral superfields transform with arbitrary R-charge where the R-charge of vector superfield is restricted to be zero by the condition that they are real. If one inserts the component decomposition eq. \ref{eq:superfielddecomp} of the superfields one can read off the R-charges of the component fields.
+i.e. the chiral superfields transform with arbitrary $R$-charge where the $R$-charge of vector superfield is restricted to be zero by the condition that they are real. If one inserts the component decomposition eq. \eqref{eq:superfielddecomp} of the superfields one can read off the $R$-charges of the component fields.
 \begin{table}
 \begin{center}
-\begin{tabular}{c|c||c|c||c|c}
-\multicolumn{2}{c||}{superfield} & \multicolumn{2}{c||}{boson} & \multicolumn{2}{c}{fermion} \\
-\hhline{=|=#=|=#=|=}
+\begin{tabular}{c|c?c|c?c|c}
+\multicolumn{2}{c?}{Superfield} & \multicolumn{2}{c?}{Boson} & \multicolumn{2}{c}{Fermion} \\
+\hlinewd{2pt}
 $\hat{\Phi}$ & $r_{\hat{\Phi}}$ & $A$ & $r_{\hat{\Phi}}$ & $\psi$ & $r_{\hat{\Phi}}-1$\\
 $\hat{V}$ & 0 & $v^\mu$ & 0 & $\lambda$ & $+1$
 \end{tabular}
@@ -35,55 +35,83 @@ $\hat{V}$ & 0 & $v^\mu$ & 0 & $\lambda$ & $+1$
 \end{center}
 \end{table}
 
+%\begin{table}
+%\begin{center}
+%\begin{tabular}{c|c||c|c||c|c}
+%\multicolumn{2}{c||}{superfield} & \multicolumn{2}{c||}{boson} & \multicolumn{2}{c}{fermion} \\
+%\hhline{=|=#=|=#=|=}
+%$\hat{\Phi}$ & $r_{\hat{\Phi}}$ & $A$ & $r_{\hat{\Phi}}$ & $\psi$ & $r_{\hat{\Phi}}-1$\\
+%$\hat{V}$ & 0 & $v^\mu$ & 0 & $\lambda$ & $+1$
+%\end{tabular}
+%\caption{This table shows the R-charges of a generic chiral and vector superfield.}
+%\end{center}
+%\end{table}
+
 
 
 \subsection{The Minimal R-Symmetric Supersymmetric Standard Model}
-If one imposes R-symmetry upon the MSSM one is faced with a certain arbitrariness, i.e. the choice of the R-charges of the chiral superfields. A minimal R-symmetric extension of the MSSM is the minimal R-symmetric supersymmetric Standard Model (MRSSM)\cite{Kribs:2007ac}. In this model the R-charges are chosen in such a way, that every Standard Model particle has R-charge zero. Following this one obtains the R-charges of all particles which are summed up in table \ref{tab:R_charges_MRSSM}.
+If one imposes R-symmetry upon the MSSM one is faced with a certain arbitrariness, i.e. the choice of the R-charges of the chiral superfields. A minimal R-symmetric extension of the MSSM is the minimal R-symmetric supersymmetric Standard Model (MRSSM)\cite{Kribs:2007ac}. In this model the R-charges are chosen in such a way, that every Standard Model particle has R-charge zero. Following this one obtains the R-charges of all particles which are summed up in table \ref{tab:R_charges_MRSSM}\cite{Diessner:2015bna}.
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{c||c|c||c|c||c|c}
-Field & \multicolumn{2}{c||}{Superfield} & \multicolumn{2}{c||}{Boson} & \multicolumn{2}{c}{Fermion} \\
-\hhline{=#=|=#=|=#=|=}
-Gauge Vector & $\hat{V}_s^a$, $\hat{V}_w^a$, $\hat{V}_Y$ & 0 & $G^a_\mu$, $W^a_\mu$, $B_\mu$ & 0 & $\lambda_s^a$, $\lambda_w^a$, $\lambda_Y$ &+1\\
-Matter & $\hat{L}$, $\hat{E}$ & 0 & $\tilde{l}_l$, $\tilde{e}^\dagger_R$ & +1 & $l_L$, $e_R$ & 0\\
- & $\hat{Q}$, $\hat{D}$, $\hat{U}$ & +1 & $\tilde{q}_L$, $\tilde{d}^\dagger_R$, $\tilde{u}^\dagger_R$ & +1 & $q_L$, $d_R$, $u_R$ & 0\\
-$H$-Higgs & $\hat{H}_{d,u}$ & 0 & $H_{d,u}$ & 0 & $\tilde{H}_{d,u}$ & -1\\
+\begin{tabular}{c?c|c?c|c?c|c}
+Field & \multicolumn{2}{c?}{Superfield} & \multicolumn{2}{c?}{Boson} & \multicolumn{2}{c}{Fermion} \\
+\hlinewd{2pt}
+gauge Vector & $\hat{V}_s^a$, $\hat{V}_w^a$, $\hat{V}_Y$ & 0 & $G^a_\mu$, $W^a_\mu$, $B_\mu$ & 0 & $\lambda_s^a$, $\lambda_w^a$, $\lambda_Y$ & $+1$\\
+matter & $\hat{L}$, $\hat{E}$ & $+1$ & $\tilde{l}_l$, $\tilde{e}^\dagger_R$ & $+1$ & $l_L$, $e_R$ & 0\\
+ & $\hat{Q}$, $\hat{D}$, $\hat{U}$ & $+1$ & $\tilde{q}_L$, $\tilde{d}^\dagger_R$, $\tilde{u}^\dagger_R$ & $+1$ & $q_L$, $d_R$, $u_R$ & 0\\
+$H$-Higgs & $\hat{H}_{d,u}$ & 0 & $H_{d,u}$ & 0 & $\tilde{H}_{d,u}$ & $-1$\\
 \hline
-$R$-Higgs & $\hat{R}_{d,u}$ & +2 & $R_{d,u}$ & +2 & $\tilde{R}_{d,u}$ & +1\\
-Adjoint Chiral & $\hat{O}$, $\hat{T}$, $\hat{S}$ & 0 & $\sigma^a$, $\omega^a$, $\rho$ & 0 & $\tilde{\chi}_s^a$, $\tilde{\chi}_w^a$, $\tilde{\chi}_Y$ & -1
+$R$-Higgs & $\hat{R}_{d,u}$ & $+2$ & $R_{d,u}$ & $+2$ & $\tilde{R}_{d,u}$ & $+1$\\
+adjoint chiral & $\hat{O}$, $\hat{T}$, $\hat{S}$ & 0 & $\sigma^a$, $\omega^a$, $\rho$ & 0 & $\chi_s^a$, $\chi_w^a$, $\chi_Y$ & $-1$
 \end{tabular}
-\caption{This table lists the R-charges of all superfields and their components in the MRSSM. The fields of the $R$-Higgs and the adjoint chiral superfields are not present in the MSSM}\label{tab:R_charges_MRSSM}
+\caption{This table lists the $R$-charges of all superfields and their components in the MRSSM. The fields of the $R$-Higgs and the adjoint chiral superfields are not present in the MSSM}\label{tab:R_charges_MRSSM}
 \end{center}
 \end{table}
+
+%\begin{table}[H]
+%\begin{center}
+%\begin{tabular}{c||c|c||c|c||c|c}
+%Field & \multicolumn{2}{c||}{Superfield} & \multicolumn{2}{c||}{Boson} & \multicolumn{2}{c}{Fermion} \\
+%\hhline{=#=|=#=|=#=|=}
+%Gauge Vector & $\hat{V}_s^a$, $\hat{V}_w^a$, $\hat{V}_Y$ & 0 & $G^a_\mu$, $W^a_\mu$, $B_\mu$ & 0 & $\lambda_s^a$, $\lambda_w^a$, $\lambda_Y$ &+1\\
+%Matter & $\hat{L}$, $\hat{E}$ & 0 & $\tilde{l}_l$, $\tilde{e}^\dagger_R$ & +1 & $l_L$, $e_R$ & 0\\
+% & $\hat{Q}$, $\hat{D}$, $\hat{U}$ & +1 & $\tilde{q}_L$, $\tilde{d}^\dagger_R$, $\tilde{u}^\dagger_R$ & +1 & $q_L$, $d_R$, $u_R$ & 0\\
+%$H$-Higgs & $\hat{H}_{d,u}$ & 0 & $H_{d,u}$ & 0 & $\tilde{H}_{d,u}$ & -1\\
+%\hline
+%$R$-Higgs & $\hat{R}_{d,u}$ & +2 & $R_{d,u}$ & +2 & $\tilde{R}_{d,u}$ & +1\\
+%Adjoint Chiral & $\hat{O}$, $\hat{T}$, $\hat{S}$ & 0 & $\sigma^a$, $\omega^a$, $\rho$ & 0 & $\tilde{\chi}_s^a$, $\tilde{\chi}_w^a$, $\tilde{\chi}_Y$ & -1
+%\end{tabular}
+%\caption{This table lists the R-charges of all superfields and their components in the MRSSM. The fields of the $R$-Higgs and the adjoint chiral superfields are not present in the MSSM}\label{tab:R_charges_MRSSM}
+%\end{center}
+%\end{table}
 The gauge, matter and $H$-Higgs fields are the fields of the MSSM. Below the horizontal line one finds the fields which are not present in the MSSM, i.e. the $R$-Higgs and adjoint chiral fields. These occur for the following reason.\\
 In the MSSM the gauginos are Majorana particles. Their mass terms  reads in 2-spinor notation
 \begin{align}
 \mathcal{L}_{\mathrm{Majorana\ mass}} = -m\lambda\lambda + h.c.
 \end{align}
-which is not R-invariant because the Weyl fermion $\lambda$ has R-charge +1. Giving no mass to the gauginos is phenomenologically not possible. The only way to account for a fermion mass is to write down a Dirac mass term.
+which is not R-invariant because the Weyl fermion $\lambda$ has R-charge $+1$. Giving no mass to the gauginos is phenomenologically not possible. The only way to account for a fermion mass is to write down a Dirac mass term
 \begin{align}
-\mathcal{L}_{\mathrm{Dirac\ mass}} = -m \chi\lambda + h.c.
+\mathcal{L}_{\mathrm{Dirac\ mass}} = -m \chi\lambda + h.c.,
 \end{align}
-This means that the 4-spinor of every gaugino is a Dirac- instead of a Majorana-spinor, e.g. for the gluino:
+where $\chi$ is another Weyl-spinor. This means that the 4-spinor of every gaugino is a Dirac- instead of a Majorana-spinor, e.g. for the gluino:
 \begin{align}
 & \tilde{g}_\mathrm{MSSM} = \begin{pmatrix}
 -i \lambda_s \\
-+i \overline{\lambda_s}
++i \overline{\lambda}_s
 \end{pmatrix} && \tilde{g}_\mathrm{MRSSM} = \begin{pmatrix}
 -i \lambda_s \\
-+i \overline{\chi_s}
++i \overline{\chi}_s
 \end{pmatrix}.
 \end{align}
 In order to get a R-symmetric mass term on has to choose the R-charge of the new Weyl-spinor $\chi$ to be the opposite of $\lambda$.\\
 This explains the necessity of enlarging the field content if one imposes R-symmetry.\\
-Of course the new Weyl-spinor $\chi$ must have also a superpartner. One chooses this superpartner to be a scalar, i.e. the additional Weyl fermion comes from a chiral superfield. In order to maintain gauge invariance this chiral superfield has to transform in the adjoint representation, hence the name adjoint chiral in table \ref{tab:R_charges_MRSSM}. To fix notation the component decomposition of the 8 chiral supermultipletts assosiated to the gluons is given by
+Of course the new Weyl-spinor $\chi$ must have also a superpartner. One chooses this superpartner to be a scalar, i.e. the additional Weyl fermion comes from a chiral superfield. In order to maintain gauge invariance this chiral superfield has to transform in the adjoint representation, hence the name adjoint chiral in table \ref{tab:R_charges_MRSSM}. To fix notation the component decomposition of the eight chiral supermultiplets assosiated to the gluons is given by
 \begin{align}
 &\hat{O}^a(x, \theta, \overline{\theta}) = \sigma^a + \sqrt{2}\theta i\chi^a_s + \hdots && a = 1,\hdots,8.
 \end{align}
 The scalar components $\sigma^a$ are referred to as scalar gluons and the Weyl spinors $\chi^a$ are called octinos.\\
-The same argument as for the adjoint chiral explains the existence of additional Higgs-superfields which are referred to as $R$-Higgs fields.\\
-Apart from these extensions R-symmetry also forbids terms which are allowed by supersymmetry. For the above choice of R-charges the $\mu$-term in \ref{eq:W_MSSM} and the $A$-terms in the last line of \ref{eq:L_soft} are absent in the MRSSM. Inspecting eq. \ref{eq:off_diagonal} implies that there is no squark mixing in the MRSSM. As a consequence terms which allow flavor violating processes like $\mu \to e \gamma$ are forbidden in the MRSSM\cite{Kribs:2007ac}. 
-Quite interestingly Dirac gauginos can be heavier than Majorana gauginos without being less natural in view of the hierarchy problem\cite{Nelson:2002ca, Kribs:2012gx, Hardy:2013ywa}. Finally the production cross section of strongly interacting particles is suppressed\cite{Kribs:2012gx, Kribs:2013oda}. It is this last feature which is going to be observed further in this thesis. To this end the colored sector of the MRSSM in now considered in more detail.
+The same argument as for the adjoint chiral superfields explains the existence of additional Higgs-superfields which are referred to as $R$-Higgs fields.\\
+Apart from these extensions $R$-symmetry also forbids terms which are allowed by supersymmetry. For the above choice of $R$-charges the $\mu$-term in \eqref{eq:W_MSSM} and the $A$-terms in the last line of \eqref{eq:L_soft} are absent in the MRSSM. Inspecting eq. \eqref{eq:off_diagonal} implies that there is no squark mixing in the MRSSM. As a consequence terms which allow flavor violating processes like $\mu \to e \gamma$ in the MSSM are suppressed in the MRSSM\cite{Kribs:2007ac}. Quite interestingly Dirac gauginos can be heavier than Majorana gauginos without being less natural in view of the hierarchy problem\cite{Nelson:2002ca, Kribs:2012gx, Hardy:2013ywa}. Finally the production cross section of strongly interacting particles is suppressed\cite{Kribs:2012gx, Kribs:2013oda}. It is this last feature which is going to be observed further in this thesis. To this end the colored sector of the MRSSM in now considered in more detail.
 
 
 \subsection{The R-Symmetric Supersymmetric Quantum Chromodynamcis}
@@ -92,26 +120,30 @@ The subject of this thesis is the phenomenology of the strongly coupling sector 
 \mathcal{L}_{\mathrm{RSQCD}} = &\int\mathrm{d}^4\theta\ \left( \hat{\overline{Q}}_L \mathrm{e}^{2g_s\hat{V}_s} \hat{Q}_L + \hat{\overline{Q}}_R \mathrm{e}^{-2g_s\hat{V}^T_s} \hat{Q}_R + \hat{\overline{O}} \mathrm{e}^{2g_s\hat{V}^{\mathrm{fund}}_s} \hat{O}\right)\nonumber\\
 +& \left( \int \mathrm{d}^2\theta \frac{1}{16g_s^2} \hat{W}_s^{a\alpha}\hat{W}^a_{s\alpha} + h.c. \right) + \mathcal{L}_{\mathrm{soft}}\label{eq:L_super_RSQCD}
 \end{align}
-where $\hat{Q}_L$ and $\hat{Q}_R$ refer to the left and right handed superfield of the quark. Note that each field in the first line of eq. \ref{eq:L_super_RSQCD} transforms in a different representation of $SU_C(3)$, i.e. the fundamental, the antifundamental and the adjoint one. In terms of components fields these expressions are given by
+where $\hat{Q}_L$ and $\hat{Q}_R$ refer to the left- and right-handed superfield of the quark. Note that each field in the first line of eq. \eqref{eq:L_super_RSQCD} transforms in a different representation of $SU_C(3)$, i.e. the fundamental, the antifundamental and the adjoint one. From now on $T^a$ stands for the fundamental representation of the generators of $SU(3)_C$. In terms of components fields these expressions are given by
 \begin{align}
 \int\mathrm{d}^4\theta\ \hat{\overline{Q}}_L \mathrm{e}^{2g_s\hat{V}_s} \hat{Q}_L =\ & F_L^\dagger F_L + (D_\mu \tilde{q}_L)^\dagger (D^\mu \tilde{q}_L) + \overline{q}_L \overline{\sigma}^\mu i D_\mu q_L\nonumber\\
-&-\sqrt{2}g_s \left( -i (\tilde{q}_L^\dagger T^a q_L ) \lambda^a + i \overline{\lambda}^a (\overline{q}_L T^a \tilde{q}_L) \right) + g_s\tilde{q}_L^\dagger T^a D^a \tilde{q}_L\label{eq:RSQCD_Feynmanrules1}\\
+&-\sqrt{2}g_s \left( -i (\tilde{q}_L^\dagger T^a q_L ) \lambda^a + i \overline{\lambda}^a (\overline{q}_L T^a \tilde{q}_L) \right) + g_s\tilde{q}_L^\dagger T^a D^a \tilde{q}_L,\label{eq:RSQCD_Feynmanrules1}\\
 \int\mathrm{d}^4\theta\ \hat{\overline{Q}}_R \mathrm{e}^{-2g_s\hat{V}^T_s} \hat{Q}_R =\  & F_R^\dagger F_R + (D_\mu \tilde{q}_R)^\dagger (D^\mu \tilde{q}_R) + \overline{q}_R \overline{\sigma}^\mu i D_\mu q_R\nonumber\\
-&+\sqrt{2}g_s \left( -i (\tilde{q}_R T^{\ast a} q_R ) \lambda^a + i \overline{\lambda}^a (\overline{q}_R T^{\ast a} \tilde{q}_R^\dagger) \right) - g_s \tilde{q}_R T^{\ast a} D^a \tilde{q}_R^\dagger\label{eq:RSQCD_Feynmanrules2}\\
+&+\sqrt{2}g_s \left( -i (\tilde{q}_R T^{\ast a} q_R ) \lambda^a + i \overline{\lambda}^a (\overline{q}_R T^{\ast a} \tilde{q}_R^\dagger) \right) - g_s \tilde{q}_R T^{\ast a} D^a \tilde{q}_R^\dagger,\label{eq:RSQCD_Feynmanrules2}\\
 \int\mathrm{d}^4\theta\ \hat{\overline{O}} \mathrm{e}^{2g_s\hat{V}^{\mathrm{fund}}_s} \hat{O} =\  & F_O^\dagger F_O + (D_\mu \sigma^a)^\dagger (D^\mu \sigma^a) + \overline{\chi} \overline{\sigma}^\mu i D_\mu \chi\nonumber\\
 &-\sqrt{2}g_s \left( -i (\sigma_b^\dagger (-if_{abc}) (-i\chi^c) ) \lambda^a + i \overline{\lambda}^a (i\overline{\chi}_b (+if_{abc}) \sigma^{c\dagger}) \right)\nonumber\\
-&-ig_s\sigma^{b^\dagger} f^{abc}D^a\sigma^c
+&-ig_s\sigma^{b^\dagger} f^{abc}D^a\sigma^c,
 \end{align}
 where in the gauge covariant derivative $D_\mu = \partial_\mu +ig_sT^aG^a_\mu$ the generator $T^a$ needs to be replaced by $-T^{\ast a}$ or $-if^{abc}$ if applied to a field transforming in the antifundamental or adjoint representation respectively.\\
 The soft breaking Lagrangian accounts for the squark, gaugino and scalar gluon masses. These mass terms arise from a hidden sector spurion. For gauginos the D-type spurion is given by $\hat{W}_\alpha^\prime = \theta_\alpha D$ and mediates super symmetry breaking at the mediation scale $M$: $\int\mathrm{d}\theta^2\frac{\hat{W}_\alpha^\prime}{M}W_s^\alpha \hat{O}$. After integrating out the spurion one obtains\cite{Fox:2002bu, Diessner:2015bna}
 \begin{align}
-\mathcal{L}_{\mathrm{soft}} =\ & -\frac{m_{\tilde{q}}^2}{2}(|\tilde{q}_L|^2 + |\tilde{q}_R|^2)\nonumber\\
+\mathcal{L}_{\mathrm{soft}} =\ & -\frac{m_{\tilde{q}}^2}{2}(|\tilde{q}_L|^2 + |\tilde{q}_R|^2),\nonumber\\
 & -m_{\sigma}^2\left|\sigma^{a}\right|^2 - m_g(\lambda\chi -\sqrt{2}D^a \sigma^a + h.c.)
 \end{align}
-where the complex scalar gluons which are also referred to as sgluons $\sigma = \frac{\phi_0 + i\sigma_0}{\sqrt{2}}$ constitute of two real ones with different masses.
+where the complex scalar gluons which are also referred to as sgluons
+\begin{align}
+\sigma = \frac{\phi_0 + i\sigma_0}{\sqrt{2}},
+\end{align}
+constitute of two real ones with different masses.
 The equations of motion for the auxiliary fields are
 \begin{align}
-D^a =& -g_s \tilde{q}_L^\dagger T^a \tilde{q}_L + g_s \tilde{q}_R T^{\ast a} \tilde{q}_R^\dagger + ig_s\sigma^{\dagger b}f^{abc}\sigma^c -\sqrt{2}m_g(\sigma^a + \sigma^{\dagger a})\\
+D^a =& -g_s \tilde{q}_L^\dagger T^a \tilde{q}_L + g_s \tilde{q}_R T^{\ast a} \tilde{q}_R^\dagger + ig_s\sigma^{\dagger b}f^{abc}\sigma^c -\sqrt{2}m_g(\sigma^a + \sigma^{\dagger a}),\\
 F_i =&\ 0 \hspace{3cm} \mathrm{for} \hspace{3cm} i = L,R,O
 \end{align}
 where $D^a$ is still real as the purely imaginary parts to not contribute by virtue of the antisymmetry of the structure constants. After eliminating the auxiliary fields the complete Lagrangian reads in 4 spinor notation\footnote{How a 4 spinor is composed of Weyl-spinors is given in the Appendix \ref{sec:2spinor_notation}}
@@ -125,7 +157,7 @@ where $D^a$ is still real as the purely imaginary parts to not contribute by vir
 \end{align}
 Observe that there is no 3 sgluon vertex, because of the antisymmetry of the structure constants $f^{abc}$. As already alluded to there are two distinct sgluons with different masses. The mass of the pseudoscalar $\sigma_0^a$ is given by the soft breaking parameter $m_{\sigma_0} = m_\sigma$ whereas the mass of the scalar $\phi^0$ is given by 
 \begin{align}
-m_{\phi_0} = \sqrt{m_{\sigma_0}^2 + 4 m_{\tilde{g}}}.
+m_{\phi_0} = \sqrt{m_{\sigma_0}^2 + 4 m_{\tilde{g}}^2}.
 \end{align}
 The Feynman rules infered from this Lagrangian are given in Appendix \ref{sec:FeynmanRules}.
 \newpage

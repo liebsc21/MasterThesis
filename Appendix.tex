@@ -8,7 +8,7 @@ g^{\mu\nu} = \mathrm{diag}(1, -1, -1, -1).
 \end{align}
 
 
-\subsection{Constants of the Colour Algebra $SU(N)$}
+\subsection{Constants of the Color Algebra $SU(N)$}\label{sec:coloralgebra}
 [Marina von Steinkirch]\\
 Tha Casimir operator $C(R)\mathbbm{1}$ of a semi-simple Lie algebra in the irreducible representation $R$ is given by
 \begin{align}
@@ -477,11 +477,11 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right "handedness" of 
 
 
 \subsection{Passarino-Veltman Integrals}\label{sec:Passarino}
-The definition of the Passarino-Veltman integrals in this thesis agrees with the one from \texttt{Looptools} \cite{Hahn:1998} convention. The original paper \cite{Passarino:1978jh} uses slightly different conventions. A pedagogical introduction to the evaluation of one-loop integrals can be found in \cite{Ellis:2011cr}
+The definition of the momenta within the Passarino-Veltman integrals in this thesis agrees with the one from \texttt{Looptools} \cite{Hahn:1998} convention. The original paper \cite{Passarino:1978jh} uses slightly different conventions. A pedagogical introduction to the evaluation of one-loop integrals can be found in \cite{Ellis:2011cr}.  $A$, $B$ and $C$ integrals are defined by:
 \begin{align}
 \frac{i}{16\pi^2} A_0(m^2) &= \int_l \frac{1}{l^2-m^2}\nonumber\\
 \frac{i}{16\pi^2} B_{0,\mu,\mu\nu}(p^2,m_1^2,m_2^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p)^2-m_2^2]}\\
-\frac{i}{16\pi^2} C_{0,\mu,\mu\nu}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p_1)^2-m_2^2][(l+p_1+p_2)^2-m_3^2]}\nonumber
+\frac{i}{16\pi^2} C_{0,\mu,\mu\nu}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p_1)^2-m_2^2][(l+p_1+p_2)^2-m_3^2]}.\nonumber\label{eq:LoopInt}
 \end{align}
 with the shortcut $\int_l = \mu^{2\epsilon}\int\frac{\mathrm{d}^D l}{(2\pi)^D}$. Furthermore there are supressed $\varepsilon$'s which prescripe how the poles in the complex plane are avoided. They are hidden in the infinitesimal shift of the masses: $m_i^2 \to m_i^2 - i \varepsilon$.\\
 The tensor integrals can be decomposed as
@@ -515,7 +515,7 @@ From the generic $\epsilon$-expansion of the $B_0$ integral \cite{Denner}
 \begin{align}
 B_0(p^2,m_1^2,m_2^2) = \Delta_\epsilon - \int_0^1\mathrm{d}x\ \ln \frac{-x(1-x)p^2 + xm_2^2 + (1-x)m_1^2}{\mu^2}
 \end{align} 
-and Passarino-Veltman decomposition \cite{Passarino:1978jh} one can determine the UV-divergent part of all $B$ and $C$ integrals. In chapter \ref{sec:MSRen} this was necessary in order to obtain the renormalization constants in the $\overline{\mathrm{MS}}$-scheme. Infrared and collinear singularities arise from the special case where one or multiple masses tend to zero. These poles are either regularized in terms of a small mass cutoff $\Lambda$ or also dimensionally as $\epsilon$-poles. In the later case the integral first needs to undergo the limit to zero masses and than being evaluated.\\
+and Passarino-Veltman decomposition \cite{Passarino:1978jh} one can determine the UV-divergent part of all $B$ and $C$ integrals. In chapter \ref{sec:MSRen} this was necessary in order to obtain the renormalization constants in the $\overline{\mathrm{MS}}$-scheme. Infrared and collinear singularities arise from the special case where one or multiple masses tend to zero. These poles can be regularized with a small mass cutoff $\Lambda$ leading singularities of the form $\ln \Lambda$ or dimensionally which leads to $\epsilon$-poles as in the treatment of UV-divergences. In the latter case the integral first needs to undergo the limit to zero masses and than being evaluated.\\
 The following list shows all necessary integrals needed to determine the renormalization constants in \ref{sec:MSRen}.
 \begin{align}
 \left.A_0(m^2)\right|_{\mathrm{UV-div}} &= m^2 \Delta_\epsilon\\

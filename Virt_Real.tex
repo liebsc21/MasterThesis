@@ -32,6 +32,7 @@ contains divergences. These come from integrals over undetermined momentum and e
 	\draw[scalar](-0.5,-1)--(0,0);
 	\draw[fermion](0,0)--(0.5,-1);
 	\draw[gluon](-0.5,-1)--(0.5,-1);
+	\draw[fermionnoarrow](-0.5,-1)--(0.5,-1);
 	\draw[scalar](0.5,-1)--(1.5,-1);
 \end{scope}
 \begin{scope}[shift={(-0.5,-3.5)}]
@@ -60,8 +61,8 @@ contains divergences. These come from integrals over undetermined momentum and e
 \caption{A selection of diagrams contributing to the 1-loop matrix element for squark production. Each diagram is a representative of a certain diagram type. In the first line an example for a self-energy and a vertex-correction diagram is shown. The second line lists typical box-diagrams: a three-point box and a four-point box.}\label{fig:1loopdiagrams}
 \end{center}
 \end{figure}
-Due to their origin these divergences are referred to as ultraviolet and infrared divergences.
-Ultraviolet divergences occur when the loop momenta and energy tend to infinity which corresponds to arbitrary short distance interactions. However, these divergences are cured by first regularizing them and then introducing appropriate counterterms\footnote{These counterterms have to be of the same $\mathcal{O}(\hbar)$ as the loop diagrams they are constructed to cancel. NOCHMAL IN LAHIRI / PAL NACHSCHAUEN.} in the Lagrangian to cancel the extracted singularities. The second step is called renormalization and can be understood as a redefinition or rescaling of parameters and fields in the Lagrangian in the first place:
+Due to their origin these divergences are referred to as ultraviolet (UV) and infrared divergences (IR).
+Ultraviolet divergences occur when loop momenta and energy tend to infinity which corresponds to arbitrary short distance interactions. However, these divergences are cured by first regularizing them and then introducing appropriate counterterms\footnote{These counterterms have to be of the same $\mathcal{O}(\hbar)$ as the loop diagrams they are constructed to cancel \cite{lahiri2005first}.} in the Lagrangian to cancel the extracted singularities. The second step is called renormalization and can be understood as a redefinition or rescaling of parameters and fields in the Lagrangian in the first place:
 \begin{align}
 & \phi^0 / \sigma^0 \to \sqrt{Z_{\phi^0 / \sigma^0}}\phi^0 / \sigma^0 && \tilde{q}_{L/R} \to \sqrt{Z_{\tilde{q}_{L/R}}}\tilde{q}_{L/R}\nonumber\\
 & P_L \tilde{g} \to \sqrt{Z_{\tilde{g}}^L} P_L \tilde{g} && P_R \tilde{g} \to \sqrt{Z_{\tilde{g}}^R} P_R \tilde{g}\nonumber\\
@@ -69,29 +70,29 @@ Ultraviolet divergences occur when the loop momenta and energy tend to infinity 
 & g_s \to g_{s\ \mathrm{bare}} && m_{\tilde{q}}^2 \to m_{\tilde{q}\ \mathrm{bare}}^2\nonumber\\
 &  m_{\sigma}^2 \to m_{\sigma\ \mathrm{bare}}^2 && m_{\tilde{g}} \to m_{\tilde{g}\ \mathrm{bare}}\label{eq:parametertrafo}
 \end{align}
-In this thesis the computation is performed in $D = 4-2\epsilon$ dimensions in order to regularize it. Ultraviolet divergences show then up as single poles in $\epsilon$. This procedure will be discussed in detail in section \ref{sec:renMRSSM} and \ref{sec:LSZ}.\\
+In this thesis the computation of amplitudes is performed in $D = 4-2\epsilon$ dimensions in order to regularize infinities. Ultraviolet divergences show then up as single poles in $\epsilon$. The renormalization will be discussed in detail in section \ref{sec:renMRSSM} and \ref{sec:LSZ}.\\
 Having removed the ultraviolet divergences the matrix element is not free of divergences as it comprises infrared divergences. These split into soft and collinear (or mass) singularities\footnote{The names differ in the literature. Often infrared divergences are used as a synonym for soft divergences.} which cannot be removed by means of renormalization. These additional singularities show up as single and double poles of $\epsilon$ in the matrix element $\mathcal{M^{\mathrm{1L}}}$ and the virtual cross section which is obtained after performing the 2-body phase space  integration as in eq. \ref{eq:sigma_tree} but over $\left|\mathcal{M^{\mathrm{V}}}\right|^2$:
 \begin{align}
 \frac{\mbox{d}^2 \sigma^{\mathrm{V}}}{\mbox{d}t\ \mbox{d}u} =& \frac{K_{ab}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_1^2m_2^2}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_1^2m_2^2)\nonumber\\
-&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum |\mathcal{M}^{\mathrm{V}}|^2.
+&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum |\mathcal{M}^{\mathrm{V}}|^2.\label{eq:diffsigma}
 \end{align}
 The single poles correspond to soft or collinear divergences whereas the double poles correspond to the coincidence of soft and collinear divergences.
 
 
 \subsection{Real Corrections}
-A crucial thing to recognize in the calculation of the $\mathcal{O}(\alpha_s)$ correction to the squark production cross section is that not only virtual corrections but also real corrections give rise to this physical observable. This is because one does not measure the final state partons but the jets in which they hadronize in due to confinement. This means that a radiation of a massless particle whose energy tends to zero or the radiation of a  particle which is collinear to one of the final state particles is in experiment measured as a two jet event even though there are three particles in the final state of the calculation. However real corrections also contain divergences. Including these contributions to the cross section causes the cancellation of singles poles coming from soft divergences and the cancellation of double poles. At this point the only singularities which are left in the cross section are the collinear ones.\\
-To see how these are removed consider diagram the second digram in fig. \ref{fig:RealGluon}. The propagator of the quark which radiates off a gluon is giving a contribution of the form
+A crucial thing to recognize in the calculation of the $\mathcal{O}(\alpha_s)$ correction to the squark production cross section is that not only virtual corrections but also real corrections give rise to this physical observable. This is because one does not measure the final state partons but the jets in which they hadronize in due to confinement. This means that a radiation of a massless particle whose energy tends to zero or the radiation of a  particle which is collinear to one of the final state particles is in experiment measured as a two jet event even though there are three particles in the final state of the calculation. However real corrections also contain divergences. Including these contributions to the cross section causes the cancellation of single poles coming from soft divergences and the cancellation of double poles. At this point the only singularities which are left in the cross section are the collinear ones.\\
+To see how these are removed consider the second diagram in fig. \ref{fig:RealGluon}. The propagator of the quark which radiates off a gluon gives a contribution of the form
 \begin{align}
 \frac{1}{(p_q + p_g)^2 - m_q^2} = \frac{1}{p_q \cdot p_g} = \frac{1}{2E_qE_g(1-\beta_q \cos \theta_{qg})} \hspace{2cm} \mathrm{with}\ \beta_q = \frac{\vec{p}_q}{E_q}
 \end{align}
-to the the diagram in question. Where $p_q$, $p_g$ ($E_q$, $E_g$) are the quark's and gluon's four-momentum (energy) and $\theta_{qg}$ is the angle between the quark's and gluon's three-momentum. One observes two potentially singular limits
+to the the diagram in question. Here $p_q$, $p_g$ ($E_q$, $E_g$) are the quark's and gluon's four-momentum (energy) and $\theta_{qg}$ is the angle between the quark's and gluon's three-momentum. One observes two potentially singular limits
 \begin{align}
 \mathrm{soft\ gluon:}& \hspace{1cm} E_g \to 0\\
 %& \hspace{1cm} E_q \to 0 \hspace{1cm} \mathrm{if}\ m_q \to 0\\
 \mathrm{collinear\ particles:}& \hspace{1cm} \theta_{qg} \to 0 \hspace{1cm} \mathrm{if}\ m_q \to 0.
 \end{align}
-Within these limits the inner quark can almost be considered as on-shell which means that it may travel a long distance between the emission of a gluon and taking part in the actual interaction. This suggest that some divergences may come from the incoming hadron and are actually not associated with the interaction. In fact this turns out to be the case: The remaining collinear divergences can be absorbed in to a redefinition of the parton density functions. This procedure is referred to as mass factorization. Figure \ref{fig:DivergenceSummary} summarizes the required steps to render the next-to-leading-order cross section finite.\\
-In fact the Kinoshita-Lee-Naunberg-Theorem \cite{1962JMP.....3..650K},\cite{PhysRev.133.B1549} guarantees the finiteness of sufficiently inclusive observables.
+Within these limits the inner quark can almost be considered as on-shell which means that it may travel a long distance between the emission of a gluon and taking part in the actual interaction. This suggest that some divergences may come from the incoming hadron and are actually not associated with the interaction. In fact this turns out to be the case: The remaining collinear divergences have a generic form (evtl. angeben) and can, by redefinition, be absorbed into the parton density functions. This procedure is referred to as mass factorization \cite{dissertori2003quantum}. In fact the Kinoshita-Lee-Naunberg-Theorem \cite{1962JMP.....3..650K},\cite{PhysRev.133.B1549} guarantees the finiteness of sufficiently inclusive observables.\\
+Figure \ref{fig:DivergenceSummary} summarizes the required steps to render the next-to-leading-order cross section finite.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}
@@ -115,7 +116,7 @@ In fact the Kinoshita-Lee-Naunberg-Theorem \cite{1962JMP.....3..650K},\cite{Phys
 
 
 \subsubsection{Real Gluon Radiation}
-Representative Feynman-diagrams for real gluon emission are shown in fig. \ref{fig:RealGluon}. In order to extract the singularities the so called two-cut method has been adopted. This is the phase space has been divided into different regimes: a soft part, a hard collinear part and a hard non-collinear part.\\
+A representative set of Feynman-diagrams for real gluon emission are shown in fig. \ref{fig:RealGluon}. In order to extract the singularities the so called two-cut method has been adopted. This is the phase space has been divided into different regimes: a soft part, a hard collinear part and a hard non-collinear part.\\
 In the soft part the energy of the outgoing gluon is only integrated up to  $\delta_s \frac{\sqrt{s}}{2}$ where $\delta_s$ is a cut on which the final result must not depend on.
 \begin{figure}[!htbp]
 \begin{center}

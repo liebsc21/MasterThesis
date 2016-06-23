@@ -1,5 +1,5 @@
 \section{The Standard Model}
-The Standard Model of particle physics is the commonly accepted theory describing the world's fundamental particles and their interactions. It is a gauge quantum field theory which is characterized by its invariance under symmetry groups. The Standard Model contains different fields, whose quantized excitations are interpreted as particles.\\
+The Standard Model of particle physics is the commonly accepted theory describing the world's fundamental particles and their interactions. It is a gauge quantum field theory and therefore characterized by its invariance under symmetry groups. The Standard Model contains different fields, whose quantized excitations are interpreted as all known particles.\\
 This chapter summarizes the most important aspects of the Standard Model.
 %The different fields defined on Minkowski space are Dirac spinors describing matter fields (leptons and quarks), gauge vectors describing force mediators and a scalar field (the Higgs) which accounts for the masses of particles.\\
 %More formally a particle state is said to give rise to an irreducible representation of the Poincaré group
@@ -9,67 +9,67 @@ This chapter summarizes the most important aspects of the Standard Model.
 \subsubsection*{Space-time Symmetries}
 The Standard Model is defined on Minkowski space, whose coordinates are label with $x^\mu$ $\mu \in \left\{0,1,2,4\right\}$. As a relativistic theory it is invariant under Poincaré transformations, i.e. it is invariant under Lorentz-transformations (with generators $J^{\mu\nu}$) and translations (with generators $P^\mu$) in spacetime. The set of all Poincaré transformations form the Poincaré group, which is a Lie group. Its generators obey the Poincaré-algebra
 \begin{align}
-[P^\mu,P^\nu] &= 0\nonumber\\
-[P^\mu,J^{\nu\rho}] &= i(g^{\mu\nu} P^\rho - g^{\mu\rho}P^\nu)\nonumber\\
+[P^\mu,P^\nu] &= 0,\nonumber\\
+[P^\mu,J^{\nu\rho}] &= i(g^{\mu\nu} P^\rho - g^{\mu\rho}P^\nu),\nonumber\\
 [J^{\mu\nu},J^{\rho\sigma}] &= i(g^{\nu\rho}J^{\mu\rho} + g^{\mu\sigma}J^{\nu\rho} - g^{\mu\rho}J^{\nu\sigma} - g^{\nu\sigma}J^{\mu\rho}).\label{eq:PoincareAlgebra}
 \end{align}
 The fields of the Standard Model transform in different representations of the Poincaré-group \cite{book:17018}. 
 
 
 \subsubsection*{Gauge Symmetries} 
-In order to describe interactions of matter particles gauge theories are used. In the Standard Model matter fields are described by Dirac spinors. The Lagrangian of a free Dirac field reads
+In order to describe interactions of matter particles with spin-1 force mediators, gauge theories are used. In the Standard Model matter fields are described by Dirac spinors. The Lagrangian of a free Dirac field reads
 \begin{align}
-\mathcal{L}_{Dirac} = \overline{\Psi} ( i\slashed{\partial} - m)\Psi.\label{eq:DiracLagrangian}
+\mathcal{L}_{\mathrm{Dirac}} = \overline{\Psi} ( i\slashed{\partial} - m)\Psi,\label{eq:DiracLagrangian}
 \end{align}
-To include interactions one imposes a local group symmetry (gauge symmetry) upon this Lagrangian. A spinor transforms under a generic gauge transformation like 
+where $m$ denotes the particle's mass. To include interactions, one imposes a local group symmetry (gauge symmetry) upon this Lagrangian. A spinor transforms under a generic gauge transformation like 
 \begin{align}
 \Psi(x) \to U(x)\Psi(x),
 \end{align}
-where $U(x)$ is an element of the gauge group in question. Because the gauge group is a unitary matrix Lie group it can be written in the form $U(x)=\mathrm{exp}(-igT^a\theta^a(x))$. Here $T^a$ are the self-adjoint generators of the associated Lie algebra which obey
+where $U(x)$ is an element of the gauge group in question. Because the gauge group is an unitary matrix Lie group, it can be written in the form $U(x)=\mathrm{exp}(-igT^a\theta^a(x))$. Here, $T^a$ are the self-adjoint generators of the associated Lie algebra which obey
 \begin{align}
-[T^a,T^b] = if_{abc}T^c
+[T^a,T^b] = if_{abc}T^c,
 \end{align}
-where $f_{abc}$ are the structure constants of a Lie algebra, $g$ is the coupling constant of the gauge group and $\theta^a(x)$ are local parameters.\\
-Because the parameters of the gauge group are local the derivative in \ref{eq:DiracLagrangian} spoils the gauge invariance. In order to rectify gauge invariance of the Lagrangian one introduces a further field for each index $a$ of the generators - the gauge vector $G^{a\mu}$. Defining the transformation of the matrix valued gauge vector $G^\mu := G^{a\mu}T^a$ as 
+with $f_{abc}$ the structure constants of a Lie algebra, $g$ is the coupling constant of the gauge group and $\theta^a(x)$ are local parameters.\\
+As the parameters of the gauge group are local, the derivative in \eqref{eq:DiracLagrangian} spoils gauge invariance. In order to rectify the gauge invariance of the Lagrangian, one introduces a further field for each index $a$ of the generators, the gauge vector $G^{a\mu}$. Defining the transformation of the matrix valued gauge vector $G^\mu := G^{a\mu}T^a$ as 
 \begin{align}
 G^{\mu}(x) \to U^{-1}(x) \left( G^\mu(x) + \frac{i}{g}\partial^\mu \right) U(x)
 \end{align}
 and introducing the gauge covariant derivative
 \begin{align}
-D^\mu = \partial^\mu + igT^aG^{a\mu}
+D^\mu = \partial^\mu + igT^aG^{a\mu},
 \end{align}
 one finds that the expression $D_\mu \Psi(x)$ transforms as
 \begin{align}
-D_\mu \Psi(x) \to U(x) D_\mu \Psi(x) \label{eq:CovDerivative}
+D_\mu \Psi(x) \to U(x) D_\mu \Psi(x). \label{eq:CovDerivative}
 \end{align}
-Therefore gauge invariance is restored in eq. \ref{eq:DiracLagrangian} by replacing $\partial_\mu$ with $D_\mu$. But if the gauge vector is interpreted as a physical field there must apart from the so far introduced interaction term also be a kinetic term associated with it. Using eq. \ref{eq:CovDerivative} one defines the field strength tensor\footnote{An alternative construction of the field strength tensor makes use of the gauge invariant Wilson loop. This gives some insights into the geometry of gauge transformations \cite{Peskin}.} $F^{a\mu\nu}$ whose matrix valued form
+Therefore, gauge invariance is restored in eq. \eqref{eq:DiracLagrangian} by replacing $\partial_\mu$ with $D_\mu$. But if the gauge vector is interpreted as a physical field, there must   also be a kinetic term associated with it. Using eq. \eqref{eq:CovDerivative} one defines the field strength tensor\footnote{An alternative construction of the field strength tensor makes use of the gauge invariant Wilson loop. This gives some insights into the geometry of gauge transformations \cite{Peskin}.} $F^{a\mu\nu}$, whose matrix valued form
 \begin{align}
 F^{\mu\nu} = F^{a\mu\nu}T^a := \frac{1}{ig}[D^\mu,D^\nu] = \partial^\mu G^\nu - \partial^\nu G^\mu - g f_{abc} T^c G^{a\mu}G^{b\nu}
 \end{align}
-transforms as $F^{\mu\nu} \to U(x)F^{\mu\nu}U^{-1}(x)$. Using the cyclic property of the trace and the Dynkin index $T(F)$ defined in eq. \ref{eq:DynkinIndex} in the appendix one can write down a gauge invariant kinetic term for the gauge vector:
+transforms as $F^{\mu\nu} \to U(x)F^{\mu\nu}U^{-1}(x)$. Using the cyclic property of the trace and the Dynkin index $T(F)$ defined in eq. \eqref{eq:DynkinIndex} in the appendix, one can write down a gauge invariant kinetic term for the gauge vector:
 \begin{align}
-\mathcal{L}_{\mathrm{gauge}} = - \frac{1}{2} \mathrm{Tr} \left( F^{\mu\nu}F_{\mu\nu} \right) = -\frac{T(F)}{2} F^{a\mu\nu}F^a_{\mu\nu}
+\mathcal{L}_{\mathrm{gauge}} = - \frac{1}{2} \mathrm{Tr} \left( F^{\mu\nu}F_{\mu\nu} \right) = -\frac{T(F)}{2} F^{a\mu\nu}F^a_{\mu\nu}.
 \end{align}
 This completes the construction of a Lagrangian which is invariant under non-abelian gauge group transformations. The result is the famous Yang and Mills Lagrangian \cite{PhysRev.96.191}
 \begin{align}
-\mathcal{L}_{\mathrm{Yang-Mills}} = \overline{\Psi}i\slashed{D}\Psi - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}
+\mathcal{L}_{\mathrm{Yang-Mills}} = \overline{\Psi}(i\slashed{D} - m)\Psi - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}
 \end{align}
 This Lagragian gives rise to spin-$\frac{1}{2}$ (matter) particles which interact with spin-1 (force mediator) particles. Furthermore if the gauge group is non-abelian, i.e. $f_{abc} \neq 0$, there are self interactions among the spin-1 particles.\\
-The gauge group of the Standard Model is a direct product of the three gauge groups\footnote{The subscript stands for the associated charge of the groups respectively: $Y$ for hypercharge, $L$ for left handedness (weak Isospin $I_3$) and $C$ for color}: $U_Y(1)$, $SU_L(2)$ and $SU_C(3)$. The elements $U(x)$ of those are given in table \ref{tab:SM_transformations}.\\
+The gauge group of the Standard Model is a direct product of the three gauge groups\footnote{The subscript stands for the associated charge of the groups respectively: $Y$ for hypercharge, $L$ for left handedness (weak Isospin $I_3$) and $C$ for color}: $U(1)_Y$, $SU(2)_L$ and $SU(3)_C$. The elements $U(x)$ of those are given in table \ref{tab:SM_transformations}.\\
 These gauge groups give rise to 3 forces: the strong force, the weak force and the electromagnetic force.
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{c?c}
 Gauge Group & Group Element\\
 \hlinewd{2pt}
-$U_Y(1)$ & $U(x) = \mathrm{exp}\left(-ig_Y\frac{\hat{Y}}{2}\theta_Y(x)\right)$\\
+$U(1)_Y$ & $U(x) = \mathrm{exp}\left(-ig_Y\frac{\hat{Y}}{2}\theta_Y(x)\right)$\\
 \hline
-$SU_L(2)$ & $U(x) = \mathrm{exp}\left(-ig_w \vec{\tau} \cdot \vec{\theta}_w(x)\right)$\\
+$SU(2)_L$ & $U(x) = \mathrm{exp}\left(-ig_w \vec{\tau} \cdot \vec{\theta}_w(x)\right)$\\
 \hline
-$SU_C(3)$ & $U(x) = \mathrm{exp}\left(-ig_s T^a \cdot \theta_s^a(x)\right)$
+$SU(3)_C$ & $U(x) = \mathrm{exp}\left(-ig_s T^a \cdot \theta_s^a(x)\right)$
 \end{tabular}
-\caption{The table lists the explicit element $U(x)$ of the gauge groups $U_Y(1)$, $SU_L(2)$ and $SU_C(3)$.
-The hypercharge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of the field it is applied to (see table \ref{tab:SMfieldcontent}). $\vec{\tau}$ and $T^a$ are the geneators of $SU_L(2)$ and $SU_C(3)$ respectively. In the fundamental representation $\vec{\tau} = \frac{\vec{\sigma}}{2}$ where $\vec{\sigma}$ has the 3 Pauli matrices as components and $T^a = \frac{\lambda^a}{2}$ where $\lambda^a$ are the 8 Gell-Mann matrices. $\varepsilon_{abc}$ and $f_{abc}$ are the structure constants of $SU_L(2)$ and $SU_C(3)$ respectively.}\label{tab:SM_transformations}
+\caption{The table lists the explicit element $U(x)$ of the gauge groups $U(1)_Y$, $SU(2)_L$ and $SU(3)_C$ of the Standard Model.
+The hypercharge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of the field it is applied to (see table \ref{tab:SMfieldcontent}). $\vec{\tau}$ and $T^a$ are the geneators of $SU(2)_L$ and $SU(3)_C$ respectively. In the fundamental representation $\vec{\tau} = \frac{\vec{\sigma}}{2}$ where $\vec{\sigma}$ has the 3 Pauli matrices as components and $T^a = \frac{\lambda^a}{2}$ where $\lambda^a$ are the 8 Gell-Mann matrices. $\varepsilon_{abc}$ and $f_{abc}$ are the structure constants of $SU(2)_L$ and $SU(3)_C$ respectively.}\label{tab:SM_transformations}
 \end{center}
 \end{table}
 
@@ -82,7 +82,7 @@ The hypercharge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of th
 % & $B^\mu(x) \to B^\mu(x) + \partial^\mu\theta_Y(x)$\\
 %\hline
 % & $U(x) = \mathrm{exp}\left(-ig_w \vec{\tau} \cdot \vec{\theta}_w(x)\right)$\\
-% $SU_L(2)$ & $\psi(x) \to \left( \mathbbm{1} - ig_w \vec{\tau} \cdot \vec{\theta}_w(x)\right)\psi(x)$\\
+% $SU(2)_L$ & $\psi(x) \to \left( \mathbbm{1} - ig_w \vec{\tau} \cdot \vec{\theta}_w(x)\right)\psi(x)$\\
 % & $W^{a\mu}(x) \to W^{a\mu}(x) +\partial^\mu\theta^a_w(x) + g_w \varepsilon^{abc} \theta^b_w(x)W^{c\mu}(x)$\\
 %  \hline
 % & $U(x) = \mathrm{exp}\left(-ig_s T^a \cdot \theta_s^a(x)\right)$\\
@@ -90,12 +90,12 @@ The hypercharge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of th
 % & $G^{a\mu}(x) \to G^{a\mu}(x) + \partial^\mu\theta^a_s(x) + g_s f_{abc} \theta^b_s(x)G^{c\mu}$\\
 % \hline
 %\end{tabular}
-%\caption{The table lists the explicit element $U(x)$ of the gauge groups $U_Y(1)$, $SU_L(2)$ and $SU_C(3)$ and the infinitesimal transformations of spinor and vector fields.\newline
-%The hypercharge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of the field it is applied to. $\vec{\tau}$ and $T^a$ are the geneators of $SU_L(2)$ and $SU_C(3)$ respectively. In the fundamental representation one has $\vec{\tau} = \frac{\vec{\sigma}}{2}$ where $\vec{\sigma}$ has the 3 Pauli matrices as components and $T^a = \frac{\lambda^a}{2}$ where $\lambda^a$ are the 8 Gell-Mann matrices. $\varepsilon_{abc}$ and $f_{abc}$ are the structure constants of $SU_L(2)$ and $SU_C(3)$ respectively.}\label{tab:SM_transformations}
+%\caption{The table lists the explicit element $U(x)$ of the gauge groups $U_Y(1)$, $SU(2)_L$ and $SU_C(3)$ and the infinitesimal transformations of spinor and vector fields.\newline
+%The hypercharge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of the field it is applied to. $\vec{\tau}$ and $T^a$ are the geneators of $SU(2)_L$ and $SU_C(3)$ respectively. In the fundamental representation one has $\vec{\tau} = \frac{\vec{\sigma}}{2}$ where $\vec{\sigma}$ has the 3 Pauli matrices as components and $T^a = \frac{\lambda^a}{2}$ where $\lambda^a$ are the 8 Gell-Mann matrices. $\varepsilon_{abc}$ and $f_{abc}$ are the structure constants of $SU(2)_L$ and $SU_C(3)$ respectively.}\label{tab:SM_transformations}
 %\end{center}
 %\end{table}
 
-%Furthermore the SM is a gauge theory, which has the gauge group $SU_C(3)\times SU_L(2)\times U_Y(1)$.
+%Furthermore the SM is a gauge theory, which has the gauge group $SU_C(3)\times SU(2)_L\times U_Y(1)$.
 %\paragraph{Transformation under $U_Y(1)$:}
 %Under $U_Y(1)$ spinor fields transform like
 %\begin{align}
@@ -105,7 +105,7 @@ The hypercharge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of th
 %\begin{align}
 %B^\mu(x) \to B^\mu(x) + \partial^\mu\theta_Y(x)
 %\end{align}
-%\paragraph{Transformation under $SU_L(2)$:}
+%\paragraph{Transformation under $SU(2)_L$:}
 %Spinor fields transform under this group as
 %where $\vec{\sigma}$ has the three Pauli matrices (see Appendix) as components. The gauge fields transforms as 
 %\begin{align}
@@ -129,39 +129,38 @@ The hypercharge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of th
 
 \subsection{The Particles of the Standard Model}
 In the Standard Model different matter particles take part in different interactions, i.e. their corresponding spinor couples to different gauge vectors.\\
-If a spinor couples to a certain gauge vector it transforms  non trivially (like indicated in table \ref{tab:SM_transformations}) under the gauge group which is associated with this gauge vector\footnote{In the Standard Model all matter particles transform in the fundamental (or trivial) representation of gauge groups.}. This means if a particle couples to a certain force its charge which is associated with this force is nonzero.\\
-The charges of particles for a force are defined as the eigenvalues of the generators which correspond to the force.
+If a spinor couples to a certain gauge vector, it transforms  non-trivially (like indicated in table \ref{tab:SM_transformations}) under the gauge group which is associated with this gauge vector.\footnote{In the Standard Model all matter particles transform in the fundamental (or trivial) representation of gauge groups.} This means if a particle couples to a certain force its charge which is associated with this force is non-zero.\\
+The charges of a particle related to a force are defined as the eigenvalues of the generators which correspond to the force.
 \subsubsection*{The Quarks:}
-Quarks are strongly interacting fermions, which means their spinors transform non trivially under $SU_C(3)$. Because they transform in the fundamental representation of $SU_C(3)$ this means a quark spinor is built up by 3 spinors each carrying another color. This splitting of the quark spinor in colors is often suppressed for the sake of simplicity. This convention is adopted throughout this thesis.\\
-Furthermore the left handed component of quarks interact weakly, which means that their spinors\footnote{The left handed part of a 4-spinor $\Psi$ is projected out by the appropriate projector $P_L$. This is explained in Appendix \ref{sec:2spinor_notation}.} transform (in the fundamental representation) under $SU_L(2)$ transformations meaning that 2 left handed quark spinors are assembled within a doublet.\\
-Finally all quarks carry a hypercharge. In section \ref{sec:EWSB} the mechanism of electroweak symmetry breaking is described. This mechanism explains how electromagnetism arises from the groups $SU_L(2)$ and $U_Y(1)$. All quarks interact electromagnetically.\\
-After all there are 6 quarks which are listed in table \ref{tab:generations}. They are categorized in 3 generations because their quantum numbers except for their masses reoccur in each generation. The two types of quarks within a generation which have distinct quantum numbers are referred to as up-type and down-type quarks. An up-type-quark and the down-type quark of the same generation built up a doublet.
+Quarks are strongly interacting fermions, which means their spinors transform non trivially under $SU_C(3)$. Because they transform in the fundamental representation of $SU_C(3)$ this means a quark spinor is built up by three spinors each carrying another color. This splitting of the quark spinor in colors is often suppressed for the sake of simplicity. This convention is adopted throughout this thesis.\\
+Furthermore, the left handed component of quarks interact weakly, which means that their spinors\footnote{The left handed part of a 4-spinor $\Psi$ is projected out by the appropriate projector $P_L$. This is explained in Appendix \ref{sec:2spinor_notation}.} transform (in the fundamental representation) under $SU(2)_L$ transformations meaning that two left handed quark spinors are assembled within a doublet.\\
+Finally, all quarks carry a hypercharge. In section \ref{sec:EWSB} the mechanism of electroweak symmetry breaking is described. This mechanism explains how electromagnetism arises from the groups $SU(2)_L$ and $U(1)_Y$. All quarks interact electromagnetically.\\
+All together, there are six quarks which are listed in table \ref{tab:generations}. They are categorized in 3 generations because their quantum numbers except for their masses reoccur in each generation. The two types of quarks within a generation which have distinct quantum numbers are referred to as up-type and down-type quarks. The up-type-quark and the down-type quark of the same generation built up a doublet.
 \subsubsection*{The Leptons:}
-Leptons do not interact strongly. They take part in the weak and the electromagnetic interaction, i.e. their spinors transform under the fundamental representation of $SU_L(2)$ and $U_Y(1)$. As for the quarks only the left handed components interact weakly.\\
-As for the quarks there are 6 leptons which are classified into 3 generations (see table \ref{tab:generations}). In each generation is a lepton with a negative electrical charged and an electrically neutral lepton. The latter ones are referred to as neutrinos. Right handed neutrinos have not been observed (yet) and are therefore absent in the SM. The former are called electron, muon and tau. Each left handed leptons with an electric charge is assembled with its neutrino in a doublet.
+Leptons do not interact strongly. They take part in the weak and the electromagnetic interaction, i.e. their spinors transform non-trivially under the fundamental representation of $SU(2)_L$ and $U(1)_Y$. As for the quarks only the left handed components interact weakly and there are six leptons which are classified into three generations (see table \ref{tab:generations}). In each generation is a lepton with a negative electrical charged and an electrically neutral lepton. The latter ones are referred to as neutrinos. Right handed neutrinos have not been observed (yet) and are therefore absent in the Standard Model. The former are called electron, muon and tau. Each left handed leptons with an electric charge is assembled with its neutrino in a doublet.
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{l?l|l|l}
-Particle & 1$^{st}$ generation & 2$^{nd}$ generation & 3$^{rd}$ generation\\
+Particle & 1$^{st}$ Generation & 2$^{nd}$ Generation & 3$^{rd}$ Generation\\
 \hlinewd{2pt}
-$u_{i}$ \hspace{0.5cm} up-type-Quark & $u$ \hspace{0.5cm} up-Quark & $c$ \hspace{0.5cm} charm-Quark & $t$ \hspace{0.5cm} top-Quark\\
-$d_{i}$ \hspace{0.5cm} down-type-Quark & $d$ \hspace{0.5cm} down-Quark & $s$ \hspace{0.5cm} strange-Quark & $b$ \hspace{0.5cm} bottom-Quark\\
+$u_{i}$ \hspace{0.5cm} up-type-quark & $u$ \hspace{0.5cm} up-quark & $c$ \hspace{0.5cm} charm-quark & $t$ \hspace{0.5cm} top-quark\\
+$d_{i}$ \hspace{0.5cm} down-type-quark & $d$ \hspace{0.5cm} down-quark & $s$ \hspace{0.5cm} strange-quark & $b$ \hspace{0.5cm} bottom-quark\\
 \hline
-$e_i$ \hspace{0.5cm} Charged Lepton & $e$ \hspace{0.5cm} Electron & $\mu$ \hspace{0.5cm} Muon &  $\tau$ \hspace{0.5cm} Tau\\
-$\nu_i$ \hspace{0.5cm} Neutrino & $\nu_e$ \hspace{0.35cm} Electron Neutrino & $\nu_\mu$ \hspace{0.35cm} Muon Neutrino &  $\nu_\tau$ \hspace{0.35cm} Tau Neutrino
+$e_i$ \hspace{0.5cm} charged lepton & $e$ \hspace{0.5cm} electron & $\mu$ \hspace{0.5cm} muon &  $\tau$ \hspace{0.5cm} tau\\
+$\nu_i$ \hspace{0.5cm} neutrino & $\nu_e$ \hspace{0.35cm} electron neutrino & $\nu_\mu$ \hspace{0.35cm} muon neutrino &  $\nu_\tau$ \hspace{0.35cm} tau neutrino
 \end{tabular}
-\caption{The matter particles of the SM. Listed are the symbol and the name of the particles.}\label{tab:generations}
+\caption{The matter particles of the Standard Model. Listed are the symbol and the name of the particles. The labeling of particles has been taken from \cite{Bach}. The shortcut charged lepton refers to electrically charged leptons.}\label{tab:generations}
 \end{center}
 \end{table}
-Quarks and Leptons are the matter particles of the Standard Model. They are listed together with their charges for the different forces in table \ref{tab:SMfieldcontent}. There is the color for strong interactions, the third component of the weak isospin $I_3$ for weak interactions (the eigenvalue of the third generator of the $SU_L(2)$) and the half of the hypercharge $\frac{Y}{2}$ to obtain the electric charge $Q$ via the Gell-Mann–Nishijima formula: $Q = I_3 + \frac{Y}{2}$.\\
-Because the left and right-handed parts of spinors transform differently under the $SU_L(2)$ they are listed separately. All quarks occur with three different colors.\\
-In the last row the Higgs-boson is listed. Its associated field is responsible for the mass of elementary particles. That is explained in section \ref{sec:EWSB}.\\
+Quarks and leptons are the matter particles of the Standard Model. They are listed together with their charges for the different forces in table \ref{tab:SMfieldcontent}. There is the color for strong interactions, the third component of the weak isospin $I_3$ for weak interactions (the eigenvalue of the third generator of the $SU(2)_L$) and the half of the hypercharge $\frac{Y}{2}$ to obtain the electric charge $Q$ via the Gell-Mann–Nishijima formula: $Q = I_3 + \frac{Y}{2}$.\\
+Because the left- and right-handed parts of spinors transform differently under the $SU_L(2)$ they are listed separately. All quarks occur with three different colors.\\
+In the last row, the Higgs-boson is listed. Its associated field is responsible for the mass of elementary particles. That is explained in section \ref{sec:EWSB}.\\
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{c?c|c|c|c|c}
-Particle & Symbol & color & $I_3$ & $\frac{Y}{2}$ & Q\\
+Particle & Symbol & Color & $I_3$ & $\frac{Y}{2}$ & Q\\
 \hlinewd{2pt}
-Left handed Quarks & $Q_{iL} = \begin{pmatrix}
+left-handed quarks & $q_{iL} = \begin{pmatrix}
 u_{iL}\\
 d_{iL}
 \end{pmatrix}$ & red, green, blue & $\begin{pmatrix}
@@ -171,10 +170,10 @@ d_{iL}
 +\frac{2}{3}\\
 -\frac{1}{3}
 \end{pmatrix}$\\
-Right-handed Quarks & $u_{iR}$ & red, green, blue & $0$ & $+\frac{2}{3}$ & $+\frac{2}{3}$ \\
+right-handed quarks & $u_{iR}$ & red, green, blue & $0$ & $+\frac{2}{3}$ & $+\frac{2}{3}$ \\
  & $d_{iR}$ & red, green, blue & $0$ & $-\frac{1}{3}$ & $-\frac{1}{3}$\\
 \hline
-Left-handed Leptons & $\ell_{iL} = \begin{pmatrix}
+left-handed leptons & $\ell_{iL} = \begin{pmatrix}
 \nu_{iL}\\
 e_{iL}
 \end{pmatrix}$ & - & $\begin{pmatrix}
@@ -184,11 +183,11 @@ e_{iL}
 0\\
 -1
 \end{pmatrix}$\\
-Right-handed Leptons & $e_{iR}$ & - & 0 & $+1$ & $+1$\\
+right-handed leptons & $e_{iR}$ & - & 0 & $+1$ & $+1$\\
 \hline
 Higgs & $H$ & - & $-\frac{1}{2}$ & $+\frac{1}{2}$ & $0$
 \end{tabular}
-\caption{This table lists all matter particles in the Standard Model and the Higgs particle with their charges for all forces. This is the color, the weak isospin $I_3$, the half of their hypercharge and their electrical charge. The index $i = 1,2,3$ labels the generation of the matter particles and is written out in table \ref{tab:generations}. If there are no colors specified or charges are zero this means that the fields in question transform trivially under the pertaining gauge transformation.}\label{tab:SMfieldcontent}
+\caption{This table lists all matter particles in the Standard Model and the Higgs particle with their charges for all forces. This is the color, the weak isospin $I_3$, the half of their hypercharge and their electrical charge. The index $i = 1,2,3$ labels the generation of the matter particles and is written out in table \ref{tab:generations}. If there are no colors specified or charges are zero this means that the fields in question transform trivially under the pertaining gauge transformation. In fact, the Higgs particle originates from a $SU(2)_L$-doublet. This is not given here because within a certain gauge only the Higgs particle is a real particle. }\label{tab:SMfieldcontent}
 \end{center}
 \end{table}
 
@@ -196,30 +195,30 @@ Higgs & $H$ & - & $-\frac{1}{2}$ & $+\frac{1}{2}$ & $0$
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{c|c|c?c|c|c}
-\multicolumn{3}{c?}{before EWSB} & \multicolumn{3}{c}{after EWSB}\\
+\multicolumn{3}{c?}{Before EWSB} & \multicolumn{3}{c}{After EWSB}\\
 \hlinewd{2pt}
 group & coupling constant & gauge field & coupling constant & gauge field & Particle\\
 \hlinewd{2pt}
-$SU_C(3)$ & $g_s$ & $G^a_\mu$ & $g_s$ & $G^a_\mu$ & Gluon\\
-$SU_L(2)$ & $g_w$ & $W^b_\mu$ & $g_W = \sqrt{2}g_w$,  &  $W^\pm_\mu$,  & $W^\pm$,  \\
+$SU(3)_C$ & $g_s$ & $G^a_\mu$ & $g_s$ & $G^a_\mu$ & Gluon\\
+$SU(2)_L$ & $g_w$ & $W^b_\mu$ & $g_W = \sqrt{2}g_w$,  &  $W^\pm_\mu$,  & $W^\pm$,  \\
  & & & $g_Z = \sqrt{g_w^2 + g_Y^2}$ & $Z^0_\mu$ & $Z^0$ Boson\\
-$U_Y(1)$ & $g_Y$ & $B_\mu$ & $e = g_Y\cdot c_w$ & $A_\mu$ & Photon
+$U(1)_Y$ & $g_Y$ & $B_\mu$ & $e = g_Y\cdot c_w$ & $A_\mu$ & Photon
 \end{tabular}
-\caption{The gauge fields and their coupling constants before and after electro weak symmetry breaking (EWSB). The Gluon field is not affected by EWSB. $a = 1,\hdots 8$ and $b=1,2,3$ label the number of gauge fields. $c_w$ is the cosine of the electroweak mixing angle defined in \ref{sec:EWSB}}\label{tab:force_particles}
+\caption{The gauge fields and their coupling constants before and after electro weak symmetry breaking (EWSB). The Gluon field is not affected by EWSB. $a = 1,\hdots 8$ and $b=1,2,3$ label the number of gauge fields. $c_w$ is the cosine of the electroweak mixing angle defined in \ref{sec:EWSB}.}\label{tab:force_particles}
 \end{center}
 \end{table}
-The force particles are described by gauge fields. The gauge field of $SU_C(3)$ is the gluon field. Because the $SU_C(3)$ has 8 generators there are 8 gluons. Their coupling constant is denoted with $g_s$.\\
-For the other force particles in the Standard Model - the $W^\pm$ bosons, the $Z_0$ boson and the photon the situation is slightly more involved. They are obtained as a mixture of the $W^b_\mu$ ($b=1,2,3$) and the $B_\mu$ field which are the gauge fields of $SU_L(2)$ and $U_Y(1)$ respectively. This mixing procedure is explained in section \ref{sec:EWSB}.\\
+The force particles are described by gauge fields. The gauge field of $SU(3)_C$ is the gluon field. Because the $SU_C(3)$ has eight generators there are eight gluons. Their coupling constant is denoted with $g_s$.\\
+For the other force particles in the Standard Model - the $W^\pm$ bosons, the $Z_0$ boson and the photon the situation is slightly more involved. They are obtained as a mixture of the $W^b_\mu$ ($b=1,2,3$) and the $B_\mu$ field which are the gauge fields of $SU_L(2)_L$ and $U_Y(1)_Y$ respectively. This mixing procedure is explained in section \ref{sec:EWSB}.\\
 For the moment being the coupling constants and gauge fields before and after this mixing are quoted in table \ref{tab:force_particles}.\bigbreak
 The Lagrangian of the SM is built up by qualitatively different terms. Firstly there are the kinetic and minimal coupling terms of the matter fields 
 \begin{align}
-\mathcal{L}_{\mathrm{matter}} =  \sum_{i=1}^3 \left( \overline{\ell}_{iL} i \slashed{D} l_{iL} + \overline{e}_{iR} i \slashed{D} e_{iR} + \overline{q}_{iL} i \slashed{D} q_{iL} + \overline{u}_{iR} i \slashed{D} u_{iR} + \overline{d}_{iR} i \slashed{D} d_{iR} \right)
+\mathcal{L}_{\mathrm{matter}} =  \sum_{i=1}^3 \left( \overline{\ell}_{iL} i \slashed{D} l_{iL} + \overline{e}_{iR} i \slashed{D} e_{iR} + \overline{q}_{iL} i \slashed{D} q_{iL} + \overline{u}_{iR} i \slashed{D} u_{iR} + \overline{d}_{iR} i \slashed{D} d_{iR} \right),
 \end{align}
 where $i \in \left\{1,2,3\right\}$ labels the generations of matter. The gauge covariant derivative is given by
 \begin{align}
-D_\mu = \partial_\mu + i g_Y\frac{\hat{Y}}{2} +ig_w \vec{\tau}\cdot \vec{W}^\mu + i g_s T^a G_a^\mu
+D_\mu = \partial_\mu + i g_Y\frac{\hat{Y}}{2} +ig_w \vec{\tau}\cdot \vec{W}^\mu + i g_s T^a G_a^\mu,
 \end{align}
-where for each field the corresponding representation (fundamental or trivial) of the gauge group is to be inserted (see table \ref{tab:SMfieldcontent}). The hyper charge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of the field it is applied to. These can also be found in table \ref{tab:SMfieldcontent}.
+where for each field the corresponding representation (fundamental or trivial) of the gauge group is to be inserted (see table \ref{tab:SMfieldcontent}). The hypercharge operator $\hat{Y}$ gives the eigenvalue of the hypercharge of the field it is applied to. These can also be found in table \ref{tab:SMfieldcontent}.
 The kinetic terms of the gauge fields are given by
 \begin{align}
 \mathcal{L}_{\mathrm{gauge}} = -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} - \frac{1}{4}W^{a\mu\nu}W^a_{\mu\nu} - \frac{1}{4}G^{a\mu\nu}G^a_{\mu\nu}.
@@ -227,12 +226,12 @@ The kinetic terms of the gauge fields are given by
 
 
 \subsection{Electroweak Symmetry Breaking}\label{sec:EWSB}
-So far no mass terms like in the Dirac Lagrangian \ref{eq:DiracLagrangian} have been introduced. The reason for this is that they are not gauge invariant for left- and right-handed spinors transform differently. The same argument forbids terms like $-\frac{m^2}{2}A^\mu A_\mu$ for a generic gauge boson. Electroweak symmetry breaking (EWSB) ascribes masses to those particles \cite{Higgs:1964ia, Higgs:1964pj, Higgs:1966ev, Englert:1964et, Guralnik:1964eu, Kibble:1967sv, Bernstein:1974rd}. To this end one considers a complex scalar doublet
+So far, no mass terms like in the Dirac Lagrangian \ref{eq:DiracLagrangian} have been introduced. The reason for this is that they are not gauge invariant, for left- and right-handed spinors transform differently. The same argument forbids terms like $-\frac{m^2}{2}A^\mu A_\mu$ for a generic gauge boson. Electroweak symmetry breaking (EWSB) ascribes masses to those particles \cite{Higgs:1964ia, Higgs:1964pj, Higgs:1966ev, Englert:1964et, Guralnik:1964eu, Kibble:1967sv, Bernstein:1974rd}. To this end one considers a complex scalar doublet
 \begin{align}
 \Phi = \begin{pmatrix}
 \phi^+ \\ 
 \phi^0
-\end{pmatrix}
+\end{pmatrix},
 \end{align}
 which receives a vacuum expectation value (VEV) $\langle \Phi \rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}
 0 \\ v
@@ -240,15 +239,19 @@ which receives a vacuum expectation value (VEV) $\langle \Phi \rangle = \frac{1}
 \begin{align}
 V(\Phi^\dagger\Phi) = -\mu^2 \Phi^\dagger\Phi + \lambda (\Phi^\dagger\Phi)^2
 \end{align}
-where $\mu^2,\lambda > 0$.
+where $\mu^2,\lambda > 0$ and $v$ is given by $v = \sqrt{\frac{\mu^2}{\lambda}}$.
 The Higgs sector of the Standard Model reads
 \begin{align}
 &\mathcal{L}_{\mathrm{Higgs}} = (D_\mu \Phi)^\dagger (D^\mu \Phi) - V(\Phi^\dagger\Phi).
 \end{align}
-The Higgs doublet couples to the gauge fields of $SU_L(2)$ and $U_Y(1)$ in the fundamental representation. Inserting an expansion\footnote{The complex $\phi^+(x)$ and the real $\sigma(x)$ are the fields of the so called massless Goldstone bosons. These degrees of freedom can be absorbed in the longitudinally polarized degrees of freedom of the arising gauge bosons $W^\pm$ and $Z^0$. This is referred to as unitary gauge\cite{book:811554}. The real $H(x)$ is the Higgs field, whose excitation is the Higgs boson.} around the VEV $\Phi = \begin{pmatrix}
+The Higgs doublet couples to the gauge fields of $SU(2)_L$ and $U_Y(1)$ in the fundamental representation. Inserting an expansion\footnote{The complex $\phi^+(x)$ and the real $\sigma(x)$ are the fields of the so-called massless Goldstone bosons. These degrees of freedom can be absorbed in the longitudinally polarized degrees of freedom of the arising gauge bosons $W^\pm$ and $Z^0$. This is referred to as unitary gauge\cite{book:811554}. The real $H(x)$ is the Higgs field, whose excitation is the Higgs boson.} around the VEV 
+\begin{align}
+\Phi = \begin{pmatrix}
 \phi^+(x) \\
 \frac{1}{\sqrt{2}} (v + H(x) + i\sigma(x))
-\end{pmatrix}$ one obtains quadratic terms, i.e. mass terms, for the gauge fields in question. In order to obtain mass eigenstates out of $B_\mu$ and $W_\mu^3$ and charge eigenstates for $Q$ and $I_3$ out of $W_\mu^1$ and $W_\mu^2$ one performs the transformation
+\end{pmatrix}
+\end{align}
+one obtains quadratic terms, i.e. mass terms, for the gauge fields in question. In order to obtain mass eigenstates out of $B_\mu$ and $W_\mu^3$ and charge eigenstates for $Q$ and $I_3$ out of $W_\mu^1$ and $W_\mu^2$ one performs the transformation
 \begin{align}
 &\begin{pmatrix}
 A_\mu \\
@@ -259,33 +262,33 @@ Z^0_\mu
 \end{pmatrix} \begin{pmatrix}
 B_\mu \\
 W^3_\mu
-\end{pmatrix}
+\end{pmatrix},
 && W^{\pm}_\mu = \frac{1}{\sqrt{2}}(W^1_\mu \mp i W^2_\mu),
 \end{align}
 where the electroweak mixing angle is given by $\cos\theta_w = \frac{g_w}{\sqrt{g_w^2 + g_Y^2}}$.
 These gauge fields acquire masses:
 \begin{align}
-& m_W = \frac{g_w}{2} v \hspace{3cm} m_Z = \frac{\sqrt{g_w^2+g_Y^2}}{2} v \hspace{3cm} m_A = 0.
+& m_W = \frac{g_w}{2} v, \hspace{3cm} m_Z = \frac{\sqrt{g_w^2+g_Y^2}}{2} v, \hspace{3cm} m_A = 0.
 \end{align}
-Apart from the massive bosons $W^\pm_\mu$ and $Z^0_\mu$ one obtains the massless photon $A_\mu$. As the photon is massless it is still associated with a gauge symmetry called $U_{em}(1)$. One therefore often writes EWSB as the breaking of the gauge group $SU_L(2) \times U_Y(1)$ to $U_{em}(1)$.\\
-Matter particles acquire mass via Yukawa coulings to the Higgs doublet. For up-type-quarks one uses that the charge conjugate of $\Phi$: $\Phi^C = i \sigma^2 \Phi^\ast$ also transforms as $\Phi$.
+Apart from the massive bosons $W^\pm_\mu$ and $Z^0_\mu$ one obtains the massless photon $A_\mu$. As the photon is massless it is still associated with a gauge symmetry called $U_{em}(1)$. One therefore often writes EWSB as the breaking of the gauge group $SU(2)_L \times U_Y(1)$ to $U_{em}(1)$.\\
+Matter particles acquire mass via Yukawa coulings to the Higgs doublet. For up-type-quarks one uses that the charge conjugate of $\Phi$: $\Phi^C = i \sigma^2 \Phi^\ast$ also transforms as $\Phi$. The Yukawa Lagrangian is given by
 \begin{align}
-\mathcal{L}_{\mathrm{Yukawa}} = -\sum_{i,j=1}^3 \left( y_{ij}^e \overline{\ell}_L \Phi e_R  + y_{ij}^d \overline{q}_L \Phi d_R + y_{ij}^u \overline{q}_L \Phi^C u_R\right) + h.c. \label{eq:LYukawa}
+\mathcal{L}_{\mathrm{Yukawa}} = -\sum_{i,j=1}^3 \left( y_{ij}^e \overline{\ell}_L \Phi e_R  + y_{ij}^d \overline{q}_L \Phi d_R + y_{ij}^u \overline{q}_L \Phi^C u_R\right) + h.c., \label{eq:LYukawa}
 \end{align}
 where $y^e$, $y^d$, $y^u$ are 3$\times$3 matrices in generation space. The fermion mass matrices are therefore:
 \begin{align}
-m^e_{ij} = \frac{y^e_{ij}}{\sqrt{2}} v  \hspace{4cm} m^d_{ij} = \frac{y^d_{ij}}{\sqrt{2}} v \hspace{4cm} m^u_{ij} = \frac{y^u_{ij}}{\sqrt{2}} v.
+m^e_{ij} = \frac{y^e_{ij}}{\sqrt{2}} v,  \hspace{4cm} m^d_{ij} = \frac{y^d_{ij}}{\sqrt{2}} v, \hspace{4cm} m^u_{ij} = \frac{y^u_{ij}}{\sqrt{2}} v.
 \end{align}
-The quark mass matrices are not diagonal, which is the precondition of the violation of CP-invariance. \footnote{The actual CP-violating term is the coupling term from quarks to the $W$-bosons.} One therefore has to distinguish between interaction and mass eigenstates of the quarks. The corresponding transformation matrix is the well known CKM-matrix \cite{Cabbibo:1964zsa, Kobayashi:1973fv}. Throughout this thesis, the CKM-matrix is approximated with the unit matrix as it will have a minor influence upon the results\\
+The quark mass matrices are not diagonal, which is the precondition of the violation of CP-invariance.\footnote{The actual CP-violating term is in the coupling term of quarks to the $W$-bosons.} One therefore has to distinguish between interaction and mass eigenstates of the quarks. The corresponding transformation matrix is the well known CKM-matrix \cite{Cabbibo:1964zsa, Kobayashi:1973fv}. Throughout this thesis, the CKM-matrix is approximated with the unit matrix as it will have no influence upon the results.\\
 The upshot of EWSB are masses for all matter particles except for the neutrinos and masses for the gauge bosons $W^\pm$ and $Z^0$.
 
 \subsection{Quantization}
-The Quantization of Spin 0 and Spin $\frac{1}{2}$ fields yield no complication in the Lagrangian formalism. To quantize Spin 1 fields it turns out that the usual gauge invariance needs to be replaced by the so called BRST invariance \cite{Becchi:1974xu, Becchi:1974md, Becchi:1975nq}. This results in two extra contributions in the Lagrangian. Firstly there are the gauge fixing terms:
+The Quantization of spin-0 and spin-$\frac{1}{2}$ fields yield no complication in the Lagrangian formalism. To quantize spin 1 fields it turns out that the usual gauge invariance needs to be replaced by the so called BRST invariance \cite{Becchi:1974xu, Becchi:1974md, Becchi:1975nq}. This results in two extra contributions in the Lagrangian. Firstly there are the gauge fixing terms:
 \begin{align}
 \mathcal{L}_{R_\xi} = -\frac{1}{2\xi_A} (\partial^\mu A_\mu)^2  - \frac{1}{\xi_W} |\partial^\mu W_\mu^+ - im_W \xi_W \phi^+|^2 - \frac{1}{2\xi_Z} (\partial^\mu Z_\mu - m_Z \xi_Z \sigma)^2 - \frac{1}{2\xi_G}(\partial^\mu G_\mu^a)^2.
 \end{align}
-Here $R_\xi$-gauge is chosen, where the parameters $\xi_i$ specify the gauge further. The two terms in the middle are modified with the Goldstone bosons from section \ref{sec:EWSB}. This is to cancel terms of the form $V_\mu \partial^\mu \phi$ up to a total derivative arising from EWSB which would lead to non-diagonal propagators, where $V$ stands for a gauge boson $W^\pm$ or $Z^0$ and $\phi$ for a Goldstone boson.\\%\cite{book:811554}page 622
-Secondly there is a ghost Lagrangian
+Here, $R_\xi$-gauge is chosen, where the parameters $\xi_i$ specify the gauge further. The second and third term are modified with the Goldstone bosons from section \ref{sec:EWSB}. This is to cancel terms of the form $V_\mu \partial^\mu \phi$ up to a total derivative arising from EWSB which would lead to non-diagonal propagators, where $V$ stands for a gauge boson $W^\pm$ or $Z^0$ and $\phi$ for a Goldstone boson.\\%\cite{book:811554}page 622
+Secondly, there is a ghost Lagrangian
 \begin{align}
 \mathcal{L}_{\mathrm{ghost}} = -\overline{c}_a \partial^\mu \left( \partial_\mu c_a + g_s f_{abc} c_b G_{c \mu} \right) + \mathcal{L}_{\mathrm{weak\ ghosts}}.\label{eq:GhostLagrangian}
 \end{align}
