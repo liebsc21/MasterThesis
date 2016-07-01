@@ -1,5 +1,5 @@
 \section{Renormalization of the MRSSM}\label{sec:renMRSSM}
-This section discusses the removal of ultraviolet divergences in the amplitude of squark production at 1-loop level in the RSQCD. After an introduction and discussion of the regularization schemes, field and mass renormalization constants are calculated in dimensional regularization in the on-shell scheme. After that the renormalization constant of the strong gauge coupling $g_s$ is computed in a mixture of $\overline{\mathrm{MS}}$- and zero-momentum subtraction scheme. This was done because the gauge coupling of the parton density functions is given in the $\overline{\mathrm{MS}}$-scheme but does not include heavy particles, such as the top-quark or supersymmetric particles in its $\beta$-function. However renormalizing these heavy particles in the zero-momentum subtraction implies that the $\beta$-function of $g_s$ is exactly the one from QCD. This is shown in section \ref{sec:beta_function}. After that a fact already discussed in section \ref{sec:RegSchemeDep} is revisited: the used regularization breaks supersymmetry. Section \ref{sec:SUSYrestore} describes the calculation of an extra counterterm which restores supersymmetry. Finally the UV-divergent parts of all renormalization constants in the RSQCD are given. These might prove useful when someone is to check for UV-finiteness of a Green-function or a physical observable. The chapter closes with a discussion of the renormalizes matrix amplitude.
+This section discusses the removal of ultraviolet divergences in the amplitude of squark production at 1-loop level in the RSQCD. After an introduction and discussion of the regularization schemes, field and mass renormalization constants are calculated in dimensional regularization in the on-shell scheme. After that the renormalization constant of the strong gauge coupling $g_s$ is computed in a mixture of $\overline{\mathrm{MS}}$- and zero-momentum subtraction scheme. This was done because the gauge coupling of the parton density functions is given in the $\overline{\mathrm{MS}}$-scheme but does not include heavy particles, such as the top-quark or supersymmetric particles in its $\beta$-function. However renormalizing these heavy particles in the zero-momentum subtraction implies that the $\beta$-function of $g_s$ is exactly the one from QCD. This is shown in section \ref{sec:beta_function}. After that, a fact already discussed in section \ref{sec:RegSchemeDep} is revisited: dimensinal regularization breaks supersymmetry. Section \ref{sec:SUSYrestore} describes the calculation of an extra counterterm which restores supersymmetry within the renomalization. Finally, the UV-divergent parts of all renormalization constants in the RSQCD are given. These might prove useful, when someone is to check for UV-finiteness of a Green-function or a physical observable. The chapter closes with a discussion of the renormalized matrix amplitude.
 %In order to improve the prediction of cross sections one has to take quantum corrections into account. These are associated with loops in the corresponding Feynman diagrams. Computing these loop diagrams one might encounter infinities which arise from certain momentum configurations of the unspecified loop momenta. These infinities can be classified due to their origin. Infinities which are associated with loop momenta which tend to infinity are referred to as ultraviolet(UV) divergences. Infinities arising from loop momenta approaching zero can occur in loops with massless particles and are called infrared(IR) singularities. \\%Furthermore there are collinear singularities with occur when a massless particle splits into two massless collinear particles.\\
 %These infinities are not physical and must therefore be removed to get sensible predictions. To this end one regularizes them to extract them from the quantity in question. UV-divergences can be removed by means of renormalization, i.e. counterterms are inserted into the Lagrangian to cancel UV-divergences. Infrared and collinear divergenves are removed by adding up all possible contributions which give rise to the considered observable.
 
@@ -18,15 +18,15 @@ maybe refer to Collins: Renormalization
 
 
 \subsection{Regularization Scheme Dependences}\label{sec:RegSchemeDep}
-To discuss the subject of this and ensuing subsections it is useful to introduce the effective action $\Gamma$. A formal introduction of $\Gamma$ can be found in~\cite{Peskin}. In short $\Gamma$ can be viewed as a modification of the classical action $\Gamma_{\mathrm{cl}} = \int \mathcal{L}_{\mathrm{cl}}$ by quantum effects:
+To discuss the subject of this and ensuing subsections, it is useful to introduce the effective action $\Gamma$. A formal introduction of $\Gamma$ can be found in~\cite{Peskin}. In short $\Gamma$ can be viewed as a generalization of the classical action $\Gamma_{\mathrm{cl}} = \int \mathcal{L}_{\mathrm{cl}}$ by quantum effects:
 \begin{align}
 \Gamma = \Gamma_{\mathrm{cl}} + \mathcal{O}(\hbar)
 \end{align}
-This means that in addition to the vertices in the classical Lagrangian new vertices arise due to loop effects. As already alluded to loop corrections might a priori not be finite and then need to be rendered finite by the addition of counterterms. For $\mathcal{O}(\hbar)$ corrections one writes
+This means that in addition to the vertices in the classical Lagrangian, new vertices arise due to loop effects. As already alluded to, loop corrections might a priori not be finite and then need to be rendered finite by the addition of counterterms. For $\mathcal{O}(\hbar)$ corrections one writes
 \begin{align}
 \Gamma^{(\leq 1)} \to \Gamma^{(\leq 1)} + \Gamma^{(1),\ \mathrm{ct}}
 \end{align} 
-These counterterms depend on the regularization (and renormalization) scheme. If one chooses to work with DREG supersymmetry will not be preserved at 1-loop order, i.e. $\Gamma^{(\leq 1)}_{\mathrm{DREG}}$ is not supersymmetric. To maintain supersymmetry invariance of the renormalized effective action the counterterms will not only consist of supersymmetric counterterms $\Gamma^{(1),\ \mathrm{ct,\ sym}}_{\mathrm{DREG}}$ but also of counterterms restoring supersymmetry $\Gamma^{(1),\ \mathrm{ct,\ trans}}_{\mathrm{DREG}}$. 
+These counterterms depend on the regularization (and renormalization) scheme. If one chooses to work with DREG, supersymmetry will not be preserved at 1-loop order, i.e. $\Gamma^{(\leq 1)}_{\mathrm{DREG}}$ is not supersymmetric. To maintain supersymmetry invariance of the renormalized effective action, the counterterms will not only consist of supersymmetric counterterms $\Gamma^{(1),\ \mathrm{ct,\ sym}}_{\mathrm{DREG}}$ but also of counterterms restoring supersymmetry $\Gamma^{(1),\ \mathrm{ct,\ trans}}_{\mathrm{DREG}}$. 
 \begin{align}
 \Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DREG}} = \Gamma^{(1),\ \mathrm{ct,\ sym}}_{\mathrm{DREG}} + \Gamma^{(1),\ \mathrm{ct,\ trans}}_{\mathrm{DREG}}
 \end{align}
@@ -38,8 +38,8 @@ Equating also the finite terms in $\Gamma^{(1),\ \mathrm{ct,\ sym}}$ in DRED and
 \begin{align}
 \Gamma^{\mathrm{(1),ct,trans}}_{\mathrm{DREG}} = \Gamma^{(\leq 1)}_{\mathrm{DRED}} - \Gamma^{(\leq 1)}_{\mathrm{DREG}}.\label{eq:GammaCtRestore}
 \end{align} 
-This equation justifies the label "trans" at the supersymmetry restoring counterterm because it actually describes the transition counterterm from DREG to DRED or vice versa.\\ %This way supersymmetry is preserved by the renormalization constants.\\ 
-In the case of the MRSSM it will turn out that the only supersymmetry violation comes from corrections associated with the gluon as already alluded to in section \ref{sec:RegSchemes}. However supersymmetry restoring will always already be included in $\delta Z^{\mathrm{DREG}}$. Referring to the field renormalization constants from eq. \ref{eq:fieldtrafo} this is 
+This equation justifies the label ``trans'' at the supersymmetry restoring counterterm because it actually describes the transition counterterm from DREG to DRED or vice versa.\\ %This way supersymmetry is preserved by the renormalization constants.\\ 
+In the case of the MRSSM it will turn out that the only supersymmetry violation comes from corrections associated with the gluon, as already alluded to in section \ref{sec:RegSchemes}. However, supersymmetry restoring will always already be included in $\delta Z^{\mathrm{DREG}}$. Referring to the field renormalization constants from eq. \ref{eq:fieldtrafo}, this is 
 \begin{align}
 \delta Z^{\mathrm{DREG}} = \delta Z^{\mathrm{DREG,sym}} + \delta Z^{\mathrm{trans}}
 \end{align}
@@ -47,7 +47,7 @@ where
 \begin{align}
 \delta Z^{\mathrm{trans}} = \delta Z^{\mathrm{DREG}} - \delta Z^{\mathrm{DRED}}
 \end{align}
-is the supersymmetry restoring renormalization constant. Note the sign within this definition in comparison to eq. \ref{eq:GammaCtRestore}. The only point where particularly care is required is the coupling: The  gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$ receive different supersymmetry restoring counterterms due to different loop diagrams. Therefore one has to make a difference between these couplings at 1-loop level. In order to match $g_s$ to the experimentally measured coupling it is renormalized in the  $\overline{\mathrm{MS}}$-scheme (with an additional manipulation for heavy particles, which will be explained in subsection \ref{sec:RenGaugeCoupling}). The Yukawa coupling $\hat{g}_s$ therefore needs to be added with the difference of the supersymmetry restoring counterterms from the $q\tilde{q}^\dagger\tilde{g}$ vertex and the $q\overline{q}G$ vertex at 1-loop in order to be renormalized in the same way.
+is the supersymmetry restoring renormalization constant. Note the sign within this definition in comparison to eq. \ref{eq:GammaCtRestore}. The only point where particularly care is required is the coupling: The  gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$ receive different supersymmetry restoring counterterms, due to different loop diagrams. Therefore one has to make a difference between these couplings at 1-loop level. In order to match $g_s$ to the experimentally measured coupling, it is renormalized in the  $\overline{\mathrm{MS}}$-scheme (with an additional manipulation for heavy particles, which will be explained in subsection \ref{sec:RenGaugeCoupling}). The Yukawa coupling $\hat{g}_s$ therefore needs to be added with the difference of the supersymmetry restoring counterterms from the $q\tilde{q}^\dagger\tilde{g}$ vertex and the $q\overline{q}G$ vertex at 1-loop in order to be renormalized in the same way.
 
 
 %An alternative procedure is used in \cite{Beenakker:1996ch}, where only one supersymmetry restoring counterterm, which translates between the renormalized gauge coupling $g_s$ and the renormalized Yukawa coupling $\hat{G}_s$ is needed. That is possible because the only supersymmetry violation comes from the gauge sector. For a comprehensive discussion of this issue see [Philipp Vasros Diplomarbeit and the paper with Dominik]\\
@@ -705,7 +705,7 @@ Note the only difference to the MSSM\cite{Beenakker:1996ch} is the appearence of
 
 \subsection{The Beta Function}\label{sec:beta_function}
 The beta function describes the dependence of the gauge coupling $g_s$ upon the energy scale $\mu$.\\
-Writing down the action of a theory in $D$ dimensions one needs to introduce an energy scale $\mu$ in order to keep the action dimensionless. But $\mu$ is no physical parameter and can be absorped into the fields and parameters. To this end one defines
+Writing down the action of a theory in $D$ dimensions, one needs to introduce an energy scale $\mu$ in order to keep the action dimensionless. But $\mu$ is no physical parameter but can be absorped into the fields and parameters. To this end one defines
 \begin{align}
 g_{sB}(g_s, \mu) = \mu^\epsilon g_s \left( 1 + \frac{\delta g_s}{g_s} \right)
 \end{align}
@@ -728,7 +728,7 @@ one finds
 \beta(g_s,\epsilon) &= -\epsilon g_s \left( 1 + \frac{g_s^2}{16\pi^2} L \right) + \beta(g_s) + \mathcal{O}(\mathrm{2-loop})\\
 \beta(g_s) &= \frac{g_s^3}{16\pi^2} \beta_0^L + \mathcal{O}(\mathrm{2-loop}).
 \end{align}
-This is the beta function of QCD first found by Politzer \cite{Politzer:1973fx} Gross and Wilczek \cite{Gross:1973ju}
+This is the beta function of QCD first found by Politzer \cite{Politzer:1973fx} Gross and Wilczek \cite{Gross:1973ju}. This means that renormalizing $g_s$ in the way it is, decouples heavy particles from the $\beta$ function and allows to adopt $\alpha_s = \frac{g_s^2}{4\pi}$ from the parton density functions.
 
 
 
