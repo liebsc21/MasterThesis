@@ -178,7 +178,7 @@ for lines in f_MRSSM1.readlines():
     
     sigma1_MRSSM_bb = np.append(sigma1_MRSSM_bb, float(lines.split()[15]))
 
-sigma1_MRSSM = sigma1_MRSSM_dd+sigma1_MRSSM_du+sigma1_MRSSM_ds+sigma1_MRSSM_dc+sigma1_MRSSM_db+sigma1_MRSSM_uu+sigma1_MRSSM_us+sigma1_MRSSM_uc+sigma1_MRSSM_ub+sigma1_MRSSM_ss+sigma1_MRSSM_sc+sigma1_MRSSM_sb+sigma1_MRSSM_cc+sigma1_MRSSM_cb+sigma1_MRSSM_bb 
+sigma1_MRSSM = sigma1_MRSSM_dd+2*sigma1_MRSSM_du+2*sigma1_MRSSM_ds+2*sigma1_MRSSM_dc+2*sigma1_MRSSM_db+sigma1_MRSSM_uu+2*sigma1_MRSSM_us+2*sigma1_MRSSM_uc+2*sigma1_MRSSM_ub+sigma1_MRSSM_ss+2*sigma1_MRSSM_sc+2*sigma1_MRSSM_sb+sigma1_MRSSM_cc+2*sigma1_MRSSM_cb+sigma1_MRSSM_bb 
 
 f_MRSSM1.close()
 
@@ -218,7 +218,7 @@ for lines in f_MRSSM3.readlines():
     
     sigma3_MRSSM_bb = np.append(sigma3_MRSSM_bb, float(lines.split()[15]))
 
-sigma3_MRSSM = sigma3_MRSSM_dd+sigma3_MRSSM_du+sigma3_MRSSM_ds+sigma3_MRSSM_dc+sigma3_MRSSM_db+sigma3_MRSSM_uu+sigma3_MRSSM_us+sigma3_MRSSM_uc+sigma3_MRSSM_ub+sigma3_MRSSM_ss+sigma3_MRSSM_sc+sigma3_MRSSM_sb+sigma3_MRSSM_cc+sigma3_MRSSM_cb+sigma3_MRSSM_bb 
+sigma3_MRSSM = sigma3_MRSSM_dd+2*sigma3_MRSSM_du+2*sigma3_MRSSM_ds+2*sigma3_MRSSM_dc+2*sigma3_MRSSM_db+sigma3_MRSSM_uu+2*sigma3_MRSSM_us+2*sigma3_MRSSM_uc+2*sigma3_MRSSM_ub+sigma3_MRSSM_ss+2*sigma3_MRSSM_sc+2*sigma3_MRSSM_sb+sigma3_MRSSM_cc+2*sigma3_MRSSM_cb+sigma3_MRSSM_bb 
 
 f_MRSSM3.close()
 
@@ -290,7 +290,7 @@ for lines in f_MSSM1.readlines():
     
     sigma1_MSSM_bb = np.append(sigma1_MSSM_bb, float(lines.split()[15]))
 
-sigma1_MSSM = sigma1_MSSM_dd+sigma1_MSSM_du+sigma1_MSSM_ds+sigma1_MSSM_dc+sigma1_MSSM_db+sigma1_MSSM_uu+sigma1_MSSM_us+sigma1_MSSM_uc+sigma1_MSSM_ub+sigma1_MSSM_ss+sigma1_MSSM_sc+sigma1_MSSM_sb+sigma1_MSSM_cc+sigma1_MSSM_cb+sigma1_MSSM_bb 
+sigma1_MSSM = sigma1_MSSM_dd+2*sigma1_MSSM_du+2*sigma1_MSSM_ds+2*sigma1_MSSM_dc+2*sigma1_MSSM_db+sigma1_MSSM_uu+2*sigma1_MSSM_us+2*sigma1_MSSM_uc+2*sigma1_MSSM_ub+sigma1_MSSM_ss+2*sigma1_MSSM_sc+2*sigma1_MSSM_sb+sigma1_MSSM_cc+2*sigma1_MSSM_cb+sigma1_MSSM_bb 
 
 f_MSSM1.close()
 
@@ -330,7 +330,7 @@ for lines in f_MSSM3.readlines():
     
     sigma3_MSSM_bb = np.append(sigma3_MSSM_bb, float(lines.split()[15]))
 
-sigma3_MSSM = sigma3_MSSM_dd+sigma3_MSSM_du+sigma3_MSSM_ds+sigma3_MSSM_dc+sigma3_MSSM_db+sigma3_MSSM_uu+sigma3_MSSM_us+sigma3_MSSM_uc+sigma3_MSSM_ub+sigma3_MSSM_ss+sigma3_MSSM_sc+sigma3_MSSM_sb+sigma3_MSSM_cc+sigma3_MSSM_cb+sigma3_MSSM_bb 
+sigma3_MSSM = sigma3_MSSM_dd+2*sigma3_MSSM_du+2*sigma3_MSSM_ds+2*sigma3_MSSM_dc+2*sigma3_MSSM_db+sigma3_MSSM_uu+2*sigma3_MSSM_us+2*sigma3_MSSM_uc+2*sigma3_MSSM_ub+sigma3_MSSM_ss+2*sigma3_MSSM_sc+2*sigma3_MSSM_sb+sigma3_MSSM_cc+2*sigma3_MSSM_cb+sigma3_MSSM_bb 
 
 f_MSSM3.close()
 
