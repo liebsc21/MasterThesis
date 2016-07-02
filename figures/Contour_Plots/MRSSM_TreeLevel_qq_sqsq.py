@@ -21,12 +21,12 @@ def contourdata():
     """
     
     """
-    mass = np.linspace(100, 2000, num=N)
-    mass = np.linspace(100, 2000, num=N)
+    mass_sq = np.linspace(100, 2000, num=N)
+    mass_glu = np.linspace(100, 3000, num=N)
     # note reverse ordering for yi and xi because of the way   
     # shape works in numpy                                                  
-    sigma = nans((len(mass),len(mass)))  
-    myfile = open('MRSSM_3_qq_sqsq.txt', 'r')     
+    sigma = nans((len(mass_sq),len(mass_glu)))  
+    myfile = open('MRSSM_3_qq_sqLsqR.txt', 'r')     
     i = 0
     for line in myfile:
         data = line.split()
@@ -35,6 +35,7 @@ def contourdata():
         i += 1   
     myfile.close()
     
+    v = 10**np.linspace(-1, 7, 9, endpoint=True)
     fig = plt.figure(1,figsize=(9, 8)) 
     ax1 = plt.axes()
     font_size = 18
@@ -42,8 +43,8 @@ def contourdata():
     plt.ylabel(r"$m_{\tilde{g}}$ in GeV", size = font_size)
     plt.xticks(fontsize = font_size)
     plt.yticks(fontsize = font_size)
-    cf=ax1.contourf(mass, mass, sigma, norm = LogNorm())
-    levels1 = [0.1, 1, 10**3, 10**4, 10**5, 10**6]
+    cf=ax1.contourf(mass_sq, mass_glu, sigma, v, norm = LogNorm(), vmin=1, vmax =10**6)
+    levels1 = [1, 10**3, 10**4, 10**5, 10**6]
     cl1 = plt.contour(cf, levels=levels1,
                   colors='k',
                   linewidths=(1,),
@@ -59,9 +60,12 @@ def contourdata():
                   linestyles='dashed',
                   linewidths=(1,),
                   hold='on')
-    plt.clabel(cl2, fmt='%2.1f', colors='k', fontsize = font_size)
-    plt.clabel(cl3, fmt='%2.1f', colors='k', fontsize = font_size)
-    cbar = fig.colorbar(cf, orientation='horizontal')
+    manual_locations2 = [(1000.0, 2500.0), (1000.0, 1000.0)]              
+    manual_locations3 = [(1000.0, 2000.0), (1000.0, 1400.0)]
+    plt.clabel(cl2, fmt='%2.1f', inline=1, colors='k', fontsize = font_size, manual=manual_locations2)
+    plt.clabel(cl3, fmt='%2.1f', inline=1, colors='k', fontsize = font_size, manual=manual_locations3)
+    
+    cbar = fig.colorbar(cf, ticks=v, orientation='horizontal')
     cbar.ax.set_xlabel(r'$\sigma^{\mathrm{B}}_{\mathrm{MRSSM}}(qq \to \tilde{q}\tilde{q})$ in fb', size = font_size)
     cbar.ax.tick_params(labelsize=font_size)
     cbar.add_lines(cl1)
