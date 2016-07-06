@@ -1,20 +1,23 @@
 \section{Renormalization of the MRSSM}\label{sec:renMRSSM}
-This section discusses the removal of ultraviolet divergences in the amplitude of squark production at 1-loop level in the RSQCD. After an introduction and discussion of the regularization schemes, field and mass renormalization constants are calculated in dimensional regularization in the on-shell scheme. After that the renormalization constant of the strong gauge coupling $g_s$ is computed in a mixture of $\overline{\mathrm{MS}}$- and zero-momentum subtraction scheme. This was done because the gauge coupling of the parton density functions is given in the $\overline{\mathrm{MS}}$-scheme but does not include heavy particles, such as the top-quark or supersymmetric particles in its $\beta$-function. However renormalizing these heavy particles in the zero-momentum subtraction implies that the $\beta$-function of $g_s$ is exactly the one from QCD. This is shown in section \ref{sec:beta_function}. After that, a fact already discussed in section \ref{sec:RegSchemeDep} is revisited: dimensinal regularization breaks supersymmetry. Section \ref{sec:SUSYrestore} describes the calculation of an extra counterterm which restores supersymmetry within the renomalization. Finally, the UV-divergent parts of all renormalization constants in the RSQCD are given. These might prove useful, when someone is to check for UV-finiteness of a Green-function or a physical observable. The chapter closes with a discussion of the renormalized matrix amplitude.
+This section discusses the removal of ultraviolet divergences in the amplitude of squark production at 1-loop level in the RSQCD. After an introduction and discussion of the regularization schemes, field and mass renormalization constants are calculated in dimensional regularization in the on-shell scheme. After that the renormalization constant of the strong gauge coupling $g_s$ is computed in a mixture of $\overline{\mathrm{MS}}$- and zero-momentum subtraction scheme. This was done because the gauge coupling of the parton density functions is given in the $\overline{\mathrm{MS}}$-scheme but does not include heavy particles, such as the top-quark or supersymmetric particles in its $\beta$-function. However renormalizing these heavy particles in the zero-momentum subtraction implies that the $\beta$-function of $g_s$ is exactly the one from QCD. This is shown in section \ref{sec:beta_function}. After that, a fact already discussed in section \ref{sec:RegSchemeDep} is revisited: dimensinal regularization breaks supersymmetry. Section \ref{sec:SUSYrestore} describes the calculation of an additional counterterm which restores supersymmetry within the renomalization. Finally, the UV-divergent parts of all renormalization constants in the RSQCD are given. These might prove useful, when someone is to check for UV-finiteness of a Green-function or a physical observable. The chapter closes with a discussion of the renormalized matrix amplitude.
 %In order to improve the prediction of cross sections one has to take quantum corrections into account. These are associated with loops in the corresponding Feynman diagrams. Computing these loop diagrams one might encounter infinities which arise from certain momentum configurations of the unspecified loop momenta. These infinities can be classified due to their origin. Infinities which are associated with loop momenta which tend to infinity are referred to as ultraviolet(UV) divergences. Infinities arising from loop momenta approaching zero can occur in loops with massless particles and are called infrared(IR) singularities. \\%Furthermore there are collinear singularities with occur when a massless particle splits into two massless collinear particles.\\
 %These infinities are not physical and must therefore be removed to get sensible predictions. To this end one regularizes them to extract them from the quantity in question. UV-divergences can be removed by means of renormalization, i.e. counterterms are inserted into the Lagrangian to cancel UV-divergences. Infrared and collinear divergenves are removed by adding up all possible contributions which give rise to the considered observable.
 
 \subsection{Regularization Schemes}\label{sec:RegSchemes}
 \subsubsection*{Dimensional Regularization (DREG)}
-Dimensional regularization(DREG) is a very common procedure for regularizing infinities which was devised by t'Hooft and Veltman~\cite{'tHooft:1972fi}. In this scheme loop momenta, gamma- and epsilon-tensors, phase space and fields are defined in $D$ dimensions. As in every regularization scheme a parameter with mass dimension needs to be introduced. In DREG that is the $\mu$ parameter which ensures that the loop integrals still have mass dimension 4:
+Dimensional regularization (DREG) is a very common procedure for regularizing infinities which was devised by t'Hooft and Veltman~\cite{'tHooft:1972fi}. In this scheme loop momenta, gamma- and epsilon-tensors, phase space and fields are defined in $D$ dimensions\cite{Collins:105730}. As in every regularization scheme a parameter with mass dimension needs to be introduced. In DREG, that is the $\mu$ parameter which ensures that the loop integrals still have mass dimension four:
 \begin{align}
 \int \frac{\mbox{d}^4p}{(2\pi)^4} \to \mu^{4-D} \int \frac{\mbox{d}^Dp}{(2\pi)^D}.
 \end{align}
-One often writes $D=4-2\epsilon$. Then the divergences of the loop integral manifest in $\frac{1}{\epsilon}$ poles.\\
+If one writes $D=4-2\epsilon$, the divergences of the loop integral manifest in $\frac{1}{\epsilon}$ poles.\\
 However DREG suffers a flaw in supersymmetry. As the degrees of freedom of a massless gauge boson are $D-2$ but the degrees of freedom of its superpartner are 2 there is a mismatch if $D \neq 4$. As a consequence there are $2\epsilon$ degrees of freedom associated with the gluon\footnote{These degrees of freedom are identified with scalars and are therefore referred to as $\epsilon$ scalars} which do not have a supersymmetric partner. Therefore DREG violates supersymmetry.
 
 \subsubsection*{Dimensional Reduction (DRED)}
-Dimensional reduction (DRED) was introduced to rectify the imperfections of DREG, i.e. it preserves supersymmetry\footnote{It is not clear if DRED preserves supersymmetry at all orders in perturbation theory but it does preserve supersymmetry at the 1-loop level.}. DRED promotes only loop momenta to $D$ dimensions. All other quantities which are $D$ dimensional in DREG stay in 4 dimensions.\\
-maybe refer to Collins: Renormalization
+Dimensional reduction (DRED) was introduced to rectify the imperfections of DREG, i.e. it preserves supersymmetry.\footnote{It is not clear whether DRED preserves supersymmetry at all orders in perturbation theory\cite{Jack:1997sr} but it does preserve supersymmetry at 1-loop level\cite{Hollik:2001cz}.} DRED promotes only loop momenta to $D$ dimensions. All other quantities which are $D$ dimensional in DREG stay in 4 dimensions. The most important difference is the contraction of the metric tensor with itself equals four
+\begin{align}
+g_{\mu\nu}g^{\mu\nu} = 4,
+\end{align}
+instead of $D$ in dimensional regularization. It has been shown in \cite{Stockinger:2005gx} that DRED can be defined in a mathematically consistent way.
 
 
 \subsection{Regularization Scheme Dependences}\label{sec:RegSchemeDep}
@@ -34,7 +37,7 @@ Fortunately a supersymmetry conserving regularization scheme (at 1-loop level) i
 \begin{align}
 \Gamma^{(\leq 1)}_{\mathrm{DRED}} + \Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DRED}} \overset{!}{=} \Gamma^{(\leq 1)}_{\mathrm{DREG}} + \Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DREG}}.
 \end{align}
-Equating also the finite terms in $\Gamma^{(1),\ \mathrm{ct,\ sym}}$ in DRED and DREG the choice of the supersymmetry restoring counterterms is fixed by\cite{Varso}:
+Equating also the finite terms in $\Gamma^{(1),\ \mathrm{ct,\ sym}}$ in DRED and DREG the choice of the supersymmetry restoring counterterms is fixed by\cite{Varso, Stockinger:2011gp, Martin:1993yx}:
 \begin{align}
 \Gamma^{\mathrm{(1),ct,trans}}_{\mathrm{DREG}} = \Gamma^{(\leq 1)}_{\mathrm{DRED}} - \Gamma^{(\leq 1)}_{\mathrm{DREG}}.\label{eq:GammaCtRestore}
 \end{align} 
@@ -47,7 +50,7 @@ where
 \begin{align}
 \delta Z^{\mathrm{trans}} = \delta Z^{\mathrm{DREG}} - \delta Z^{\mathrm{DRED}}
 \end{align}
-is the supersymmetry restoring renormalization constant. Note the sign within this definition in comparison to eq. \eqref{eq:GammaCtRestore}. The only point where particularly care is required is the coupling: The  gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$ receive different supersymmetry restoring counterterms, due to different loop diagrams. Therefore one has to make a difference between these couplings at 1-loop level. In order to match $g_s$ to the experimentally measured coupling, it is renormalized in the  $\overline{\mathrm{MS}}$-scheme (with an additional manipulation for heavy particles, which will be explained in subsection \ref{sec:RenGaugeCoupling}). The Yukawa coupling $\hat{g}_s$ therefore needs to be added with the difference of the supersymmetry restoring counterterms from the $q\tilde{q}^\dagger\tilde{g}$ vertex and the $q\overline{q}G$ vertex at 1-loop in order to be renormalized in the same way.
+is the supersymmetry restoring renormalization constant. Note the sign within this definition in comparison to eq. \eqref{eq:GammaCtRestore}. The only point where particularly care is required is the coupling: The  gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$ receive different supersymmetry restoring counterterms, due to different loop diagrams. Therefore one has to make a difference between these couplings at 1-loop level. In order to match $g_s$ to the experimentally measured coupling, it is renormalized in the  $\overline{\mathrm{MS}}$-scheme (with an additional manipulation for heavy particles, which will be explained in section \ref{sec:RenGaugeCoupling}). The Yukawa coupling $\hat{g}_s$ therefore needs to be added with the difference of the supersymmetry restoring counterterms from the $q\tilde{q}^\dagger\tilde{g}$ vertex and the $q\overline{q}G$ vertex at 1-loop in order to be renormalized in the same way.
 
 
 %An alternative procedure is used in \cite{Beenakker:1996ch}, where only one supersymmetry restoring counterterm, which translates between the renormalized gauge coupling $g_s$ and the renormalized Yukawa coupling $\hat{G}_s$ is needed. That is possible because the only supersymmetry violation comes from the gauge sector. For a comprehensive discussion of this issue see [Philipp Vasros Diplomarbeit and the paper with Dominik]\\
@@ -221,7 +224,7 @@ The squark self-energy exhibits no regularization dependence. The transition cou
 \delta Z_{\tilde{q}}^{\mathrm{trans}} = \delta m_{\tilde{q}}^{2\ \mathrm{trans}} = 0. \label{eq:SquarkSC}
 \end{align}
 
-\subsubsection*{The Glunio Self-Energy}
+\subsubsection*{The Gluino Self-Energy}
 The 4-spinor of the gluino comprises two Weyl spinors which describe very different particles.
 \begin{align}
 \tilde{g}^a = \begin{pmatrix}
@@ -358,7 +361,7 @@ Apart from the renormalization constant of the gauge coupling and the supersymme
 &= -\mathcal{M}^B  \delta Z_{\tilde{g}}^L + 2  \frac{ m_{\tilde{g}}}{t_{\tilde{g}}} \left( -2g_s^2 \frac{\left\langle v_2 |P_R \slashed{k}_3|u_1\right\rangle}{t_{\tilde{g}}} T^a_{\delta \beta} T^a_{\gamma \alpha} \right)\delta m_{\tilde{g}}\nonumber\\ 
 & \hspace{2cm}+ 2 \frac{ m_{\tilde{g}}}{u_{\tilde{g}}} \left( 2g_s^2 \frac{\left\langle v_2 |P_L \slashed{k}_3|u_1\right\rangle}{u_{\tilde{g}}} T^a_{\gamma\beta} T^a_{\delta\alpha} \right)\delta m_{\tilde{g}}.
 \end{align}
-Where $\delta Z^R_{\tilde{g}}$ drops out already in $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ as the octino does neither couple to quarks nor to squarks, the renormalization constant of the actual gluino $\delta Z^L_{\tilde{g}}$ drops out when $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ and $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}}$ are added. This is also true in a more general case, i.e. the renormalization constants of virtual particles do always drop out.
+Where $\delta Z^R_{\tilde{g}}$ drops out already in $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ as the octino does neither couple to quarks nor to squarks. The renormalization constant of the actual gluino $\delta Z^L_{\tilde{g}}$ drops out when $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ and $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}}$ are added. This is also true in a more general case, i.e. the renormalization constants of virtual particles do always drop out. This may be understood in the path integral approach of quantum field theory\cite{Peskin}: When considering a certain process, the Green function corresponding to this process, can be expressed as a path integral over fields within the theory. The field of virtual particles does not occur next to the path integral measure, in contrast to the fields of external particles. This means, that rescaling a field of an inner particle has no influence on the Green function. Ergo the field renormalization constants of any virtual particle must always drop out when considering a certain process.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1 pt, scale=1]
@@ -805,7 +808,7 @@ To quickly check for UV-finiteness of a Greenfunction or a physical observable i
 & \delta Z_{\sigma^0} = 0 && \delta m_{\sigma^0}^2 = 0\nonumber\\
 & \delta Z_{G} = -\frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}} 2T(F) n_f
 \end{align}
-Note that the renormalization constants $\delta m_{\tilde{g}}$, $\delta m^2_{\phi^0}$ and $\delta m^2_{\sigma^0}$ are not independent from each other as the masses of the gluino and the two sgluons stam from only two parameters, i.e. $m_{\tilde{g}}$ and $m_{\sigma}^2$ from the softly breaking part of the Lagrangian, eq. \eqref{eq:L_RSQCD}. 
+Note that the renormalization constants $\delta m_{\tilde{g}}$, $\delta m^2_{\phi^0}$ and $\delta m^2_{\sigma^0}$ are not independent from each other as the masses of the gluino and the two sgluons arise  from only two parameters, i.e. $m_{\tilde{g}}$ and $m_{\sigma}^2$ from the softly breaking part of the Lagrangian, eq. \eqref{eq:L_RSQCD}. 
 In additions it happens that the particle content of RSQCD is such that $\frac{\delta g_s}{g_s} = 0$. This means that the $\beta$ function of $g_s$ equals zero at 1-loop-level if one does not choose to decouple heavy particles from the running as has been done in this thesis. However at 2-loop-level there is a non-zero $\beta$ function of $g_s$, which has been calculated by \texttt{SARAH}.
 
 
@@ -818,7 +821,7 @@ To extract infrared divergences \texttt{LoopTools} has been used. This  tool pro
 \begin{figure}[!htpb]
 \begin{center}
 \includegraphics[scale=.5]{figures/MatrixElement_SE_Vertices_Boxes}
-\caption{•}
+\caption{bla}
 \end{center}
 \end{figure}
 

@@ -149,7 +149,7 @@ $d_{i}$ \hspace{0.5cm} down-type-quark & $d$ \hspace{0.5cm} down-quark & $s$ \hs
 $e_i$ \hspace{0.5cm} charged lepton & $e$ \hspace{0.5cm} electron & $\mu$ \hspace{0.5cm} muon &  $\tau$ \hspace{0.5cm} tau\\
 $\nu_i$ \hspace{0.5cm} neutrino & $\nu_e$ \hspace{0.35cm} electron neutrino & $\nu_\mu$ \hspace{0.35cm} muon neutrino &  $\nu_\tau$ \hspace{0.35cm} tau neutrino
 \end{tabular}
-\caption{The matter particles of the Standard Model. Listed are the symbol and the name of the particles. The labeling of particles has been taken from \cite{Bach}. The shortcut charged lepton refers to electrically charged leptons.}\label{tab:generations}
+\caption{The matter particles of the Standard Model. Listed are the symbol and the name of the particles. The labeling of particles has been taken from \cite{Diessner, Bach}. The shortcut charged lepton refers to electrically charged leptons.}\label{tab:generations}
 \end{center}
 \end{table}
 Quarks and leptons are the matter particles of the Standard Model. They are listed together with their charges for the different forces in table \ref{tab:SMfieldcontent}. There is the color for strong interactions, the third component of the weak isospin $I_3$ for weak interactions (the eigenvalue of the third generator of the $SU(2)_L$) and the half of the hypercharge $\frac{Y}{2}$ to obtain the electric charge $Q$ via the Gell-Mann–Nishijima formula: $Q = I_3 + \frac{Y}{2}$.\\
@@ -187,7 +187,7 @@ right-handed leptons & $e_{iR}$ & - & 0 & $+1$ & $+1$\\
 \hline
 Higgs & $H$ & - & $-\frac{1}{2}$ & $+\frac{1}{2}$ & $0$
 \end{tabular}
-\caption{This table lists all matter particles in the Standard Model and the Higgs particle with their charges for all forces. This is the color, the weak isospin $I_3$, the half of their hypercharge and their electrical charge. The index $i = 1,2,3$ labels the generation of the matter particles and is written out in table \ref{tab:generations}. If there are no colors specified or charges are zero this means that the fields in question transform trivially under the pertaining gauge transformation. In fact, the Higgs particle originates from a $SU(2)_L$-doublet. This is not given here because within a certain gauge only the Higgs particle is a real particle. }\label{tab:SMfieldcontent}
+\caption{This table lists all matter particles in the Standard Model and the Higgs particle with their charges for all forces. This is the color, the weak isospin $I_3$, the half of their hypercharge and their electrical charge. The index $i = 1,2,3$ labels the generation of the matter particles and is written out in table \ref{tab:generations}. If there are no colors specified or charges are zero this means that the fields in question transform trivially under the pertaining gauge transformation. In fact, the Higgs particle originates from a $SU(2)_L$-doublet. This is not given here because only the Higgs particle, is a real particle. The other degrees of freedom of the doublet can be absorbed into the longitudinally polarized degrees of freedom of the three massive gauge bosons, see section \ref{sec:EWSB}.}\label{tab:SMfieldcontent}
 \end{center}
 \end{table}
 
@@ -197,12 +197,12 @@ Higgs & $H$ & - & $-\frac{1}{2}$ & $+\frac{1}{2}$ & $0$
 \begin{tabular}{c|c|c?c|c|c}
 \multicolumn{3}{c?}{Before EWSB} & \multicolumn{3}{c}{After EWSB}\\
 \hlinewd{2pt}
-group & coupling constant & gauge field & coupling constant & gauge field & Particle\\
+Group & Coupling Constant & Gauge Field & Coupling Constant & Gauge Field & Particle\\
 \hlinewd{2pt}
-$SU(3)_C$ & $g_s$ & $G^a_\mu$ & $g_s$ & $G^a_\mu$ & Gluon\\
+$SU(3)_C$ & $g_s$ & $G^a_\mu$ & $g_s$ & $G^a_\mu$ & gluon\\
 $SU(2)_L$ & $g_w$ & $W^b_\mu$ & $g_W = \sqrt{2}g_w$,  &  $W^\pm_\mu$,  & $W^\pm$,  \\
- & & & $g_Z = \sqrt{g_w^2 + g_Y^2}$ & $Z^0_\mu$ & $Z^0$ Boson\\
-$U(1)_Y$ & $g_Y$ & $B_\mu$ & $e = g_Y\cdot c_w$ & $A_\mu$ & Photon
+ & & & $g_Z = \sqrt{g_w^2 + g_Y^2}$ & $Z^0_\mu$ & $Z^0$ boson\\
+$U(1)_Y$ & $g_Y$ & $B_\mu$ & $e = g_Y\cdot c_w$ & $A_\mu$ & photon
 \end{tabular}
 \caption{The gauge fields and their coupling constants before and after electro weak symmetry breaking (EWSB). The Gluon field is not affected by EWSB. $a = 1,\hdots 8$ and $b=1,2,3$ label the number of gauge fields. $c_w$ is the cosine of the electroweak mixing angle defined in \ref{sec:EWSB}.}\label{tab:force_particles}
 \end{center}
@@ -226,7 +226,7 @@ The kinetic terms of the gauge fields are given by
 
 
 \subsection{Electroweak Symmetry Breaking}\label{sec:EWSB}
-So far, no mass terms like in the Dirac Lagrangian \ref{eq:DiracLagrangian} have been introduced. The reason for this is that they are not gauge invariant, for left- and right-handed spinors transform differently. The same argument forbids terms like $-\frac{m^2}{2}A^\mu A_\mu$ for a generic gauge boson. Electroweak symmetry breaking (EWSB) ascribes masses to those particles \cite{Higgs:1964ia, Higgs:1964pj, Higgs:1966ev, Englert:1964et, Guralnik:1964eu, Kibble:1967sv, Bernstein:1974rd}. To this end one considers a complex scalar doublet
+So far, no mass terms like in the Dirac Lagrangian \eqref{eq:DiracLagrangian} have been introduced. The reason for this is that they are not gauge invariant, for left- and right-handed spinors transform differently. The same argument forbids terms like $-\frac{m^2}{2}A^\mu A_\mu$ for a generic gauge boson. Electroweak symmetry breaking (EWSB) ascribes masses to those particles \cite{Higgs:1964ia, Higgs:1964pj, Higgs:1966ev, Englert:1964et, Guralnik:1964eu, Kibble:1967sv, Bernstein:1974rd}. To this end one considers a complex scalar doublet
 \begin{align}
 \Phi = \begin{pmatrix}
 \phi^+ \\ 
@@ -251,7 +251,11 @@ The Higgs doublet couples to the gauge fields of $SU(2)_L$ and $U_Y(1)$ in the f
 \frac{1}{\sqrt{2}} (v + H(x) + i\sigma(x))
 \end{pmatrix}
 \end{align}
-one obtains quadratic terms, i.e. mass terms, for the gauge fields in question. In order to obtain mass eigenstates out of $B_\mu$ and $W_\mu^3$ and charge eigenstates for $Q$ and $I_3$ out of $W_\mu^1$ and $W_\mu^2$ one performs the transformation
+one obtains quadratic terms, i.e. mass terms, for the gauge fields in question and the Higgs field $H$. The mass of the Higgs boson is then given by
+\begin{align}
+m_H = \mu.
+\end{align}
+In order to obtain mass eigenstates out of $B_\mu$ and $W_\mu^3$ and charge eigenstates for $Q$ and $I_3$ out of $W_\mu^1$ and $W_\mu^2$ one performs the transformation
 \begin{align}
 &\begin{pmatrix}
 A_\mu \\
@@ -293,7 +297,7 @@ Secondly, there is a ghost Lagrangian
 \mathcal{L}_{\mathrm{ghost}} = -\overline{c}_a \partial^\mu \left( \partial_\mu c_a + g_s f_{abc} c_b G_{c \mu} \right) + \mathcal{L}_{\mathrm{weak\ ghosts}}.\label{eq:GhostLagrangian}
 \end{align}
 The ghost Lagrangian corresponding to the electroweak sector is not needed within this thesis and due to its lengthy form not quoted here. It can found in \cite{book:811554}. %[S622]
-In eq. \ref{eq:GhostLagrangian} $c_a$ and $\overline{c}_a$ are the Faddeev-Popov ghost and antighosts. This fields do not correspond to physical particles because they violate the spin–statistics theorem, i.e. they anticommute while being spin 0 fields. Ghost fields are an elegant way of accounting for an additional term in the Lagrangian of non-abelian gauge fields which is best seen in the path integral quantization\cite{Peskin}.
+In eq. \eqref{eq:GhostLagrangian} $c_a$ and $\overline{c}_a$ are the Faddeev-Popov ghosts and antighosts. This fields do not correspond to physical particles because they violate the spin–statistics theorem, i.e. they anticommute while being spin 0 fields. Ghost fields are an elegant way of accounting for an additional term in the Lagrangian of non-abelian gauge fields which is best seen in the path integral quantization\cite{Peskin}.
 
 \subsection{Lagrangian of the Standard Model}
 The complete Lagrangian of the Standard Model reads
