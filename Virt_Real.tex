@@ -1,15 +1,16 @@
 \section{Virtual and Real Corrections}\label{sec:VirtRealCorr}
-The results calculated in the previous chapter are not the full theoretical predictions for the different processes but only the first term in a perturbation series of $\alpha_s$.\\
-This section describes the necessary steps in the calculation of the squark production cross section at next-to-leading-order, i.e. its $\mathcal{O}(\alpha_s)$-correction.\\
+The results calculated in the previous chapter are not the full theoretical predictions for the cross sections of the different processes but only the first term in a perturbation series of $\alpha_s$.\\
+This section describes the necessary steps in the calculation of the squark production cross section at next-to-leading order, i.e. its $\mathcal{O}(\alpha_s)$-correction.\\
 \ignore{Reason validity of perturbation theory in this context.}
 
 
 \subsection{Virtual Correction}
-According to quantum field theory the $\mathcal{O}(\alpha_s)$ correction to a tree level process includes the computation of one-loop diagrams such as shown in fig. \ref{fig:1loopdiagrams}. To yield $\mathcal{O}(\alpha_s)$ corrections in the cross section the interference term between the one-loop amplitude $\mathcal{M}^{\mathrm{1L}}$ and the Born amplitude $\mathcal{M}^{\mathrm{B}}$ needs to be considered. However the virtual amplitude 
+According to quantum field theory the $\mathcal{O}(\alpha_s)$ correction to a tree-level process includes the computation of one-loop diagrams such as shown in fig. \ref{fig:1loopdiagrams}. To yield $\mathcal{O}(\alpha_s)$ corrections in the cross section, the interference term between the one-loop amplitude $\mathcal{M}^{\mathrm{1L}}$ and the Born amplitude $\mathcal{M}^{\mathrm{B}}$ needs to be considered. 
 \begin{align}
-\left( \mathcal{M}^{\mathrm{V}} \right)^2 = \mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast} + \mathcal{M}^{\mathrm{1L}} \mathcal{M}^{\mathrm{B}\ast} = 2 \Re \left( \mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast} \right)
+\left| \mathcal{M}^{\mathrm{B}} + \mathcal{M}^{\mathrm{1L}} \right|^2 &= \left| \mathcal{M}^{\mathrm{B}} \right|^2 + \mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast} + \mathcal{M}^{\mathrm{1L}} \mathcal{M}^{\mathrm{B}\ast} + \left| \mathcal{M}^{\mathrm{1L}} \right|^2\nonumber\\
+&= \left| \mathcal{M}^{\mathrm{B}} \right|^2 + 2 \Re \left( \mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast} \right) + \mathcal{O}(\mbox{2-loop})
 \end{align}
-contains divergences. These come from integrals over undetermined momentum and energy of particles running in loops.
+However, this term contains divergences. These come from integrals over undetermined momentum and energy of particles running in loops.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -58,10 +59,10 @@ contains divergences. These come from integrals over undetermined momentum and e
 	\draw[scalar](0.5,-0.5)--(1.5,-0.5);
 \end{scope}
 \end{tikzpicture}
-\caption{A selection of diagrams contributing to the 1-loop matrix element for squark production. Each diagram is a representative of a certain diagram type. In the first line an example for a self-energy and a vertex-correction diagram is shown. The second line lists typical box-diagrams: a three-point box and a four-point box.}\label{fig:1loopdiagrams}
+\caption{A selection of diagrams contributing to the 1-loop matrix element for squark production. Each diagram is a representative of a certain topology. In the first line, an example for a self-energy and a vertex-correction diagram is shown. The second line lists typical box-diagrams: a three-point box and a four-point box.}\label{fig:1loopdiagrams}
 \end{center}
 \end{figure}
-Due to their origin these divergences are referred to as ultraviolet (UV) and infrared divergences (IR).
+Due to their origin these divergences are referred to as ultraviolet (UV) or infrared divergences (IR).
 Ultraviolet divergences occur when loop momenta and energy tend to infinity which corresponds to arbitrary short distance interactions. However, these divergences are cured by first regularizing them and then introducing appropriate counterterms\footnote{These counterterms have to be of the same $\mathcal{O}(\hbar)$ as the loop diagrams they are constructed to cancel \cite{lahiri2005first}.} in the Lagrangian to cancel the extracted singularities. The second step is called renormalization and can be understood as a redefinition or rescaling of parameters and fields in the Lagrangian in the first place:
 \begin{align}
 & \phi^0 / \sigma^0 \to \sqrt{Z_{\phi^0 / \sigma^0}}\phi^0 / \sigma^0 && \tilde{q}_{L/R} \to \sqrt{Z_{\tilde{q}_{L/R}}}\tilde{q}_{L/R}\nonumber\\
@@ -70,18 +71,31 @@ Ultraviolet divergences occur when loop momenta and energy tend to infinity whic
 & g_s \to g_{s\ \mathrm{bare}} && m_{\tilde{q}}^2 \to m_{\tilde{q}\ \mathrm{bare}}^2\nonumber\\
 &  m_{\sigma}^2 \to m_{\sigma\ \mathrm{bare}}^2 && m_{\tilde{g}} \to m_{\tilde{g}\ \mathrm{bare}}\label{eq:parametertrafo}
 \end{align}
-In this thesis the computation of amplitudes is performed in $D = 4-2\epsilon$ dimensions in order to regularize infinities. Ultraviolet divergences show then up as single poles in $\epsilon$. The renormalization will be discussed in detail in section \ref{sec:renMRSSM} and \ref{sec:LSZ}.\\
-Having removed the ultraviolet divergences the matrix element is not free of divergences as it comprises infrared divergences. These split into soft and collinear (or mass) singularities\footnote{The names differ in the literature. Often infrared divergences are used as a synonym for soft divergences.} which cannot be removed by means of renormalization. These additional singularities show up as single and double poles of $\epsilon$ in the matrix element $\mathcal{M^{\mathrm{1L}}}$ and the virtual cross section which is obtained after performing the 2-body phase space  integration as in eq. \eqref{eq:sigma_tree} but over $\left(\mathcal{M^{\mathrm{V}}}\right)^2$:
+In this thesis the computation of amplitudes is performed in $D = 4-2\epsilon$ dimensions in order to regularize infinities. Ultraviolet divergences then show up as single poles in $\epsilon$. The renormalization will be discussed in detail in section \ref{sec:renMRSSM} and \ref{sec:LSZ}.\\
+Having removed the ultraviolet divergences the matrix element is not free of divergences as it still comprises infrared divergences. These split into soft and collinear (or mass) singularities\footnote{The names differ in the literature. Often infrared divergences are used as a synonym for soft divergences. The name soft and collinear divergences is explained within the next section} which cannot be removed by means of renormalization. These additional singularities show up as single and double poles in $\epsilon$ in the matrix element $\mathcal{M^{\mathrm{1L}}}$ and the virtual cross section which is obtained after performing the 2-body phase space integration as in eq. \eqref{eq:sigma_tree} but over $2 \Re \left( \mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast} \right)$:
 \begin{align}
 \frac{\mbox{d}^2 \sigma^{\mathrm{V}}}{\mbox{d}t\ \mbox{d}u} =& \frac{K_{ab}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_1^2m_2^2}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_1^2m_2^2)\nonumber\\
-&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum \left(\mathcal{M}^{\mathrm{V}}\right)^2.\label{eq:diffsigma}
+&\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum 2 \Re \left( \mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast} \right).\label{eq:diffsigma}
 \end{align}
-The single poles correspond to soft or collinear divergences whereas the double poles correspond to the coincidence of soft and collinear divergences.
+The single poles correspond to soft and collinear divergences whereas the double poles correspond to the coincidence of soft and collinear divergences.
 
 
 \subsection{Real Corrections}
-A crucial thing to recognize in the calculation of the $\mathcal{O}(\alpha_s)$ correction to the squark production cross section is that not only virtual corrections but also real corrections give rise to this physical observable. This is because one does not measure the final state partons but the jets in which they hadronize in, due to confinement. This means that a radiation of a massless particle whose energy tends to zero or the radiation of a  particle which is collinear to one of the final state particles is in experiment measured as a two jet event even though there are three particles in the final state of the calculation.\\
-However, real corrections also contain divergences. Including these contributions to the cross section causes the cancellation of single poles coming from soft divergences and the cancellation of double poles. At this point the only singularities which are left in the cross section are the collinear ones.\\
+A crucial thing to recognize in the calculation of the $\mathcal{O}(\alpha_s)$ correction to the squark production cross section is that not only virtual corrections but also real corrections give rise to this physical observable. This is because one does not measure final state partons but jets, which consist of hadrons which in turn consist of partons. This means that the radiation of a massless particle whose energy tends to zero or the radiation of a particle which is collinear to one of the final state partons of the tree-level process can in experiment not be distinguished from the tree-level process, for both processes may give rise to the same number of jets. Ergo, the cross section of squark production at $\mathcal{O}(\alpha_s^3)$ is given by
+\begin{align}
+\sigma^{\mathrm{NLO}} = \sigma^{\mathrm{B}} + \sigma^{\mathrm{V}} + \sigma^{\mathrm{R}},
+\end{align}
+where $\sigma^{\mathrm{R}}$ donates the cross section arising from real corrections. However, real corrections also contain divergences. To see how these arise, consider the second diagram in fig. \ref{fig:RealGluon}. The propagator of the quark which radiates off a gluon gives a contribution of the form
+\begin{align}
+\frac{1}{(p_q + p_g)^2 - m_q^2} = \frac{1}{p_q \cdot p_g} = \frac{1}{2E_qE_g(1-\beta_q \cos \theta_{qg})} \hspace{2cm} \mathrm{with}\ \beta_q = \frac{|\vec{p}_q|}{E_q}
+\end{align}
+to the diagram in question. Here, $p_q$, $p_g$ ($E_q$, $E_g$) are the quark's and gluon's four-momentum (energy) and $\theta_{qg}$ is the angle between the quark's and gluon's three-momentum. One observes two potentially singular limits
+\begin{align}
+\mathrm{soft\ gluon:}& \hspace{1cm} E_g \to 0\\
+%& \hspace{1cm} E_q \to 0 \hspace{1cm} \mathrm{if}\ m_q \to 0\\
+\mathrm{collinear\ particles:}& \hspace{1cm} \theta_{qg} \to 0 \hspace{1cm} \mathrm{if}\ m_q \to 0.\label{eq:collLimit}
+\end{align}
+Including these singularities into the cross section causes the cancellation of single poles coming from the virtual cross section and the soft divergences coming from the real cross section as well as the cancellation of double poles. At this point the only singularities which are left in the sum of real and virtual cross section are collinear ones, coming from the real correction.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -113,32 +127,27 @@ However, real corrections also contain divergences. Including these contribution
 	\draw[gluon] (1,0)--(2,0);
 \end{scope}
 \end{tikzpicture}
-\caption{A selection of real gluon emission diagrams contributing to squark production. Again each diagram is a representative of a certain diagram type. The first one is final state gluon emission, the second one initial state gluon radiation and the third one is the radiation of a gluon from a virtual particle within the diagram.}\label{fig:RealGluon}
+\caption{A selection of real gluon emission diagrams contributing to squark production. Each diagram is a representative of a certain diagram type. The first one is final state gluon emission, the second one initial state gluon radiation and the third one is the radiation of a gluon from a virtual particle within the diagram.}\label{fig:RealGluon}
 \end{center}
-\end{figure}
-To see how these are removed, consider the second diagram in fig. \ref{fig:RealGluon}. The propagator of the quark which radiates off a gluon gives a contribution of the form
+\end{figure}\\
+To see how these are removed, consider the collinear limit \eqref{eq:collLimit}. Within this limits the inner quark can almost be considered as on-shell which means that it may travel a long distance between the emission of a gluon and taking part in the actual interaction. This suggest that some divergences may come from the incoming hadron and are actually not associated with the hard interaction. In fact this turns out to be the case: The remaining collinear divergences have a generic form and can be absorbed into the parton density functions. Within the $\overline{\mathrm{MS}}$-scheme, the redefinition of parton density functions is given by:\cite{Harris:2001sx}
 \begin{align}
-\frac{1}{(p_q + p_g)^2 - m_q^2} = \frac{1}{p_q \cdot p_g} = \frac{1}{2E_qE_g(1-\beta_q \cos \theta_{qg})} \hspace{2cm} \mathrm{with}\ \beta_q = \frac{\vec{p}_q}{E_q}
+f_{P_i / H}(x,\mu_f) = f(x) + \left( -\frac{1}{\epsilon} \right)\left[ \frac{\alpha_s}{2\pi} \frac{\Gamma(1-\epsilon)}{\Gamma(1-2\epsilon)} \left( \frac{4\pi\mu_R^2}{\mu_F^2} \right)^\epsilon\right] \int_1^x\frac{\mathrm{d}z}{z} P_{P_i P_j}(z)f_{P_j / H}(\frac{x}{z}).
 \end{align}
-to the diagram in question. Here, $p_q$, $p_g$ ($E_q$, $E_g$) are the quark's and gluon's four-momentum (energy) and $\theta_{qg}$ is the angle between the quark's and gluon's three-momentum. One observes two potentially singular limits
-\begin{align}
-\mathrm{soft\ gluon:}& \hspace{1cm} E_g \to 0\\
-%& \hspace{1cm} E_q \to 0 \hspace{1cm} \mathrm{if}\ m_q \to 0\\
-\mathrm{collinear\ particles:}& \hspace{1cm} \theta_{qg} \to 0 \hspace{1cm} \mathrm{if}\ m_q \to 0.
-\end{align}
-Within these limits the inner quark can almost be considered as on-shell which means that it may travel a long distance between the emission of a gluon and taking part in the actual interaction. This suggest that some divergences may come from the incoming hadron and are actually not associated with the interaction. In fact this turns out to be the case: The remaining collinear divergences have a generic form (given in [...]) and can, by redefinition, be absorbed into the parton density functions. This procedure is referred to as mass factorization \cite{dissertori2003quantum}. In fact the Kinoshita-Lee-Naunberg-Theorem \cite{1962JMP.....3..650K},\cite{PhysRev.133.B1549} guarantees the finiteness of sufficiently inclusive observables.\\
-Figure \ref{fig:DivergenceSummary} summarizes the required steps to render the next-to-leading-order cross section finite.
+Here, the indices $P_i$ label partons, i.e. quarks or the gluon, and $H$ labels the hadron in which the partons are confined. $\Gamma(\hdots)$ is the Gamma function and $P_{P_i P_j}(x)$ are the Altarelli-Parisi-kernels\cite{Altarelli:1977zs} which are a measure for the propability of finding a parton $P_i$ with momentum fraction $x$ within a parton $P_j$. This procedure of removing collinear divergences is referred to as mass factorization \cite{dissertori2003quantum}.\\
+In fact, apart from this removal of collinear divergences, the Kinoshita-Lee-Naunberg-Theorem \cite{1962JMP.....3..650K},\cite{PhysRev.133.B1549} guarantees the finiteness of sufficiently inclusive observables, i.e. the cancellation of soft divergences between virtual and real corrections.\\
+Figure \ref{fig:DivergenceSummary} summarizes the required steps to render the next-to-leading order cross section finite.
 \begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
 	\node [block1a] (Mvirt) {$\mathcal{M}^{\mathrm{1L}}$ is UV- and  IR-divergent};
 	\node [block2a] at (6,0) (Mreal) {$\mathcal{M}^{\mathrm{real}}$ is IR-divergent};
 	\node [block1a] at (0,-2) (Mvirtren) {$\mathcal{M}^{\mathrm{1L}}$ is IR-divergent};
-	\path [line, line width = 1] (Mvirt) --node[right] {renormalize} (Mvirtren);
+	\path [line, line width = 1] (Mvirt) --node[right] {renormalization} (Mvirtren);
 	\node [block1b] at (0,-4) (svirtren) {$\sigma^{\mathrm{virt}}$ is IR-divergent};
 	\node [block2b] at (6,-4) (sreal) {$\sigma^{\mathrm{real}}$ is IR-divergent};
-	\path [line, line width = 1] (Mvirtren) --node[right] {integrate phase space} (svirtren);
-	\path [line, line width = 1] (Mreal) --node[right] {integrate phase space} (sreal);
+	\path [line, line width = 1] (Mvirtren) --node[right] {phase space integration} (svirtren);
+	\path [line, line width = 1] (Mreal) --node[right] {phase space integration} (sreal);
 	\node [block2b] at (6, -6) (srealfac) {$\sigma^{\mathrm{real}}$ is IR-divergent};
 	\path [line, line width = 1] (sreal) --node[right] {mass factorization} (srealfac);
 	\node [block3] at (3,-8) (snlo) {$\sigma^{\mathrm{NLO}} = \sigma^{\mathrm{virt}} + \sigma^{\mathrm{real}}$ is finite};
@@ -151,11 +160,11 @@ Figure \ref{fig:DivergenceSummary} summarizes the required steps to render the n
 
 
 \subsubsection*{Real Gluon Radiation}
-A representative set of Feynman-diagrams for real gluon emission are shown in fig. \ref{fig:RealGluon}. In order to extract the singularities the so called ``two-cut phase space slicing method''[cite??] has been adopted. Within this approach the phase space has been divided into different regimes: a soft part ($S$), a hard collinear part ($HC$) and a hard non-collinear part ($H\overline{C}$):
+A representative set of Feynman-diagrams for real gluon emission are shown in fig. \ref{fig:RealGluon}. In order to extract the singularities the so called ``two-cut phase space slicing method''\cite{Harris:2001sx} has been adopted. Within this approach, the phase space has been divided into different regimes: a soft part ($S$), a hard collinear part ($HC$) and a hard non-collinear part ($H\overline{C}$):
 \begin{align}
 \sigma^{\mathrm{R}} = \int_S \mathrm{d}\sigma^{\mathrm{R}} + \int_H \mathrm{d}\sigma^{\mathrm{R}} = \int_S \mathrm{d}\sigma^{\mathrm{R}} + \int_{HC} \mathrm{d}\sigma^{\mathrm{R}} + \int_{H\overline{C}}\mathrm{d} \sigma^{\mathrm{R}}.
 \end{align}
-In the soft part the energy of the outgoing gluon is only integrated up to  $\delta_s \frac{\sqrt{s}}{2}$ where $\delta_s$ is a cut on which the final result must not depend on. A second cut $\delta_c$ is introduced to separate the collinear from the non-collinear region. After deviding the phase space in the three mentioned part, each integration is performed analytically in $D = 4 - 2\epsilon$ dimensions. After performing mass factorization and adding up all three contributions, the real corrections do not depend on the two cut parameters $\delta_s$ and $\delta_c$. Furthermore the $\frac{1}{\epsilon^2}$ and $\frac{1}{\epsilon}$ poles have exactly the opposite sign of the ones extracted from the virtual corrections.
+In the soft part, the energy of the outgoing gluon is only integrated up to  $\delta_s \frac{\sqrt{s}}{2}$ where $\delta_s$ is a cut on which the final result must not depend on and $\sqrt{s}$ is the center of mass energy of the colliding partons. A second cut $\delta_c$ is introduced to separate the collinear from the non-collinear region. After dividing the phase space into the three mentioned parts, each integration is performed separately. In the parts containing divergences, i.e. the soft and hard collinear part, the integration over the gluons four-momentum is performed analytically in $D = 4 - 2\epsilon$ dimensions. After performing mass factorization and adding up all three contributions, the real corrections do not depend on the two cut parameters $\delta_s$ and $\delta_c$. Furthermore the $\frac{1}{\epsilon^2}$ and $\frac{1}{\epsilon}$ poles have exactly the opposite sign of the ones extracted from the virtual corrections.
 
 
 
@@ -206,6 +215,7 @@ These singularities are treated by introducing a non-zero width $\Gamma_{\tilde{
 \frac{1}{p^2 - m_{\tilde{q}}^2} \to \frac{1}{p^2 - m_{\tilde{q}}^2 + i m_{\tilde{q}} \Gamma_{\tilde{q}}}.
 \end{align}
 Integrating over the regime of phase space, where the gluino approaches its mass-shell, actually gives the tree-level contribution of the process $qG \to \tilde{q}\tilde{g}$ weighted by the branching ratio $\frac{\Gamma_{\tilde{q}\to q \tilde{g}}}{\Gamma_{\tilde{q}}}$. To avoid double counting, one has to cut this very regime of phase space out and subtract it from the total contribution originating from those diagrams. For a detailed prescription on how to deal with this issue, see \cite{Beenakker:1996ch, Gavin:2013kga}.
+
 
 
 \newpage

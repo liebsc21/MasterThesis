@@ -67,6 +67,38 @@
 \usepackage[]{units}
 % Package for code extracts
 \usepackage{listings}
+\lstset{breaklines=true,
+  breakatwhitespace=true,
+  stepnumber=1,
+  basicstyle=\ttfamily\footnotesize,
+  commentstyle=\ttfamily,
+  prebreak={\textbackslash},
+  breakindent=10pt,
+  breakautoindent=false,
+  showspaces=false,
+  showstringspaces=false,
+  frame=single,
+  abovecaptionskip=0em,
+  aboveskip=1.4em,
+  belowcaptionskip=0.5em,
+  belowskip=1em,
+  keywordstyle=\ttfamily,
+}
+\definecolor{light}{RGB}{245,245,245}
+\lstdefinestyle{Mybash}{
+  language=bash,
+  backgroundcolor=\color{light}
+}
+\lstdefinestyle{MyMathematica}{
+  language=Mathematica,
+  backgroundcolor=\color{light}
+}
+\lstdefinestyle{Mycpp}{
+  language=C++,
+  backgroundcolor=\color{light}
+}
+% diagonal separtion in table
+\usepackage{slashbox}
 
 % comment within a line
 \newcommand{\ignore}[1]{}

@@ -4,7 +4,7 @@ The production of sgluons is not included in the following analysis. However, th
 \begin{align}
 q\overline{q} \to \phi_0\phi_0\ (\sigma_0\sigma_0), \hspace{2cm} GG \to \phi_0\phi_0\ (\sigma_0\sigma_0).
 \end{align}
-To give a reasonable and consistent prediction of hadronic cross sections, a scenario with large sgluon mass, i.e. soft breaking parameter $m_\sigma = \unit[5]{TeV}$, is considered. This validates the negligence of sgluon production as in this case they are too heavy to significantly produce them at the LHC with $\sqrt{S} = \unit[13]{TeV}$. See \cite{Choi:2008ub, GoncalvesNetto:2012nt} for a calculation of the sgluon production cross section. \ignore{Feynman diagrams there are only ones, one can only produce sigma,sigma or phi,phi but not sigma,phi}
+To give a reasonable and consistent prediction of hadronic cross sections, a scenario with large sgluon mass, i.e. soft breaking parameter $m_\sigma = \unit[5]{TeV}$, is considered. This validates the negligence of sgluon production as in this case they are too heavy to significantly produce them at the LHC with $\sqrt{S} = \unit[13]{TeV}$. See \cite{Choi:2008ub, GoncalvesNetto:2012nt, phdWojciech} for a calculation of the sgluon production cross section. \ignore{Feynman diagrams there are only ones, one can only produce sigma,sigma or phi,phi but not sigma,phi}
 Section \ref{sec:PartProcesses} gives analytic results for the parton reaction before the next section describes how the hadronic cross section is obtained. Section \ref{sec:tree-level_cross_sections} presents the hadronic cross section of all considered processes for various choices of squark and gluino mass. In particular, squark production is considered more closely. This includes the statement of uncertainties of the calculation.
 
 
@@ -536,7 +536,7 @@ As the production of the final state $X$ may proceed via various initial partons
 \end{align}
 where the sum runs over all partons $P_i$ ($P_j$) which are in the hadron $H_1$ ($H_2$).\\
 To get an intuitive idea of this factorization, regard the hadrons as extended objects consisting of partons\footnote{The proton is considered as composed of three valence quarks: Two up-quarks and one down-quark. In addition there are gluons and seaquarks, i.e. virtual quark-antiquark pairs.} which are permanently interacting which each other. Now consider two colliding hadrons in their center-of-mass frame. Due to Lorentz contraction the hadrons appear as thin discs and the parton's mutual interactions are time-delayed within this frame. This effectively means that a hadron at the time of collision is virtually frozen.\\ % maybe picture of colliding discs\\
-This in turn implies that the hadron consists, at the time of collision, of a definite number of partons which can be thought of as carrying a definite fraction of the hadron's  momentum $p_{\mathrm{Part}} = x p_{\mathrm{Had}}$ with $x \in \left\{0, 1 \right\}$. The parton density function $f_{P/H}(x)$ can therefore be understood as the probability of finding a parton $P$ within the hadron $H$ carrying $x$ of its momentum. 
+This in turn implies that the hadron consists, at the time of collision, of a definite number of partons which can be thought of as carrying a definite fraction of the hadron's  momentum $p_{\mathrm{Part}} = x p_{\mathrm{Had}}$ with $x \in \left\{0, 1 \right\}$. The parton density function $f_{P/H}(x)$ can (at tree-level) therefore be understood as the probability of finding a parton $P$ within the hadron $H$ carrying $x$ of its momentum fraction. 
 \begin{figure}[!htbp]
 \begin{center}
 \includegraphics[scale=0.6]{figures/pdf's}
@@ -549,7 +549,7 @@ This in turn implies that the hadron consists, at the time of collision, of a de
 \caption{Hadronic cross section for squark production in the MRSSM at the LHC at $\sqrt{S} = \unit[13]{GeV}$. The ratio of the gluino and squark mass is fixed to 2. The parton densities used are $\mathtt{MMHT2014}$ LO with $\alpha_s(M_Z) = 0.135$ in the 5-flavor scheme \cite{Harland-Lang:2014zoa}. As renormalization and factorization scale $\mu_R = \mu_F = \frac{m_1 + m_2}{2}$ has been chosen, where $m_i$ are the final state particle masses.} \label{fig:TreeXsection}
 \end{center}
 \end{figure}\\
-They actually depend on an arbitrary energy scale referred to as the factorization scale $\mu_F$. The $\mu_F$ evolution is given within the scope of perturbation theory by coupled integro-differential equations named after Gribov, Lipatov, Dokshitzer, Altarelli and Parisi: the DGLAP-equations. For further reading on parton density functions and factorization see \cite{dissertori2003quantum} and \cite{Collins:1989gx}. See \cite{Brock:1993sz} for how to determine parton density functions.\\
+They actually depend on an arbitrary energy scale referred to as the factorization scale $\mu_F$. The $\mu_F$ evolution is given within the scope of perturbation theory by coupled integro-differential equations named after Gribov, Lipatov\cite{Gribov:1972ri}, Dokshitzer\cite{Dokshitzer:1977sg}, Altarelli and Parisi\cite{Altarelli:1977zs}: the DGLAP-equations. For further reading on parton density functions and factorization see \cite{dissertori2003quantum} and \cite{Collins:1989gx}. See \cite{Brock:1993sz} for how to determine parton density functions.\\
 Fig. \ref{fig:pdfs} shows a parton density function set for the proton. One can see that the partons most probable to carry a high fraction of momentum are the valence quarks. For lower values of $x$, gluons constitute the major component of the proton.\\
 Fig.\ref{fig:TreeXsection} shows the hadronic cross section for the production of various squarks in the MRSSM. These can only be produced by their non supersymmetric partner, e.g. two up-squarks can only be produced by two up-quarks. Because the partonic cross section for these processes are the same, cf. eq. \eqref{eq:PartonicEquality}, one can see the influence of the parton density functions quite nicely: The up-squark production is the dominant contribution to squark production. Apart from the solid lines in fig. \ref{fig:TreeXsection} which correspond to the production of first generation squarks, also the cross section of mixed first and second generation (dashed lines) and second generation (dotted lines) squarks is shown. The dashed dotted line shows the cross section of the charged conjugated particles of the dominant channel.\\
 
@@ -558,9 +558,9 @@ Fig.\ref{fig:TreeXsection} shows the hadronic cross section for the production o
 %REFER TO Kribs, Martin: SNOWMASS WHITEPAPER\\
 %REFER TO Vernoica Sanz: How many SUpersymmetries?\\
 %\\
-This section presents hadronic tree-level or (Born) cross sections of squark and gluino production for two colliding protons in both, the MSSM and the MRSSM.\\
-Note that in the following all possible production channels are taken into account. This is, for squark and squark-gluino production, also the charged conjugated processes, i.e. $\tilde{q}^\dagger\tilde{q}^\dagger$ and $\tilde{q}^\dagger\tilde{g}\left( \overline{\tilde{g}} \right)$, are included. In addition, squark production counts thoses processes twice which involve flavor unlike quarks, e.g. $ud \to \tilde{u}\tilde{d}$ is counted twice as the $d$-quark may come from either proton. This logic applies also to squark-antisquark production through a quark-antiquark pair.\\
-The calculations have been performed by a $\texttt{C++}$ code which uses a library containing the absolute squared amplitudes for the processes in question. Note that the author has opted for the absolute squared amplitudes and not the partonic cross sections because this allows also for the calculation of partial differential cross sections.\\
+This section presents hadronic tree-level (Born) cross sections of squark and gluino production for two colliding protons in both, the MSSM and the MRSSM.\\
+Note that in the following all possible production channels are taken into account. This is, for squark and squark-gluino production, also the charged conjugated processes, i.e. $\tilde{q}^\dagger\tilde{q}^\dagger$ and $\tilde{q}^\dagger\tilde{g}\left( \overline{\tilde{g}} \right)$, are included. In addition, squark production counts thoses processes twice which involve flavor unlike quarks, e.g. $ud \to \tilde{u}\tilde{d}$ is counted twice as the $d$-quark may come from either proton. This applies also to squark-antisquark production through a quark-antiquark pair.\\
+The calculations have been performed by a $\texttt{C++}$ code which uses a library containing the absolute squared amplitudes for the processes in question. Note that the author has opted for the absolute squared amplitudes and not the partonic cross sections because this allows also for the calculation of partial differential cross sections, for possible future use. To perform the integration over the Mandelstam variable $t$ and $x_1$ and $x_2$, the routine ``Cuhre'' which is part of the \texttt{CUBA} library\cite{Hahn:2004fe} has been used\\
 The following paragraph discusses fig. \ref{fig:TreeXsection}, \ref{fig:TreeLevelSigma_0,9_2} and \ref{fig:TreeXsection5}, i.e. the hadronic cross section of all considered processes for three successive mass ratios of gluino and squark: $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9,\ 2$ and $5$. Also, the corresponding fraction of final states is shown.
 \begin{figure}[!htpb]
 \begin{center}
@@ -577,13 +577,12 @@ The following paragraph discusses fig. \ref{fig:TreeXsection}, \ref{fig:TreeLeve
 \end{center}
 \end{figure}
 
-For the small mass ratio $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9$ and small squark masses the dominant contribution comes from gluino (antigluino) production. This is even more dominant in the MRSSM which can be explained by the above mentioned factor of 2 difference in the $GG \to \tilde{g}\tilde{g}(\overline{\tilde{g}})$ channel which comes from the distinguishable gluino and antigluino in the MRSSM. Furthermore there is the above mentioned destructive interference term in the $q\overline{q} \to \tilde{g}\tilde{g}(\overline{\tilde{g}})$ channel which makes the cross section in the MRSSM dominant over the one in the MSSM.\\
-For a growing squark mass the previously subdominant gluino-squark production takes over and becomes dominant. A salient difference between the MSSM and the MRSSM is that squark production is strongly suppressed in the MRSSM. While in the MSSM it becomes dominant above about $\unit[1700]{GeV}$ it is subsubdominant for the whole displayed squark mass in the MRSSM. This suppression has also already been explained above.\\
-Turning from $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9$ to $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 2$ suppresses quite strongly the production of gluinos in all pertaining channels. For the MSSM one finds above $\unit[500]{GeV}$ a growing dominance of squark production. The same happens in the MRSSM but for a significantly higher squark mass of about $\unit[1300]{GeV}$. This suppression of squark production in the MRSSM increases with a growing gluino masses which can be seen when going from $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9$ to  $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 2$ or even $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 5$ depicted in fig. \ref{fig:TreeXsection5}. This reflects the gluino mass dependence explained in detail in section \ref{sec:PartProcesses}.\\
-See also \ref{fig:TreeXsection_fixed_m} for a visualization of this behavior.\\
-Note also that for sufficiently large squark masses squark production becomes the dominant process, see fig. \ref{fig:TreeXsection} and \ref{fig:TreeLevelSigma_0,9_2}. This is because the production of heavy particles requires large longitudinal momenta of the colliding partons, i.e. large $x$. Looking at the parton density functions in fig. \ref{fig:pdfs} one sees that within the proton the partons most likely to carry large momentum are quarks. So looking at large $x$ the proton basically consists of quarks and because the only process involving only quarks in the initial state is squark production, this channel dominates for high masses.\\
-The total cross section in the MRSSM is increasingly smaller than in the MSSM in particular from about $\unit[500]{GeV}$ onwards. The is because for masses below that the $GG \to \tilde{q}\tilde{q}^\dagger$ channel which is the same for both models is the dominant one.\\
-When raising the gluino squark mass ratio further to $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 5$ the above described tendency continues. This is all processes including a gluino get even more negligible and squark production gets further suppressed. While in the MSSM it becomes dominant over $GG \to \tilde{q}\tilde{q}^\dagger$ at $m_{\tilde{q}} \approx \unit[1000]{GeV}$ it is subdominant in the MRSSM in the whole displayed mass range. even though it does not fall that steeply as the dominant channel.\\
+For the small mass ratio $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9$ and small squark masses, the dominant contribution comes from gluino (antigluino) production. This is even more dominant in the MRSSM which can be explained by the above mentioned factor of two difference in the $GG \to \tilde{g}\tilde{g}(\overline{\tilde{g}})$ channel which comes from the distinguishable gluino and antigluino in the MRSSM. Furthermore there is the above mentioned destructive interference term in the $q\overline{q} \to \tilde{g}\tilde{g}(\overline{\tilde{g}})$ channel which makes the cross section for this process in the MRSSM dominant over the one in the MSSM.\\
+For a growing squark mass the previously subdominant gluino-squark production takes over and becomes dominant. A salient difference between the MSSM and the MRSSM is that squark production is strongly suppressed in the MRSSM. While in the MSSM it becomes dominant above about $\unit[1400]{GeV}$ it is subsubdominant for the whole displayed squark mass in the MRSSM. This suppression has also already been explained above.\\
+Turning from $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9$ to $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 2$ suppresses quite strongly the production of gluinos in all pertaining channels. For the MSSM one finds above $\unit[500]{GeV}$ a growing dominance of squark production. The same happens in the MRSSM but for a significantly higher squark mass of about $\unit[1200]{GeV}$. This suppression of squark production in the MRSSM increases with a growing gluino masses which can be seen when going from $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 0.9$ to  $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 2$ or even $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 5$ depicted in fig. \ref{fig:TreeXsection5}. This reflects the gluino mass dependence explained in detail in section \ref{sec:PartProcesses}. See also \ref{fig:TreeXsection_fixed_m} for a visualization of this behavior.\\
+Note also, that for sufficiently large squark masses squark production becomes the dominant process, see fig. \ref{fig:TreeXsection} and \ref{fig:TreeLevelSigma_0,9_2}. This is because the production of heavy particles requires large longitudinal momenta of the colliding partons, i.e. large $x$. Looking at the parton density functions in fig. \ref{fig:pdfs} one sees that within the proton the partons most likely to carry large momentum are quarks. So looking at large $x$ the proton basically consists of quarks and because the only process involving only quarks in the initial state is squark production, this channel dominates for high masses.\\
+The total cross section in the MRSSM is increasingly smaller than in the MSSM in particular from about $\unit[500]{GeV}$ onwards. The is because for masses below that the $GG \to \tilde{q}\tilde{q}^\dagger$ channel, which is the same for both models, is the dominant one.\\
+When raising the gluino squark mass ratio further to $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} = 5$ the above described tendency continues. This is, all processes including a gluino get even more negligible and squark production gets further suppressed. While in the MSSM it becomes dominant over $GG \to \tilde{q}\tilde{q}^\dagger$ at $m_{\tilde{q}} \approx \unit[800]{GeV}$, it is subdominant in the MRSSM within the whole displayed mass range, even though it does not fall that steeply as the dominant channel.\\
 
 \begin{figure}[!htpb]
 \begin{center}
@@ -593,7 +592,7 @@ When raising the gluino squark mass ratio further to $\frac{m_{\tilde{g}}}{m_{\t
 \end{center}
 \end{figure}
 \newpage
-The contour plots \ref{fig:ContourTree} underline the already announced difference between squark production in the MRSSM and the MSSM. While the cross sections for small gluino masses resemble each other closely, the cross section in the MRSSM gets increasingly suppressed with increasing gluino mass. 
+The contour plots in fig. \ref{fig:ContourTree} underline the already announced difference between squark production in the MRSSM and the MSSM. While the cross sections for small gluino masses resemble each other closely, the cross section in the MRSSM gets increasingly suppressed with increasing gluino mass. 
 \begin{figure}[!htpb]
 \begin{center}
 \includegraphics[scale=.55]{figures/contour_MRSSM_squarks}
@@ -601,6 +600,15 @@ The contour plots \ref{fig:ContourTree} underline the already announced differen
 \caption{The squark production cross section including five flavors (also including $\tilde{q}^\dagger\tilde{q}^{\prime\dagger}$) in the MRSSM (top) and MSSM (bottom) at the LHC which $\sqrt{S} = \unit[13]{GeV}$. The parton density functions and the renormalization and factorization scale are chosen as in fig. \ref{fig:TreeXsection}.}\label{fig:ContourTree}
 \end{center}
 \end{figure}
+
+\begin{figure}[!htpb]
+\begin{center}
+\includegraphics[scale=.5]{figures/MSSM+MRSSM_msg=2000}
+\includegraphics[scale=.5]{figures/MSSM+MRSSM_msq=1000}
+\caption{Comparison of squark production cross section including five flavors (also including $\tilde{q}^\dagger\tilde{q}^{\prime\dagger}$) in the MSSM and MRSSM at the LHC which $\sqrt{S} = \unit[13]{GeV}$ for fixed gluino mass (top) and fixed squark mass (bottom). The parton density functions and the renormalization and factorization scale are chosen as in fig. \ref{fig:TreeXsection}.}\label{fig:TreeXsection_fixed_m}
+\end{center}
+\end{figure}
+
 Fig.\ref{fig:TreeXsection_fixed_m} shows the Born cross section of squark production including all possible flavors for a fixed mass of the gluino $m_{\tilde{g}} = \unit[2000]{GeV}$ (top) and the squark $m_{\tilde{q}} = \unit[1000]{GeV}$ (bottom). The figure includes errors of the calculation which come from the parton density functions and the renormalization and factorization scale.\\
 The 68\% uncertainty from the central value pdf-set is obtained by performing the calculation with all eigenvector sets of the central value and taking the minimum and maximum at each point as deviations from the calculation with the central set.\\
 The uncertainty from the renormalization scale $\mu_R$ and the factorization scale $\mu_F$ is obtained by varying both parameters with a factor of $\frac{1}{2}$ and two. For each parameter combination the cross section has been calculated. The uncertainty originating from the scale has then been determined by taking the minimum and maximum of these nine numbers for each point.\\
@@ -609,14 +617,13 @@ The total uncertainty is then obtained by Gauß's propagation of uncertainties:
 \Delta \sigma = \sqrt{(\Delta \sigma_{\mathrm{pdf}})^2 + (\Delta \sigma_{\mathrm{scale}})^2}.
 \end{align}
 The uncertainty coming from the scale variation has been found much greater than the one from the parton density functions. The uncertainty from the phase space integration is negligible, i.e. $\Delta \sigma_{\mathrm{int}} < 1\text{\textperthousand}$.
+\newpage
 
-
-
-\begin{table}
+\begin{table}[H]
 \begin{center}
-\begin{tabular}{c|c|c|c}
-$m_{\tilde{g}}$ \textbackslash $m_{\tilde{q}}$ & $\unit[500]{GeV}$ & $\unit[1000]{GeV}$ & $\unit[1500]{GeV}$\\
-\hline
+\begin{tabular}{c?c|c|c}
+\backslashbox{$m_{\tilde{g}}$}{$m_{\tilde{q}}$} & $\unit[500]{GeV}$ & $\unit[1000]{GeV}$ & $\unit[1500]{GeV}$\\
+\hlinewd{2pt}
 & & & \\
 $\unit[1000]{GeV}$ & $\unit[934.9]{fb}\ _{- 27.2\%\ignore{735}- 2.1\% \ignore{915}}^{+ 30.0\% \ignore{1213}+ 1.2\% \ignore{946}}$ & $\unit[102.1]{fb}\ _{- 29.2\% \ignore{79.0}- 2.1\%\ignore{100}}^{+ 31.2\% \ignore{134}+ 1.9\% \ignore{104}}$ & $\unit[13.12]{fb}\ _{- 31.6\% \ignore{9.97}- 1.7\% \ignore{12.9}}^{+ 34.1\% \ignore{17.6}+ 2.1\% \ignore{13.4}}$\\
 & & & \\
@@ -628,11 +635,11 @@ $\unit[2000]{GeV}$ & $\unit[165.5]{fb}\ _{- 28.2\% \ignore{129}- 2.1\% \ignore{1
 \end{center}
 \end{table}
 %\vspace{1cm}
-\begin{table}
+\begin{table}[H]
 \begin{center}
-\begin{tabular}{c|c|c|c}
-$m_{\tilde{g}}$ \textbackslash $m_{\tilde{q}}$ & $\unit[500]{GeV}$ & $\unit[1000]{GeV}$ & $\unit[1500]{GeV}$\\
-\hline
+\begin{tabular}{c?c|c|c}
+\backslashbox{$m_{\tilde{g}}$}{$m_{\tilde{q}}$} & $\unit[500]{GeV}$ & $\unit[1000]{GeV}$ & $\unit[1500]{GeV}$\\
+\hlinewd{2pt}
 & & & \\
 $\unit[1000]{GeV}$ & $\unit[5257]{fb}\ _{- 24.6\% \ignore{4196}- 1.2\% \ignore{5163}}^{+ 28.4\% \ignore{6714}+ 1.8\% \ignore{5319}}$ 
 & $\unit[340.4]{fb}\ _{- 28.4\% \ignore{265}- 1.9\% \ignore{334}}^{+ 31.0\% \ignore{446} + 1.6\% \ignore{346}}$ 
@@ -650,13 +657,4 @@ $\unit[2000]{GeV}$ & $\unit[2179]{fb}\ _{- 25.6\% \ignore{1735}- 1.9\%\ignore{21
 \end{center}
 \end{table}
 
-
-
-\begin{figure}[!htpb]
-\begin{center}
-\includegraphics[scale=.5]{figures/MSSM+MRSSM_msg=2000}
-\includegraphics[scale=.5]{figures/MSSM+MRSSM_msq=1000}
-\caption{Comparison of squark production cross section including five flavors (also including $\tilde{q}^\dagger\tilde{q}^{\prime\dagger}$) in the MSSM and MRSSM at the LHC which $\sqrt{S} = \unit[13]{GeV}$ for fixed gluino mass (top) and fixed squark mass (bottom). The parton density functions and the renormalization and factorization scale are chosen as in fig. \ref{fig:TreeXsection}.}\label{fig:TreeXsection_fixed_m}
-\end{center}
-\end{figure}
-As a summary of the comparison between MSSM and MRSSM gluino production one can say, that the gluino production is enhanced in the MRSSM due to distinguishable gluino and antigluino. In order to meet missing experimental evidence for supersymmerty this suggests that gluinos might be heavier than squarks in the MRSSM. Focusing on $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} \geq 2$ the most significant change between the considered models is the growing suppression of squark production for a increasing gluino mass. This is why this channel is going to be investigated at next-to-leading order within this thesis. The ensuing sections provide the prerequisites for this calculation.
+As a summary of the comparison between MSSM and MRSSM, one can say, that the gluino production is enhanced in the MRSSM due to distinguishable gluino and antigluino. In order to meet missing experimental evidence for supersymmerty, this suggests that gluinos might be heavier than squarks in the MRSSM. Focusing on $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} \geq 2$ the most significant change between the considered models is the growing suppression of squark production for an increasing gluino mass. This is why this channel is going to be investigated at next-to-leading order within this thesis. The ensuing sections provide the prerequisites for this calculation.

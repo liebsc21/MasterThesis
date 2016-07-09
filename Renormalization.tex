@@ -1,19 +1,19 @@
 \section{Renormalization of the MRSSM}\label{sec:renMRSSM}
-This section discusses the removal of ultraviolet divergences in the amplitude of squark production at 1-loop level in the RSQCD. After an introduction and discussion of the regularization schemes, field and mass renormalization constants are calculated in dimensional regularization in the on-shell scheme. After that the renormalization constant of the strong gauge coupling $g_s$ is computed in a mixture of $\overline{\mathrm{MS}}$- and zero-momentum subtraction scheme. This was done because the gauge coupling of the parton density functions is given in the $\overline{\mathrm{MS}}$-scheme but does not include heavy particles, such as the top-quark or supersymmetric particles in its $\beta$-function. However renormalizing these heavy particles in the zero-momentum subtraction implies that the $\beta$-function of $g_s$ is exactly the one from QCD. This is shown in section \ref{sec:beta_function}. After that, a fact already discussed in section \ref{sec:RegSchemeDep} is revisited: dimensinal regularization breaks supersymmetry. Section \ref{sec:SUSYrestore} describes the calculation of an additional counterterm which restores supersymmetry within the renomalization. Finally, the UV-divergent parts of all renormalization constants in the RSQCD are given. These might prove useful, when someone is to check for UV-finiteness of a Green-function or a physical observable. The chapter closes with a discussion of the renormalized matrix amplitude.
+This section discusses the removal of ultraviolet divergences in the amplitude of squark production at 1-loop level in the RSQCD. After a very brief introduction and discussion of the regularization schemes, field and mass renormalization constants are calculated, using dimensional regularization, in the on-shell scheme. After that, the renormalization constant of the strong gauge coupling $g_s$ is computed in a mixture of $\overline{\mathrm{MS}}$- and zero-momentum subtraction scheme. This was done because the gauge coupling of the parton density functions is given in the $\overline{\mathrm{MS}}$-scheme but does not include heavy particles, such as the top-quark or supersymmetric particles in its $\beta$-function. However renormalizing these heavy particles in the zero-momentum subtraction, implies that the $\beta$-function of $g_s$ is exactly the one from QCD. This is shown in section \ref{sec:beta_function}. After that, a fact already discussed in section \ref{sec:RegSchemeDep} is revisited: dimensinal regularization breaks supersymmetry. Section \ref{sec:SUSYrestore} describes the calculation of an additional counterterm which restores supersymmetry within the renomalization. Finally, the UV-divergent parts of all renormalization constants in the RSQCD are given. These might prove useful, when someone is to check for UV-finiteness of a Green-function or a physical observable. The chapter closes with a discussion of the renormalized matrix amplitude.
 %In order to improve the prediction of cross sections one has to take quantum corrections into account. These are associated with loops in the corresponding Feynman diagrams. Computing these loop diagrams one might encounter infinities which arise from certain momentum configurations of the unspecified loop momenta. These infinities can be classified due to their origin. Infinities which are associated with loop momenta which tend to infinity are referred to as ultraviolet(UV) divergences. Infinities arising from loop momenta approaching zero can occur in loops with massless particles and are called infrared(IR) singularities. \\%Furthermore there are collinear singularities with occur when a massless particle splits into two massless collinear particles.\\
 %These infinities are not physical and must therefore be removed to get sensible predictions. To this end one regularizes them to extract them from the quantity in question. UV-divergences can be removed by means of renormalization, i.e. counterterms are inserted into the Lagrangian to cancel UV-divergences. Infrared and collinear divergenves are removed by adding up all possible contributions which give rise to the considered observable.
 
 \subsection{Regularization Schemes}\label{sec:RegSchemes}
 \subsubsection*{Dimensional Regularization (DREG)}
-Dimensional regularization (DREG) is a very common procedure for regularizing infinities which was devised by t'Hooft and Veltman~\cite{'tHooft:1972fi}. In this scheme loop momenta, gamma- and epsilon-tensors, phase space and fields are defined in $D$ dimensions\cite{Collins:105730}. As in every regularization scheme a parameter with mass dimension needs to be introduced. In DREG, that is the $\mu$ parameter which ensures that the loop integrals still have mass dimension four:
+Dimensional regularization (DREG) is a very common procedure for regularizing infinities which was devised by t'Hooft and Veltman~\cite{'tHooft:1972fi}. In this scheme, loop momenta, gamma- and epsilon-tensors, phase space and fields are defined in $D$ dimensions\cite{Collins:105730}. As in every regularization scheme, a parameter with mass dimension needs to be introduced. In DREG, that is the $\mu$ parameter which ensures that the loop integrals still have mass dimension four:
 \begin{align}
 \int \frac{\mbox{d}^4p}{(2\pi)^4} \to \mu^{4-D} \int \frac{\mbox{d}^Dp}{(2\pi)^D}.
 \end{align}
-If one writes $D=4-2\epsilon$, the divergences of the loop integral manifest in $\frac{1}{\epsilon}$ poles.\\
-However DREG suffers a flaw in supersymmetry. As the degrees of freedom of a massless gauge boson are $D-2$ but the degrees of freedom of its superpartner are 2 there is a mismatch if $D \neq 4$. As a consequence there are $2\epsilon$ degrees of freedom associated with the gluon\footnote{These degrees of freedom are identified with scalars and are therefore referred to as $\epsilon$ scalars} which do not have a supersymmetric partner. Therefore DREG violates supersymmetry.
+If one writes $D=4-2\epsilon$, the divergences of the loop integrals manifest in $\frac{1}{\epsilon}$ poles.\\
+However DREG suffers a flaw in supersymmetry. As the degrees of freedom of a massless gauge boson are $D-2$ but the degrees of freedom of its superpartner are two, there is a mismatch if $D \neq 4$. As a consequence, there are $2\epsilon$ degrees of freedom associated with the gluon\footnote{These degrees of freedom are identified with scalars and are therefore referred to as $\epsilon$ scalars.} which do not have a supersymmetric partner. Therefore DREG violates supersymmetry.
 
 \subsubsection*{Dimensional Reduction (DRED)}
-Dimensional reduction (DRED) was introduced to rectify the imperfections of DREG, i.e. it preserves supersymmetry.\footnote{It is not clear whether DRED preserves supersymmetry at all orders in perturbation theory\cite{Jack:1997sr} but it does preserve supersymmetry at 1-loop level\cite{Hollik:2001cz}.} DRED promotes only loop momenta to $D$ dimensions. All other quantities which are $D$ dimensional in DREG stay in 4 dimensions. The most important difference is the contraction of the metric tensor with itself equals four
+Dimensional reduction (DRED) was introduced to rectify the imperfections of DREG, i.e. it preserves supersymmetry.\footnote{It is not clear whether DRED preserves supersymmetry at all orders in perturbation theory\cite{Jack:1997sr} but it does preserve supersymmetry at 1-loop level\cite{Hollik:2001cz}.} DRED promotes only loop momenta to $D$ dimensions. All other quantities which are $D$ dimensional in DREG stay in four dimensions. The most important difference is that the contraction of the metric tensor with itself equals four
 \begin{align}
 g_{\mu\nu}g^{\mu\nu} = 4,
 \end{align}
@@ -21,23 +21,23 @@ instead of $D$ in dimensional regularization. It has been shown in \cite{Stockin
 
 
 \subsection{Regularization Scheme Dependences}\label{sec:RegSchemeDep}
-To discuss the subject of this and ensuing subsections, it is useful to introduce the effective action $\Gamma$. A formal introduction of $\Gamma$ can be found in~\cite{Peskin}. In short $\Gamma$ can be viewed as a generalization of the classical action $\Gamma_{\mathrm{cl}} = \int \mathcal{L}_{\mathrm{cl}}$ by quantum effects:
+To discuss the subject of this and ensuing subsections, it is useful to introduce the effective action $\Gamma$. A formal introduction of $\Gamma$ can be found in~\cite{Peskin}. In short, $\Gamma$ can be viewed as a generalization of the classical action $\Gamma_{\mathrm{cl}} = \int \mathcal{L}_{\mathrm{cl}}$ by quantum effects:
 \begin{align}
-\Gamma = \Gamma_{\mathrm{cl}} + \mathcal{O}(\hbar)
+\Gamma = \Gamma_{\mathrm{cl}} + \mathcal{O}(\hbar).
 \end{align}
-This means that in addition to the vertices in the classical Lagrangian, new vertices arise due to loop effects. As already alluded to, loop corrections might a priori not be finite and then need to be rendered finite by the addition of counterterms. For $\mathcal{O}(\hbar)$ corrections one writes
+This means that in addition to the vertices in the classical Lagrangian, new vertices arise due to loop effects. As already alluded to, loop corrections might a priori not be finite and then need to be rendered ultraviolet finite by the addition of counterterms. For $\mathcal{O}(\hbar)$ corrections one writes
 \begin{align}
-\Gamma^{(\leq 1)} \to \Gamma^{(\leq 1)} + \Gamma^{(1),\ \mathrm{ct}}
+\Gamma^{(\leq 1)} \to \Gamma^{(\leq 1)} + \Gamma^{(1),\mathrm{ct}}
 \end{align} 
-These counterterms depend on the regularization (and renormalization) scheme. If one chooses to work with DREG, supersymmetry will not be preserved at 1-loop order, i.e. $\Gamma^{(\leq 1)}_{\mathrm{DREG}}$ is not supersymmetric. To maintain supersymmetry invariance of the renormalized effective action, the counterterms will not only consist of supersymmetric counterterms $\Gamma^{(1),\ \mathrm{ct,\ sym}}_{\mathrm{DREG}}$ but also of counterterms restoring supersymmetry $\Gamma^{(1),\ \mathrm{ct,\ trans}}_{\mathrm{DREG}}$. 
+These counterterms depend on the regularization (and renormalization) scheme. If one chooses to work with DREG, which is done in this thesis, supersymmetry will not be preserved at 1-loop order, i.e. $\Gamma^{(\leq 1)}_{\mathrm{DREG}}$ is not supersymmetric. To maintain supersymmetry invariance of the renormalized effective action, the counterterms will not only consist of supersymmetric counterterms $\Gamma^{(1),\ \mathrm{ct,sym}}_{\mathrm{DREG}}$ but also of counterterms restoring supersymmetry $\Gamma^{(1),\mathrm{ct,trans}}_{\mathrm{DREG}}$. 
 \begin{align}
-\Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DREG}} = \Gamma^{(1),\ \mathrm{ct,\ sym}}_{\mathrm{DREG}} + \Gamma^{(1),\ \mathrm{ct,\ trans}}_{\mathrm{DREG}}
+\Gamma^{(1),\mathrm{ct}}_{\mathrm{DREG}} = \Gamma^{(1),\mathrm{ct,sym}}_{\mathrm{DREG}} + \Gamma^{(1),\mathrm{ct,trans}}_{\mathrm{DREG}}
 \end{align}
-Fortunately a supersymmetry conserving regularization scheme (at 1-loop level) is given by DRED \cite{Hollik:2001cz}. One way to acquire supersymmetry restoring counterterms is therefore given by
+Fortunately, a supersymmetry conserving regularization scheme (at 1-loop level) is given by DRED \cite{Hollik:2001cz}. One way to acquire supersymmetry restoring counterterms is therefore given by
 \begin{align}
-\Gamma^{(\leq 1)}_{\mathrm{DRED}} + \Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DRED}} \overset{!}{=} \Gamma^{(\leq 1)}_{\mathrm{DREG}} + \Gamma^{(1),\ \mathrm{ct}}_{\mathrm{DREG}}.
+\Gamma^{(\leq 1)}_{\mathrm{DRED}} + \Gamma^{(1),\mathrm{ct}}_{\mathrm{DRED}} \overset{!}{=} \Gamma^{(\leq 1)}_{\mathrm{DREG}} + \Gamma^{(1),\mathrm{ct}}_{\mathrm{DREG}}.
 \end{align}
-Equating also the finite terms in $\Gamma^{(1),\ \mathrm{ct,\ sym}}$ in DRED and DREG the choice of the supersymmetry restoring counterterms is fixed by\cite{Varso, Stockinger:2011gp, Martin:1993yx}:
+Equating also the finite terms in $\Gamma^{(1),\mathrm{ct,sym}}$ in DRED and DREG the choice of the supersymmetry restoring counterterms is fixed by\cite{Varso, Stockinger:2011gp, Martin:1993yx}:
 \begin{align}
 \Gamma^{\mathrm{(1),ct,trans}}_{\mathrm{DREG}} = \Gamma^{(\leq 1)}_{\mathrm{DRED}} - \Gamma^{(\leq 1)}_{\mathrm{DREG}}.\label{eq:GammaCtRestore}
 \end{align} 
@@ -50,11 +50,17 @@ where
 \begin{align}
 \delta Z^{\mathrm{trans}} = \delta Z^{\mathrm{DREG}} - \delta Z^{\mathrm{DRED}}
 \end{align}
-is the supersymmetry restoring renormalization constant. Note the sign within this definition in comparison to eq. \eqref{eq:GammaCtRestore}. The only point where particularly care is required is the coupling: The  gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$ receive different supersymmetry restoring counterterms, due to different loop diagrams. Therefore one has to make a difference between these couplings at 1-loop level. In order to match $g_s$ to the experimentally measured coupling, it is renormalized in the  $\overline{\mathrm{MS}}$-scheme (with an additional manipulation for heavy particles, which will be explained in section \ref{sec:RenGaugeCoupling}). The Yukawa coupling $\hat{g}_s$ therefore needs to be added with the difference of the supersymmetry restoring counterterms from the $q\tilde{q}^\dagger\tilde{g}$ vertex and the $q\overline{q}G$ vertex at 1-loop in order to be renormalized in the same way.
+is the supersymmetry restoring renormalization constant. Note the sign within this definition in comparison to eq. \eqref{eq:GammaCtRestore}. The only point where particularly care is required is the coupling: The  gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$ receive different supersymmetry restoring counterterms:
+\begin{align}
+\delta g_s^{\mathrm{trans}} \neq \delta \hat{g}_s^{\mathrm{trans}}.
+\end{align}
+This is due to different loop diagrams, i.e. 
+\begin{align}
+\Gamma^{(1),\mathrm{ct,trans}}_{\mathrm{DREG},q_i \overline{q}_j G^a_\mu} \hspace{1cm} \mathrm{and} \hspace{1cm} \Gamma^{(1),\mathrm{ct,trans}}_{\mathrm{DREG},\tilde{q}_{Li} \overline{q}_j \tilde{g}^a}
+\end{align}
+are proportional to a different combination of $C(A)$ and $C(F)$. Furthermore there are different fields on the vertex, which also come with different supersymmetry restoring counterterms.\\
+Therefore one has to make a difference between these couplings at 1-loop level. In order to match $g_s$ to the experimentally measured coupling, it is renormalized in the  $\overline{\mathrm{MS}}$-scheme (with an additional manipulation for heavy particles, which will be explained in section \ref{sec:RenGaugeCoupling}). The Yukawa coupling $\hat{g}_s$ needs therefore to be added with the difference of the supersymmetry restoring counterterms from the $\tilde{q}_L\overline{q}\tilde{g}$ vertex and the $q\overline{q}G$ vertex at 1-loop in order to be renormalized in the same way.
 
-
-%An alternative procedure is used in \cite{Beenakker:1996ch}, where only one supersymmetry restoring counterterm, which translates between the renormalized gauge coupling $g_s$ and the renormalized Yukawa coupling $\hat{G}_s$ is needed. That is possible because the only supersymmetry violation comes from the gauge sector. For a comprehensive discussion of this issue see [Philipp Vasros Diplomarbeit and the paper with Dominik]\\
-%SUSY restoring is always already in $\delta Z^{DREG}$ included. Only important thing is the coupling: $g_s$ and $\hat{g}_s$ receive different SUSY restoring counterterm. Therefore one has to make a difference between these couplings at 1-loop level. In order to match $g_s$ to the experimentaly measured coupling it is renormalized in $\overline{\mathrm{MS}}$. The Yukawa coupling $\hat{g}_s$ therefore needs to be added with the difference of the SUSY-restoring counterterms at 1-loop in order to be renormalized the same way.
 
 
 \subsection{On-Shell Renormalization}\label{sec:QuarkSE}
@@ -63,7 +69,7 @@ Field renormalization constants $\delta Z$ and parameter renormalization constan
 \begin{align}
 Z = 1 + \delta Z \hspace{3cm} o_{\mathrm{bare}} = o + \delta o
 \end{align}
-where $Z$ and $o$ are defined by the multiplicative renormalization transformation, introduced in eq. \eqref{eq:fieldtrafo} and \eqref{eq:fieldtrafo}. The field and mass renormalization constants have been calculated in DREG in the on-shell scheme. This has the advantage that when turning to the cross section no manipulation of the Green function to the S-matrix element has to be done, see section \ref{sec:LSZ}.\\
+where $Z$ and $o$ are defined by the multiplicative renormalization transformation, introduced in eq. \eqref{eq:fieldtrafo} and \eqref{eq:parametertrafo}. The field and mass renormalization constants have been calculated in DREG in the on-shell scheme. This has the advantage that when turning to the cross section no manipulation of the Green function to the S-matrix element has to be done, see section \ref{sec:LSZ}.\\
 The calculation has partially been performed by hand but was always checked with the mathematica output generated by the packages  \texttt{FeynArts} \cite{Hahn:2000} and \texttt{FormCalc} \cite{ChokoufeNejad:2013qja, Hahn:1998yk} which used a model file generated by \texttt{SARAH}\cite{Staub:2013tta, Staub:2012pb, Staub:2010jh, Staub:2009bi}.\\
 The renormalization constants are given in terms of Passarino-Veltman integrals whose definition may be found in Appendix \ref{sec:Passarino}.
 
@@ -750,18 +756,18 @@ which translates to the transition counterterm
 \end{align}
 
 \subsubsection*{The $q\overline{q}G$ Vertex Correction Revisited}
-The diagrams from which the supersymmetry restoring contributions to the gauge coupling correction come from are shown in figure \ref{fig:GaugeCouplingCorrection} and evaluate to
+The diagrams from which the supersymmetry restoring contributions to the $q\overline{q}G$ vertex come from, are shown in figure \ref{fig:GaugeCouplingCorrection} and evaluate to
 \begin{align}
 i\Gamma^{\mathrm{(1),ct,trans}}_{\mathrm{DREG}, q_i\overline{q}_jG_\mu^a} &= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2}\left[ \left( C(F) - \frac{C(A)}{2} \right) + \frac{C(A)}{2} \right]\\
 &= -ig_s T^a_{ij} \gamma^\mu \left[ \frac{\delta g_s^{\mathrm{trans}}}{g_s} + \delta Z^{\mathrm{trans}}_q + \frac{\delta Z^{\mathrm{trans}}_G}{2} \right]
 \end{align}
-where the second line shows the supersymmetry restoring counterterms. This yields
+where the second line shows the supersymmetry restoring counterterms to which they have to be equated to. Using the transition counterterms of the field yields
 \begin{align}
 \frac{\delta g_s^{\mathrm{trans}}}{g_s} = -\frac{C(A)}{6} \frac{g_s^2}{16\pi^2}.
 \end{align}
 
-\subsubsection*{The $q\tilde{q}^\dagger\tilde{g}$ Vertex Correction}
-The supersymmetry restoring corrections to the Yukawa coupling originate from the diagram below.
+\subsubsection*{The $\tilde{q}_L\overline{q}\tilde{g}$ Vertex Correction}
+The supersymmetry restoring corrections to the $\tilde{q}_L \overline{q}\tilde{g}$ originate from the diagram in figure \ref{fig:YukawaCT}.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -775,17 +781,17 @@ The supersymmetry restoring corrections to the Yukawa coupling originate from th
 	\draw[fermion](45:0.5)--(-45:0.5);
 	\node at (0.7,0) {$q$};
 	\draw[fermionbar](45:0.5)--(45:1.3);
-	\draw[scalarbar](-45:0.5)--(-45:1.3);
+	\draw[scalar](-45:0.5)--(-45:1.3);
 \end{tikzpicture}
-\caption{Diagram of the supersymmetry restoring correction of  the $q\tilde{q}\tilde{g}$ vertex}
+\caption{Diagram of the supersymmetry restoring correction of  the $q\tilde{q}\tilde{g}$ vertex}\label{fig:YukawaCT}
 \end{center}
 \end{figure}
 The supersymmetry restoring part is given by
 \begin{align}
-i\Gamma^{\mathrm{(1),ct,trans}}_{\mathrm{DREG}, q_i\tilde{q}_j\tilde{g}^a} &= -ig_s \sqrt{2} P_L T^a_{ij}  \frac{g_s^2}{16\pi^2}C(A)\\
+i\Gamma^{\mathrm{(1),ct,trans}}_{\mathrm{DREG}, \tilde{q}_{Li}\overline{q}_j\tilde{g}^a} &= -ig_s \sqrt{2} P_L T^a_{ij}  \frac{g_s^2}{16\pi^2}C(A)\\
 &= -ig_s \sqrt{2} P_L T^a_{ij}  \left[ \frac{\delta \hat{g}_s^{\mathrm{trans}}}{g_s} + \frac{\delta Z^{\mathrm{trans}}_q + \delta Z^{\mathrm{trans}}_{\tilde{q}} + \delta Z^{\mathrm{trans}}_{\tilde{g}}}{2} \right].
 \end{align}
-The supersymmetry restoring part of the Yukawa renormalization constants is therefore
+Again, using the transition counterterms of the respective fields, one obtains
 \begin{align}
 \frac{\delta \hat{g}_s^{\mathrm{trans}}}{g_s} = -\frac{C(F)-C(A)}{2} \frac{g_s^2}{16\pi^2}.
 \end{align}
@@ -808,30 +814,67 @@ To quickly check for UV-finiteness of a Greenfunction or a physical observable i
 & \delta Z_{\sigma^0} = 0 && \delta m_{\sigma^0}^2 = 0\nonumber\\
 & \delta Z_{G} = -\frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}} 2T(F) n_f
 \end{align}
+The results have been checked with the \texttt{FormCalc} function \texttt{UVDivergentPart[expr]} which replaces the loop integrals in \texttt{expr} with its UV divergent part.\\
 Note that the renormalization constants $\delta m_{\tilde{g}}$, $\delta m^2_{\phi^0}$ and $\delta m^2_{\sigma^0}$ are not independent from each other as the masses of the gluino and the two sgluons arise  from only two parameters, i.e. $m_{\tilde{g}}$ and $m_{\sigma}^2$ from the softly breaking part of the Lagrangian, eq. \eqref{eq:L_RSQCD}. 
 In additions it happens that the particle content of RSQCD is such that $\frac{\delta g_s}{g_s} = 0$. This means that the $\beta$ function of $g_s$ equals zero at 1-loop-level if one does not choose to decouple heavy particles from the running as has been done in this thesis. However at 2-loop-level there is a non-zero $\beta$ function of $g_s$, which has been calculated by \texttt{SARAH}.
 
 
 
 \subsection{The Renormalized Matrix Element}
-After having renormalized the matrix element for squark production all UV-divergences are removed. This has been achieved by extending the model file, generated by \texttt{SARAH} with counterterm Feynman rules and the above calculated renormalization constants. The derivation of the counterterm Feynman rules has been performed by the author whereas the implementation into the modelfile was mainly done by Philip Dießner, another member of the group. The renormalization constants for masses and fields are calculated by \texttt{FormCalc} functions like \textsc{MassRC} and \textsc{FieldRC}\cite{FormCalcManual}. Their result has been checked with the above calculated renormalization constants.\\
+After having renormalized the matrix element for squark production all UV-divergences are removed. This has been achieved by extending the model file, generated by \texttt{SARAH} with counterterm Feynman rules and the above calculated renormalization constants. The derivation of the counterterm Feynman rules has been performed by the author whereas the implementation into the modelfile was mainly done by Philip Dießner, another member of the group. The renormalization constants for masses and fields are calculated by \texttt{FormCalc} functions like \texttt{MassRC} and \texttt{FieldRC}\cite{FormCalcManual}. Their result has been checked with the above calculated renormalization constants.
 \begin{lstlisting}
-Auszug von modelfile
+RenConst[dZFu1[gen_]] :=FieldRC[F[3,{gen}]][[1]]
+RenConst[dZFd1[gen_]] :=FieldRC[F[4,{gen}]][[1]]  
+
+RenConst[dZSu1[gen_]] := FieldRC[S[13,{gen}]]	
+RenConst[dMSu1[gen_]] := MassRC[S[13,{gen}]]
+RenConst[dZSd1[gen_]] := FieldRC[S[14,{gen}]]	
+RenConst[dMSd1[gen_]] := MassRC[S[14,{gen}]]
+
+RenConst[dZGlL1] := xZfL1[F[15], 0]
+RenConst[dZGlR1] := xZfR1[F[15], 0]
+RenConst[dZbarGlL1] := dZGlR1
+RenConst[dZbarGlR1] := dZGlL1
+RenConst[dMGl1] := MassRC[F[15]]
+
+RenConst[dZgs1] := 0 - FiniteGs * g3*g3/(16*Pi*Pi)*(2*Log[(MassGlu/mu)^2]
+                     +Log[(MassSq/mu)^2]+1/3*Log[(MassFu[3]/mu)^2]
+                     +1/4*Log[(MasssigmaO/mu)^2]
+                     +1/4*Log[(MassphiO/mu)^2])
+dZgs1restore := FiniteGs * g3*g3/(12*Pi*Pi)
+
+RenConst[dZGG1] := FieldRC[V[5]]
 \end{lstlisting}
-To keep track of all divergences, the calculation has been performed with the option: \textsc{Dimensions} $\to 0$. This is the only opportunity in \texttt{FormCalc} to really work in $D$ dimensions, i.e. the result contains a quantity $Dminus4$ which equals $-2\epsilon$ in DREG. The absolute matrix element coming from \texttt{FormCalc} is given in terms of scalar integrals, like defined in Appendix \ref{sec:Passarino}.\\
-To extract infrared divergences \texttt{LoopTools} has been used. This  tool provides the function \textsc{SetLambda} which can be set to 0, $-1$ or $-2$ to extract the finite part, single pole or double pole of  scalar integrals. This allows for numerically extracting the coefficients of $\epsilon^i$ with $i \in \left\{ 0,-1,-2 \right\}$ of the absolute squared matrix amplitude. The respective poles of $|\mathcal{M}^{\mathrm{V}}_{\mathrm{MRSSM}}(uu \to \tilde{u}_L\tilde{u}_R)|^2$ are shown in figure \ref{fig:MatrixElement}. In addition the tree-level absolute squared matrix amplitude with leading order $\alpha_s$ is compared with its analogue with next-to-leading order $\alpha_s$ and virtual absolute squared matrix amplitude. The latter is  not given analytically. All $|\mathcal{M}|^2$ are color and spin averaged in the final state and summed over in the initial state.
+To keep track of all divergences, the calculation in \texttt{FormCalc} has been performed with the option: \texttt{Dimension} $\to 0$ which is the only opportunity to really work in $D$ dimensions, i.e. the result contains a quantity \texttt{Dminus4} which equals $-2\epsilon$ in DREG. The absolute squared matrix element coming from \texttt{FormCalc} is then given in terms of scalar integrals, like defined in Appendix \ref{sec:Passarino}. To get a notion for the \texttt{FormCalc} output, the following line shows the  off-shell amplitude of the quark self-energy in terms of loop integrals and \texttt{Dminus4}
+%\begin{lstlistings}
+Amp[{{F[3, {1, Col1}], k[1], 0, {}}} -> {{F[3, {1, Col2}], k[2], 
+     0, {}}}][(1/(\[Pi]^2))
+  g3^2 ((1/6 + Dminus4/12) (B0i[bb0, Pair[k[1], k[1]], 0, 0] + 
+        B0i[bb1, Pair[k[1], k[1]], 0, 0]) - 
+     1/6 B0i[bb1, Pair[k[1], k[1]], MassGlu^2, MassSu[1]^2]) Mat[(
+SequenceForm["<", "u", 2, "|", 6, ",", 
+FormCalc`k[1], "|", "u", 1, ">"]) SUNT[Col1, Col2]] + (1/(\[Pi]^2))
+  g3^2 ((1/6 + Dminus4/12) (B0i[bb0, Pair[k[1], k[1]], 0, 0] + 
+        B0i[bb1, Pair[k[1], k[1]], 0, 0]) - 
+     1/6 B0i[bb1, Pair[k[1], k[1]], MassGlu^2, MassSu[4]^2]) Mat[(
+SequenceForm["<", "u", 2, "|", 7, ",", 
+FormCalc`k[1], "|", "u", 1, ">"]) SUNT[Col1, Col2]]]
+%\end{lstlistings}
+To extract infrared divergences, \texttt{LoopTools} has been used. This  tool provides the function \texttt{SetLambda} which can be set to 0, $-1$ or $-2$ to extract the finite part, single pole or double pole of  scalar integrals. This allows for numerically extracting the coefficients of $\epsilon^i$ with $i \in \left\{ 0,-1,-2 \right\}$ of the absolute squared matrix amplitude. The respective poles of $|\mathcal{M}^{\mathrm{V}}_{\mathrm{MRSSM}}(uu \to \tilde{u}_L\tilde{u}_R)|^2$ are shown in figure \ref{fig:MatrixElement}. Note, that the extraction of the single pole does not only involve setting the option \texttt{SetLamda} $\to-1$ and \texttt{Dminus4}$\to 0$, but also setting \texttt{SetLamda}$\to-2$ and \texttt{Dminus4} $\to -2$ and subtract the term obtained by \texttt{SetLamda}$\to-2$ and \texttt{Dminus4} $\to 0$. In doing so, one accounts for the contraction of double poles with terms of $\mathcal{\epsilon}$. The same logic implies to the extraction of finite terms.\\
+\\
+In addition the tree-level absolute squared matrix amplitude with leading order $\alpha_s$ is compared with its analogue with next-to-leading order $\alpha_s$ and virtual absolute squared matrix amplitude. The latter is  not given analytically. All $|\mathcal{M}|^2$ are color and spin averaged in the final state and summed over in the initial state.
 \begin{figure}[!htpb]
 \begin{center}
-\includegraphics[scale=.5]{figures/MatrixElement_SE_Vertices_Boxes}
-\caption{bla}
+\includegraphics[scale=.5]{figures/MatrixElement_Poles.png}
+\caption{Coefficients of $\mathcal{O}(\epsilon^0)$, $\mathcal{O}(\epsilon^{-1})$ and $\mathcal{O}(\epsilon^{-2})$ terms of the absolute squared matrix element of $uu \to \tilde{u}_L\tilde{u}_R$ in the MRSSM as a function of the Mandelstam variable $t$. External helicities and colors are averaged. The parameters are fixed to $m_{\tilde{q}} = \mu = \unit[1000]{GeV}$, $m_{\tilde{g}} = \unit[2000]{GeV}$, $m_{\sigma} = \unit[5000]{GeV}$ and $\sqrt{s} = \unit[6000]{GeV}$ which is the partonic center of mass energy.}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htpb]
 \begin{center}
-\includegraphics[scale=.5]{figures/MatrixElement_Poles.png}
+\includegraphics[scale=.5]{figures/MatrixElement_SE_Vertices_Boxes}
 \includegraphics[scale=.5]{figures/MatrixElement.png}
-\caption{The figure at the top shows the coefficients of $\mathcal{O}(\epsilon^0)$, $\mathcal{O}(\epsilon^{-1})$ and $\mathcal{O}(\epsilon^{-2})$ terms of the absolute squared matrix element of $uu \to \tilde{u}_L\tilde{u}_R$ in the MRSSM as a function of the Mandelstam variable $t$. External helicities and colors are averaged. The parameters are fixed to $m_{\tilde{q}} = \mu = \unit[1000]{GeV}$, $m_{\tilde{g}} = \unit[2000]{GeV}$, $m_{\sigma} = \unit[5000]{GeV}$ and $\sqrt{s} = \unit[6000]{GeV}$ which is the partnoic center of mass energy.\newline
+\caption{\newline
 The figure at the bottom shows the absolute squared matrix element of $uu \to \tilde{u}_L\tilde{u}_R$ in the MRSSM at tree-level with $\alpha_s = $ from the leading order parton density function $\mathtt{MMHT2014}$\cite{Harland-Lang:2014zoa}, and $\alpha_s = $ from the netxt-to-leading order parton density function as well as the contribution from the virtual absolute squared matrix element.}\label{fig:MatrixElement}
 \end{center}
 \end{figure}
