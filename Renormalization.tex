@@ -820,7 +820,7 @@ In additions it happens that the particle content of RSQCD is such that $\frac{\
 
 
 
-\subsection{The Renormalized Matrix Element}
+\subsection{The Renormalization of the Matrix Element}
 This section explains how the renormalization of the RSQCD is implemented in the framework of the automated calculation and gives intermediate results in the form of the renormalized matrix element.
 
 \subsubsection{Implementation into the Model File}
@@ -875,16 +875,15 @@ dZgs1restore := FiniteGs * g3*g3/(12*Pi*Pi)
 
 RenConst[dZGG1] := FieldRC[V[5]]
 \end{lstlisting}
-The first two lines encode the field renormalization constant of up- and down-type quarks. The function \texttt{FieldRC} actually calculates two renormalization constants when the argument is a fermion field: the left- and right-handed part. But these terms are identical since electroweak interactions are not considered within the modelfile. It therefore suffices to just pick the first element of the list. This is indicated with the addendum $\texttt{[[1]]}$.\\
-The next block of the code provides the renormalization constants of up- and down-type squarks, before the ensuing block deals with the gluino. Here, the predefined function \texttt{xZfL1} (\texttt{xZfR1}) is used to extract the field renormalization constant of the left- (right-) handed component of the Dirac-spinor as they couple differently, like already discussed.\\
+The first two lines encode the field renormalization constant of up- and down-type quarks. The function \texttt{FieldRC} actually calculates two renormalization constants when the argument is a fermion field: the left- and right-handed part. But these terms are identical since electroweak interactions are not considered within the modelfile. It therefore suffices to just pick the first element of the list. This is achieved with the addendum $\texttt{[[1]]}$.\\
+The next block of the code provides the renormalization constants of up- and down-type squarks, before the ensuing block deals with the gluino. Here, the predefined function \texttt{xZfL1} (\texttt{xZfR1}) is used to extract the field renormalization constant of the left- (right-) handed component of the Dirac-spinor.\\
 Finally the gauge coupling renormalization and the supersymmetry restoring counterterm are implemented, before the gluon field is renormalized. The necessity of the parameter \texttt{FiniteGs} will be explained shortly.\\
-\\
-The parameter \texttt{FiniteGs} has been introduced as these terms should only contribute if \texttt{SetLambda}$\to 0$. In all other choices \texttt{FiniteGs} has to be replaced with zero instead of one. For more details on how the renormalization works within \texttt{FormCalc}, see the manual \cite{FormCalcManual}.\\
+The result of these renormalization constants has been checked with the above calculated renormalization constants.
 
-After having renormalized the matrix element for squark production all UV-divergences are removed.\\
-
-Their result has been checked with the above calculated renormalization constants.\\
-To keep track of all divergences, the calculation in \texttt{FormCalc} has been performed with the option: \texttt{Dimension} $\to 0$ which is the only opportunity to really work in $D$ dimensions, i.e. the result contains a quantity \texttt{Dminus4} which equals $-2\epsilon$ in DREG. The absolute squared matrix element coming from \texttt{FormCalc} is then given in terms of scalar integrals, like defined in Appendix \ref{sec:Passarino}. To get a notion for the \texttt{FormCalc} output, the following line shows the  off-shell amplitude of the quark self-energy in terms of loop integrals and \texttt{Dminus4}
+\subsubsection{The Renormalized Matrix Element}
+After providing the model file with renormalization constants and counterterm Feynman rules, the matrix element for squark production can be renormalized. For more details on how the renormalization works within \texttt{FormCalc}, see the manual \cite{FormCalcManual}.
+To check whether all UV-divergences have been removed, the \texttt{FormCalc} function \texttt{UVDivergentPart} has been used.\\
+However, the matrix element still contains IR-divergences. To keep track of these divergences, the calculation in \texttt{FormCalc} has been performed with the option: \texttt{Dimension} $\to 0$ which is the only opportunity to really work in $D$ dimensions, i.e. the result contains a quantity \texttt{Dminus4} which equals $-2\epsilon$ in DREG. The absolute squared matrix element coming from \texttt{FormCalc} is then given in terms of scalar integrals, like defined in Appendix \ref{sec:Passarino}. To get a notion for the \texttt{FormCalc} output, the following line shows the off-shell amplitude of the quark self-energy in terms of loop integrals and \texttt{Dminus4}
 \begin{lstlisting}[style=MyMathematicaOutput]
 Amp[{{F[3, {1, Col1}], k[1], 0, {}}} -> {{F[3, {1, Col2}], k[2], 0, {}}}]
 [(1/([Pi]^2)) g3^2 ((1/6 + Dminus4/12) (B0i[bb0, Pair[k[1], k[1]], 0, 0] 
@@ -892,16 +891,16 @@ Amp[{{F[3, {1, Col1}], k[1], 0, {}}} -> {{F[3, {1, Col2}], k[2], 0, {}}}]
 + (1/([Pi]^2)) g3^2 ((1/6 + Dminus4/12) (B0i[bb0, Pair[k[1], k[1]], 0, 0] 
 + B0i[bb1, Pair[k[1], k[1]], 0, 0]) - 1/6 B0i[bb1, Pair[k[1], k[1]], MassGlu^2, MassSu[4]^2]) Mat[(<u2|7 k[1]|u1>]) SUNT[Col1, Col2]]]
 \end{lstlisting}
-To extract infrared divergences, \texttt{LoopTools} has been used. This  tool provides the function \texttt{SetLambda} which can be set to 0, $-1$ or $-2$ to extract the finite part, single pole or double pole of  scalar integrals. This allows for numerically extracting the coefficients of $\epsilon^i$ with $i \in \left\{ 0,-1,-2 \right\}$ of the absolute squared matrix amplitude. The respective poles of $|\mathcal{M}^{\mathrm{V}}_{\mathrm{MRSSM}}(uu \to \tilde{u}_L\tilde{u}_R)|^2$ are shown in figure \ref{fig:MatrixElement}. Note, that the extraction of the single pole does not only involve setting the option \texttt{SetLamda} $\to-1$ and \texttt{Dminus4}$\to 0$, but also setting \texttt{SetLamda}$\to-2$ and \texttt{Dminus4} $\to -2$ and subtract the term obtained by \texttt{SetLamda}$\to-2$ and \texttt{Dminus4} $\to 0$. In doing so, one accounts for the contraction of double poles with terms of $\mathcal{\epsilon}$. The same logic implies to the extraction of finite terms.\\
-\\
-In addition the tree-level absolute squared matrix amplitude with leading order $\alpha_s$ is compared with its analogue with next-to-leading order $\alpha_s$ and virtual absolute squared matrix amplitude. The latter is  not given analytically. All $|\mathcal{M}|^2$ are color and spin averaged in the final state and summed over in the initial state.
-\begin{figure}[!htpb]
+To extract infrared divergences, \texttt{LoopTools} has been used. This package provides the function \texttt{SetLambda} which can be set to 0, $-1$ or $-2$ to extract the finite part, $\frac{1}{\epsilon}$ pole or $\frac{1}{\epsilon^2}$ pole of scalar integrals in dimensioanl regularisation. \texttt{SetLambda} includes both, UV and IR poles. In fact, the function \texttt{SetUVDiv} controls whether UV divergences are kept (\texttt{SetUVDiv}$\to 1$) or discarded (\texttt{SetUVDiv}$\to 0$), which presents another check of UV-finiteness which has been performed.\\
+However, using \texttt{SetLambda} allows for numerically extracting the coefficients of $\epsilon^i$ with $i \in \left\{ 0,-1,-2 \right\}$ of the absolute squared matrix amplitude. The respective poles of $|\mathcal{M}^{\mathrm{V}}_{\mathrm{MRSSM}}(uu \to \tilde{u}_L\tilde{u}_R)|^2$ are shown in figure \ref{fig:MatrixElementPoles}. Note, that the extraction of the single pole does not only involve setting the option \texttt{SetLamda} $\to-1$ and \texttt{Dminus4}$\to 0$, but also setting \texttt{SetLamda}$\to -2$ and \texttt{Dminus4} $\to -2$ and subtracting the term obtained by \texttt{SetLamda}$\to-2$ and \texttt{Dminus4} $\to 0$. In doing so, one accounts for the contraction of double poles with terms of $\mathcal{\epsilon}$. The same logic implies to the extraction of finite terms.\\
+Now it becomes clear, why the parameter \texttt{FiniteGs} has been introduced. As \texttt{SetLambda} only replaces the loop integrals but not every other term in an expression with the corresponding prefactor of $\epsilon^i$, \texttt{FiniteGs} needs to be set to zero when \texttt{SetLambda} is set to $-1$ or $-2$ and \texttt{FiniteGs}$\to 1$ when \texttt{SetLambda}$\to 0$.
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=.5]{figures/MatrixElement_Poles.png}
-\caption{Coefficients of $\mathcal{O}(\epsilon^0)$, $\mathcal{O}(\epsilon^{-1})$ and $\mathcal{O}(\epsilon^{-2})$ terms of the absolute squared matrix element of $uu \to \tilde{u}_L\tilde{u}_R$ in the MRSSM as a function of the Mandelstam variable $t$. External helicities and colors are averaged. The parameters are fixed to $m_{\tilde{q}} = \mu = \unit[1000]{GeV}$, $m_{\tilde{g}} = \unit[2000]{GeV}$, $m_{\sigma} = \unit[5000]{GeV}$ and $\sqrt{s} = \unit[6000]{GeV}$ which is the partonic center of mass energy.}
+\caption{Coefficients of $\mathcal{O}(\epsilon^0)$, $\mathcal{O}(\epsilon^{-1})$ and $\mathcal{O}(\epsilon^{-2})$ terms of $\frac{1}{4\cdot 9}\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}})$ of $uu \to \tilde{u}_L\tilde{u}_R$ in the MRSSM as a function of the Mandelstam variable $t$. External helicities and colors are averaged. The parameters are fixed to $m_{\tilde{q}} = \mu = \unit[1000]{GeV}$, $m_{\tilde{g}} = \unit[2000]{GeV}$, $m_{\sigma} = \unit[5000]{GeV}$ and $\sqrt{s} = \unit[6000]{GeV}$ which is the partonic center of mass energy.}\label{fig:MatrixElementPoles}
 \end{center}
 \end{figure}
-
+The upper plot in figure \ref{fig:MatrixElement} shows the finite contributions from loop diagrams with different topology to $\frac{1}{4\cdot 9}\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}})$ as a function of the Mandelstam variable $t$ where $\frac{1}{4\cdot 9}$ is the averaging over final state spins and colors. The lower plot displays the tree-level absolute squared matrix amplitude with leading order $\alpha_s$ which is compared to its analogue with next-to-leading order $\alpha_s$ and virtual correction $\frac{1}{4\cdot 9}\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}})$. The latter is not given analytically. All terms are color and spin averaged in the final state and summed over in the initial state.
 \begin{figure}[!htpb]
 \begin{center}
 \includegraphics[scale=.5]{figures/MatrixElement_SE_Vertices_Boxes}
