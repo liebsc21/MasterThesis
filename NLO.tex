@@ -253,7 +253,7 @@ $1000$ & $1000$ & $42.63$ & $61.8$ & $1.45$\\
 $1000$ & $2000$ & $11.56$ & $14.3$ & $1.24$\\
 $1500$ & $3000$ & $0.9166$ & $1.13$ & $1.23$
 \end{tabular}
-\caption{•}\label{tab:Modelfille}
+\caption{$K$-factors of the process $pp \to \tilde{u}_L\tilde{u}_R$  in the MRSSM for a selected set of masses. The center-of-mass energy is $\sqrt{S} = \unit[13]{TeV}$ and the pseudoscalar mass is fixed to $m_{\mathrm{\sigma}} = \unit[5000]{GeV}$.}\label{tab:Modelfille}
 \end{center}
 \end{table}
 Calculate uncertainties for multiple/one points()(pdf,) scale\\
@@ -265,16 +265,16 @@ To compare the results of $K$-factors in the MRSSM to those in the MSSM, the cro
 \begin{lstlisting}[style=Mybash]
 generate p p > ul ur [QCD] $$go
 \end{lstlisting}
-the $s$-channel gluinos were omitted as \texttt{MadGraph5} does not deal with divergences coming from the gluino in the on-shell limit. But as already discussed, these contributions are only of sub percent order. In fact, comparing the results from \texttt{MadGraph5} with the program \texttt{Prospino2} shows good agreement of the next-to leading order cross sections:
+the $s$-channel gluinos were omitted, with the addendum \texttt{\$\$go} as \texttt{MadGraph5} does not deal with divergences coming from the gluino in the on-shell limit. But as already discussed, these contributions are only of sub percent order. In fact, comparing the results from \texttt{MadGraph5} with the ones obtain by using the  program \texttt{Prospino2}, which does include these contributions, shows good agreement of the next-to leading order cross sections of $pp \to \tilde{u}_L \tilde{u}_R$:
 \begin{align}
-\sigma^{\mathrm{NLO}}_{\mathrm{MSSM,\texttt{MadGraph}}} = \unit[(9.49 \pm 0.03]{fb} \hspace{1cm}  \sigma^{\mathrm{NLO}}_{\mathrm{MSSM,\texttt{Prospino2}}} = \unit[9.48]{fb} + 1\%,
+\sigma^{\mathrm{NLO}}_{\mathrm{MSSM,\texttt{MadGraph}}} = \unit[(9.49 \pm 0.03)]{fb} \hspace{1cm}  \sigma^{\mathrm{NLO}}_{\mathrm{MSSM,\texttt{Prospino2}}} = \unit[9.48]{fb} + 1\%,
 \end{align}
 where the given uncertainty is the uncertainty of the integration over the phase space and the chosen parameters are: $m_{\tilde{q}} =\unit[1500]{GeV}$, $m_{\tilde{g}} = \unit[1000]{GeV}$, $\mu_F = \mu_R = m_{\tilde{q}}$ and $\sqrt{S} = \unit[13]{TeV}$.
 \begin{figure}[!htpb]
 \begin{center}
-\includegraphics[scale=.5]{figures/MSSM_uu_susu_Kfactors_msg=2000GeV.png}
-\includegraphics[scale=.5]{figures/MSSM_uu_susu_Kfactors_msq=1000GeV.png}
-\caption{Dependence of the $K$-factor for the process $pp \to \tilde{u}\tilde{u}$, where $\tilde{u}\tilde{u} \in \left\{ \tilde{u}_L\tilde{u}_R, \tilde{u}_L\tilde{u}_L, \tilde{u}_R\tilde{u}_R \right\}$, in the MSSM on the squark mass $m_{\tilde{q}}$ for fixed $m_{\tilde{g}} = \unit[2000]{GeV}$ (top) and on the gluino mass $m_{\tilde{g}}$ for fixed $m_{\tilde{q}} = \unit[1000]{GeV}$ (bottom). The cross section has been broken down to contributions coming from $pp \to \tilde{u}_L\tilde{u}_R$ and the from $pp \to \tilde{u}_L\tilde{u}_L$ channel. The latter equals the contributions coming from $pp \to \tilde{u}_R\tilde{u}_R$.}\label{fig:1LXsection_fixed_m}
+\includegraphics[scale=.55]{figures/MSSM_uu_susu_Kfactors_msg=2000GeV.png}
+\includegraphics[scale=.55]{figures/MSSM_uu_susu_Kfactors_msq=1000GeV.png}
+\caption{Dependence of the $K$-factor for the process $pp \to \tilde{u}\tilde{u}$, where $\tilde{u}\tilde{u} \in \left\{ \tilde{u}_L\tilde{u}_R, \tilde{u}_L\tilde{u}_L, \tilde{u}_R\tilde{u}_R \right\}$, in the MSSM on the squark mass $m_{\tilde{q}}$ for fixed $m_{\tilde{g}} = \unit[2000]{GeV}$ (top) and on the gluino mass $m_{\tilde{g}}$ for fixed $m_{\tilde{q}} = \unit[1000]{GeV}$ (bottom). The $K$-factors have been broken down to contributions coming from $pp \to \tilde{u}_L\tilde{u}_R$ and from $pp \to \tilde{u}_L\tilde{u}_L$. The latter equals the contributions coming from $pp \to \tilde{u}_R\tilde{u}_R$.}\label{fig:1LXsection_fixed_m}
 \end{center}
 \end{figure}
 \begin{table}[H]
@@ -290,7 +290,7 @@ $1000$ & $1000$ & $42.63$ & $58.5$ & $1.37$ & $122.2$ & $161.3$ \ignore{58.5+2*5
 $1000$ & $2000$ & $11.56$ & $13.3$ & $1.15$ & $66.36$ & $72.1$ \ignore{13.3+2*29.4} & $1.09$\\
 $1500$ & $3000$ & $0.9166$ & $1.05$ & $1.14$ & $7.045$ & $7.57$\ignore{1.05+2*3.26} & $1.07$
 \end{tabular}
-\caption{$K$-factors of the process $pp \to \tilde{u}_L\tilde{u}_R$ and $pp \to \tilde{u}\tilde{u}$, where $\tilde{u}\tilde{u} \in \left\{ \tilde{u}_L\tilde{u}_R, \tilde{u}_L\tilde{u}_L, \tilde{u}_R\tilde{u}_R \right\}$, in the MSSM for a selected set of masses}\label{tab:Modelfille}
+\caption{$K$-factors of the process $pp \to \tilde{u}_L\tilde{u}_R$ and $pp \to \tilde{u}\tilde{u}$, where $\tilde{u}\tilde{u} \in \left\{ \tilde{u}_L\tilde{u}_R, \tilde{u}_L\tilde{u}_L, \tilde{u}_R\tilde{u}_R \right\}$, in the MSSM for a selected set of masses. The center-of-mass energy is $\sqrt{S} = \unit[13]{TeV}$.}\label{tab:Modelfille}
 \end{center}
 \end{table}
 Calculate uncertainties for multiple/ points(pdf, scale, integration)
@@ -305,12 +305,13 @@ The cross section for squark production does not exist in the limit of an infini
 \begin{align}
 \lim_{m_{\sigma}\to\infty} \sigma(qq \to \tilde{q}\tilde{q}) \sim \ln \frac{m_{\sigma}^2}{\mu^2}
 \end{align}
-This is actually expected as an effective field theory of the MRSSM where the sgluon is integrated out is no longer supersymmetric. This is because the sgluon is together with the octino part of a supermultiplet. Integrating out only the sgluon means that the octino misses its superpartner in the effective field theory. In this case the decoupling theorem \cite{Appelquist:1974tg} does no longer hold.\\
-It is even possible to predict the  logarithmic scaling of $\sigma(qq \to \tilde{q}\tilde{q})$ quantitatively. The coefficient of the logarithm is proportional to the difference of the one-loop $\beta$ function coefficients of $g_s$ and $\hat{g}_s$ in the effective theory with the heavy particle integrated out, see eq. (4) in \cite{Cheng:1997sq}.
 \begin{figure}[!htpb]
 \begin{center}
 \includegraphics[scale=.5]{figures/MRSSM_uu_susu_Kfactors_msq=1000GeV_msg=2000GeV.png}
 \caption{Dependence of the $K$-factor for the process $uu \to \tilde{u}\tilde{u}$ on the mass of the pseudoscalar sgluon. For $m_{\sigma} \approx \unit[10^5]{GeV}$ onwards want find a logarithmic scaling as predicted by \cite{Cheng:1997sq}.}
 \end{center}
 \end{figure}
+This is actually expected as an effective field theory of the MRSSM where the sgluon is integrated out is no longer supersymmetric. This is because the sgluon is together with the octino part of a supermultiplet. Integrating out only the sgluon means that the octino misses its superpartner in the effective field theory. In this case the decoupling theorem \cite{Appelquist:1974tg} does no longer hold.\\
+It is even possible to predict the  logarithmic scaling of $\sigma(qq \to \tilde{q}\tilde{q})$ quantitatively. The coefficient of the logarithm is proportional to the difference of the one-loop $\beta$ function coefficients of $g_s$ and $\hat{g}_s$ in the effective theory with the heavy particle integrated out, see eq. (4) in \cite{Cheng:1997sq}.
+
 
