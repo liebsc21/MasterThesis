@@ -1,8 +1,8 @@
 \section{Squark Production at One-Loop}
-This section discusses the cross section for squark production at next-to-leading order $\sigma^{\mathrm{NLO}}$. To do so, the next section gives a justification why on-shell renormalization has been chosen in section \ref{sec:renMRSSM}. After that, the set up of the calculation of the different contributions to $\sigma^{\mathrm{NLO}}$ is explained. This includes a remark on how the calculation was sped up. Finally the results of the computation are presented in the form of $K$-factors. These are then compared to the ones in the MSSM before the thesis closes with an discussion of the behavior of $\sigma^{\mathrm{NLO}}$ in the limit of large sgluon masses.
+This section discusses the cross section for squark production at next-to-leading order $\sigma^{\mathrm{NLO}}$. To do so, the next section gives a justification why on-shell renormalization has been chosen in section \ref{sec:renMRSSM}. After that, the set up of the calculation, which has been performed by a \texttt{C++} program,  of the different contributions to $\sigma^{\mathrm{NLO}}$, is explained. This includes a remark on how the calculation was sped up. Finally the results of the computation are presented in the form of $K$-factors. These are then compared to the ones in the MSSM before the thesis closes with an discussion of the behavior of $\sigma^{\mathrm{NLO}}$ in the limit of large sgluon masses.
 
 \subsection{The LSZ Theorem}\label{sec:LSZ}
-The LSZ theorem\cite{Lehmann:1954rq}, named after  Harry Lehmann, Kurt Symanzik and Wolfhart Zimmermann, or LSZ reduction formula prescribes how to obtain the S-matrix element, i.e. a physical observable, from the time ordered correlation function of the respective field operators. The time ordered correlation function of fields in an interacting theory can be calculated perturbatively with the aid of the Gell-Mann and Low theorem and the Wick theorem. \\
+The LSZ theorem\cite{Lehmann:1954rq} or LSZ reduction formula, named after  Harry Lehmann, Kurt Symanzik and Wolfhart Zimmermann, prescribes how to obtain the S-matrix element, i.e. a physical observable, from the time ordered correlation function of the respective field operators. The time ordered correlation function of fields in an interacting theory can be calculated perturbatively with the aid of the Gell-Mann and Low theorem and the Wick theorem. \\
 Considering a physical process with kinematics $\vec{k}_1 \hdots \vec{k}_n \to \vec{p}_1 \hdots \vec{p}_m$ and taking for the sake of simplicity only one scalar field $\phi$ the Fourier transform of the time ordered product of a correlation function is related to the corresponding S-matrix element like\footnote{In this subsection the $\sim$ indicates that the poles on either side are the same provided that all momenta are close to their mass shell, i.e. $p_i^0 \to E_{\vec{p}_i}$ and $k_j^0 \to E_{\vec{k}_j}$.}
 \begin{align}
 \prod_{i=1}^n \int \mathrm{d}x_i\ \mathrm{e}^{ip_i x_i} \prod_{j=1}^m \int \mathrm{d}y_j\ \mathrm{e}^{ik_j y_j} \left\langle \Omega | \mathcal{T} \left[ \phi(x_1) \hdots \phi(x_n) \phi(y_1) \hdots \phi(y_m) \right] | \Omega\right\rangle \nonumber\\
@@ -10,7 +10,7 @@ Considering a physical process with kinematics $\vec{k}_1 \hdots \vec{k}_n \to \
 \end{align}
 Here $\mathcal{T}$ denotes the time ordering operator, $\left.| \Omega \right\rangle$ is the ground state of the interacting theory and $\sqrt{Z}$ is the residue of the single particle pole in the two-point function 
 \begin{align}
-\int \mathrm{d}x\ \mathrm{e}^{ip x} \left\langle \Omega | \mathcal{T} \left[ \phi(x) \phi(0) \right] | \Omega\right\rangle &= \frac{i}{p^2-m_0^2} + \frac{i}{p^2-m_0^2} \left(\frac{i\Sigma(p^2)}{p^2-m_0^2}\right) + \frac{i}{p^2-m_0^2} \left(\frac{\Sigma(p^2)}{p^2-m_0^2}\right)^2 + \hdots\nonumber\\
+\int \mathrm{d}x\ \mathrm{e}^{ip x} \left\langle \Omega | \mathcal{T} \left[ \phi(x) \phi(0) \right] | \Omega\right\rangle &= \frac{i}{p^2-m_0^2} + \frac{i}{p^2-m_0^2} \left(\frac{\Sigma(p^2)}{p^2-m_0^2}\right) + \frac{i}{p^2-m_0^2} \left(\frac{\Sigma(p^2)}{p^2-m_0^2}\right)^2 + \hdots\nonumber\\
 &= \frac{i}{p^2 - m_0^2 - \Sigma(p^2)}.\label{eq:propagator}
 \end{align}
 \begin{figure}[!htbp]
@@ -113,7 +113,7 @@ Now considers the full $(n+m)$-point function in scalar theory. One can decompos
 	\draw[fill=black] (-90:1.5) circle (.01);
 	\draw[fill=black] (-100:1.5) circle (.01);
 \end{tikzpicture}
-\caption{Diagrammatic figure of a ``full' $(n+m)$-point function. Apart from the ``full'' propagators there is the ``full'' amputated $(n+m)$-point function}
+\caption{Diagrammatic figure of a ``full'' $(n+m)$-point function. Apart from the ``full'' propagators there is the ``full'' amputated $(n+m)$-point function}
 \end{center}
 \end{figure}\\
 Inserting the expression
@@ -153,25 +153,25 @@ for the full propagators one notices the same singularity as in eq. \eqref{eq:LS
 \end{tikzpicture}
 \end{center}
 \end{figure}\\
-Now it becomes visible why the renormalization in the on-shell scheme
+Now it becomes clear, why the renormalization in the on-shell scheme
 \begin{align}
 \left.\frac{\partial \Sigma(p^2)}{\partial p^2}\right|_{p^2 = m^2} \stackrel{!}{=} 0
 \end{align}
-introduces no further manipulation when turning from the correlation function to the S-matrix-element because $Z = 1$ in on-shell renormalization. Furthermore the on-shell condition for the mass renormalization
+introduces no further modification, when turning from the Green function to the S-matrix-element because $Z = 1$ in on-shell renormalization. Furthermore the on-shell condition for the mass renormalization
 \begin{align}
 \Sigma(p^2)|_{p^2 = m^2} = 0
 \end{align}
 means that the physical mass equals the tree level mass.
 
 \subsection{The Squark Production Cross Section at Next-to-Leading Order}
-The squark production cross section at next-to-leading order is composed out of three contributions. These are the Born (tree-level) cross section, the virtual correction and the real correction. 
+The squark production cross section at next-to-leading order is composed out of three contributions. These are the Born (tree-level) cross section, the virtual and the real corrections. 
 \begin{align}
 \sigma^{\mathrm{NLO}} = \sigma^{\mathrm{B}} + \sigma^{\mathrm{V}} + \sigma^{\mathrm{R}}\label{eq:BVR}
 \end{align}
-All three contributions have to be calculated with next-to-leading order parton density functions and $\alpha_s$. The next section summaries how the calculation has been performed.
+All three contributions have to be calculated with next-to-leading order parton density functions and $\alpha_s$. The next section summaries how the calculation has been automated within a \texttt{C++} program.
 
-\subsubsection{The Set Up of the calculation}
-The setup of the calculation is summarized in fig. \ref{fig:CalcSetup}. Both the virtual and the Born matrix amplitude have been generated with the \texttt{Mathematica} package \texttt{FeynArts}. To this end a modelfile, generated by the \texttt{Mathematica} package \texttt{SARAH}, has been adjusted to include counterterm Feynman rules and appropriate renormalization constants. This procedure was explained in section \ref{sec:MatrixElRen}. The matrix amplitudes have been processed further to $\sum|\mathcal{M}^{\mathrm{B}}|^2$ and $ \sum 2\Re (\mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast})$ by the \texttt{Mathematica} package \texttt{FormCalc} before this output has then been converted to a \texttt{C++} readable code and stored in an output file.
+\subsubsection{The Setup of the Calculation}
+The setup of the calculation is summarized in fig. \ref{fig:CalcSetup}. Both the virtual and the Born matrix amplitude have been generated with the \texttt{Mathematica} package \texttt{FeynArts}. To this end a modelfile, generated by the \texttt{Mathematica} package \texttt{SARAH}, has been adjusted appropriately as described in section \ref{sec:ModelFileImplementation}. The matrix amplitudes have been processed further to $\sum|\mathcal{M}^{\mathrm{B}}|^2$ and $ \sum 2\Re (\mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast})$ by the \texttt{Mathematica} package \texttt{FormCalc} before this output has then been converted to a \texttt{C++} readable code.
 \begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
@@ -194,9 +194,11 @@ The setup of the calculation is summarized in fig. \ref{fig:CalcSetup}. Both the
 \caption{This scheme illustrates the setup of the computation of the next-to-leading order cross section. The (absolute) squared matrix amplitudes of the Born contribution the virtual correction and the real correction in the soft and/or collinear limit are generated by \texttt{Mathematica} packages and imported into a \texttt{C++} code. The amplitude from the real corrections is analytically integrated over the gluon's four momentum in $D$ dimensions. Loop integrals are evaluated numerically using \texttt{Looptools}. For the hard non-collinear regime, the matrix amplitude of the real corrections is imported from \texttt{MadGraph5}. The \texttt{CUBA}-library was used for all three contributions to perform the remaining integration to arrive at the cross sections $\sigma^{\mathrm{B}}$, $\sigma^{\mathrm{V}}$ and $\sigma^{\mathrm{R}}$.}\label{fig:CalcSetup}
 \end{center}
 \end{figure}
-This output file is in turn invoked by a \texttt{C++} code which evaluates the scalar integrals of $ \sum 2\Re (\mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast})$ numerically by using the package \texttt{LoopTools}. Finally the phase space integration and the integration over $x_1$ and $x_2$ is performed by the integration routine ``Cuhre'' which is part of the \texttt{CUBA} library\cite{Hahn:2004fe}. The parton density functions are included using \texttt{LHAPDF6}\cite{Buckley:2014ana}\\
-The computation of the real corrections have been done by Wojciech Kotlarski, another member of the group. To extract the singularities from the real corrections, the ``two cut phase space slicing method'' outlined in section \ref{sec:RealGluonRad}, has been used. For the soft and hard collinear limit, the absolute squared matrix element has been calculated with \texttt{FormCalc} and analytically integrated over the gluons four-momentum in $D$ dimensions in \texttt{Mathematica}. This has been exported to the \texttt{C++} code to perform the rest of the integration numerically with the \texttt{CUBA} library. The matrix element in the hard non-collinear regime has been imported from \texttt{MadGraph5}\cite{Alwall:2014hca}and the whole integration has been performed numerically by the \texttt{CUBA} library.\\
-It has been checked that for multiple different and quite distinct choices of the parameters $m_{\tilde{q}}$ and $m_{\tilde{g}}$, the double as well as the single poles of the virtual and real correction cancel up to machine precision. As the poles of the real corrections have been calculated analytically, it is possible to quote them. The double pole is actually proportional to the Born cross section:
+This \texttt{C++} output is in turn invoked by the main program which evaluates the scalar integrals of $ \sum 2\Re (\mathcal{M}^{\mathrm{B}} \mathcal{M}^{\mathrm{1L}\ast})$ numerically by using the package \texttt{LoopTools}. Finally the phase space integration and the integration over $x_1$ and $x_2$ is performed by the integration routine ``Cuhre'' which is part of the \texttt{CUBA} library\cite{Hahn:2004fe}. The parton density functions are included using \texttt{LHAPDF6}\cite{Buckley:2014ana}.\\
+The computation of the real corrections have been done by Wojciech Kotlarski, another member of the group. To extract the singularities from the real corrections, the ``two cut phase space slicing method'' outlined in section \ref{sec:RealGluonRad}, has been used. For the soft and hard collinear limit, the absolute squared matrix element has been calculated with \texttt{FormCalc} and analytically integrated over the gluon's four-momentum in $D$ dimensions in \texttt{Mathematica}. This has been exported to the \texttt{C++} code to perform the rest of the integration numerically with the \texttt{CUBA} library. The matrix element in the hard non-collinear regime has been imported from \texttt{MadGraph5}\cite{Alwall:2014hca} and the whole integration has been performed numerically by the \texttt{CUBA} library.\\
+\\
+It has been checked that for multiple different and quite distinct choices of the parameters $m_{\tilde{q}}$ and $m_{\tilde{g}}$, the double as well as the single poles of the virtual and real correction cancel up to machine precision. Regarding the virtual corrections, this has been done by numerically extracting the $\frac{1}{\epsilon}$ and $\frac{1}{\epsilon^2}$ coefficient of loop integrals (see the discussion in section \ref{sec:SetLambdaExplanation} for more details).\\
+As the poles of the real corrections have been calculated analytically, it is possible to quote them. The double pole is actually proportional to the Born cross section:
 \begin{align}
 \sigma^{\mathrm{R}}_{\mathrm{double\ pole}} = -\sigma^{\mathrm{V}}_{\mathrm{double\ pole}} = C(F)\frac{\alpha_s}{\pi}\sigma^{\mathrm{B}} \frac{1}{\epsilon^2}.
 \end{align}
@@ -240,12 +242,12 @@ Figure \ref{fig:1LXsection_fixed_m} shows the $K$-factor for the production of u
 \caption{Dependence of the $K$-factor for the process $uu \to \tilde{u}_L\tilde{u}_R$ in the MRSSM on the squark mass $m_{\tilde{q}}$ for fixed $m_{\tilde{g}} = \unit[2000]{GeV}$ (top) and on the gluino mass $m_{\tilde{g}}$ for fixed $m_{\tilde{q}} = \unit[1000]{GeV}$ (bottom).}\label{fig:1LXsection_fixed_m}
 \end{center}
 \end{figure}
-Note further that within the real corrections, only gluon radiation is included. This is because quark radiation, as described in section \ref{sec:RealQuarkRad}, involves the treatment of on-shell singularities which have unfortunately not been dealt with, due to a limited time budget. However, \cite{Gavin:2013kga} suggests that quark radiation gives only a sub percent effect to the next-to-leading order cross section of squark production. Of course, this argument applies to the MSSM but as the only difference to the MRSSM comes from diagrams involving gluinos and sgluons it provides also a strong argument for the suppression of quark radiation in squark production in the MRSSM. In fact, sgluons do not appear at all in diagrams contributing to real corrections. Furthermore, the change from Majorana to Dirac gluinos can never imply an amplification of processes involving gluinos. The reason for this is, that if a gluino undergoes, due to its mass, a chirality flip, the right handed part of  it, namely the octino, does not couple to quarks and squarks.\\
-As the calculation of $\sigma^{\mathrm{NLO}}$ has, due to CPU-time, been performed with one percent accuracy, the effect of quark radiation is possibly not visible within the given results. Table ??? shows the $\sigma^{\mathrm{LO}}$ and $\sigma^{\mathrm{NLO}}$ as they have been calculated by \texttt{C++} program.
+Note further that within the real corrections, only gluon radiation is included. This is because quark radiation, as described in section \ref{sec:RealQuarkRad}, involves the treatment of on-shell singularities which have unfortunately not been dealt with, due to a limited time budget. However, \cite{Gavin:2013kga} suggests that quark radiation gives only a sub percent effect to the next-to-leading order cross section of squark production when $m_{\tilde{g}} < m_{\tilde{q}}$. Of course, this argument applies to the MSSM but as the only difference to the MRSSM comes from diagrams involving gluinos and sgluons it provides also a strong argument for the suppression of quark radiation in the MRSSM. In fact, sgluons do not appear at all in diagrams contributing to real corrections. Furthermore, the change from Majorana to Dirac gluinos can never imply an amplification of processes involving gluinos. The reason for this is, that if a gluino undergoes, due to its mass, a chirality flip, the right handed part of it, namely the octino, does not couple to quarks and squarks. However, the effect of quark radiation is thought to increase when $m_{\tilde{g}} > m_{\tilde{q}}$. This is quantified within the next chapter, when squark production is discussed in the MSSM. Nonetheless, quark radiation is by no means to be thought of a dominant contribution to squark production at next-to-leading order.\\
+As the calculation of $\sigma^{\mathrm{NLO}}$ has, due to CPU-time, been performed with one percent accuracy, the effect of quark radiation is possibly not visible within the given results. Table \ref{tab:MRSSMKfactors} shows $\sigma^{\mathrm{LO}}$ and $\sigma^{\mathrm{NLO}}$ as they have been calculated by the devised \texttt{C++} program.
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{c|c?c|c|c}
-$m_{\tilde{q}}$ in GeV & $m_{\tilde{q}}$ in GeV & $\sigma^{\mathrm{LO}}$ in fb & $\sigma^{\mathrm{NLO}}$ in fb & $K$\\
+$m_{\tilde{q}}$ in GeV & $m_{\tilde{g}}$ in GeV & $\sigma^{\mathrm{LO}}$ in fb & $\sigma^{\mathrm{NLO}}$ in fb & $K$\\
 \hlinewd{2pt}
 $500$ & $500$ & $966.4$ & $1441$ & $1.49$\\
 $500$ & $1000$ & $303.4$ & $383$ & $1.26$\\
@@ -253,11 +255,11 @@ $1000$ & $1000$ & $42.63$ & $61.8$ & $1.45$\\
 $1000$ & $2000$ & $11.56$ & $14.3$ & $1.24$\\
 $1500$ & $3000$ & $0.9166$ & $1.13$ & $1.23$
 \end{tabular}
-\caption{$K$-factors of the process $pp \to \tilde{u}_L\tilde{u}_R$  in the MRSSM for a selected set of masses. The center-of-mass energy is $\sqrt{S} = \unit[13]{TeV}$ and the pseudoscalar mass is fixed to $m_{\mathrm{\sigma}} = \unit[5000]{GeV}$.}\label{tab:Modelfille}
+\caption{$K$-factors of the process $pp \to \tilde{u}_L\tilde{u}_R$  in the MRSSM for a selected set of masses. The center-of-mass energy is $\sqrt{S} = \unit[13]{TeV}$ and the pseudoscalar mass is fixed to $m_{\mathrm{\sigma}} = \unit[5000]{GeV}$.}\label{tab:MRSSMKfactors}
 \end{center}
 \end{table}
-Calculate uncertainties for multiple/one points()(pdf,) scale\\
-For three different choices of $m_{\tilde{q}}$ and $m_{\tilde{g}}$, Philip Dießner checked the results by doing the calculation using \texttt{GoSam}\cite{Cullen:2014yla, Cullen:2011ac}.
+It can be seen that the $K$-factors depend strongly on the ratio $\frac{m_{\tilde{g}}}{m_{\tilde{q}}}$ but not strongly on the masses itself.\\
+For three different choices of $m_{\tilde{q}}$ and $m_{\tilde{g}}$, Philip Dießner checked the results by doing the calculation using \texttt{GoSam}\cite{Cullen:2014yla, Cullen:2011ac} and \texttt{MadGraph}.
 
 
 \subsubsection{$K$-factors for Squark Production in the MSSM}
@@ -265,24 +267,36 @@ To compare the results of $K$-factors in the MRSSM to those in the MSSM, the cro
 \begin{lstlisting}[style=Mybash]
 generate p p > ul ur [QCD] $$go
 \end{lstlisting}
-the $s$-channel gluinos were omitted, with the addendum \texttt{\$\$go} as \texttt{MadGraph5} does not deal with divergences coming from the gluino in the on-shell limit. But as already discussed, these contributions are only of sub percent order. In fact, comparing the results from \texttt{MadGraph5} with the ones obtain by using the  program \texttt{Prospino2}, which does include these contributions, shows good agreement of the next-to leading order cross sections of $pp \to \tilde{u}_L \tilde{u}_R$:
-\begin{align}
-\sigma^{\mathrm{NLO}}_{\mathrm{MSSM,\texttt{MadGraph}}} = \unit[(9.49 \pm 0.03)]{fb} \hspace{1cm}  \sigma^{\mathrm{NLO}}_{\mathrm{MSSM,\texttt{Prospino2}}} = \unit[9.48]{fb} + 1\%,
-\end{align}
-where the given uncertainty is the uncertainty of the integration over the phase space and the chosen parameters are: $m_{\tilde{q}} =\unit[1500]{GeV}$, $m_{\tilde{g}} = \unit[1000]{GeV}$, $\mu_F = \mu_R = m_{\tilde{q}}$ and $\sqrt{S} = \unit[13]{TeV}$.
+the $s$-channel gluinos were omitted, with the addendum \texttt{\$\$go} as \texttt{MadGraph5} does not deal with divergences coming from the gluino in the on-shell limit. 
 \begin{figure}[!htpb]
 \begin{center}
-\includegraphics[scale=.55]{figures/MSSM_uu_susu_Kfactors_msg=2000GeV.png}
-\includegraphics[scale=.55]{figures/MSSM_uu_susu_Kfactors_msq=1000GeV.png}
+\includegraphics[scale=.47]{figures/MSSM_uu_susu_Kfactors_msg=2000GeV.png}
+\includegraphics[scale=.47]{figures/MSSM_uu_susu_Kfactors_msq=1000GeV.png}
 \caption{Dependence of the $K$-factor for the process $pp \to \tilde{u}\tilde{u}$, where $\tilde{u}\tilde{u} \in \left\{ \tilde{u}_L\tilde{u}_R, \tilde{u}_L\tilde{u}_L, \tilde{u}_R\tilde{u}_R \right\}$, in the MSSM on the squark mass $m_{\tilde{q}}$ for fixed $m_{\tilde{g}} = \unit[2000]{GeV}$ (top) and on the gluino mass $m_{\tilde{g}}$ for fixed $m_{\tilde{q}} = \unit[1000]{GeV}$ (bottom). The $K$-factors have been broken down to contributions coming from $pp \to \tilde{u}_L\tilde{u}_R$ and from $pp \to \tilde{u}_L\tilde{u}_L$. The latter equals the contributions coming from $pp \to \tilde{u}_R\tilde{u}_R$.}\label{fig:1LXsection_fixed_m}
 \end{center}
 \end{figure}
+As already discussed, these contributions are only of sub percent order when $m_{\tilde{q}} > m_{\tilde{g}}$\cite{Gavin:2013kga} but increase for $m_{\tilde{g}} > m_{\tilde{q}}$ as indicated in table \ref{tab:MSSMMadGraphProspino}, which compares $\sigma^{\mathrm{NLO}}$ obtained using \texttt{MadGraph5} and the program \texttt{Prospino2}\cite{Beenakker:1996ed} for both scenarios.
+\begin{table}
+\begin{center}
+\begin{tabular}{c|c?c?c}
+$m_{\tilde{q}}$ in GeV & $m_{\tilde{g}}$ in GeV & $\sigma^{\mathrm{NLO}}_{\texttt{MadGraph}}$ in fb & $\sigma^{\mathrm{NLO}}_{\texttt{Prospino2}}$ in fb \\
+\hlinewd{2pt}
+$1500$ & $1000$ & $9.49 \pm 0.03$ & $9.48 \pm 1\%$ \\
+$1000$ & $2000$ & $13.32 \pm 0.05$ & $13.9 \pm 0.8\%$ 
+\end{tabular}
+\caption{$\sigma^{\mathrm{NLO}}(pp \to \tilde{u}_L\tilde{u}_R)$ in the MSSM obtained from \texttt{MadGraph5} and \texttt{Prospino2} for a selected set of masses. The center-of-mass energy is $\sqrt{S} = \unit[13]{TeV}$. Within the \texttt{MadGraph5} calculation, the $s$-channel gluino diagrams have been discarded. This becomes relevant only when $m_{\tilde{g}} > m_{\tilde{q}}$.}\label{tab:MSSMMadGraphProspino}
+\end{center}
+\end{table}
+
+In fact, comparing $\sigma^{\mathrm{NLO}}(pp \to \tilde{u}_L\tilde{u}_R)$ from \texttt{MadGraph5} with the ones obtain by using \texttt{Prospino2}, which does include quark radiation, shows good agreement for the case $m_{\tilde{g}} < m_{\tilde{q}}$ but a small deviation for $m_{\tilde{g}} > m_{\tilde{q}}$. The given uncertainties are the uncertainties of the integration over the phase space and the chosen parameters are: $m_{\tilde{q}} =\unit[1500]{GeV}$, $m_{\tilde{g}} = \unit[1000]{GeV}$, $\mu_F = \mu_R = m_{\tilde{q}}$ and $\sqrt{S} = \unit[13]{TeV}$.\\
+Table \ref{tab:KfactorsMSSM} displays the leading order and next-to-leading order cross section of up-squark production in the MSSM. The total cross section for the production of all possible channels $\left\{ \tilde{u}_L\tilde{u}_R, \tilde{u}_L\tilde{u}_L, \tilde{u}_R\tilde{u}_R \right\}$ is broken down to the contribution, coming from the channel $\tilde{u}_L\tilde{u}_R$ whose tree-level cross section is the same as in the MRSSM.
+
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{c|c?c|c|c?c|c|c}
-\multicolumn{2}{c?}{} & \multicolumn{3}{c?}{$p + p \to \tilde{u}_L + \tilde{u}_R$} & \multicolumn{3}{c}{$p + p \to \tilde{u} + \tilde{u}$}\\
+\multicolumn{2}{c?}{} & \multicolumn{3}{c?}{$p + p \to \tilde{u}_L + \tilde{u}_R$} & \multicolumn{3}{c}{$p + p \to \tilde{u} + \tilde{u}$} \\
 \hlinewd{2pt}
-$m_{\tilde{q}}$ in GeV & $m_{\tilde{q}}$ in GeV & $\sigma^{\mathrm{LO}}$ in fb & $\sigma^{\mathrm{NLO}}$ in fb & $K$ & $\sigma^{\mathrm{LO}}$ in fb & $\sigma^{\mathrm{NLO}}$ in fb & $K$\\
+$m_{\tilde{q}}$ in GeV & $m_{\tilde{g}}$ in GeV & $\sigma^{\mathrm{LO}}$ in fb & $\sigma^{\mathrm{NLO}}$ in fb & $K$ & $\sigma^{\mathrm{LO}}$ in fb & $\sigma^{\mathrm{NLO}}$ in fb & $K$\\
 \hlinewd{2pt}
 $500$ & $500$ & $966.4$ & $1328$ & $1.37$ & $2333$ & $3102$ \ignore{1328+2*887} & $1.33$\\
 $500$ & $1000$ & $303.4$ & $352$ & $1.16$ & $1271$ & $1393$ \ignore{353 + 2*520} & $1.10$\\
@@ -290,10 +304,12 @@ $1000$ & $1000$ & $42.63$ & $58.5$ & $1.37$ & $122.2$ & $161.3$ \ignore{58.5+2*5
 $1000$ & $2000$ & $11.56$ & $13.3$ & $1.15$ & $66.36$ & $72.1$ \ignore{13.3+2*29.4} & $1.09$\\
 $1500$ & $3000$ & $0.9166$ & $1.05$ & $1.14$ & $7.045$ & $7.57$\ignore{1.05+2*3.26} & $1.07$
 \end{tabular}
-\caption{$K$-factors of the process $pp \to \tilde{u}_L\tilde{u}_R$ and $pp \to \tilde{u}\tilde{u}$, where $\tilde{u}\tilde{u} \in \left\{ \tilde{u}_L\tilde{u}_R, \tilde{u}_L\tilde{u}_L, \tilde{u}_R\tilde{u}_R \right\}$, in the MSSM for a selected set of masses. The center-of-mass energy is $\sqrt{S} = \unit[13]{TeV}$.}\label{tab:Modelfille}
+\caption{$K$-factors of the process $pp \to \tilde{u}_L\tilde{u}_R$ and $pp \to \tilde{u}\tilde{u}$, where $\tilde{u}\tilde{u} \in \left\{ \tilde{u}_L\tilde{u}_R, \tilde{u}_L\tilde{u}_L, \tilde{u}_R\tilde{u}_R \right\}$, in the MSSM for a selected set of masses. The center-of-mass energy is $\sqrt{S} = \unit[13]{TeV}$.}\label{tab:KfactorsMSSM}
 \end{center}
 \end{table}
-Calculate uncertainties for multiple/ points(pdf, scale, integration)
+
+Again, it is clearly visible that the $K$-factors depend rather strongly on the ratio $\frac{m_{\mathrm{g}}}{m_{\mathrm{q}}}$ but not so much on the masses itself. Comparing with the results from the MRSSM \ref{tab:MRSSMKfactors}, one can state that the $K$-factors of the MRSSM are slightly larger. This might be the case, as there are additional degrees of freedom in the $R$-symmetric model, namely the octino which enters the gluino self-energy contributions (see second diagram from the right in \ref{fig:GluinoSE}) and the sgluons which enters there and in box diagrams (see lower right diagram in \ref{fig:1loopdiagrams}). The dependence on the sgluon mass is discussed within the next chapter
+%Calculate uncertainties for multiple/ points(pdf, scale, integration)
 
 
 
@@ -305,7 +321,8 @@ The cross section for squark production does not exist in the limit of an infini
 \begin{align}
 \lim_{m_{\sigma}\to\infty} \sigma(qq \to \tilde{q}\tilde{q}) \sim \ln \frac{m_{\sigma}^2}{\mu^2}
 \end{align}
-\begin{figure}[!htpb]
+
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=.5]{figures/MRSSM_uu_susu_Kfactors_msq=1000GeV_msg=2000GeV.png}
 \caption{Dependence of the $K$-factor for the process $uu \to \tilde{u}\tilde{u}$ on the mass of the pseudoscalar sgluon. For $m_{\sigma} \approx \unit[10^5]{GeV}$ onwards want find a logarithmic scaling as predicted by \cite{Cheng:1997sq}.}
