@@ -120,7 +120,7 @@ Inserting the expression
 \begin{align}
 \frac{i}{p^2 - m_0^2 - \Sigma(p^2)} \sim \frac{i Z}{p^2 - m^2}
 \end{align}
-for the full propagators one notices the same singularity as in eq. \eqref{eq:LSZ}. If one now compares the coefficients of these poles in eq. \eqref{eq:LSZ} one finds
+for the full propagators one notices the same singularity as in eq. \eqref{eq:LSZ}. Comparing the coefficients of these poles in eq. \eqref{eq:LSZ} one obtains
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=2.0 pt, scale=1.3, arrow/.style={thick,->,shorten >=2pt,shorten <=2pt,>=stealth}]
@@ -204,7 +204,7 @@ As the poles of the real corrections have been calculated analytically, it is po
 \end{align}
 
 \subsubsection{Remark on Prefactors in the Calculation}
-For the discussion of results it will not been distinguished between virtual and real corrections. This is because they have not been separated strictly in the calculation: As already discussed both $\sigma^{\mathrm{V}}$ and $\sigma^{\mathrm{R}}$ are divergent, i.e. there are poles of the form $\frac{1}{\epsilon}$ and $\frac{1}{\epsilon^2}$. But these pole cancel exactly. On the other hand there are also prefactors from the phase space integral and the loop integral, with can be expanded in a power series in $\epsilon$. In short, the virtual and real correction to the cross section can be expressed with some coefficients $A - E$, which are functions of the parameters $m_{\tilde{g}}$ and $m_{\tilde{q}}$, in the following way
+For the discussion of results it will not been distinguished between virtual and real corrections. This is because they have not been separated strictly in the calculation: As already discussed both $\sigma^{\mathrm{V}}$ and $\sigma^{\mathrm{R}}$ are divergent, i.e. there are poles of the form $\frac{1}{\epsilon}$ and $\frac{1}{\epsilon^2}$. But these pole cancel exactly. On the other hand there are also prefactors from the phase space integral and the loop integral, with can be expanded in a power series in $\epsilon$. In short, the virtual and real correction to the cross section can be expressed with some coefficients $A$ - $E$, which are functions of the parameters $m_{\tilde{g}}$, $m_{\tilde{q}}$ and $m_{\sigma}$, in the following way:
 \begin{align}
 \sigma^{\mathrm{V}} &= \left( 1 + (A^{\mathrm{V}} + P_1)\epsilon + (B^{\mathrm{V}} + P_2)\epsilon^2 + \mathcal{O}(\epsilon^3) \right)\left( C^{\mathrm{V}} - \frac{D}{\epsilon} - \frac{E}{\epsilon^2} \right),\\
 \sigma^{\mathrm{R}} &= \left( 1 + (A^{\mathrm{R}} + P_1)\epsilon + (B^{\mathrm{R}} + P_2)\epsilon^2 + \mathcal{O}(\epsilon^3) \right)\left( C^{\mathrm{R}} + \frac{D}{\epsilon} + \frac{E}{\epsilon^2} \right).\label{eq:prefactoredecomp}
@@ -213,11 +213,11 @@ Here, the coefficients $A$, $B$ and $C$ are in general distinct in the virtual a
 Some of the prefactors, namely $P_1$ and $P_2$, are the same in both contributions. Keeping them in eq. \eqref{eq:prefactoredecomp} would slow the computation of the real part down by about a factor of five because this part of the calculation is done analytically. Therefore a speed-up can been achieved by discarding the common prefactors at the cost of loosing track about the origin of the next-to-leading order correction.\\
 One common prefactor comes from the two-body phase space integral in eq. \eqref{eq:diffsigma}
 \begin{align}
-\frac{(4\pi)^\epsilon}{\Gamma(1-\epsilon)}\left( \frac{tu - m_{\tilde{q}}^4}{\mu^2 s} \right)^{-\epsilon} = 1 &+ \epsilon\left( \ln 4\pi -\gamma_E - \ln \frac{tu - m_{\tilde{q}}^4}{\mu^2 s} \right) 
+\frac{(4\pi)^\epsilon}{\Gamma(1-\epsilon)}\left( \frac{tu - m_{\tilde{q}}^4}{\mu^2 s} \right)^{-\epsilon} = 1 &+ \epsilon\left( \ln 4\pi -\gamma_E - \ln \frac{tu - m_{\tilde{q}}^4}{\mu^2 s} \right)  
 + \epsilon^2\left( \frac{1}{2}\left( \ln 4\pi - \ln \frac{tu - m_{\tilde{q}}^4}{\mu^2 s} \right)^2 \right.\nonumber\\
 &+ \left.\frac{\gamma_E^2}{2} - \frac{\pi^2}{12} - \gamma_E\left( \ln 4\pi - \ln \frac{tu - m_{\tilde{q}}^4}{\mu^2 s} \right) \right) + \mathcal{O}(\epsilon^3).\label{eq:PhasePrefactor}
 \end{align}
-In addition the prefactor of a loop integral defined in \texttt{LoopTools} differs from the one usually, and therefore also here, used. The \texttt{LoopTools} definition\cite{LoopToolsManual} of a loop integral is 
+In addition the prefactor of a loop integral defined in \texttt{LoopTools} differs from the one usually (and therefore also here) used. The \texttt{LoopTools} definition\cite{LoopToolsManual} of a loop integral is 
 \begin{align}
 T^N_{\mu_1\hdots\mu_P} = \frac{\mu^{4-D}}{i\pi^{\frac{D}{2}}r_\Gamma}\int\mathrm{d}^Dq\frac{q_{\mu_1} \hdots q_{\mu_P}}{[q^2-m_1^2] [(q+p_1)^2-m_2^2] \hdots [(q+p_1+ \hdots +p_{N-1})^2-m_N^2]}\label{eq:LoopToolsInt}
 \end{align}
@@ -225,25 +225,31 @@ where $T^1$ is an $A$-integral, $T^2$ is an $B$-integral, etc. and $r_\Gamma = \
 \begin{align}
 r_\Gamma (4\pi)^\epsilon = 1 + \epsilon(\ln 4\pi -\gamma_E) + \epsilon^2\left( \frac{\gamma_E^2}{2} - \frac{\pi^2}{12} + \frac{\ln^2 4\pi}{2} - \gamma_E\ln 4\pi \right) + \mathcal{O}(\epsilon^3)\label{eq:LoopPrefactor}
 \end{align}
-in order to have the same prefactors as in eq. \eqref{eq:LoopInt}. The right hand side of eq. \eqref{eq:PhasePrefactor} and eq. \eqref{eq:LoopPrefactor} are the prefactors discarded in the computation. Instead the prefactor $\left( 1 + \frac{\pi^2}{6}\epsilon^2 \right)$ has been included in the virtual correction.
+in order to have the same prefactors as in eq. \eqref{eq:LoopInt}. Without going into detail why these factors are chosen, the right hand side of eq. \eqref{eq:PhasePrefactor} and eq. \eqref{eq:LoopPrefactor} are the prefactors discarded in the computation. Instead the prefactor $\left( 1 + \frac{\pi^2}{6}\epsilon^2 \right)$ has been included in the virtual correction. Therefore $P_1$ and $P_2$ are chosen like
+\begin{align}
+P_1 &=  2\ln 4\pi - 2\gamma_E - \ln \frac{tu - m_{\tilde{q}}^4}{\mu^2 s} \\
+P_2 &=  -\ln 4\pi \cdot\ln \frac{tu - m_{\tilde{q}}^4}{\mu^2 s} + \frac{1}{2} \ln^2 \frac{tu - m_{\tilde{q}}^4}{\mu^2 s}  + \gamma_E^2 - \frac{\pi^2}{3} + \ln^2 4\pi - 2\gamma_E\ln 4\pi + \gamma_E \ln \frac{tu - m_{\tilde{q}}^4}{\mu^2 s}  \nonumber
+\end{align}
 
 
 \subsubsection{$K$-factors for Squark Production in the MRSSM}
-A common way to describe next-to-leading order corrections is stating the $K$-factor, which is defined to be the ratio of the complete next-to-leading order cross section $\sigma^{\mathrm{NLO}}$, see eq. \eqref{eq:BVR} and the leading order cross section $\sigma^{\mathrm{LO}}$, obtained using leading order parton desity functions and $\alpha_s$:
+A common way to describe next-to-leading order corrections is stating the $K$-factor, which is defined to be the ratio of the complete next-to-leading order cross section $\sigma^{\mathrm{NLO}}$, see eq. \eqref{eq:BVR} and the leading order cross section $\sigma^{\mathrm{LO}}$, obtained using leading order parton density functions and $\alpha_s$:
 \begin{align}
 K(X \to Y) = \frac{\sigma^{\mathrm{NLO}}(X \to Y)}{\sigma^{\mathrm{LO}}(X \to Y)}.
 \end{align}
-The process in question is described by $X \to Y$.
-Figure \ref{fig:1LXsection_fixed_m} shows the $K$-factor for the production of up-squarks in the MRSSM for varying masses of both, the squark ($m_{\tilde{g}} = \unit[2000]{GeV}$) and the gluino $m_{\tilde{q}} = \unit[1000]{GeV}$. The mass of the pseudoscalar has been fixed to $m_{\sigma} = \unit[5000]{GeV}$ in both plots. It can be seen that the  $K$-factor increases with increasing squark mass and decreases with increasing gluino mass. Note that the sum of virtual and real corrections gets negative for very light squarks. But this region of parameter space is already excluded experimentally.
-\begin{figure}[!htpb]
+Here, $X$ denotes the initial state and $Y$ the final state.
+Figure \ref{fig:1LXsection_fixed_m} shows the $K$-factors for the production of up-squarks in the MRSSM for varying masses of both, the squark ($m_{\tilde{g}} = \unit[2000]{GeV}$) and the gluino $m_{\tilde{q}} = \unit[1000]{GeV}$. The mass of the pseudoscalar has been fixed to $m_{\sigma} = \unit[5000]{GeV}$ in both plots.
+In addition to the $K$-factor, the contributions to it are split into the ones coming from the Born cross section\footnote{The contribution of the Born cross section to the $K$-factor is smaller as one as it has been calculated with next-to-leading order parton density functions.} and real and virtual corrections.\\
+It can be seen that the  $K$-factor increases with increasing squark mass and decreases with increasing gluino mass. Note, that the sum of virtual and real corrections gets negative for very light squarks. But this region of parameter space is already excluded experimentally.
+\begin{figure}[H]
 \begin{center}
-\includegraphics[scale=.5]{figures/MRSSM_uu_susu_Kfactors_msg=2000GeV.png}
-\includegraphics[scale=.5]{figures/MRSSM_uu_susu_Kfactors_msq=1000GeV.png}
+\includegraphics[scale=.4]{figures/MRSSM_uu_susu_Kfactors_msg=2000GeV.png}
+\includegraphics[scale=.4]{figures/MRSSM_uu_susu_Kfactors_msq=1000GeV.png}
 \caption{Dependence of the $K$-factor for the process $uu \to \tilde{u}_L\tilde{u}_R$ in the MRSSM on the squark mass $m_{\tilde{q}}$ for fixed $m_{\tilde{g}} = \unit[2000]{GeV}$ (top) and on the gluino mass $m_{\tilde{g}}$ for fixed $m_{\tilde{q}} = \unit[1000]{GeV}$ (bottom).}\label{fig:1LXsection_fixed_m}
 \end{center}
 \end{figure}
-Note further that within the real corrections, only gluon radiation is included. This is because quark radiation, as described in section \ref{sec:RealQuarkRad}, involves the treatment of on-shell singularities which have unfortunately not been dealt with, due to a limited time budget. However, \cite{Gavin:2013kga} suggests that quark radiation gives only a sub percent effect to the next-to-leading order cross section of squark production when $m_{\tilde{g}} < m_{\tilde{q}}$. Of course, this argument applies to the MSSM but as the only difference to the MRSSM comes from diagrams involving gluinos and sgluons it provides also a strong argument for the suppression of quark radiation in the MRSSM. In fact, sgluons do not appear at all in diagrams contributing to real corrections. Furthermore, the change from Majorana to Dirac gluinos can never imply an amplification of processes involving gluinos. The reason for this is, that if a gluino undergoes, due to its mass, a chirality flip, the right handed part of it, namely the octino, does not couple to quarks and squarks. However, the effect of quark radiation is thought to increase when $m_{\tilde{g}} > m_{\tilde{q}}$. This is quantified within the next chapter, when squark production is discussed in the MSSM. Nonetheless, quark radiation is by no means to be thought of a dominant contribution to squark production at next-to-leading order.\\
-As the calculation of $\sigma^{\mathrm{NLO}}$ has, due to CPU-time, been performed with one percent accuracy, the effect of quark radiation is possibly not visible within the given results. Table \ref{tab:MRSSMKfactors} shows $\sigma^{\mathrm{LO}}$ and $\sigma^{\mathrm{NLO}}$ as they have been calculated by the devised \texttt{C++} program.
+Note further, that within the real corrections, only gluon radiation is included. This is because quark radiation, as described in section \ref{sec:RealQuarkRad}, involves the treatment of on-shell singularities which have unfortunately not been dealt with, due to a limited time budget. However, \cite{Gavin:2013kga} suggests that quark radiation gives only a sub percent effect to the next-to-leading order cross section of squark production when $m_{\tilde{g}} < m_{\tilde{q}}$. Of course, this argument applies to the MSSM but as the only difference to the MRSSM comes from diagrams involving gluinos and sgluons it provides also a strong argument for the suppression of quark radiation in the MRSSM. In fact, sgluons do not appear at all in diagrams contributing to real corrections. Furthermore, the change from Majorana to Dirac gluinos can never imply an amplification of processes involving gluinos. The reason for this is, that if a gluino undergoes, due to its mass, a chirality flip, the right handed part of it, namely the octino, does neither couple to quarks nor to squarks. However, the effect of quark radiation is thought to increase when $m_{\tilde{g}} > m_{\tilde{q}}$. This is quantified within the next section, when squark production is discussed in the MSSM. Nonetheless, quark radiation is by no means to be thought of a dominant contribution to squark production at next-to-leading order.\\
+Table \ref{tab:MRSSMKfactors} shows $\sigma^{\mathrm{LO}}$ and $\sigma^{\mathrm{NLO}}$ as they have been calculated by the devised \texttt{C++} program.
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{c|c?c|c|c}
@@ -255,15 +261,17 @@ $1000$ & $1000$ & $42.63$ & $61.8$ & $1.45$\\
 $1000$ & $2000$ & $11.56$ & $14.3$ & $1.24$\\
 $1500$ & $3000$ & $0.9166$ & $1.13$ & $1.23$
 \end{tabular}
-\caption{$K$-factors of the process $pp \to \tilde{u}_L\tilde{u}_R$  in the MRSSM for a selected set of masses. The center-of-mass energy is $\sqrt{S} = \unit[13]{TeV}$ and the pseudoscalar mass is fixed to $m_{\mathrm{\sigma}} = \unit[5000]{GeV}$.}\label{tab:MRSSMKfactors}
+\caption{$K$-factors of the process $pp \to \tilde{u}_L\tilde{u}_R$  in the MRSSM for a selected set of masses. The center-of-mass energy is $\sqrt{S} = \unit[13]{TeV}$ and the pseudoscalar mass is fixed to $m_{\mathrm{\sigma}} = \unit[5000]{GeV}$. For $\sigma^{\mathrm{LO}}$
+\texttt{MMHT2014}(LHAPDF ID: 25000) parton density functions has been used, whereas $\sigma^{\mathrm{NLO}}$ used
+\texttt{MMHT2014}(LHAPDF ID: 25100)}\label{tab:MRSSMKfactors}
 \end{center}
 \end{table}
-It can be seen that the $K$-factors depend strongly on the ratio $\frac{m_{\tilde{g}}}{m_{\tilde{q}}}$ but not strongly on the masses itself.\\
-For three different choices of $m_{\tilde{q}}$ and $m_{\tilde{g}}$, Philip Dießner checked the results by doing the calculation using \texttt{GoSam}\cite{Cullen:2014yla, Cullen:2011ac} and \texttt{MadGraph}.
+It can be seen that the $K$-factors depend strongly on the ratio $\frac{m_{\tilde{g}}}{m_{\tilde{q}}}$ but not that strongly on the masses itself.\\
+For three different choices of $m_{\tilde{q}}$ and $m_{\tilde{g}}$, Philip Dießner checked the results up to permille accuracy by doing the calculation using \texttt{GoSam}\cite{Cullen:2014yla, Cullen:2011ac} and \texttt{MadGraph5\_aMC@NLO}\cite{Alwall:2014hca} on the basis of the same model file.
 
 
 \subsubsection{$K$-factors for Squark Production in the MSSM}
-To compare the results of $K$-factors in the MRSSM to those in the MSSM, the cross sections in question have been calculated using the program \texttt{MadGraph5\_aMC@NLO}\cite{Alwall:2014hca} with the same parton density functions as before, i.e. \texttt{MMHT2014}\cite{Harland-Lang:2014zoa}. When generating the code for the pertaining processes, e.g. two protons to $\tilde{u}_L + \tilde{u}_R$, with
+To compare the results of $K$-factors in the MRSSM to those in the MSSM, the cross sections in question have been calculated using the program \texttt{MadGraph5\_aMC@NLO} with the same parton density functions as before, i.e. \texttt{MMHT2014}. When generating the code for the pertaining processes, e.g. two protons to $\tilde{u}_L + \tilde{u}_R$, with
 \begin{lstlisting}[style=Mybash]
 generate p p > ul ur [QCD] $$go
 \end{lstlisting}
@@ -276,19 +284,21 @@ the $s$-channel gluinos were omitted, with the addendum \texttt{\$\$go} as \text
 \end{center}
 \end{figure}
 As already discussed, these contributions are only of sub percent order when $m_{\tilde{q}} > m_{\tilde{g}}$\cite{Gavin:2013kga} but increase for $m_{\tilde{g}} > m_{\tilde{q}}$ as indicated in table \ref{tab:MSSMMadGraphProspino}, which compares $\sigma^{\mathrm{NLO}}$ obtained using \texttt{MadGraph5} and the program \texttt{Prospino2}\cite{Beenakker:1996ed} for both scenarios.
-\begin{table}
+
+\begin{table}[H]
 \begin{center}
 \begin{tabular}{c|c?c?c}
 $m_{\tilde{q}}$ in GeV & $m_{\tilde{g}}$ in GeV & $\sigma^{\mathrm{NLO}}_{\texttt{MadGraph}}$ in fb & $\sigma^{\mathrm{NLO}}_{\texttt{Prospino2}}$ in fb \\
 \hlinewd{2pt}
-$1500$ & $1000$ & $9.49 \pm 0.03$ & $9.48 \pm 1\%$ \\
-$1000$ & $2000$ & $13.32 \pm 0.05$ & $13.9 \pm 0.8\%$ 
+$1500$ & $1000$ & $9.49 \pm 0.03$ & $9.48 \pm 0.09$ \\
+$1000$ & $2000$ & $13.32 \pm 0.05$ & $13.89 \pm 0.11\%$ 
 \end{tabular}
 \caption{$\sigma^{\mathrm{NLO}}(pp \to \tilde{u}_L\tilde{u}_R)$ in the MSSM obtained from \texttt{MadGraph5} and \texttt{Prospino2} for a selected set of masses. The center-of-mass energy is $\sqrt{S} = \unit[13]{TeV}$. Within the \texttt{MadGraph5} calculation, the $s$-channel gluino diagrams have been discarded. This becomes relevant only when $m_{\tilde{g}} > m_{\tilde{q}}$.}\label{tab:MSSMMadGraphProspino}
 \end{center}
 \end{table}
 
-In fact, comparing $\sigma^{\mathrm{NLO}}(pp \to \tilde{u}_L\tilde{u}_R)$ from \texttt{MadGraph5} with the ones obtain by using \texttt{Prospino2}, which does include quark radiation, shows good agreement for the case $m_{\tilde{g}} < m_{\tilde{q}}$ but a small deviation for $m_{\tilde{g}} > m_{\tilde{q}}$. The given uncertainties are the uncertainties of the integration over the phase space and the chosen parameters are: $m_{\tilde{q}} =\unit[1500]{GeV}$, $m_{\tilde{g}} = \unit[1000]{GeV}$, $\mu_F = \mu_R = m_{\tilde{q}}$ and $\sqrt{S} = \unit[13]{TeV}$.\\
+In fact, comparing $\sigma^{\mathrm{NLO}}(pp \to \tilde{u}_L\tilde{u}_R)$ from \texttt{MadGraph5} with the one obtained by using \texttt{Prospino2}, which does include quark radiation, shows good agreement for the case $m_{\tilde{g}} < m_{\tilde{q}}$ but a small deviation for $m_{\tilde{g}} > m_{\tilde{q}}$. The given uncertainties are the uncertainties of the integration over the phase space and the chosen parameters are: $\mu_F = \mu_R = m_{\tilde{q}}$ and $\sqrt{S} = \unit[13]{TeV}$.\\
+Figure \ref{fig:1LXsection_fixed_m} shows the $K$-factors for squark production in the MSSM, broken down to $K$-factors for ``chirality'' like ($\tilde{u}_L \tilde{u}_L$) and unlike squarks $\tilde{u}_L \tilde{u}_R$. It can be seen, that the mass dependence of $K(pp \to \tilde{u}_L \tilde{u}_R)$ in the MSSM is quite similar to the one in the MRSSM and that the MSSM $K$-factors are slightly smaller than in the MSSM. However, the $K$-factors for ``chirality'' like squarks are distinctly larger. The mass dependence of them is quite the same as for the  $pp \to \tilde{u}_L \tilde{u}_R$ channel. The only difference is a local maximum of the $K$-factor as a function of the gluino mass at $m_{\tilde{g}} \approx \unit[500]{GeV}$. Adding the cross sections for the three possible channels $\tilde{u}_L \tilde{u}_R$, $\tilde{u}_L \tilde{u}_L$ and $\tilde{u}_R \tilde{u}_R$ together one ends up with $K$-factors which have the same mass dependence as in the MRSSM but which can, depending on the chosen parameters, be significantly smaller.\\
 Table \ref{tab:KfactorsMSSM} displays the leading order and next-to-leading order cross section of up-squark production in the MSSM. The total cross section for the production of all possible channels $\left\{ \tilde{u}_L\tilde{u}_R, \tilde{u}_L\tilde{u}_L, \tilde{u}_R\tilde{u}_R \right\}$ is broken down to the contribution, coming from the channel $\tilde{u}_L\tilde{u}_R$ whose tree-level cross section is the same as in the MRSSM.
 
 \begin{table}[H]
@@ -308,7 +318,7 @@ $1500$ & $3000$ & $0.9166$ & $1.05$ & $1.14$ & $7.045$ & $7.57$\ignore{1.05+2*3.
 \end{center}
 \end{table}
 
-Again, it is clearly visible that the $K$-factors depend rather strongly on the ratio $\frac{m_{\mathrm{g}}}{m_{\mathrm{q}}}$ but not so much on the masses itself. Comparing with the results from the MRSSM \ref{tab:MRSSMKfactors}, one can state that the $K$-factors of the MRSSM are slightly larger. This might be the case, as there are additional degrees of freedom in the $R$-symmetric model, namely the octino which enters the gluino self-energy contributions (see second diagram from the right in \ref{fig:GluinoSE}) and the sgluons which enters there and in box diagrams (see lower right diagram in \ref{fig:1loopdiagrams}). The dependence on the sgluon mass is discussed within the next chapter
+Again, it is clearly visible that the $K$-factors depend rather strongly on the ratio $\frac{m_{\mathrm{g}}}{m_{\mathrm{q}}}$ but not so much on the masses itself. Comparing with the results from the MRSSM in table \ref{tab:MRSSMKfactors}, one can state that the $K$-factors of the MRSSM are slightly larger. This might be the case, as there are additional degrees of freedom in the $R$-symmetric model, namely the octino which enters the gluino self-energy contributions (see second diagram from the right in \ref{fig:GluinoSE}) and the sgluons which enters there and in box diagrams (see lower right diagram in \ref{fig:1loopdiagrams}). The dependence on the sgluon mass is discussed within the next chapter
 %Calculate uncertainties for multiple/ points(pdf, scale, integration)
 
 
@@ -317,9 +327,9 @@ Again, it is clearly visible that the $K$-factors depend rather strongly on the 
 
 
 \subsection{The Cross Section in the Limit of Large Sgluon Masses}
-The cross section for squark production does not exist in the limit of an infinitely large sgluon mass, instead it was found that it diverges logarithmically.\\
+The cross section for squark production does not exist in the limit of an infinitely large sgluon mass, instead it was found that it diverges logarithmically:
 \begin{align}
-\lim_{m_{\sigma}\to\infty} \sigma(qq \to \tilde{q}\tilde{q}) \sim \ln \frac{m_{\sigma}^2}{\mu^2}
+\lim_{m_{\sigma}\to\infty} \sigma(qq \to \tilde{q}\tilde{q}) \sim \ln \frac{m_{\sigma}^2}{\mu^2}.
 \end{align}
 
 \begin{figure}[H]
@@ -328,7 +338,6 @@ The cross section for squark production does not exist in the limit of an infini
 \caption{Dependence of the $K$-factor for the process $uu \to \tilde{u}\tilde{u}$ on the mass of the pseudoscalar sgluon. For $m_{\sigma} \approx \unit[10^5]{GeV}$ onwards want find a logarithmic scaling as predicted by \cite{Cheng:1997sq}.}
 \end{center}
 \end{figure}
-This is actually expected as an effective field theory of the MRSSM where the sgluon is integrated out is no longer supersymmetric. This is because the sgluon is together with the octino part of a supermultiplet. Integrating out only the sgluon means that the octino misses its superpartner in the effective field theory. In this case the decoupling theorem \cite{Appelquist:1974tg} does no longer hold.\\
-It is even possible to predict the  logarithmic scaling of $\sigma(qq \to \tilde{q}\tilde{q})$ quantitatively. The coefficient of the logarithm is proportional to the difference of the one-loop $\beta$ function coefficients of $g_s$ and $\hat{g}_s$ in the effective theory with the heavy particle integrated out, see eq. (4) in \cite{Cheng:1997sq}.
+This is actually expected as an effective field theory of the MRSSM where the sgluon is integrated out is no longer supersymmetric. This is because the sgluon is together with the octino part of a supermultiplet. Integrating out only the sgluon means that the octino misses its superpartner in the effective field theory. In this case the decoupling theorem \cite{Appelquist:1974tg} does no longer hold\footnote{It is even possible to predict the  logarithmic scaling of $\sigma(qq \to \tilde{q}\tilde{q})$ quantitatively. The coefficient of the logarithm is proportional to the difference of the one-loop $\beta$ function coefficients of $g_s$ and $\hat{g}_s$ in the effective theory with the heavy particle integrated out, see eq. (4) in \cite{Cheng:1997sq}.}.
 
 
