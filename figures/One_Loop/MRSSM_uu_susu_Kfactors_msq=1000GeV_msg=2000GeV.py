@@ -37,7 +37,7 @@ fig = plt.figure(1,figsize=(10, 9))
 
 first_window = plt.subplot(111)
 plt.xlabel(r"$m_{\tilde{\sigma}}$ in GeV", size = 22)
-plt.ylabel(r"$K(pp \to \tilde{u}_L\tilde{u}_R)$ ", size = 22)
+plt.ylabel(r"$K_{\mathrm{MRSSM}}(pp \to \tilde{u}_L\tilde{u}_R)$ ", size = 22)
 plt.xticks(fontsize = 20)
 plt.yticks(fontsize = 20)
 

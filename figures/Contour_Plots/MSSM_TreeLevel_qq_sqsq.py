@@ -65,7 +65,7 @@ def contourdata():
     plt.clabel(cl2, fmt='%2.1f', colors='k', fontsize = font_size, manual=manual_locations2)
     plt.clabel(cl3, fmt='%2.1f', colors='k', fontsize = font_size, manual=manual_locations2)
     cbar = fig.colorbar(cf, ticks=v, orientation='horizontal')
-    cbar.ax.set_xlabel(r'$\sigma^{\mathrm{B}}_{\mathrm{MSSM}}(qq \to \tilde{q}\tilde{q})$ in fb', size = font_size)
+    cbar.ax.set_xlabel(r'$\sigma^{\mathrm{B}}_{\mathrm{MSSM}}(pp \to \tilde{q}\tilde{q})$ in fb', size = font_size)
     cbar.ax.tick_params(labelsize=font_size)
     cbar.add_lines(cl1)
     cbar.add_lines(cl2, erase=False)

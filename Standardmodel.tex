@@ -1,19 +1,19 @@
 \section{The Standard Model}
-The Standard Model of particle physics is the commonly accepted theory describing the world's fundamental particles and their interactions. It is a gauge quantum field theory and therefore characterized by its invariance under symmetry groups. The Standard Model contains different fields, whose quantized excitations are interpreted as all known particles.\\
+The Standard Model of particle physics is the commonly accepted theory describing the world's fundamental particles and their interactions. It is a gauge quantum field theory and therefore characterized by its invariance under symmetry groups. The Standard Model contains different fields, whose quantized excitations are interpreted as particles.\\
 This chapter summarizes the most important aspects of the Standard Model.
 %The different fields defined on Minkowski space are Dirac spinors describing matter fields (leptons and quarks), gauge vectors describing force mediators and a scalar field (the Higgs) which accounts for the masses of particles.\\
 %More formally a particle state is said to give rise to an irreducible representation of the Poincaré group
 
 
 \subsection{Symmetries and Transformations}
-\subsubsection*{Space-time Symmetries}
-The Standard Model is defined on Minkowski space, whose coordinates are label with $x^\mu$ $\mu \in \left\{0,1,2,4\right\}$. As a relativistic theory it is invariant under Poincaré transformations, i.e. it is invariant under Lorentz-transformations (with generators $J^{\mu\nu}$) and translations (with generators $P^\mu$) in spacetime. The set of all Poincaré transformations form the Poincaré group, which is a Lie group. Its generators obey the Poincaré-algebra
+\subsubsection*{Space-Time Symmetries}
+The Standard Model is defined on Minkowski space, whose coordinates are labeled with $x^\mu$ $\mu \in \left\{0,1,2,4\right\}$. As a relativistic theory it is invariant under Poincaré transformations, i.e. it is invariant under Lorentz-transformations (with generators $J^{\mu\nu}$) and translations (with generators $P^\mu$) in space-time. The set of all Poincaré transformations form the Poincaré group, which is a Lie group. Its generators obey the Poincaré algebra
 \begin{align}
 [P^\mu,P^\nu] &= 0,\nonumber\\
 [P^\mu,J^{\nu\rho}] &= i(g^{\mu\nu} P^\rho - g^{\mu\rho}P^\nu),\nonumber\\
 [J^{\mu\nu},J^{\rho\sigma}] &= i(g^{\nu\rho}J^{\mu\rho} + g^{\mu\sigma}J^{\nu\rho} - g^{\mu\rho}J^{\nu\sigma} - g^{\nu\sigma}J^{\mu\rho}).\label{eq:PoincareAlgebra}
 \end{align}
-The fields of the Standard Model transform in different representations of the Poincaré-group \cite{book:17018}. 
+The fields of the Standard Model transform in different representations of the Poincaré group \cite{book:17018}. 
 
 
 \subsubsection*{Gauge Symmetries} 
@@ -25,12 +25,12 @@ where $m$ denotes the particle's mass. To include interactions, one imposes a lo
 \begin{align}
 \Psi(x) \to U(x)\Psi(x),
 \end{align}
-where $U(x)$ is an element of the gauge group in question. Because the gauge group is an unitary matrix Lie group, it can be written in the form $U(x)=\mathrm{exp}(-igT^a\theta^a(x))$. Here, $T^a$ are the self-adjoint generators of the associated Lie algebra which obey
+where $U(x)$ is an element of the gauge group in question. Because the gauge group is an unitary matrix Lie group, it can be written like $U(x)=\mathrm{exp}(-igT^a\theta^a(x))$. Here, $T^a$ are the self-adjoint generators of the associated Lie algebra which obey
 \begin{align}
 [T^a,T^b] = if_{abc}T^c,
 \end{align}
-with $f_{abc}$ the structure constants of a Lie algebra, $g$ is the coupling constant of the gauge group and $\theta^a(x)$ are local parameters.\\
-As the parameters of the gauge group are local, the derivative in \eqref{eq:DiracLagrangian} spoils gauge invariance. In order to rectify the gauge invariance of the Lagrangian, one introduces a further field for each index $a$ of the generators, the gauge vector $G^{a\mu}$. Defining the transformation of the matrix valued gauge vector $G^\mu := G^{a\mu}T^a$ as 
+with $f_{abc}$ being the structure constants of a Lie algebra, $g$ is the coupling constant of the gauge group and $\theta^a(x)$ are local parameters.\\
+As the parameters of the gauge group are local, the derivative in eq. \eqref{eq:DiracLagrangian} spoils gauge invariance. In order to rectify the gauge invariance of the Lagrangian, one introduces a further field for each index $a$ of the generators, the gauge vector $G^{a\mu}$. Defining the transformation of the matrix valued gauge vector $G^\mu := G^{a\mu}T^a$ as 
 \begin{align}
 G^{\mu}(x) \to U^{-1}(x) \left( G^\mu(x) + \frac{i}{g}\partial^\mu \right) U(x)
 \end{align}
@@ -55,8 +55,8 @@ This completes the construction of a Lagrangian which is invariant under non-abe
 \mathcal{L}_{\mathrm{Yang-Mills}} = \overline{\Psi}(i\slashed{D} - m)\Psi - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}
 \end{align}
 This Lagragian gives rise to spin-$\frac{1}{2}$ (matter) particles which interact with spin-1 (force mediator) particles. Furthermore if the gauge group is non-abelian, i.e. $f_{abc} \neq 0$, there are self interactions among the spin-1 particles.\\
-The gauge group of the Standard Model is a direct product of the three gauge groups\footnote{The subscript stands for the associated charge of the groups respectively: $Y$ for hypercharge, $L$ for left handedness (weak Isospin $I_3$) and $C$ for color}: $U(1)_Y$, $SU(2)_L$ and $SU(3)_C$. The elements $U(x)$ of those are given in table \ref{tab:SM_transformations}.\\
-These gauge groups give rise to 3 forces: the strong force, the weak force and the electromagnetic force.
+The gauge group of the Standard Model is a direct product of the three gauge groups\footnote{The subscripts stand for the associated charge of the respective groups: $Y$ for hypercharge, $L$ for left handedness (weak Isospin $I_3$) and $C$ for color}: $U(1)_Y$, $SU(2)_L$ and $SU(3)_C$. The elements $U(x)$ of those are given in table \ref{tab:SM_transformations}.\\
+These gauge groups give rise to three forces: the strong force, the weak force and the electromagnetic force.
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{c?c}

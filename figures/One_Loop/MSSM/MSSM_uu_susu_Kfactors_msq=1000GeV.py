@@ -65,7 +65,7 @@ font_size = 18
 ############# first subplot #####################
 first_window = plt.subplot2grid((2,2), (0,0))
 plt.xlabel(r"$m_{\tilde{g}}$ in GeV", size = font_size)
-plt.ylabel(r"$K(pp \to \tilde{u}_L\tilde{u}_R)$ ", size = font_size)
+plt.ylabel(r"$K_{\mathrm{MSSM}}(pp \to \tilde{u}_L\tilde{u}_R)$ ", size = font_size)
 plt.xticks(fontsize = font_size)
 plt.yticks(fontsize = font_size)
 
@@ -87,7 +87,7 @@ plt.plot(m_gluino, sigma_NLO_1L_lr/sigma_LO_Tree_lr, lw=2, ls="-", c='blue')#, l
 ############# second subplot #####################
 second_window = plt.subplot2grid((2,2), (0,1))
 plt.xlabel(r"$m_{\tilde{g}}$ in GeV", size = font_size)
-plt.ylabel(r"$K(pp \to \tilde{u}_L\tilde{u}_L)$ ", size = font_size)
+plt.ylabel(r"$K_{\mathrm{MSSM}}(pp \to \tilde{u}_L\tilde{u}_L)$ ", size = font_size)
 plt.xticks(fontsize = font_size)
 plt.yticks(fontsize = font_size)
 
@@ -110,7 +110,7 @@ plt.plot(m_gluino, sigma_NLO_1L_ll/sigma_LO_Tree_ll, lw=2, ls="-", c='blue')#, l
 ############# third subplot #####################
 third_window = plt.subplot2grid((2,2), (1,0), colspan = 2)
 plt.xlabel(r"$m_{\tilde{g}}$ in GeV", size = font_size)
-plt.ylabel(r"$K(pp \to \tilde{u}\tilde{u})$ ", size = font_size)
+plt.ylabel(r"$K_{\mathrm{MSSM}}(pp \to \tilde{u}\tilde{u})$ ", size = font_size)
 plt.xticks(fontsize = font_size)
 plt.yticks(fontsize = font_size)
 
