@@ -1,5 +1,5 @@
 \section{Renormalization of the MRSSM}\label{sec:renMRSSM}
-This section discusses the removal of ultraviolet divergences in the amplitude of squark production at 1-loop level in the RSQCD. After a very brief introduction and discussion of the regularization schemes, field and mass renormalization constants are calculated, using dimensional regularization, in the on-shell scheme. After that, the renormalization constant of the strong gauge coupling $g_s$ is computed in a mixture of $\overline{\mathrm{MS}}$- and zero-momentum subtraction scheme. This is done because the gauge coupling of the parton density functions \texttt{MMHT2014} is given in the $\overline{\mathrm{MS}}$-scheme but does not include heavy particles, such as the top-quark or supersymmetric particles in its $\beta$-function. However renormalizing these heavy particles in the zero-momentum subtraction, implies that the $\beta$-function of $g_s$ is exactly the one from QCD. This is shown in section \ref{sec:beta_function}. Afterwards, the fact that dimensinal regularization breaks supersymmetry, which is already discussed in section \ref{sec:RegSchemeDep}, is revisited. Section \ref{sec:SUSYrestore} describes the calculation of an additional counterterm which restores supersymmetry within the renomalization. Finally, the UV-divergent parts of all renormalization constants in the RSQCD are given. These might prove useful in checks for UV-finiteness of a Green-function or a physical observable. The chapter closes with a discussion of the renormalized matrix amplitude.
+This section discusses the removal of ultraviolet divergences in the amplitude of squark production at 1-loop level in the RSQCD. After a very brief introduction and discussion of the regularization schemes, field and mass renormalization constants are calculated in the on-shell scheme, using dimensional regularization. After that, the renormalization constant of the strong gauge coupling $g_s$ is computed in a mixture of $\overline{\mathrm{MS}}$- and zero-momentum subtraction scheme. This is done because the gauge coupling of the parton density functions \texttt{MMHT2014} is given in the $\overline{\mathrm{MS}}$-scheme but does not include heavy particles, such as the top-quark or supersymmetric particles in its $\beta$-function. However renormalizing these heavy particles in the zero-momentum subtraction, implies that the $\beta$-function of $g_s$ is exactly the one from QCD. This is shown in section \ref{sec:beta_function}. Afterwards, the fact that dimensinal regularization breaks supersymmetry, which is already discussed in section \ref{sec:RegSchemeDep}, is revisited. Section \ref{sec:SUSYrestore} describes the calculation of an additional counterterm which restores supersymmetry within the renomalization. Finally, the UV-divergent parts of all renormalization constants in the RSQCD are given. These might prove useful in checks for UV-finiteness of a Green-function or a physical observable. The chapter closes with a discussion of the renormalized matrix amplitude.
 %In order to improve the prediction of cross sections one has to take quantum corrections into account. These are associated with loops in the corresponding Feynman diagrams. Computing these loop diagrams one might encounter infinities which arise from certain momentum configurations of the unspecified loop momenta. These infinities can be classified due to their origin. Infinities which are associated with loop momenta which tend to infinity are referred to as ultraviolet(UV) divergences. Infinities arising from loop momenta approaching zero can occur in loops with massless particles and are called infrared(IR) singularities. \\%Furthermore there are collinear singularities with occur when a massless particle splits into two massless collinear particles.\\
 %These infinities are not physical and must therefore be removed to get sensible predictions. To this end one regularizes them to extract them from the quantity in question. UV-divergences can be removed by means of renormalization, i.e. counterterms are inserted into the Lagrangian to cancel UV-divergences. Infrared and collinear divergenves are removed by adding up all possible contributions which give rise to the considered observable.
 
@@ -67,9 +67,9 @@ Therefore one has to distinguish between these couplings at 1-loop level. In ord
 One part of the computation of the cross section at next-to-leading order is the calculation of renormalization constants. 
 Field renormalization constants $\delta Z$ and parameter renormalization constants $\delta o$ with $o \in \left\{ g, m \right\}$ are defined by
 \begin{align}
-Z = 1 + \delta Z \hspace{3cm} o_{\mathrm{bare}} = o + \delta o
+Z = 1 + \delta Z \hspace{3cm} o_{\mathrm{bare}} = o + \delta o\label{eq:renconst}
 \end{align}
-where $Z$ and $o$ are defined by the multiplicative renormalization transformation, introduced in eq. \eqref{eq:fieldtrafo} and \eqref{eq:parametertrafo}. The field and mass renormalization constants have been calculated in DREG in the on-shell scheme. This has the advantage that when turning to the cross section no modification of the Green function to the S-matrix element has to be done. This is discussed in more detail in section \ref{sec:LSZ}.\\
+where $Z$ and $o_{\mathrm{bare}}$ are defined by the multiplicative renormalization transformation, introduced in eq. \eqref{eq:fieldtrafo} and \eqref{eq:parametertrafo}. The field and mass renormalization constants have been calculated in DREG in the on-shell scheme. The advantage of this is that when turning to the cross section no modification of the Green function to the S-matrix element has to be done. This is discussed in more detail in section \ref{sec:LSZ}.\\
 The calculation has partially been performed by hand but was always checked with the mathematica output generated by the packages  \texttt{FeynArts} \cite{Hahn:2000} and \texttt{FormCalc} \cite{ChokoufeNejad:2013qja, Hahn:1998yk} which used a model file generated by \texttt{SARAH}\cite{Staub:2013tta, Staub:2012pb, Staub:2010jh, Staub:2009bi}.\\
 The renormalization constants are given in terms of Passarino-Veltman integrals whose definition can be found in Appendix \ref{sec:Passarino}.
 
@@ -138,7 +138,7 @@ Doing the same calculation in DRED one finds that this very term $\frac{1}{2}$ i
 \end{align}
 
 \subsubsection*{The Squark Self-Energy}
-The contributions to the self-energy, shown in fig. \ref{fig:SquarkSE}, of the left- and right-handed squark are the same because electroweak effects are neglected. Therefore to avoid unnecessary labeling $\Gamma_{\tilde{q}\tilde{q}^\dagger}$ stands in the following for $\Gamma_{\tilde{q}_L\tilde{q}_L^\dagger} = \Gamma_{\tilde{q}_R\tilde{q}_R^\dagger}$. The one-particle irreducible Green function of the squark is given by
+The contributions to the self-energy of the left- and right-handed squark, shown in fig. \ref{fig:SquarkSE}, are the same because electroweak effects are neglected. Therefore to avoid unnecessary labeling $\Gamma_{\tilde{q}\tilde{q}^\dagger}$ stands in the following for $\Gamma_{\tilde{q}_L\tilde{q}_L^\dagger} = \Gamma_{\tilde{q}_R\tilde{q}_R^\dagger}$. The one-particle irreducible Green function of the squark is given by
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -239,7 +239,7 @@ i\overline{\chi}^a
 \end{pmatrix}
 \end{align}
 The left-handed part $\lambda^a$ is associated with the superpartner of the gluon and therefore the ``actual'' gluino whereas the right-handed part $\overline{\chi}^a$ was introduced to assign a Dirac-mass to the gluino and may be referred to as the octino.\\
-From the Lagrangian \eqref{eq:L_RSQCD} one can see that the couplings of the two particles are quite distinct. This is reflected by different field renormalization constants of the left- and right-handed part of the gluino (see eq. \eqref{eq:fieldtrafo}).
+From the Lagrangian in eq. \eqref{eq:L_RSQCD} one can see that the couplings of the two particles are quite distinct. This is reflected by different field renormalization constants of the left- and right-handed part of the gluino (see eq. \eqref{eq:fieldtrafo}).
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -286,7 +286,7 @@ From the Lagrangian \eqref{eq:L_RSQCD} one can see that the couplings of the two
 	\draw[gluon](0:0.5)--(0:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{diagrammatic contributions to the self-energy of the squark at 1-loop level}\label{fig:GluinoSE}
+\caption{Diagrammatic contributions to the self-energy of the squark at 1-loop level}\label{fig:GluinoSE}
 \end{center}
 \end{figure}
 As for the quarks, the fermion (and momentum) flow in a diagram is from the right to the left. The one-particle irreducible Green function is given by
@@ -367,7 +367,7 @@ Apart from the renormalization constant of the gauge coupling and the supersymme
 &= -\mathcal{M}^B  \delta Z_{\tilde{g}}^L + 2  \frac{ m_{\tilde{g}}}{t_{\tilde{g}}} \left( -2g_s^2 \frac{\left\langle v_2 |P_R \slashed{k}_3|u_1\right\rangle}{t_{\tilde{g}}} T^a_{\delta \beta} T^a_{\gamma \alpha} \right)\delta m_{\tilde{g}}\nonumber\\ 
 & \hspace{2cm}+ 2 \frac{ m_{\tilde{g}}}{u_{\tilde{g}}} \left( 2g_s^2 \frac{\left\langle v_2 |P_L \slashed{k}_3|u_1\right\rangle}{u_{\tilde{g}}} T^a_{\gamma\beta} T^a_{\delta\alpha} \right)\delta m_{\tilde{g}}.
 \end{align}
-Where $\delta Z^R_{\tilde{g}}$ drops out already in $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ as the octino does neither couple to quarks nor to squarks. The renormalization constant of the actual gluino $\delta Z^L_{\tilde{g}}$ drops out when $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ and $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}}$ are added. This is also true in a more general case, i.e. the renormalization constants of virtual particles do always drop out. This may be understood in the path integral approach of quantum field theory\cite{Peskin}: When considering a certain process, the Green function corresponding to this process, can be expressed as a path integral over fields within the theory. The field of virtual particles occurs, in contrast to the fields of external particles, only in the exponential. This means, that rescaling a field of an inner particle has no influence on the Green function. Ergo the field renormalization constants of any virtual particle must always drop out when considering a certain process.
+$\delta Z^R_{\tilde{g}}$ drops out already in $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ as the octino does neither couple to quarks nor to squarks. The renormalization constant of the actual gluino $\delta Z^L_{\tilde{g}}$ drops out when $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ and $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}}$ are added. This is also true in a more general case, i.e. the renormalization constants of virtual particles do always drop out. This may be understood in the path integral approach of quantum field theory\cite{Peskin}: When considering a certain process, the Green function corresponding to this process, can be expressed as a path integral over fields within the theory. The field of virtual particles occurs only in the exponential, in contrast to the fields of external particles. This means that rescaling a field of an inner particle has no influence on the Green function. Ergo the field renormalization constants of any virtual particle must always drop out when considering a certain process.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1 pt, scale=1]
@@ -424,7 +424,7 @@ The gauge coupling $g_s$ is renormalized in the $\overline{\mathrm{MS}}$-scheme 
 Extracting $\delta g_s$ from the quark-quark-gluon vertex requires not only the computation of $i\Gamma^{\mathrm{1L}}_{q_i\overline{q}_jG^\mu_a}$ but also the (re)evaluation of auxiliary field renormalization constants $\delta Z_q^{\mathrm{aux}}$ and $\delta Z_G^{\mathrm{aux}}$ in the above mentioned scheme. These will not be the same as in the on-shell scheme.
 
 \subsubsection*{The Quark Self-Energy Revisited}
-The quark self-energy has two contributions which are shown in figure \ref{fig:QuarkSelfEnergy}. The first one corresponds to light particles the second one to heavy particles: $i\Gamma^{\mathrm{1L}}_{q_i\overline{q}_j} = i\Gamma^{\mathrm{1L,light}}_{q_i\overline{q}_j} + i\Gamma^{\mathrm{1L,heavy}}_{q_i\overline{q}_j}$. For light particles only the UV-divergent\footnote{In contrast to the MS-scheme in the $\overline{\mathrm{MS}}$-scheme not only the pure ultraviolet divergence but also two additional transcendent numbers are subtracted. It is therefore common to define $\Delta_\epsilon = \frac{1}{\epsilon} -\gamma_{\mathrm{E}} + \ln 4\pi$.} part is kept. 
+The quark self-energy has two contributions which are shown in figure \ref{fig:QuarkSelfEnergy}. The first one corresponds to light particles and the second one to heavy particles: $i\Gamma^{\mathrm{1L}}_{q_i\overline{q}_j} = i\Gamma^{\mathrm{1L,light}}_{q_i\overline{q}_j} + i\Gamma^{\mathrm{1L,heavy}}_{q_i\overline{q}_j}$. For light particles only the UV-divergent\footnote{In contrast to the MS-scheme in the $\overline{\mathrm{MS}}$-scheme not only the pure ultraviolet divergence but also two additional transcendent numbers are subtracted. It is therefore common to define $\Delta_\epsilon = \frac{1}{\epsilon} -\gamma_{\mathrm{E}} + \ln 4\pi$.} part is kept. 
 The self energy corresponding to the heavy particles is evaluated at zero momentum $p^2=0$
 \begin{align}
 \left.i\Gamma^{\mathrm{1L,light}}_{q_i\overline{q}_j}\right|_{\mathrm{UV-div}} &= i C(F) \frac{g_s^2}{16\pi^2} \Delta_\epsilon \slashed{p} \delta_{ij},\\
@@ -464,6 +464,7 @@ and computes to
 	\draw[fermion] (0.5,0) arc (0:-180:.5);
 	\node at (0,-0.8) {light $q$};	
 	\draw[gluon](0:0.5)--(0:1.3);
+	\node at (1.8,0) {+};
 \end{scope}
 \begin{scope}[shift={(10.5,0)}]
 	\draw[gluon](180:1.3)--(180:0.5);
@@ -483,13 +484,13 @@ and computes to
 	\draw[gluon](0:0.5)--(0:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{Contribution to the self-energy of the gluon originating from light particles}\label{fig:lightGluonSelfEnergy}
+\caption{Contribution to the self-energy of the gluon originating from light particles.}\label{fig:lightGluonSelfEnergy}
 \end{center}
 \end{figure}
 
 
 \subsubsection*{The Gluon Self-Energy}
-As for the quark self-energy there are again contributions to the self-energy originating from light and heavy particles. Again these are differently dealt with. The ultraviolet divergent one-particle irreducible Green function is given by
+As for the quark self-energy, there are again contributions to the self-energy of the gluon originating from light and heavy particles. Again these are differently dealt with. The ultraviolet divergent one-particle irreducible Green function is given by
 \begin{align}
 \left.i\Gamma^{\mathrm{1L,light}}_{G_\mu^a G_\nu^b}\right|_{\mathrm{UV-div}} &= i\frac{g_s^2}{16\pi^2}\Delta_\epsilon \left[ 0 - \frac{4 (n_{f}-1)}{3} T(F) (p^2g^{\mu\nu}-p^\mu p^\nu) + \frac{C(A)}{12}(p^2g^{\mu\nu} + 2 p^\mu p^\nu) \right.\nonumber\\
 &+\left. \frac{C(A)}{12}(19 p^2g^{\mu\nu} - 22 p^\mu p^\nu) \right]\delta_{ab}\nonumber\\
@@ -558,7 +559,7 @@ Both the contribution from the gluon loop and the one from the ghost loop are no
 	\draw[gluon](0:0.5)--(0:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{Contribution to the self-energy of the gluon originating from heavy particles, in the last diagram either $\phi^0$ or $\sigma^0$ are running in the loop}
+\caption{Contribution to the self-energy of the gluon originating from heavy particles, in the last diagram either $\phi^0$ or $\sigma^0$ are running in the loop.}
 \end{center}
 \end{figure}
 The heavy particle contributions are calculated in the zero-momentum subtraction:
@@ -644,7 +645,7 @@ Like the self-energies, the vertex corrections are composed of loops from light 
 	\draw[fermionbar](-45:0.5)--(-45:1.3);
 \end{scope}
 \end{tikzpicture}
-\caption{Contribution from light (Standard Model) particles to the $q\overline{q}G$ vertex correction}\label{fig:GaugeCouplingCorrectionL}
+\caption{Contribution from light (Standard Model) particles to the $q\overline{q}G$ vertex correction.}\label{fig:GaugeCouplingCorrectionL}
 \end{center}
 \end{figure}
 The contributions from Standard Model particles (shown in fig. \ref{fig:GaugeCouplingCorrectionL}) to the $q\overline{q}G$ yield
@@ -699,10 +700,10 @@ The three-point-function with only heavy particles running in the loop (displaye
 \begin{align}
 i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) &= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} \left[ \left(C(F) -\frac{C(A)}{2}\right) 4C_{00}(0, 0, 0, m_{\tilde{g}}^2, m_{\tilde{q}}^2, m_{\tilde{q}}^2) \right.\nonumber\\
 &\hspace{3.3cm} + \left. C(A)\left( B_0(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2) -2C_{00}(0, 0, 0, m_{\tilde{g}}^2, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right) \right]\nonumber\\
-&= ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} 2C(F)B_1(0,m_{\tilde{g}}^2,m_{\tilde{q}}^2).
+&= ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2} 2C(F)B_1(0,m_{\tilde{g}}^2,m_{\tilde{q}}^2).\label{eq:something}
 \end{align}
-The argument $p_i^2=0$ of the vertex function denotes, that all external particles are taken on shell, i.e. at zero momentum.\\
-In the second line identities from \ref{sec:Passarino} have been used. The renormalization condition for the counterterm of the gauge coupling $\delta g_s$ reads
+The argument $p_i^2=0$ of the vertex function denotes that all external particles are taken on shell, i.e. at zero momentum.\\
+In the second line of eq. \eqref{eq:something} identities from section \ref{sec:Passarino} have been used. The renormalization condition for the counterterm of the gauge coupling $\delta g_s$ reads
 \begin{align}
 \left.i\Gamma^{\mathrm{1L,light}}_{q_i \overline{q}_j G_\mu^a}\right|_{\mathrm{UV-div}} + i\Gamma^{\mathrm{1L,heavy}}_{q_i \overline{q}_j G_\mu^a}(p_i^2=0) + \left[ -ig_s T^a_{ij}\gamma^\mu\left( \frac{\delta g_s}{g_s} + \delta Z_q^{\mathrm{aux}} + \frac{\delta Z_G^{\mathrm{aux}}}{2} \right)\right] = 0.
 \end{align}
@@ -715,7 +716,7 @@ Note the only difference to the MSSM\cite{Beenakker:1996ch} is the appearence of
 
 \subsection{The Beta Function}\label{sec:beta_function}
 The beta function describes the dependence of the gauge coupling $g_s$ upon the energy scale $\mu$.\\
-Writing down the action of a theory in $D$ dimensions, one needs to introduce an energy scale $\mu$ in order to keep the action dimensionless. But $\mu$ is no physical parameter but can be absorped into the fields and parameters. To this end one defines the bare coupling
+Writing down the action of a theory in $D$ dimensions, one needs to introduce an energy scale $\mu$ in order to keep the action dimensionless. For $\mu$ not being a physical parameter it can be absorbed into the fields and parameters. To this end, one defines the bare coupling
 \begin{align}
 g_{sB}(g_s, \mu) = \mu^\epsilon g_s \left( 1 + \frac{\delta g_s}{g_s} \right),
 \end{align}
@@ -738,12 +739,12 @@ one finds
 \beta(g_s,\epsilon) &= -\epsilon g_s \left( 1 + \frac{g_s^2}{16\pi^2} L \right) + \beta(g_s) + \mathcal{O}(\mbox{2-loop})\\
 \beta(g_s) &= \frac{g_s^3}{16\pi^2} \beta_0^L + \mathcal{O}(\mbox{2-loop}).
 \end{align}
-This is the $\beta$ function of QCD first found by Politzer \cite{Politzer:1973fx}, Gross and Wilczek \cite{Gross:1973ju}. This means that renormalizing $g_s$ in the way it is, decouples heavy particles from the $\beta$ function and allows to adopt $\alpha_s = \frac{g_s^2}{4\pi}$ from the parton density functions.
+This is the $\beta$ function of QCD first found by Politzer \cite{Politzer:1973fx}, Gross and Wilczek \cite{Gross:1973ju}. This means that renormalizing $g_s$ in the way it is decouples heavy particles from the $\beta$ function and allows to adopt $\alpha_s = \frac{g_s^2}{4\pi}$ from the parton density functions.
 
 
 
 \subsection{Supersymmetry Restoring Counterterm}\label{sec:SUSYrestore}
-As already discussed in section \ref{sec:RegSchemeDep} care is required in terms of supersymmetry restoring when renormalizing  the gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$. In doing so one needs the already calculated transition counterterms of the quark, squark and gluino from eq. \eqref{eq:QuarkSC}, \eqref{eq:SquarkSC} and \eqref{eq:GluinoSC}
+As already discussed in section \ref{sec:RegSchemeDep}, care is required in terms of supersymmetry restoring when renormalizing  the gauge coupling $g_s$ and the Yukawa coupling $\hat{g}_s$. In doing so one needs the already calculated transition counterterms of the quark, squark and gluino from eq. \eqref{eq:QuarkSC}, \eqref{eq:SquarkSC} and \eqref{eq:GluinoSC}
 as well as the transition counterterm of the gluon.
 \subsubsection*{The Gluon Self-Energy Revisited}
 The only regularization dependence of the gluon self-energy arises from the gluon loop, i.e. the last diagram in figure \ref{fig:lightGluonSelfEnergy}. With the definition of $\Gamma^{\mathrm{(1),ct,trans}}_{\mathrm{DREG}}$ in eq. \eqref{eq:GammaCtRestore} one obtains
@@ -756,7 +757,7 @@ which translates to the transition counterterm
 \end{align}
 
 \subsubsection*{The $q\overline{q}G$ Vertex Correction Revisited}
-The diagrams from which the supersymmetry restoring contributions to the $q\overline{q}G$ vertex come, are shown in figure \ref{fig:GaugeCouplingCorrection} and evaluate to
+The diagrams from which the supersymmetry restoring contributions to the $q\overline{q}G$ vertex come from are shown in figure \ref{fig:GaugeCouplingCorrectionL} and evaluate to
 \begin{align}
 i\Gamma^{\mathrm{(1),ct,trans}}_{\mathrm{DREG}, q_i\overline{q}_jG_\mu^a} &= -ig_s T^a_{ij} \gamma^\mu \frac{g_s^2}{16\pi^2}\left[ \left( C(F) - \frac{C(A)}{2} \right) + \frac{C(A)}{2} \right]\\
 &= -ig_s T^a_{ij} \gamma^\mu \left[ \frac{\delta g_s^{\mathrm{trans}}}{g_s} + \delta Z^{\mathrm{trans}}_q + \frac{\delta Z^{\mathrm{trans}}_G}{2} \right]
@@ -767,7 +768,7 @@ where the second line shows the supersymmetry restoring counterterms to which th
 \end{align}
 
 \subsubsection*{The $\tilde{q}_L\overline{q}\tilde{g}$ Vertex Correction}
-The supersymmetry restoring corrections to the $\tilde{q}_L \overline{q}\tilde{g}$ originate from the diagram in figure \ref{fig:YukawaCT}.
+The supersymmetry restoring corrections to the $\tilde{q}_L \overline{q}\tilde{g}$ vertex originate from the diagram in figure \ref{fig:YukawaCT}.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -799,12 +800,12 @@ As a consequence of the two different supersymmetry restoring parts of the coupl
 \begin{align}
 \frac{\delta g_s^{\mathrm{restore}}}{g_s} = \frac{\delta \hat{g}_s^{\mathrm{trans}}}{g_s} -\frac{\delta g_s^{\mathrm{trans}}}{g_s} = \frac{g_s^2}{16\pi^2}\left( \frac{2C(A)}{3} - \frac{C(F)}{2} \right).
 \end{align}
-In short this means that the gauge coupling $g_s$ is renormalized with $\delta g_s$ given in \eqref{eq:deltaGs} and the Yukawa coupling $\hat{g}_s$ is renormilzed with $\delta \hat{g}_s = \delta g_s + \delta g_s^{\mathrm{restore}}$.\\
+In short, this means that the gauge coupling $g_s$ is renormalized with $\delta g_s$ given in eq. \eqref{eq:deltaGs} and the Yukawa coupling $\hat{g}_s$ is renormalized with $\delta \hat{g}_s = \delta g_s + \delta g_s^{\mathrm{restore}}$.\\
 The finite correction $\delta g_s^{\mathrm{restore}}$ is the same as in supersymmetric QCD which should not surprise too much as all its contributions originate from loops with gluons.% So there are no new contributions in RSQCD with respect to SQCD. 
 
 
 \subsection{$\overline{\mathrm{MS}}$ - Renormalization}\label{sec:MSRen}
-To check quickly for UV-finiteness of a Greenfunction or a physical observable it is useful to have the extracted UV-divergences of the renormalization constants at hand. How these are obtained is described in \ref{sec:Passarino} and evaluate to
+To check quickly for UV-finiteness of a Greenfunction or a physical observable it is useful to have the extracted UV-divergences of the renormalization constants at hand. How these are obtained is described in section \ref{sec:Passarino}. They evaluate to:
 \begin{align}
 & \delta Z_{\tilde{g}}^L = -\frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}} 2\left[ T(F) n_f + C(A) \right], &&  \delta Z_{\tilde{g}}^R = -\frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}} 2 C(A),\nonumber\\
 & \delta m_{\tilde{g}} = \frac{g_s^2}{16\pi^2\epsilon_{\mathrm{UV}}} \left[ T(F) n_f - 2C(A) \right] m_{\tilde{g}},\nonumber\\
@@ -821,10 +822,10 @@ In addition, it happens that the particle content of RSQCD is such that $\frac{\
 
 
 \subsection{The Renormalization of the Matrix Element}\label{sec:MatrixElRen}
-This section explains how the renormalization of the matrix element of squark production is implemented in the framework of the automated calculation and gives intermediate results in the form of the renormalized matrix element.
+This section explains how the renormalization of the matrix element of squark production is implemented in the framework of the automated calculation and gives intermediate results in form of the renormalized matrix element.
 
 \subsubsection{Implementation into the Model File}\label{sec:ModelFileImplementation}
-Within the automated calculation, the renormalization of the matrix element of squark production has been achieved by extending the model file, generated by \texttt{SARAH} with counterterm Feynman rules and renormalization constants.\\ 
+Within the automated calculation, the renormalization of the matrix element of squark production has been achieved by extending the model file generated by \texttt{SARAH} with counterterm Feynman rules and renormalization constants.\\ 
 The derivation of the counterterm Feynman rules has been performed by the author whereas the implementation into the model file was mainly done by Philip Dießner, another member of the group. To explain the implementation, the code extract describing the quark-squark-gluino vertex is considered, as an example.
 \begin{lstlisting}[style=MyMathematica]
 C[F[3, {gt1, ct1}], F[15, {ct2}], -S[13, {gt3, ct3}]] == {{
@@ -833,8 +834,8 @@ C[F[3, {gt1, ct1}], F[15, {ct2}], -S[13, {gt3, ct3}]] == {{
 }, {0,0}}
 \end{lstlisting}
 The syntax of the vertex, also described in \cite{FeynArtsManual}, is like $\left\{\left\{\mathrm{L},\mathrm{L}^{ct}\right\},\left\{\mathrm{R},\mathrm{R}^{ct}\right\}\right\}$, where the shortcuts are explained in table \ref{tab:Modelfille}.
-The names of the particles within the model are given in the \texttt{FeynArts} manual\cite{FeynArtsManual} when  \texttt{MSSMQCD.mod}, the QCD extention of the MSSM model file is explained:\\ 
-However, \mbox{\texttt{F[3,$\left\{ \right.$gt1, ct1$\left.\right\}$]}} is an up-type quark of the \texttt{gt1}'th generation with color \texttt{ct1} and \texttt{F[15,$\left\{ \right.$ct2$\left.\right\}$]} is a gluino with color \texttt{ct2}. In comparison to \cite{FeynArtsManual}, there is a slight difference in the definition of squarks. Whereas the MSSM model file, \texttt{MSSMQCD.mod}, has three indices to label squarks, the model file generated by \texttt{SARAH} uses only two: \texttt{-S[13,$\left\{ \right.$ gt3, ct3$\left.\right\}$]} denotes an anti up-type squark of mass eigenstate \texttt{gt3} and color \texttt{ct3}. This means more specifically that \texttt{gt3}$\in \left\{ 1,2,3 \right\}$ labels the ``left-handed" squarks with increasing mass and \texttt{gt3}$\in \left\{ 4,5,6 \right\}$ the ``right-handed`'' squarks with increasing mass.
+The names of the particles within the model are given in the \texttt{FeynArts} manual\cite{FeynArtsManual} when  \texttt{MSSMQCD.mod}, the QCD extention of the MSSM model file, is explained.\\ 
+However, \mbox{\texttt{F[3,$\left\{ \right.$gt1, ct1$\left.\right\}$]}} is an up-type quark of the \texttt{gt1}'th generation with color \texttt{ct1} and \texttt{F[15,$\left\{ \right.$ct2$\left.\right\}$]} is a gluino with color \texttt{ct2}. In comparison to \cite{FeynArtsManual}, there is a slight difference in the definition of squarks. Whereas the MSSM model file, \texttt{MSSMQCD.mod}, has three indices to label squarks, the model file generated by \texttt{SARAH} uses only two: \texttt{-S[13,$\left\{ \right.$ gt3, ct3$\left.\right\}$]} denotes an anti up-type squark of mass eigenstate \texttt{gt3} and color \texttt{ct3}. This means more specifically that \texttt{gt3}$\in \left\{ 1,2,3 \right\}$ labels the ``left-handed" squarks with increasing mass and \texttt{gt3}$\in \left\{ 4,5,6 \right\}$ the ``right-handed'' squarks with increasing mass.
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{c?c}
@@ -877,7 +878,7 @@ dZgs1restore := FiniteGs * g3*g3/(12*Pi*Pi)
 RenConst[dZGG1] := FieldRC[V[5]]
 \end{lstlisting}
 The first two lines encode the field renormalization constant of up- and down-type quarks. The function \texttt{FieldRC} actually calculates two renormalization constants when the argument is a fermion field: the left- and right-handed part. But these terms are identical since electroweak interactions are not considered within the model file. It therefore suffices to just pick the first element of the list by adding \texttt{[[$1$]]} to the two-component list.\\
-The next block of the code provides the renormalization constants of up- and down-type squarks and the ensuing block deals with the gluino. Here, it is important to separate the calculation of the field renormalization constant of the left- and right-handed component of the Dirac-spinor by adding \texttt{[[$1$]]} or \texttt{[[$2$]]} at the end of \texttt{FieldRC[F[$15$]]} to pick the appropriate element of the list.\\
+The next block of the code provides the renormalization constants of up- and down-type squarks and the ensuing block deals with the gluino. Here it is important to separate the calculation of the field renormalization constant of the left- and right-handed component of the Dirac-spinor by adding \texttt{[[$1$]]} or \texttt{[[$2$]]} at the end of \texttt{FieldRC[F[$15$]]} to pick the appropriate element of the list.\\
 Finally, the gauge coupling renormalization and the supersymmetry restoring counterterm are implemented, before the gluon field is renormalized. The necessity of the parameter \texttt{FiniteGs} will be explained in the next section.\\
 These renormalization constants have been checked with the above calculated renormalization constants.
 
@@ -898,14 +899,14 @@ Mat[(<u2|7 k[1]|u1>]) SUNT[Col1, Col2]]]
 \end{lstlisting}
 Here, \texttt{k[1]} and \texttt{k[2]} are the momenta of the in- and outgoing quark, \texttt{Col1} and \texttt{Col2} their respective color, \texttt{B0i[bb0,$\hdots$]} denotes the loop integral $B_0(\hdots)$ and \texttt{B0i[bb1,$\hdots$]} the loop integral $B_1(\hdots)$ , \texttt{Pair[k[1], k[1]]} labels the scalar product of the four vector \texttt{k[1]} with itself, \texttt{MassGlu} is the gluino mass, \texttt{MassSu[i]} with \texttt{i}$\in \left\{ 1,4 \right\}$ names the degenerate squark mass, \texttt{Mat[$\hdots$]} marks a container which stores the helicity and color matrix element, \texttt{|u1>} and \texttt{|u2>} are the spinors of the in- and outgoing quark, \texttt{6} labels the right-handed projector $P_R$ and \texttt{SUNT} with only two indices is a Kronecker delta in color space.\\
 To extract infrared divergences, \texttt{LoopTools}\cite{Hahn:1998} is used. This package provides the function \texttt{SetLambda} which can be set to 0, $-1$ or $-2$ to extract the finite part, $\frac{1}{\epsilon}$ pole or $\frac{1}{\epsilon^2}$ pole of scalar integrals in dimensional regularisation. This means, when all arguments of a scalar integral are provided numerically, the integral is replaced with the coefficient of $\epsilon^i$, where $i \in \left\{ 0,-1,-2 \right\}$ is set by \texttt{SetLambda}. The so extracted divergences include both, UV and IR poles. In fact, the function \texttt{SetUVDiv} controls whether UV divergences are kept (\texttt{SetUVDiv}$\to 1$) or discarded (\texttt{SetUVDiv}$\to 0$), which presents another check of UV-finiteness which has been performed.\\
-The respective poles of $\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}\ast})(uu \to \tilde{u}_L\tilde{u}_R)$ are shown in figure \ref{fig:MatrixElementPoles}. Observe, that the single pole is positive for all values of the Mandelstam variable $t$. This is because infrared integrals are rendered finite when $\epsilon<0$ \ignore{($D$ > 4)}. This means that the single pole is actually negative and can cancel with the single pole from the real corrections which is forced to be positive as it origins from an absolute square.
+The respective poles of $\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}\ast})(uu \to \tilde{u}_L\tilde{u}_R)$ are shown in figure \ref{fig:MatrixElementPoles}. Observe that the single pole is positive for all values of the Mandelstam variable $t$. This is because infrared integrals are rendered finite when $\epsilon<0$ \ignore{($D$ > 4)}. This means that the single pole is actually negative and can cancel with the single pole from the real corrections which is forced to be positive as it origins from an absolute square.
 \begin{figure}[!htbp]
 \begin{center}
 \includegraphics[scale=.5]{figures/MatrixElement_Poles.png}
 \caption{Coefficients of $\mathcal{O}(\epsilon^0)$, $\mathcal{O}(\epsilon^{-1})$ and $\mathcal{O}(\epsilon^{-2})$ terms of the dimensionless quantity $\frac{1}{4\cdot 9}\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}})$ of $uu \to \tilde{u}_L\tilde{u}_R$ in the MRSSM as a function of the Mandelstam variable $t$. Final state helicities and colors are averaged. The parameters are fixed to \mbox{$m_{\tilde{q}} = \mu_R = \unit[1000]{GeV}$,} $m_{\tilde{g}} = \unit[2000]{GeV}$, $m_{\sigma} = \unit[5000]{GeV}$ and $\sqrt{s} = \unit[6000]{GeV}$ which is the partonic center-of-mass energy.}\label{fig:MatrixElementPoles}
 \end{center}
 \end{figure}\\
-Note, that the extraction of the single pole does not only involve setting the option \texttt{SetLamda} $\to-1$ and \texttt{Dminus4}$\to 0$, but also setting \texttt{SetLamda}$\to -2$ and \texttt{Dminus4} $\to -2$ and subtracting the term obtained by \texttt{SetLamda}$\to-2$ and \texttt{Dminus4} $\to 0$. In doing so, one accounts for the contraction of double poles with terms of $\mathcal{\epsilon}$. The same applies to the extraction of finite terms. This is summarized schematically in table \ref{tab:poles}.
+Note that the extraction of the single pole does not only involve setting the option \mbox{\texttt{SetLamda} $\to-1$} and \texttt{Dminus4}$\to 0$, but also setting \texttt{SetLamda}$\to -2$ and \texttt{Dminus4} $\to -2$ and subtracting the term obtained by \texttt{SetLamda}$\to-2$ and \texttt{Dminus4} $\to 0$. In doing so, one accounts for the contraction of double poles with terms of $\mathcal{\epsilon}$. The same applies to the extraction of finite terms. This is summarized schematically in table \ref{tab:poles}.
 
 \begin{table}[!htpb]
 \begin{center}
@@ -927,12 +928,12 @@ $\epsilon^{0}$ & $\epsilon^{0}$ & (\texttt{SetLambda} $\to 0$, \texttt{Dminus4} 
 \end{table}
 
 Now it becomes clear, why the parameter \texttt{FiniteGs} has been introduced. As \texttt{SetLambda} only replaces the loop integrals but not every other term in an expression with the corresponding prefactor of $\epsilon^i$, \texttt{FiniteGs} needs to be set to zero when \texttt{SetLambda} is set to $-1$ or $-2$ and \texttt{FiniteGs}$\to 1$ when \texttt{SetLambda}$\to 0$.\\
-The upper plot in figure \ref{fig:MatrixElement} shows the finite contributions from loop diagrams with different topology to $\frac{1}{4\cdot 9}\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}})$ as well as their sum as a function of the Mandelstam variable $t$ where $\frac{1}{4\cdot 9}$ is the averaging over final state spins and colors. The lower plot displays the tree-level absolute squared matrix amplitude with leading order $\alpha_s$ which is compared to its analogue with next-to-leading order $\alpha_s$ and the virtual correction $\frac{1}{4\cdot 9}\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}})$. The latter is not given analytically. It can be seen that the virtual corrections are relatively constant. Referring to eq. \eqref{eq:t}, this suggests that in this case, virtual corrections do enhance the differential cross section in all directions of the beam axis relatively uniformly.
+The upper plot in figure \ref{fig:MatrixElement} shows the finite contributions from loop diagrams with different topology to $\frac{1}{4\cdot 9}\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}})$ as well as their sum as a function of the Mandelstam variable $t$ where $\frac{1}{4\cdot 9}$ is the averaging over final state spins and colors. The lower plot displays the tree-level absolute squared matrix amplitude with leading order $\alpha_s$ which is compared to its analogue with next-to-leading order $\alpha_s$ and the virtual correction $\frac{1}{4\cdot 9}\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}})$. The latter is not given analytically. It can be seen that the virtual corrections are relatively constant. Referring to eq. \eqref{eq:t}, this suggests that in this case virtual corrections do enhance the differential cross section in all directions of the beam axis relatively uniformly.
 \begin{figure}[!htpb]
 \begin{center}
 \includegraphics[scale=.5]{figures/MatrixElement_SE_Vertices_Boxes}
 \includegraphics[scale=.5]{figures/MatrixElement.png}
-\caption{The figure at the bottom shows the absolute squared matrix element of $uu \to \tilde{u}_L\tilde{u}_R$ in the MRSSM at tree-level with $\alpha_s(m_Z) = 0.135$ from the leading order parton density functions $\mathtt{MMHT2014}$, and $\alpha_s(m_Z) = 0.12$ from the next-to-leading order parton density function as well as the contribution from the virtual corrections to it.\newline 
+\caption{The figure at the bottom shows the absolute squared matrix element of $uu \to \tilde{u}_L\tilde{u}_R$ in the MRSSM at tree-level with $\alpha_s(m_Z) = 0.135$ from the leading order parton density functions $\mathtt{MMHT2014}$ and $\alpha_s(m_Z) = 0.12$ from the next-to-leading order parton density function as well as the contribution from the virtual corrections to it.\newline 
 The figure at the top shows the different contributions to the virtual corrections as well as their sum. The used parameters are given under fig. \ref{fig:MatrixElementPoles}.}\label{fig:MatrixElement}
 \end{center}
 \end{figure}

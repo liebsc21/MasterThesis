@@ -11,7 +11,7 @@ g^{\mu\nu} = \mathrm{diag}(1, -1, -1, -1).
 \subsection{Constants of the Color Algebra $SU(N)$}\label{sec:coloralgebra}
 Tha Casimir operator $C(R)\mathbbm{1}$ of a semi-simple Lie algebra in the irreducible representation $R$ is given by\cite{Marina}
 \begin{align}
-g^{ab} T^a(R)T^b(R) = C(R)\mathbbm{1} \label{eq:Casimir}
+g^{ab} T^a(R)T^b(R) = C(R)\mathbbm{1}, \label{eq:Casimir}
 \end{align}
 where $T^a(R)$ is the $a$-th generator of the matrix valued representation $R$, $g^{ab}$ is the metric of the group, $C(R)$ is the quadratic Casimir invariant of the representation $R$ and $\mathbbm{1}$ is the identity in the representation space.\\
 Apart from $C(R)$ it is common to define the Dynkin-Index $T(R)$:
@@ -20,18 +20,18 @@ Apart from $C(R)$ it is common to define the Dynkin-Index $T(R)$:
 \end{align}
 The two constants are connected by
 \begin{align}
-C(R) \cdot \mathrm{dim}(R) = T(R) \cdot \mathrm{dim}(G)
+C(R) \cdot \mathrm{dim}(R) = T(R) \cdot \mathrm{dim}(G),
 \end{align}
 where $\mathrm{dim}(G)$ is the dimension of the group and $\mathrm{dim}(R)$ is the dimension of the irreducible representation $R$.\\
-In the case of $SU(N)$ one has a diagonal metric $g^{ab} = \delta^{ab}$ and therefore \ref{eq:Casimir} turns to
+In the case of $SU(N)$ one has a diagonal metric $g^{ab} = \delta^{ab}$ and therefore eq. \ref{eq:Casimir} turns to
 \begin{align}
 \sum_a (T^a(R))^2 = C(R)\mathbbm{1}_{\mathrm{dim}(R) \times \mathrm{dim}(R)}
 \end{align}
-and one can write down the following useful formulae for the fundamental representation $R=F$: $T^a_{ij} = \frac{\lambda^a_{ij}}{2}$ and the adjoint representation $R=A$: $(T^a_{ij})^{adj} = -if_{aij}$
+and one can write down the following useful formulae for the fundamental representation $R=F$: $T^a_{ij} = \frac{\lambda^a_{ij}}{2}$ and the adjoint representation $R=A$: $(T^a_{ij})^{adj} = -if_{aij}$:
 \begin{align}
-T^a_{ik} T^a_{kj} &= C(F)\mathbbm{1}_{ij} && \mbox{with}\ C(F) = \frac{N^2-1}{2N} = \frac{4}{3}\nonumber\\
-f^{abc} f^{dbc} &= C(A)\delta^{ad} && \mbox{with}\ C(A) = N = 3\nonumber\\
-\mathrm{Tr}\left[T^aT^b\right] &= T(F)\delta^{ab} && \mbox{with}\ T(F) = \frac{1}{2}\label{eq:DynkinIndex}
+T^a_{ik} T^a_{kj} &= C(F)\mathbbm{1}_{ij} && \mbox{with}\ C(F) = \frac{N^2-1}{2N} = \frac{4}{3},\nonumber\\
+f^{abc} f^{dbc} &= C(A)\delta^{ad} && \mbox{with}\ C(A) = N = 3,\nonumber\\
+\mathrm{Tr}\left[T^aT^b\right] &= T(F)\delta^{ab} && \mbox{with}\ T(F) = \frac{1}{2},\label{eq:DynkinIndex}
 \end{align}
 where $\lambda^a_{ij}$ are for $N_c = 3$ the Gell-Mann matrices and $f_{abc}$ are the structure constants of $SU(N_c)$.
 %\begin{tabular}{c|c|c}
@@ -51,11 +51,11 @@ As representation of the $\gamma$-matrices the Weyl or chiral representation is 
 &\gamma^\mu = \begin{pmatrix}
 0 && \sigma^\mu\\
 \overline{\sigma}^\mu && 0
-\end{pmatrix} &&
+\end{pmatrix}, &&
 \gamma_5 = \begin{pmatrix}
 -\mathbbm{1}_2 && 0\\
 0 && \mathbbm{1}_2
-\end{pmatrix}
+\end{pmatrix}.
 \end{align}
 with
 \begin{align}
@@ -71,13 +71,13 @@ where $\sigma^i$ are the Pauli matrices and $\mathbbm{1}_n$ is the $n \times n$ 
 P_L = \frac{1}{2}(\mathbbm{1}_4 - \gamma_5) = \begin{pmatrix}
 \mathbbm{1}_2 && 0\\
 0 && 0
-\end{pmatrix} && 
+\end{pmatrix}, && 
 P_R = \frac{1}{2}(\mathbbm{1}_4 + \gamma_5) = \begin{pmatrix}
 0 && 0\\
 0 && \mathbbm{1}_2
-\end{pmatrix}\label{eq:projectors}
+\end{pmatrix}.\label{eq:projectors}
 \end{align}
-The representation of generators of the Lorentz group on four-spinor space is composed of the matrices above. Because of the block form of those it, is not surprising that the representation on four-spinor space is reducible to two representations on two-spinor (Weyl spinor) spaces. It is therefore sensible to decompose a four-spinor into a left and a right handed Weyl spinor\footnote{The projectors in the chiral basis (eq. \ref{eq:projectors}) explain the names left and right handed Weyl spinors.}
+The representation of generators of the Lorentz group on four-spinor space is composed of the matrices above. Because of the block form of those it, is not surprising that the representation on four-spinor space is reducible to two representations on two-spinor (Weyl spinor) spaces. It is therefore sensible to decompose a four-spinor into a left and a right handed Weyl spinor\footnote{The projectors in the chiral basis (eq. \eqref{eq:projectors}) explain the names left and right handed Weyl spinors.}
 \begin{align}
 \Psi = \begin{pmatrix}
 \psi_\alpha \\
@@ -87,27 +87,27 @@ The representation of generators of the Lorentz group on four-spinor space is co
 where $\alpha,\dot{\alpha} \in \left\{ 1,2 \right\}$. Left handed Weyl spinors are labeled with undotted and right handed Weyl spinors with dotted indices. One distinguishes four different Weyl spinors:
 \begin{align}
 \psi^\alpha, \hspace{1cm} 
-\overline{\psi}^{\dot{\alpha}} = (\psi^\alpha)^\ast, \hspace{1cm} \psi_\alpha = \epsilon_{\alpha\beta}\psi^\beta, \hspace{1cm} \mathrm{and} \hspace{1cm} \psi_{\dot{\alpha}} = \epsilon_{\dot{\alpha}\dot{\beta}}\psi^{\dot{\beta}} = (\psi_\alpha)^\ast,
+\overline{\psi}^{\dot{\alpha}} = (\psi^\alpha)^\ast, \hspace{1cm} \psi_\alpha = \epsilon_{\alpha\beta}\psi^\beta \hspace{1cm} \mathrm{and} \hspace{1cm} \psi_{\dot{\alpha}} = \epsilon_{\dot{\alpha}\dot{\beta}}\psi^{\dot{\beta}} = (\psi_\alpha)^\ast,
 \end{align}
 where $^\ast$ denotes complex conjugation and indices are lowered with the antisymmetric $\epsilon_{\alpha\beta}$ ($\epsilon_{\dot{\alpha}\dot{\beta}}$), which obeys
 \begin{align}
-\epsilon^{\alpha\beta} = \epsilon_{\beta\alpha},\ \epsilon^{\dot{\alpha}\dot{\beta}} = \epsilon_{\dot{\beta}\dot{\alpha}} \hspace{3cm} \mathrm{and} \hspace{3cm} \epsilon_{12} = \epsilon_{\dot{1}\dot{2}}= 1.
+\epsilon^{\alpha\beta} = \epsilon_{\beta\alpha},\ \epsilon^{\dot{\alpha}\dot{\beta}} = \epsilon_{\dot{\beta}\dot{\alpha}} \hspace{1cm} \mathrm{and} \hspace{1cm} \epsilon_{12} = \epsilon_{\dot{1}\dot{2}}= 1.
 \end{align}
 By virtue of the antisymmetry of $\epsilon^{\alpha \beta}$ one finds the Lorentz invariant products:
 \begin{align}
 \psi\chi &:= \psi^\alpha\chi_\alpha = -\chi_\alpha\psi^\alpha = \chi^\alpha\psi_\alpha = \chi\psi,\nonumber\\
-\overline{\psi}\overline{\chi} &:= \overline{\psi}_{\dot{\alpha}} \overline{\chi}^{\dot{\alpha}} = -\overline{\chi}^{\dot{\alpha}}\overline{\psi}_{\dot{\alpha}} = \overline{\chi}_{\dot{\alpha}}\overline{\psi}^{\dot{\alpha}} = \overline{\chi}\overline{\psi} \label{eq:Weylspinorproduct}
+\overline{\psi}\overline{\chi} &:= \overline{\psi}_{\dot{\alpha}} \overline{\chi}^{\dot{\alpha}} = -\overline{\chi}^{\dot{\alpha}}\overline{\psi}_{\dot{\alpha}} = \overline{\chi}_{\dot{\alpha}}\overline{\psi}^{\dot{\alpha}} = \overline{\chi}\overline{\psi}. \label{eq:Weylspinorproduct}
 \end{align}
-To make the index structure of the Pauli matrices explicit, one writes $\sigma^\mu_{\alpha\dot{\alpha}}$ and $\overline{\sigma}^{\mu\dot{\alpha}\alpha}$ for the formulae in \ref{eq:Pauli}. For the definition of the supersymmetry algebra in section \ref{sec:SUSYalgebra} the representation of the generators of the Lorentz group on the left and right handed Weyl spinor space is introduced:
+To make the index structure of the Pauli matrices explicit, one writes $\sigma^\mu_{\alpha\dot{\alpha}}$ and $\overline{\sigma}^{\mu\dot{\alpha}\alpha}$ for the formulae in eq. \eqref{eq:Pauli}. For the definition of the supersymmetry algebra in section \ref{sec:SUSYalgebra} the representation of the generators of the Lorentz group on the left and right handed Weyl spinor space is introduced:
 \begin{align}
-\frac{1}{2}(\sigma^{\mu\nu})_\alpha^{\ \beta} := \frac{i}{4}(\sigma^\mu\overline{\sigma}^\nu - \sigma^\nu\overline{\sigma}^\mu)_\alpha^{\ \beta}\nonumber\\
-\frac{1}{2}(\overline{\sigma}^{\mu\nu})^{\dot{\alpha}}_{\ \dot{\beta}} := \frac{i}{4}(\overline{\sigma}^\mu\sigma^\nu - \overline{\sigma}^\nu\sigma^\mu)^{\dot{\alpha}}_{\ \dot{\beta}}
+\frac{1}{2}(\sigma^{\mu\nu})_\alpha^{\ \beta} := \frac{i}{4}(\sigma^\mu\overline{\sigma}^\nu - \sigma^\nu\overline{\sigma}^\mu)_\alpha^{\ \beta},\nonumber\\
+\frac{1}{2}(\overline{\sigma}^{\mu\nu})^{\dot{\alpha}}_{\ \dot{\beta}} := \frac{i}{4}(\overline{\sigma}^\mu\sigma^\nu - \overline{\sigma}^\nu\sigma^\mu)^{\dot{\alpha}}_{\ \dot{\beta}}.
 \end{align}
 
  
 With the definition of overlined and charge conjugated four-spinors\footnote{$\Psi^T$ denotes the transpose of the spinor $\Psi$ and $\Psi^\dagger$ is the Hermitian adjoint of $\Psi$.}
 \begin{align}
-&\overline{\Psi} := \Psi^\dagger \gamma^0, && \Psi^C := i\gamma^2\gamma^0 \overline{\Psi}^T  
+&\overline{\Psi} := \Psi^\dagger \gamma^0, && \Psi^C := i\gamma^2\gamma^0 \overline{\Psi}^T, 
 \end{align}
 one obtains:
 \begin{align}
@@ -126,32 +126,32 @@ one obtains:
 \psi^\alpha & \overline{\chi}_{\dot{\alpha}}
 \end{pmatrix}.
 \end{align}
-The 4-spinor of an arbitrary quark $q$ is given in terms of Weyl spinors $q_L$ and $\overline{q}_R$ by
+The four-spinor of an arbitrary quark $q$ is given in terms of Weyl spinors $q_L$ and $\overline{q}_R$ by
 \begin{align}
 q = \begin{pmatrix}
 q_L \\
 \overline{q}_R
-\end{pmatrix}
+\end{pmatrix},
 \end{align}
-whereas the 4-spinor of the Dirac gauginos is given in terms of the Weyl spinors $\lambda$ and $\overline{\chi}$\footnote{$\lambda$ is the superpartner of the gluon, called the gluino and $\overline{\chi}$ is the Weyl spinor of the chiral superfield which is associated with the gluon, called the octino.}
+whereas the four-spinor of the Dirac gauginos is given in terms of the Weyl spinors $\lambda$ and $\overline{\chi}$:\footnote{$\lambda$ is the superpartner of the gluon, called the gluino and $\overline{\chi}$ is the Weyl spinor of the chiral superfield which is associated with the gluon, referred to as the octino.}
 \begin{align}
 \tilde{g}^a = \begin{pmatrix}
 -i \lambda^a \\
 i \overline{\chi}^a
-\end{pmatrix}
+\end{pmatrix}.
 \end{align}
 
 \subsection{Anticommuting Numbers}\label{sec:AnticommNumbers}
-Anticommuting numbers $\theta^\alpha$ are also referred to as Grassmann numbers and are defined by $\theta^\alpha\theta^\beta = -\theta^\beta\theta^\alpha$ and commute with ordinary c-numbers.\\
-They occur in superspace formalism in the form of 2 tuples, i.e. $\theta^\alpha$ with $\alpha=1,2$. The complex conjugate of this tuple is denoted with $\overline{\theta}^{\dot{\alpha}}$. 
+Anticommuting numbers $\theta^\alpha$ are also referred to as Grassmann numbers. These are defined by $\theta^\alpha\theta^\beta = -\theta^\beta\theta^\alpha$ and commute with ordinary c-numbers.\\
+They occur in superspace formalism in the form of two-tuples, i.e. $\theta^\alpha$ with $\alpha \in \left\{1,2\right\}$. The complex conjugate of this tuple is denoted with $\overline{\theta}^{\dot{\alpha}}$. 
 Derivatives are defined by
 \begin{align}
-\partial^\alpha \theta_\beta := \frac{\partial}{\partial \theta_\alpha} \theta_\beta := \delta^\alpha_\beta \hspace{4cm} \partial_\alpha \theta^\beta := \frac{\partial}{\partial \theta^\alpha} \theta^\beta := \delta_\alpha^\beta\nonumber\\
-\overline{\partial}^{\dot{\alpha}} \overline{\theta}_{\dot{\beta}} := \frac{\partial}{\partial \overline{\theta}_{\dot{\alpha}}} \overline{\theta}_{\dot{\beta}} := \delta^{\dot{\alpha}}_{\dot{\beta}} \hspace{4cm} \overline{\partial}_{\dot{\alpha}} \overline{\theta}^{\dot{\beta}} := \frac{\partial}{\partial \overline{\theta}^{\dot{\alpha}}} \overline{\theta}^{\dot{\beta}} := \delta_{\dot{\alpha}}^{\dot{\beta}}
+\partial^\alpha \theta_\beta := \frac{\partial}{\partial \theta_\alpha} \theta_\beta := \delta^\alpha_\beta, \hspace{4cm} \partial_\alpha \theta^\beta := \frac{\partial}{\partial \theta^\alpha} \theta^\beta := \delta_\alpha^\beta,\nonumber\\
+\overline{\partial}^{\dot{\alpha}} \overline{\theta}_{\dot{\beta}} := \frac{\partial}{\partial \overline{\theta}_{\dot{\alpha}}} \overline{\theta}_{\dot{\beta}} := \delta^{\dot{\alpha}}_{\dot{\beta}}, \hspace{4cm} \overline{\partial}_{\dot{\alpha}} \overline{\theta}^{\dot{\beta}} := \frac{\partial}{\partial \overline{\theta}^{\dot{\alpha}}} \overline{\theta}^{\dot{\beta}} := \delta_{\dot{\alpha}}^{\dot{\beta}},
 \end{align}
 whereby one needs to be cautious as these definitions imply
 \begin{align}
-\partial_\alpha = -\epsilon_{\alpha\beta}\partial^\beta \hspace{4cm} \partial_{\dot{\alpha}} = -\epsilon_{\dot{\alpha}\dot{\beta}}\partial^{\dot{\beta}}.
+\partial_\alpha = -\epsilon_{\alpha\beta}\partial^\beta, \hspace{4cm} \partial_{\dot{\alpha}} = -\epsilon_{\dot{\alpha}\dot{\beta}}\partial^{\dot{\beta}}.
 \end{align}
 Integrals are defined by:
 \begin{align}
@@ -161,22 +161,22 @@ Integrals are defined by:
 where the first line mirrors the claim of translation invariance. One furthermore introduces the shortcuts
 \begin{align}
 \int \mathrm{d}\theta^2 &:= \int\frac{1}{4}\epsilon_{\alpha\beta} \mathrm{d}\theta^\alpha\mathrm{d}\theta^\beta, \hspace{1cm}
-\int \mathrm{d}\overline{\theta}^2 := \int\frac{1}{4}\epsilon_{\dot{\alpha}\dot{\beta}} \mathrm{d}\theta^{\dot{\alpha}}\mathrm{d}\theta^{\dot{\beta}}, \hspace{1cm} \mathrm{and} \nonumber\\
+\int \mathrm{d}\overline{\theta}^2 := \int\frac{1}{4}\epsilon_{\dot{\alpha}\dot{\beta}} \mathrm{d}\theta^{\dot{\alpha}}\mathrm{d}\theta^{\dot{\beta}} \hspace{1cm} \mathrm{and} \nonumber\\
 \int \mathrm{d}^4\theta &:= \int \mathrm{d}\theta^2\mathrm{d}\overline{\theta}^2.
 \end{align}
-For the definition of (anti-)chiral superfields and the field strength chiral superfields it proves useful to introduce supersymmetry (or chiral) covariant derivatives 
+For the definition of (anti-)chiral superfields and the field strength chiral superfields, it proves useful to introduce supersymmetry (or chiral) covariant derivatives :
 \begin{align}
-&\mathcal{D}_\alpha := \frac{\partial}{\partial \theta^\alpha} - i(\sigma^\mu\overline{\theta})_\alpha\partial_\mu && \mathcal{D}^{\dot{\alpha}} := \frac{\partial}{\partial \overline{\theta}_{\dot{\alpha}}} - i(\overline{\sigma}^\mu\theta)^{\dot{\alpha}} \partial_\mu\nonumber\\
-&D^\alpha := \epsilon^{\alpha\beta} D_\beta = -\frac{\partial}{\partial \theta_\alpha} + i(\overline{\theta} \overline{\sigma}^\mu)^\alpha \partial_\mu && \mathcal{D}_{\dot{\alpha}} := \epsilon_{\dot{\alpha}\dot{\beta}} \mathcal{D}^{\dot{\beta}} = -\frac{\partial}{\partial \overline{\theta}^{\dot{\alpha}}} + i(\sigma^\mu\theta)_{\dot{\alpha}} \partial_\mu.
+&\mathcal{D}_\alpha := \frac{\partial}{\partial \theta^\alpha} - i(\sigma^\mu\overline{\theta})_\alpha\partial_\mu, && \mathcal{D}^{\dot{\alpha}} := \frac{\partial}{\partial \overline{\theta}_{\dot{\alpha}}} - i(\overline{\sigma}^\mu\theta)^{\dot{\alpha}} \partial_\mu,\nonumber\\
+&D^\alpha := \epsilon^{\alpha\beta} D_\beta = -\frac{\partial}{\partial \theta_\alpha} + i(\overline{\theta} \overline{\sigma}^\mu)^\alpha \partial_\mu, && \mathcal{D}_{\dot{\alpha}} := \epsilon_{\dot{\alpha}\dot{\beta}} \mathcal{D}^{\dot{\beta}} = -\frac{\partial}{\partial \overline{\theta}^{\dot{\alpha}}} + i(\sigma^\mu\theta)_{\dot{\alpha}} \partial_\mu.
 \end{align}
-By construction they are supersymmetry invariant, i.e. they fulfill the following anticommutation relations with the supersymmetry generators from eq. \ref{eq:SUSYGen}:
+By construction they are supersymmetry invariant, i.e. they fulfill the following anticommutation relations with the supersymmetry generators from eq. \eqref{eq:SUSYGen}:
 \begin{align}
 \left\{ Q_\alpha, \mathcal{D}_\beta \right\} = \left\{ \overline{Q}_{\dot{\alpha}}, \mathcal{D}_\beta \right\} = \left\{ Q_\alpha, \mathcal{\mathcal{D}}_{\dot{\beta}} \right\} = \left\{ \overline{Q}_{\dot{\alpha}}, \mathcal{\mathcal{D}}_{\dot{\beta}} \right\} = 0.
 \end{align}
 
 
 \subsection{Feynman Rules for the RSQCD}\label{sec:FeynmanRules}
-The following Feynman rules are derived from the Lagrangian of the R-symmetric supersymmetric quantum chromodynamics (RSQCD) eq. \ref{eq:L_RSQCD}. When compared with the Feynman rules of the supersymmetric QCD the diagrams involving scalar gluons are new. In addition the gluon-quark-squark vertex is different in RSQCD for the gauginos are Dirac fermions. Note that for calculations involving fermions one needs to multiply the Feynman rules in the opposite direction of the fermion flow which is given by a curved arrow next to the diagrams in fig. \ref{fig:secondFeynmanRules} and does not always agree with the flow of fermion number given by the direction of the Dirac propagator. This renders the evaluation of fermion number violating processes like $qq \to \tilde{q}\tilde{q}$ unambiguous, cf. \cite{Beenakker:1996ch}.
+The following Feynman rules (fig. \ref{fig:firstFeynmanRules} - \ref{fig:thirdFeynmanRules}) are derived from the Lagrangian of the $R$-symmetric supersymmetric quantum chromodynamics (RSQCD) eq. \eqref{eq:L_RSQCD}. When compared with the Feynman rules of the supersymmetric QCD the diagrams involving scalar gluons are new. In addition the gluon-quark-squark vertex is different in RSQCD for the gauginos are Dirac fermions. Note that for calculations involving fermions one needs to multiply the Feynman rules in the opposite direction of the fermion flow which is given by a curved arrow next to the diagrams in fig. \ref{fig:secondFeynmanRules} and does not always agree with the flow of fermion number given by the direction of the Dirac propagator. This renders the evaluation of fermion number violating processes like $qq \to \tilde{q}\tilde{q}$ unambiguous, cf. \cite{Beenakker:1996ch}.
 %refer to paper cited in Beenakker(Appendix: Feynmanrules)
 \begin{figure}[!htbp]
 \begin{center}
@@ -274,7 +274,7 @@ The following Feynman rules are derived from the Lagrangian of the R-symmetric s
 \end{scope}
 \end{tikzpicture}
 \caption{In the Feynman diagrams of the propagators the momentum is flowing from the right to the left hand side. The gluon propagator is given in Feynman gauge.\newline
-In the Feynman diagrams of the vertices all momenta flow towards the vertex, i.e. in diagram 9 $-p_1$ is flowing towards the vertex.\newline
+In the Feynman diagrams of the vertices all momenta flow towards the vertex, i.e. in diagram 9: $-p_1$ flows towards the vertex.\newline
 The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' of the squarks. The indices $i,j=1,2,3$ are the color indices in the (anti)fundamental representation where $a,b,c,\hdots = 1,\hdots,8$ are the color indices of the adjoint representation.}\label{fig:firstFeynmanRules}
 \end{center}
 \end{figure}
@@ -433,7 +433,7 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 \end{scope}
 \end{tikzpicture}
 \end{center}
-\caption{The curved arrows indicate the fermion flow. The Feynman rules 16b, 17b and 18b are the complex conjugates of 16a, 17a and 18a respectively. Applying a flipping rule to a vertex one has to reverse the curved arrow, i.e. the fermion flow and replace $\Psi$ with $\bar{\Psi}^C$. In addition one has to add a minus sign for Feynman rule 13.}\label{fig:secondFeynmanRules}
+\caption{The curved arrows indicate the fermion flow. The Feynman rules 16b, 17b and 18b are the complex conjugates of 16a, 17a and 18a respectively. Applying a flipping rule to a vertex one has to reverse the curved arrow, i.e. the fermion flow and replace $\Psi$ with $\overline{\Psi}^C$. In addition one has to add a minus sign for Feynman rule 13.}\label{fig:secondFeynmanRules}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
@@ -471,6 +471,7 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 	\node at (3,0) {$\hat{=} \ -g_s^2 (f^{abc}f^{ade} + f^{abc}f^{adc})$};
 \end{scope}
 \end{tikzpicture}
+\caption{Feynman rules involving only sgluons and other scalar fields.}\label{fig:thirdFeynmanRules}
 \end{center}
 \end{figure}
 
@@ -480,9 +481,9 @@ The definition of the momenta within the Passarino-Veltman integrals in this the
 \begin{align}
 \frac{i}{16\pi^2} A_0(m^2) &= \int_l \frac{1}{l^2-m^2},\nonumber\\
 \frac{i}{16\pi^2} B_{0,\mu,\mu\nu}(p^2,m_1^2,m_2^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p)^2-m_2^2]},\\
-\frac{i}{16\pi^2} C_{0,\mu,\mu\nu}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p_1)^2-m_2^2][(l+p_1+p_2)^2-m_3^2]}.\nonumber\label{eq:LoopInt}
+\frac{i}{16\pi^2} C_{0,\mu,\mu\nu}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p_1)^2-m_2^2][(l+p_1+p_2)^2-m_3^2]},\nonumber\label{eq:LoopInt}
 \end{align}
-with the shortcut $\int_l = \mu^{2\epsilon}\int\frac{\mathrm{d}^D l}{(2\pi)^D}$. Furthermore there are supressed $\varepsilon$'s which prescripe how the poles in the complex plane are avoided. They are hidden in the infinitesimal shift of the masses: $m_i^2 \to m_i^2 - i \varepsilon$.\\
+with the shortcut $\int_l = \mu^{2\epsilon}\int\frac{\mathrm{d}^D l}{(2\pi)^D}$. Furthermore there are suppressed $\varepsilon$'s which prescribe how the poles in the complex plane are avoided. They are hidden in the infinitesimal shift of the masses: $m_i^2 \to m_i^2 - i \varepsilon$.\\
 The tensor integrals can be decomposed as
 \begin{align}
 B_\mu &:= p_\mu B_1,\nonumber\\
@@ -502,7 +503,7 @@ B_0(0,0,0) &= 0,\\
 B_1(0,m_1^2,m_2^2) &= -\frac{\Delta_\epsilon}{2} + \frac{1}{2}\ln \frac{m_1^2}{\mu^2} + \frac{-3+4t-t^2-4t \ln t +2t^2 \ln t}{4(t-1)^2} + \mathcal{O}(\epsilon),\label{eq:B1}\\
 B_1(0,0,0) &= 0.
 \end{align}
-The scaleless integrals equal to zero due to their definition on how they scale in $D$ dimensions\cite{Collins:105730}. The parameter $t$ is given by $\frac{m_2^2}{m_1^2}$. As can be seen from \ref{eq:B1} $B_1$ is in contrast to $B_0$ not symmetric in its masses but it can be shown\cite{Romao} that
+The scaleless integrals equal to zero due to their definition on how they scale in $D$ dimensions\cite{Collins:105730}. The parameter $t$ is given by $\frac{m_2^2}{m_1^2}$. As can be seen from eq. \eqref{eq:B1}, $B_1$ is, in contrast to $B_0$, not symmetric in its masses but it can be shown\cite{Romao} that
 \begin{align}
 B_1(p^2,m_1^2,m_2^2) = -(B_0(p^2,m_2^2,m_1^2) + B_1(p^2,m_2^2,m_1^2)).
 \end{align}
@@ -560,12 +561,12 @@ it is useful to perform a change of coordinates yielding
 \begin{align}
 \mathrm{d}|\vec{p}_1|\ \mathrm{d}\cos\theta = -\frac{E_1 E_2}{4|\vec{k}_a|^2|\vec{p}_1|^2(E_1+E_2)}\mathrm{d}u\ \mathrm{d}t.\label{eq:PhaseTrafo}
 \end{align}
-Inserting \ref{eq:PhaseTrafo} into \ref{eq:DPhi2} and using $2|\vec{k}_a| = \sqrt{s} = E_1 + E_2$ gives
+Inserting eq. \eqref{eq:PhaseTrafo} into eq. \eqref{eq:DPhi2} and using $2|\vec{k}_a| = \sqrt{s} = E_1 + E_2$ gives
 \begin{align}
 \int \mathrm{d}\Phi_2 = & \frac{1}{s} \frac{\pi^{-\frac{D}{2}+1}}{2^{D-3}\Gamma(\frac{D}{2}-1)} \int \mathrm{d}u\ \mathrm{d}t\ \left( \frac{tu-m_1^2m_2^2}{\mu^{2\epsilon} s} \right)^{\frac{D-4}{2}} \nonumber\\
 &\frac{1}{4}\Theta(tu-4m_1^2m_2^2)\delta \left(s+t+u-m_1^2-m_2^2\right)
 \end{align}
-where the $\Theta$-function comes from the bounds of $|\vec{p}_1|$ and $\theta$ visible in \ref{eq:DPhi2} and the combination of \ref{eq:t} and \ref{eq:u}. Working in $D=4-2\epsilon$ dimensions and inserting $\Theta(s-4m^2)$ with $m = \frac{m_1 + m_2}{2}$ to account for the production threshold one finds
+where the $\Theta$-function comes from the bounds of $|\vec{p}_1|$ and $\theta$, visible in eq. \eqref{eq:DPhi2} and the combination of eq. \eqref{eq:t} and eq. \eqref{eq:u}. Working in $D=4-2\epsilon$ dimensions and inserting $\Theta(s-4m^2)$ with $m = \frac{m_1 + m_2}{2}$ to account for the production threshold one finds
 \begin{align}
 \frac{\mbox{d}^2 \sigma}{\mbox{d}t\mbox{d}u} =& \frac{K_{ab}}{s^2} \frac{\pi S_{\epsilon}}{\Gamma(1-\epsilon)} \left[ \frac{tu-m_1^2m_2^2}{\mu^2 s}\right]^{-\epsilon} \Theta(tu-m_1^2m_2^2)\nonumber\\
 &\ \Theta(s-4m^2) \delta(s+t+u-m_1^2-m_2^2) \sum |\mathcal{M}|^2
