@@ -127,7 +127,7 @@ facecolor=[70./100,70./100,1], color =[80./100,80./100,1], linestyle="-", label 
 third_window.fill_between(m_gluino, (sigma_NLO_Tree_lr + 2*sigma_NLO_Tree_ll)/(sigma_LO_Tree_lr + 2*sigma_LO_Tree_ll), (sigma_NLO_1L_lr + 2*sigma_NLO_1L_ll)/(sigma_LO_Tree_lr + 2*sigma_LO_Tree_ll), 
 facecolor=[90./100,90./100,1], color =[80./100,80./100,1], linestyle="-", label = "Real and virtual corrections")
 
-plt.plot(m_gluino, (sigma_NLO_1L_lr + 2*sigma_NLO_1L_ll)/(sigma_LO_Tree_lr + 2*sigma_LO_Tree_ll), lw=2, ls="-", c='blue')#, label = "1L")
+plt.plot(m_gluino, (sigma_NLO_1L_lr + 2*sigma_NLO_1L_ll)/(sigma_LO_Tree_lr + 2*sigma_LO_Tree_ll), lw=2, ls="-", c='blue', label = "total $K$-factor")
 
 plt.legend(loc='best',prop={'size':font_size})
 

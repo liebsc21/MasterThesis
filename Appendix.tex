@@ -9,12 +9,11 @@ g^{\mu\nu} = \mathrm{diag}(1, -1, -1, -1).
 
 
 \subsection{Constants of the Color Algebra $SU(N)$}\label{sec:coloralgebra}
-[Marina von Steinkirch]\\
-Tha Casimir operator $C(R)\mathbbm{1}$ of a semi-simple Lie algebra in the irreducible representation $R$ is given by
+Tha Casimir operator $C(R)\mathbbm{1}$ of a semi-simple Lie algebra in the irreducible representation $R$ is given by\cite{Marina}
 \begin{align}
 g^{ab} T^a(R)T^b(R) = C(R)\mathbbm{1} \label{eq:Casimir}
 \end{align}
-where $T^a(R)$ is the $a$-th generator of the matrix valued representation $R$, $g^{ab}$ is the metric of group, $C(R)$ is the Quadratic Casimir invariant of the representation $R$ and $\mathbbm{1}$ is the identity in the representation space.\\
+where $T^a(R)$ is the $a$-th generator of the matrix valued representation $R$, $g^{ab}$ is the metric of the group, $C(R)$ is the quadratic Casimir invariant of the representation $R$ and $\mathbbm{1}$ is the identity in the representation space.\\
 Apart from $C(R)$ it is common to define the Dynkin-Index $T(R)$:
 \begin{align}
 \mathrm{Tr}\left[T^a(R)T^b(R)\right] = T(R)\delta^{ab}.
@@ -46,7 +45,7 @@ where $\lambda^a_{ij}$ are for $N_c = 3$ the Gell-Mann matrices and $f_{abc}$ ar
 
 
 
-\subsection{Weyl Basis and 2-Spinor Notation}\label{sec:2spinor_notation}
+\subsection{Weyl Basis and Two-Spinor Notation}\label{sec:2spinor_notation}
 As representation of the $\gamma$-matrices the Weyl or chiral representation is chosen:
 \begin{align}
 &\gamma^\mu = \begin{pmatrix}
@@ -69,23 +68,23 @@ with
 \end{align}
 where $\sigma^i$ are the Pauli matrices and $\mathbbm{1}_n$ is the $n \times n$ unit matrix. The left and right handed projectors are then given by
 \begin{align}
-P_L = \frac{1}{2}(\mathbbm{1}_4 - \gamma_5)\begin{pmatrix}
+P_L = \frac{1}{2}(\mathbbm{1}_4 - \gamma_5) = \begin{pmatrix}
 \mathbbm{1}_2 && 0\\
 0 && 0
 \end{pmatrix} && 
-P_R = \frac{1}{2}(\mathbbm{1}_4 + \gamma_5)\begin{pmatrix}
+P_R = \frac{1}{2}(\mathbbm{1}_4 + \gamma_5) = \begin{pmatrix}
 0 && 0\\
 0 && \mathbbm{1}_2
 \end{pmatrix}\label{eq:projectors}
 \end{align}
-The representation of generators of the Lorentz group on 4-spinor space are composed of the above matrices. Because of the block form of those it is not surprising that the representation on 4-spinor space is reducible to two representations on 2-spinor (Weyl spinor) spaces. It is therefore sensible to decompose a 4 spinor into a left and a right handed Weyl spinor\footnote{The projectors in the chiral basis (eq. \ref{eq:projectors}) explain the names left and right handed Weyl spinors.}
+The representation of generators of the Lorentz group on four-spinor space is composed of the matrices above. Because of the block form of those it, is not surprising that the representation on four-spinor space is reducible to two representations on two-spinor (Weyl spinor) spaces. It is therefore sensible to decompose a four-spinor into a left and a right handed Weyl spinor\footnote{The projectors in the chiral basis (eq. \ref{eq:projectors}) explain the names left and right handed Weyl spinors.}
 \begin{align}
 \Psi = \begin{pmatrix}
 \psi_\alpha \\
 \overline{\chi}^{\dot{\alpha}}
 \end{pmatrix}
 \end{align}
-where $\alpha,\dot{\alpha} \in \left\{ 1,2 \right\}$. Left handed Weyl spinors are labeled with undotted and right handed Weyl spinors with dotted indices. One distinguishes 4 different Weyl spinors:
+where $\alpha,\dot{\alpha} \in \left\{ 1,2 \right\}$. Left handed Weyl spinors are labeled with undotted and right handed Weyl spinors with dotted indices. One distinguishes four different Weyl spinors:
 \begin{align}
 \psi^\alpha, \hspace{1cm} 
 \overline{\psi}^{\dot{\alpha}} = (\psi^\alpha)^\ast, \hspace{1cm} \psi_\alpha = \epsilon_{\alpha\beta}\psi^\beta, \hspace{1cm} \mathrm{and} \hspace{1cm} \psi_{\dot{\alpha}} = \epsilon_{\dot{\alpha}\dot{\beta}}\psi^{\dot{\beta}} = (\psi_\alpha)^\ast,
@@ -94,19 +93,19 @@ where $^\ast$ denotes complex conjugation and indices are lowered with the antis
 \begin{align}
 \epsilon^{\alpha\beta} = \epsilon_{\beta\alpha},\ \epsilon^{\dot{\alpha}\dot{\beta}} = \epsilon_{\dot{\beta}\dot{\alpha}} \hspace{3cm} \mathrm{and} \hspace{3cm} \epsilon_{12} = \epsilon_{\dot{1}\dot{2}}= 1.
 \end{align}
-By virtue of the antisymmetry of $\epsilon$ one finds the Lorentz invariant products:
+By virtue of the antisymmetry of $\epsilon^{\alpha \beta}$ one finds the Lorentz invariant products:
 \begin{align}
 \psi\chi &:= \psi^\alpha\chi_\alpha = -\chi_\alpha\psi^\alpha = \chi^\alpha\psi_\alpha = \chi\psi,\nonumber\\
 \overline{\psi}\overline{\chi} &:= \overline{\psi}_{\dot{\alpha}} \overline{\chi}^{\dot{\alpha}} = -\overline{\chi}^{\dot{\alpha}}\overline{\psi}_{\dot{\alpha}} = \overline{\chi}_{\dot{\alpha}}\overline{\psi}^{\dot{\alpha}} = \overline{\chi}\overline{\psi} \label{eq:Weylspinorproduct}
 \end{align}
-To make the index structure of the Pauli matrices explicit one writes $\sigma^\mu_{\alpha\dot{\alpha}}$ and $\overline{\sigma}^{\mu\dot{\alpha}\alpha}$ for the formulae in \ref{eq:Pauli}. For the definition of the supersymmetry algebra in section \ref{sec:SUSYalgebra} the representation of the generators of the Lorentz group on the left and right handed Weyl spinor space are introduced:
+To make the index structure of the Pauli matrices explicit, one writes $\sigma^\mu_{\alpha\dot{\alpha}}$ and $\overline{\sigma}^{\mu\dot{\alpha}\alpha}$ for the formulae in \ref{eq:Pauli}. For the definition of the supersymmetry algebra in section \ref{sec:SUSYalgebra} the representation of the generators of the Lorentz group on the left and right handed Weyl spinor space is introduced:
 \begin{align}
 \frac{1}{2}(\sigma^{\mu\nu})_\alpha^{\ \beta} := \frac{i}{4}(\sigma^\mu\overline{\sigma}^\nu - \sigma^\nu\overline{\sigma}^\mu)_\alpha^{\ \beta}\nonumber\\
 \frac{1}{2}(\overline{\sigma}^{\mu\nu})^{\dot{\alpha}}_{\ \dot{\beta}} := \frac{i}{4}(\overline{\sigma}^\mu\sigma^\nu - \overline{\sigma}^\nu\sigma^\mu)^{\dot{\alpha}}_{\ \dot{\beta}}
 \end{align}
 
  
-With the definition of bared and charge conjugated 4-spinors\footnote{$\Psi^T$ denotes the transpose of the spinor $\Psi$ and $\Psi^\dagger$ is the Hermitian adjoint of $\Psi$.}
+With the definition of overlined and charge conjugated four-spinors\footnote{$\Psi^T$ denotes the transpose of the spinor $\Psi$ and $\Psi^\dagger$ is the Hermitian adjoint of $\Psi$.}
 \begin{align}
 &\overline{\Psi} := \Psi^\dagger \gamma^0, && \Psi^C := i\gamma^2\gamma^0 \overline{\Psi}^T  
 \end{align}
@@ -143,7 +142,7 @@ i \overline{\chi}^a
 \end{align}
 
 \subsection{Anticommuting Numbers}\label{sec:AnticommNumbers}
-Anticommuting numbers $\theta^\alpha$ are also referred to as Grassmann numbers and are defined by $\theta^\alpha\theta^\beta = -\theta^\beta\theta^\alpha$ and commute with ordinary numbers.\\
+Anticommuting numbers $\theta^\alpha$ are also referred to as Grassmann numbers and are defined by $\theta^\alpha\theta^\beta = -\theta^\beta\theta^\alpha$ and commute with ordinary c-numbers.\\
 They occur in superspace formalism in the form of 2 tuples, i.e. $\theta^\alpha$ with $\alpha=1,2$. The complex conjugate of this tuple is denoted with $\overline{\theta}^{\dot{\alpha}}$. 
 Derivatives are defined by
 \begin{align}
@@ -159,7 +158,7 @@ Integrals are defined by:
 \int\mathrm{d}\theta_\alpha\ (a+b \theta^\beta + c\theta^\beta \theta^\gamma) &:= b\delta_{\alpha}^{\beta} + c (\delta_\alpha^\beta \theta^\gamma - \delta_\alpha^\gamma \theta^\beta) \hspace{1cm} \mathrm{and} \nonumber\\
 \int\mathrm{d}\theta_\alpha\ (a\overline{\theta}^{\dot{\beta}}) &:= (a\overline{\theta}^{\dot{\beta}}) \int\mathrm{d}\theta_\alpha\
 \end{align}
-where the first line mirrows the claim of translation invariance. One furthermore introduces the shortcuts
+where the first line mirrors the claim of translation invariance. One furthermore introduces the shortcuts
 \begin{align}
 \int \mathrm{d}\theta^2 &:= \int\frac{1}{4}\epsilon_{\alpha\beta} \mathrm{d}\theta^\alpha\mathrm{d}\theta^\beta, \hspace{1cm}
 \int \mathrm{d}\overline{\theta}^2 := \int\frac{1}{4}\epsilon_{\dot{\alpha}\dot{\beta}} \mathrm{d}\theta^{\dot{\alpha}}\mathrm{d}\theta^{\dot{\beta}}, \hspace{1cm} \mathrm{and} \nonumber\\
@@ -172,12 +171,12 @@ For the definition of (anti-)chiral superfields and the field strength chiral su
 \end{align}
 By construction they are supersymmetry invariant, i.e. they fulfill the following anticommutation relations with the supersymmetry generators from eq. \ref{eq:SUSYGen}:
 \begin{align}
-\left\{ Q_\alpha, \mathcal{D}_\beta \right\} = \left\{ \overline{Q}_{\dot{\alpha}}, \mathcal{D}_\beta \right\} = \left\{ Q_\alpha, \mathcal{\mathcal{D}}_{\dot{\beta}} \right\} = \left\{ \overline{Q}_{\dot{\alpha}}, \mathcal{\mathcal{D}}_{\dot{\beta}} \right\} = 0
+\left\{ Q_\alpha, \mathcal{D}_\beta \right\} = \left\{ \overline{Q}_{\dot{\alpha}}, \mathcal{D}_\beta \right\} = \left\{ Q_\alpha, \mathcal{\mathcal{D}}_{\dot{\beta}} \right\} = \left\{ \overline{Q}_{\dot{\alpha}}, \mathcal{\mathcal{D}}_{\dot{\beta}} \right\} = 0.
 \end{align}
 
 
 \subsection{Feynman Rules for the RSQCD}\label{sec:FeynmanRules}
-The following Feynman rules are derived from the Lagrangian of the R-symmetric supersymmetric quantum chromodynamics (RSQCD) eq. \ref{eq:L_RSQCD}. When compared with the Feynman rules of the supersymmetric QCD the diagrams involving scalar gluons are new. In addition the gluon-quark-squark vertex is different in RSQCD for the gauginos are Dirac fermions. Note that for calculations involving fermions one needs to go in the opposite direction of the fermion flow which is given by a curved arrow next to the diagrams in fig. \ref{fig:secondFeynmanRules} and does not always agree with the flow of fermion number given by the direction of the Dirac propagator. This renders the evaluation of fermion number violating processes like $qq \to \tilde{q}\tilde{q}$ unambiguous, cf. \cite{Beenakker:1996ch}.
+The following Feynman rules are derived from the Lagrangian of the R-symmetric supersymmetric quantum chromodynamics (RSQCD) eq. \ref{eq:L_RSQCD}. When compared with the Feynman rules of the supersymmetric QCD the diagrams involving scalar gluons are new. In addition the gluon-quark-squark vertex is different in RSQCD for the gauginos are Dirac fermions. Note that for calculations involving fermions one needs to multiply the Feynman rules in the opposite direction of the fermion flow which is given by a curved arrow next to the diagrams in fig. \ref{fig:secondFeynmanRules} and does not always agree with the flow of fermion number given by the direction of the Dirac propagator. This renders the evaluation of fermion number violating processes like $qq \to \tilde{q}\tilde{q}$ unambiguous, cf. \cite{Beenakker:1996ch}.
 %refer to paper cited in Beenakker(Appendix: Feynmanrules)
 \begin{figure}[!htbp]
 \begin{center}
@@ -479,33 +478,33 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 \subsection{Passarino-Veltman Integrals}\label{sec:Passarino}
 The definition of the momenta within the Passarino-Veltman integrals in this thesis agrees with the one from \texttt{Looptools} \cite{Hahn:1998} convention. The original paper \cite{Passarino:1978jh} uses slightly different conventions. A pedagogical introduction to the evaluation of one-loop integrals can be found in \cite{Ellis:2011cr}.  $A$, $B$ and $C$ integrals are defined by:
 \begin{align}
-\frac{i}{16\pi^2} A_0(m^2) &= \int_l \frac{1}{l^2-m^2}\nonumber\\
-\frac{i}{16\pi^2} B_{0,\mu,\mu\nu}(p^2,m_1^2,m_2^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p)^2-m_2^2]}\\
+\frac{i}{16\pi^2} A_0(m^2) &= \int_l \frac{1}{l^2-m^2},\nonumber\\
+\frac{i}{16\pi^2} B_{0,\mu,\mu\nu}(p^2,m_1^2,m_2^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p)^2-m_2^2]},\\
 \frac{i}{16\pi^2} C_{0,\mu,\mu\nu}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p_1)^2-m_2^2][(l+p_1+p_2)^2-m_3^2]}.\nonumber\label{eq:LoopInt}
 \end{align}
 with the shortcut $\int_l = \mu^{2\epsilon}\int\frac{\mathrm{d}^D l}{(2\pi)^D}$. Furthermore there are supressed $\varepsilon$'s which prescripe how the poles in the complex plane are avoided. They are hidden in the infinitesimal shift of the masses: $m_i^2 \to m_i^2 - i \varepsilon$.\\
 The tensor integrals can be decomposed as
 \begin{align}
-B_\mu &:= p_\mu B_1\nonumber\\
-B_{\mu\nu} &:= g_{\mu\nu}B_{00} + p_\mu p_\nu B_{11}\nonumber\\
-C_\mu &= p_{1\mu}C_1 + p_{2\mu}C_2\\
-C_{\mu\nu} &:= g_{\mu\nu}C_{00} + p_{1\mu}p_{1\nu}C_{11} + p_{2\mu}p_{2\nu}C_{22} + (p_{1\mu}p_{2\nu} + p_{2\mu}p_{1\nu})C_{12}\nonumber
+B_\mu &:= p_\mu B_1,\nonumber\\
+B_{\mu\nu} &:= g_{\mu\nu}B_{00} + p_\mu p_\nu B_{11},\nonumber\\
+C_\mu &= p_{1\mu}C_1 + p_{2\mu}C_2,\\
+C_{\mu\nu} &:= g_{\mu\nu}C_{00} + p_{1\mu}p_{1\nu}C_{11} + p_{2\mu}p_{2\nu}C_{22} + (p_{1\mu}p_{2\nu} + p_{2\mu}p_{1\nu})C_{12}.\nonumber
 \end{align}
-In the the special case of vanishing momenta the integrals take a succinct form. %The following formulae show some of these special cases.
+The $A$-integral reads
 \begin{align}
-A_0(m^2) = m^2\left( \Delta_\epsilon -\ln \frac{m^2}{\mu^2} + 1 \right) + \mathcal{O}(\epsilon)
+A_0(m^2) = m^2\left( \Delta_\epsilon -\ln \frac{m^2}{\mu^2} + 1 \right) + \mathcal{O}(\epsilon).
 \end{align}
-where the typical UV-divergent constant $\Delta_\epsilon = \frac{1}{\epsilon} - \gamma_E+\ln 4\pi$ is defined. It comprises the Euler-Mascheroni constant $\gamma_{\mathrm{E}}$.
+where the typical UV-divergent constant $\Delta_\epsilon = \frac{1}{\epsilon} - \gamma_E+\ln 4\pi$ is defined. It comprises the Euler-Mascheroni constant $\gamma_{\mathrm{E}}$. In the special case of vanishing momenta, the further integrals take a succinct form. Some formulae which are needed for the calculation of renormalization constants are
 \begin{align}
-B_0(0,m_1^2,m_2^2) &= \frac{A_0(m_1^2)-A_0(m_2^2)}{m_1^2-m_2^2} = \Delta_\epsilon + 1 -\frac{m_1^2\ln \frac{m_1^2}{\mu^2}-m_2^2\ln \frac{m_2^2}{\mu^2}}{m_1^2-m_2^2} + \mathcal{O}(\epsilon)\\
-B_0(0,m^2,m^2) &= \frac{\partial}{\partial m^2} A_0(m^2) = \Delta_\epsilon -\ln \frac{m^2}{\mu^2} + \mathcal{O}(\epsilon)\\
-B_0(0,0,0) &= 0\\
-B_1(0,m_1^2,m_2^2) &= -\frac{\Delta_\epsilon}{2} + \frac{1}{2}\ln \frac{m_1^2}{\mu^2} + \frac{-3+4t-t^2-4t \ln t +2t^2 \ln t}{4(t-1)^2} + \mathcal{O}(\epsilon)\label{eq:B1}\\
-B_1(0,0,0) &= 0
+B_0(0,m_1^2,m_2^2) &= \frac{A_0(m_1^2)-A_0(m_2^2)}{m_1^2-m_2^2} = \Delta_\epsilon + 1 -\frac{m_1^2\ln \frac{m_1^2}{\mu^2}-m_2^2\ln \frac{m_2^2}{\mu^2}}{m_1^2-m_2^2} + \mathcal{O}(\epsilon),\\
+B_0(0,m^2,m^2) &= \frac{\partial}{\partial m^2} A_0(m^2) = \Delta_\epsilon -\ln \frac{m^2}{\mu^2} + \mathcal{O}(\epsilon),\\
+B_0(0,0,0) &= 0,\\
+B_1(0,m_1^2,m_2^2) &= -\frac{\Delta_\epsilon}{2} + \frac{1}{2}\ln \frac{m_1^2}{\mu^2} + \frac{-3+4t-t^2-4t \ln t +2t^2 \ln t}{4(t-1)^2} + \mathcal{O}(\epsilon),\label{eq:B1}\\
+B_1(0,0,0) &= 0.
 \end{align}
-The scaleless integrals are defined to be zero due to their definition  on how they scale in $D$ dimensions\cite{Collins:105730}. The parameter $t$ is given by $\frac{m_2^2}{m_1^2}$. As can be seen from \ref{eq:B1} $B_1$ is in contrast to $B_0$ not symmetric in its masses but it can be shown [Romao] that
+The scaleless integrals equal to zero due to their definition on how they scale in $D$ dimensions\cite{Collins:105730}. The parameter $t$ is given by $\frac{m_2^2}{m_1^2}$. As can be seen from \ref{eq:B1} $B_1$ is in contrast to $B_0$ not symmetric in its masses but it can be shown\cite{Romao} that
 \begin{align}
-B_1(p^2,m_1^2,m_2^2) = -(B_0(p^2,m_2^2,m_1^2) + B_1(p^2,m_2^2,m_1^2))
+B_1(p^2,m_1^2,m_2^2) = -(B_0(p^2,m_2^2,m_1^2) + B_1(p^2,m_2^2,m_1^2)).
 \end{align}
 It can further be shown that
 \begin{align}
@@ -515,19 +514,19 @@ From the generic $\epsilon$-expansion of the $B_0$ integral \cite{Denner}
 \begin{align}
 B_0(p^2,m_1^2,m_2^2) = \Delta_\epsilon - \int_0^1\mathrm{d}x\ \ln \frac{-x(1-x)p^2 + xm_2^2 + (1-x)m_1^2}{\mu^2}
 \end{align} 
-and Passarino-Veltman decomposition \cite{Passarino:1978jh} one can determine the UV-divergent part of all $B$ and $C$ integrals. In chapter \ref{sec:MSRen} this was necessary in order to obtain the renormalization constants in the $\overline{\mathrm{MS}}$-scheme. Infrared and collinear singularities arise from the special case where one or multiple masses tend to zero. These poles can be regularized with a small mass cutoff $\Lambda$ leading singularities of the form $\ln \Lambda$ or dimensionally which leads to $\epsilon$-poles as in the treatment of UV-divergences. In the latter case the integral first needs to undergo the limit to zero masses and than being evaluated.\\
-The following list shows all necessary integrals needed to determine the renormalization constants in \ref{sec:MSRen}.
+and Passarino-Veltman decomposition, \cite{Passarino:1978jh} one can determine the UV-divergent part of all $B$ and $C$ integrals. In chapter \ref{sec:MSRen} this is necessary in order to obtain the renormalization constants in the $\overline{\mathrm{MS}}$-scheme. Infrared and collinear singularities arise from the special case where one or multiple masses and momenta tend to zero. These poles can be regularized with a small mass cutoff $\Lambda$ leading to singularities of the form $\ln \Lambda$ or dimensionally which leads to $\epsilon$-poles as in the treatment of UV-divergences. In the latter case the integral first needs to undergo the limit to zero masses and evaluated afterwards.\\
+The following list shows all necessary integrals needed to determine the renormalization constants in \ref{sec:MSRen}:
 \begin{align}
-\left.A_0(m^2)\right|_{\mathrm{UV-div}} &= m^2 \Delta_\epsilon\\
-\left.B_0(p^2,m_1^2,m_2^2)\right|_{\mathrm{UV-div}} &= \Delta_\epsilon\\
-\left.B_1(p^2,m_1^2,m_2^2)\right|_{\mathrm{UV-div}} &= -\frac{1}{2}\Delta_\epsilon\\
-\left.C_{00}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2)\right|_{\mathrm{UV-div}} &= \frac{1}{4}\Delta_\epsilon
+\left.A_0(m^2)\right|_{\mathrm{UV-div}} &= m^2 \Delta_\epsilon,\\
+\left.B_0(p^2,m_1^2,m_2^2)\right|_{\mathrm{UV-div}} &= \Delta_\epsilon, \\
+\left.B_1(p^2,m_1^2,m_2^2)\right|_{\mathrm{UV-div}} &= -\frac{1}{2}\Delta_\epsilon,\\
+\left.C_{00}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2)\right|_{\mathrm{UV-div}} &= \frac{1}{4}\Delta_\epsilon.
 \end{align}
 The UV-divergent part of $C_{11}$, $C_{22}$, $C_{12}$ equals zero. As can be seen already from the superficial degree of divergence also $C_i|_{\mathrm{UV-div}} = 0$ for $i \in \left\{ 0, 1, 2 \right\}$ .
 
 
 
-\subsection{Cross section and Phase Space Integration}\label{sec:cross_section}
+\subsection{Cross Section and Phase Space Integration}\label{sec:cross_section}
 Once the Feynman amplitude $\mathcal{M}$ for a $2 \to N$ body scattering\footnote{with kinematics $k_a + k_b \to p_1 + \hdots p_N$} is computed one can calculate physical observables with it. The differential cross section for $2 \to N$ scattering is given by
 \begin{align}
 \mbox{d}\sigma = \frac{1}{F}\mathrm{d}\Phi_N |\mathcal{M}|^2.
@@ -540,13 +539,13 @@ The factor $\mu^{2\epsilon}$ is included to maintain the mass dimension of the c
 \begin{align}
 \mathrm{d}\sigma = \frac{1}{2s} \mathrm{d}\Phi_2 K_{ab} \sum |\mathcal{M}|^2
 \end{align} 
-where $K_{ab}$ encodes the averaging over initial state helicities and colors. Specifying to the center-of-mass frame and assuming that $\sum|\mathcal{M}|^2$ is only a function of the modulus of one of the final state particle's 3-momentum $ |\vec{p}_i|$ and the angle $\theta$ between $\vec{k}_a$ and $\vec{p}_1$ one can write
+where $K_{ab}$ encodes the averaging over initial state helicities and colors. Specifying to the center-of-mass frame and using that $\sum|\mathcal{M}|^2$ is only a function of the modulus of one of the final state particle's three-momentum $ |\vec{p}_i|$ and the angle $\theta$ between $\vec{k}_a$ and $\vec{p}_1$ one can write
 \begin{align}
 \int \mathrm{d}\Phi_2 &= \mu^{2\epsilon} \int \frac{\mathrm{d}|\vec{p}_1|\mathrm{d}\Omega^{D-1}_1}{(2\pi)^{D-2} 4 E_1 E_2} |\vec{p}_1|^{D-2} \delta \left(k_a^0 + k_b^0 - \sqrt{m_1^2 + |\vec{p}_1|^2} - \sqrt{m_2^2 + |\vec{p}_1|^2} \right)\nonumber\\
 &= \frac{1}{(2\pi)^{D-2}}\frac{2\pi^{\frac{D}{2}-1}}{\Gamma(\frac{D}{2}-1)} \mu^{2\epsilon} \int_0^\infty\mathrm{d}|\vec{p}_1| \int_0^\pi \mathrm{d} \cos\theta \frac{1}{4 E_1 E_2} p_1^{D-2}\sin^{D-4}\theta\nonumber\\
 &\ \ \delta \left(k_a^0 + k_b^0 - \sqrt{m_1^2 + |\vec{p}_1|^2} - \sqrt{m_2^2 + |\vec{p}_1|^2} \right).\label{eq:DPhi2}
 \end{align}
-In the second line the integral over the D-dimensional hypersphere 
+In the second line the integral over the $D$-dimensional hypersphere 
 \begin{align}
 \int \mathrm{d}\Omega^D = \int_0^{2\pi} \mathrm{d}\phi \prod_{i=1}^{D-2}\int_0^\pi \sin^i\theta_i \mathrm{d}\theta_i = \frac{2\pi^{\frac{D}{2}}}{\Gamma(\frac{D}{2})}
 \end{align}

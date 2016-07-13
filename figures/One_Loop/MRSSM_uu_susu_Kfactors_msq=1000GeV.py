@@ -61,7 +61,7 @@ facecolor=[1,70./100,70./100], color =[1,80./100,80./100], linestyle="-", label 
 first_window.fill_between(m_squark, sigma_NLO_Tree/sigma_LO_Tree, sigma_NLO_1L/sigma_LO_Tree, 
 facecolor=[1,90./100,90./100], color =[1,80./100,80./100], linestyle="-", label = "Real and virtual corrections")
 
-plt.plot(m_squark, sigma_NLO_1L/sigma_LO_Tree, lw=2, ls="-", c='red')#, label = "1L")
+plt.plot(m_squark, sigma_NLO_1L/sigma_LO_Tree, lw=2, ls="-", c='red', label = "total $K$-factor")
 #plt.plot(m_squark, sigma_NLO_Tree/sigma_LO_Tree, lw=2, ls="--", c='blue')#, label = "1L")
 #plt.plot(m_squark, sigma_NLO_Virt/sigma_LO_Tree, lw=2, ls="--", c='red')#, label = "1L")
 #plt.plot(m_squark, sigma_NLO_Real/sigma_LO_Tree, lw=2, ls="--", c='green')#, label = "1L")

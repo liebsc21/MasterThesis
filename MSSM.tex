@@ -1,10 +1,10 @@
 
 \section{The Minimal Supersymmetric Standard Model}
 Even though the Standard Model is a very well working machinery which has been tested to an impressive accuracy it is not the ultimate theory of nature. This is not only because of its incompleteness regarding gravity but also because of its missing incorporation of dark matter. This is that astrophysical observations \cite{Adam:2015rua} indicate that only 4.9\% of the universe's mass energy consist of ordinary matter while the majority is represented by 26.8\% of dark matter and 68.3\% of dark energy. Another puzzle is the hierarchy problem which questions the large difference between the Higgs boson mass and its quantum correction, see \cite{Martin:1997ns}. Finally, the gauge groups of the Standard Model cannot be unified to a theoretically appealing single gauge group at some high energy scale for the three gauge couplings do not meet at any renormalization scale \cite{Martin:1997ns}. There are many other problems which are not mentioned here\cite{Bach}.\\
-Supersymmetry provides a possible extension of the Standard Model. It constitutes a mathematically very aesthetic solution of the above mentioned problems\footnote{In its minimal extension to the Standard Model supersymmetry does not incorporate gravity but many quantum gravity models are supersymmetric}. This section explains briefly the mechanism of supersymmetry and the minimal supersymmetric extension of the Standard Model (MSSM).
+Supersymmetry provides a possible extension of the Standard Model. It constitutes a mathematically very aesthetic solution of the above mentioned problems\footnote{In its minimal extension to the Standard Model supersymmetry does not incorporate gravity but many quantum gravity models are supersymmetric.}. This section explains briefly the mechanism of supersymmetry and the minimal supersymmetric extension of the Standard Model (MSSM).
 
 \subsection{Supersymmetry as an Extention of the Poincaré Symmetry}\label{sec:SUSYalgebra}
-As already seen in the previous chapter symmetries are of vital importance when studying particle physics. Coleman and Mandula \cite{Coleman:1967ad} found that for any reasonable quantum field theory space-time and internal symmetries, i.e. gauge symmetries ``cannot by combined in any but the trivial way''\cite{Pelc:1996vg}. Ergo, the symmetry groups of the Standard Model are the most general ones.\\
+As already seen in the previous chapter, symmetries are of vital importance when studying particle physics. Coleman and Mandula \cite{Coleman:1967ad} found that for any reasonable quantum field theory space-time and internal symmetries, i.e. gauge symmetries ``cannot by combined in any but the trivial way''\cite{Pelc:1996vg}. Ergo, the symmetry groups of the Standard Model are the most general ones.\\
 This statement was corrected by the Haag-Lopuszanski-Sohnius theorem \cite{Haag:1974qh} which weakened the condition of the quantum field theory by allowing also for anticommuting symmetry generators. This is, by introducing the generators $Q_\alpha$ and $\overline{Q}^{\dot{\alpha}}$ with $\alpha, \dot{\alpha} \in \left\{ 1,2 \right\}$, the Poincare-algebra eq. \eqref{eq:PoincareAlgebra} can be nontrivially extended to the so called superalgebra (see Appendix \eqref{sec:2spinor_notation} for the definition of the $\sigma$-matrices):
 \begin{align}
 \left\{Q_\alpha,Q_\beta\right\} = \left\{\overline{Q}_{\dot{\alpha}},\overline{Q}_{\dot{\beta}}\right\} &= 0,  \nonumber\\
@@ -12,9 +12,9 @@ This statement was corrected by the Haag-Lopuszanski-Sohnius theorem \cite{Haag:
 [P^\mu,Q_\alpha] = [P^\mu,\overline{Q}_{\dot{\alpha}}] &= 0, \nonumber \\
 [Q_\alpha, J^{\mu\nu}] &= \frac{1}{2} (\sigma^{\mu\nu})_\alpha^{\ \beta} Q_\beta.\label{eq:SUSYalgebra}
 \end{align}
-As $J^{\mu\nu}$ is the generalized angular momentum operator the last line in eq. \eqref{eq:SUSYalgebra} implies that $Q_\alpha$ is a spin-$\frac{1}{2}$ operator. Applying $Q_\alpha$ to a field will change the spin of it by $\frac{1}{2}$. This means supersymmetry generators convert fermions to bosons and vice versa.\\
+As $J^{\mu\nu}$ is the generalized angular momentum operator, the last line in eq. \eqref{eq:SUSYalgebra} implies that $Q_\alpha$ is a spin-$\frac{1}{2}$ operator. Applying $Q_\alpha$ to a field will change the spin of it by $\frac{1}{2}$. This means supersymmetry generators convert fermions to bosons and vice versa.\\
 The superalgebra in eq. \eqref{eq:SUSYalgebra} is actually the smallest extension of the Poincare-algebra as it is possible to introduce further anticommuting symmetry generators. Their maximal number is fixed to $N = 8$. Because the MSSM is a minimal extension of the Standard Model, it deals with only one set of anticommuting symmetry generators and is therefore referred to be a $N = 1$ supersymmetric theory.\\
-A representation in the form of differential operators can be given by introducing superspace. Superspace is a manifold obtained by enlarging Minkowski space, whose coordinates are label with $x^\mu$, with four anticommuting numbers: $\theta^\alpha$ and $\overline{\theta}^{\dot{\alpha}}$, where $\alpha,\ \dot{\alpha} \in \left\{ 1,2 \right\}$ (see Appendix \ref{sec:AnticommNumbers} for the definition of anticommuting numbers). A representation of the superalgebra reads
+A representation in the form of differential operators can be given by introducing superspace. Superspace is a manifold obtained by enlarging Minkowski space, whose coordinates are labeled with $x^\mu$, with four anticommuting numbers: $\theta^\alpha$ and $\overline{\theta}^{\dot{\alpha}}$, where $\alpha,\ \dot{\alpha} \in \left\{ 1,2 \right\}$ (see Appendix \ref{sec:AnticommNumbers} for the definition of anticommuting numbers). A representation of the superalgebra reads
 \begin{align}
 P^\mu &= i\partial^\mu,\nonumber\\
 J^{\mu\nu} &= i(x^\mu\partial^\nu - x^\nu\partial^\mu),\nonumber\\
@@ -27,8 +27,8 @@ Q_\alpha &= i(\partial_\alpha + i\sigma^\mu_{\alpha\dot{\alpha}}
 
 \subsection{A Generic Supersymmetric Model in Superspace Formulation}
 This chapter outlines the generic ingredients and terms of a supersymmetric model. To this end it is practical to work in the language of superspace and superfields. Superfields are functions on superspace.\\
-The superfields\footnote{Superfield are throughout this thesis labeled with a hat.} relevant for the MSSM are the chiral superfield $\hat{\Phi}$, the antichiral superfield $\hat{\overline{\Phi}}$ and the vector superfield $\hat{V}$. Chiral superfields are defined by the restriction $\overline{\mathcal{D}}_{\dot{\alpha}}\hat{\Phi} = 0$, antichiral superfields by $\mathcal{D}_\alpha\hat{\overline{\Phi}} = 0$ (see Appendix \ref{sec:AnticommNumbers} for the definition of chiral covariant derivatives) and vector superfields by the condition of being real $\hat{V}^\dagger = \hat{V}$.\\
-All superfields can be decomposed into component fields on Minkowski space. The component decomposition of the above fields read\footnote{For tho vector superfield Wess-Zumino-gauge is applied.}
+The superfields\footnote{Superfields are labeled with a hat throughout this thesis.} relevant for the MSSM are the chiral superfield $\hat{\Phi}$, the antichiral superfield $\hat{\overline{\Phi}}$ and the vector superfield $\hat{V}$. Chiral superfields are defined by the restriction $\overline{\mathcal{D}}_{\dot{\alpha}}\hat{\Phi} = 0$, antichiral superfields by $\mathcal{D}_\alpha\hat{\overline{\Phi}} = 0$ (see Appendix \ref{sec:AnticommNumbers} for the definition of chiral covariant derivatives) and vector superfields by the condition of being real $\hat{V}^\dagger = \hat{V}$.\\
+All superfields can be decomposed into component fields on Minkowski space. The component decomposition of the above fields read\footnote{For the vector superfield Wess-Zumino-gauge is applied.}
 \begin{align}
 \hat{\Phi}(x,\theta,\overline{\theta}) &= A(x) + \sqrt{2}\theta\psi(x) + \theta\theta F(x) - i\theta\sigma^\mu \overline{\theta}\partial_\mu A(x) - \frac{1}{4}\theta\theta\overline{\theta}\overline{\theta}\partial_\mu\partial^\mu A(x) - \frac{i}{\sqrt{2}}\theta\theta\overline{\theta}\overline{\sigma}^\mu \partial_\mu\psi(x),\nonumber\\
 \hat{\overline{\Phi}}(x,\theta,\overline{\theta}) &= A^\dagger(x) + \sqrt{2}\overline{\theta}\overline{\psi}(x) + \overline{\theta}\overline{\theta} F^\dagger(x) + i\theta\sigma^\mu \overline{\theta}\partial_\mu A^\dagger(x) - \frac{1}{4}\theta\theta\overline{\theta}\overline{\theta}\partial_\mu\partial^\mu A^\dagger(x) - \frac{i}{\sqrt{2}}\overline{\theta}\overline{\theta}\theta\sigma^\mu \partial_\mu\overline{\psi}(x),\nonumber\\
@@ -41,7 +41,7 @@ The superfields transform under a generic gauge transformation as
 \hat{\overline{\Phi}} &\to \hat{\overline{\Phi}}\mathrm{e}^{2ig\hat{\overline{\Lambda}}},\nonumber\\
 \mathrm{e}^{2g\hat{V}} &\to \mathrm{e}^{-2ig\hat{\overline{\Lambda}}}\mathrm{e}^{2g\hat{V}} \mathrm{e}^{2ig\hat{\Lambda}},
 \end{align}
-where $\hat{\Lambda} = \hat{\Lambda}^aT^a$ and $\hat{V} = \hat{V}^aT^a$. $\hat{\Lambda}^a$ is an arbitrary chiral superfield, the $T^a$ are the generetors of the gauge group in question and $g$ is the gauge coupling constant of the gauge group.\\
+where $\hat{\Lambda} = \hat{\Lambda}^aT^a$ and $\hat{V} = \hat{V}^aT^a$. $\hat{\Lambda}^a$ is an arbitrary chiral superfield, the $T^a$ are the generators of the gauge group in question and $g$ is the gauge coupling constant of the gauge group.\\
 One can therefore construct the important gauge invariant term $\int\mathrm{d}^4\theta\ \hat{\overline{\Phi}}\mathrm{e}^{2g\hat{V}}\hat{\Phi}$. If one introduces the gauge covariant derivative $D_\mu = \partial + ig T^a v^a_\mu$ its component decomposition reads
 \begin{align}
 \int\mathrm{d}^4\theta\hat{\overline{\Phi}}\mathrm{e}^{2g\hat{V}}\hat{\Phi} &= F^\dagger F + \left(D_\mu A\right)^\dagger \left(D^\mu A\right) + \overline{\psi}\overline{\sigma}^\mu i D_\mu \psi\nonumber \\
@@ -82,7 +82,7 @@ and
 
 \subsection{The Minimal Supersymmetric Standard Model}
 After having introduced components of a generic supersymmetric model a possible realization of supersymmetry in nature - the Minimal Supersymmetric Standardmodel (MSSM) - is discussed in this section. 
-The field content of the MSSM is summarized in table \ref{tab:MSSMfieldcontent}. In comparison to the Standard Model each particle has a superpartner which differs in its spin by $\frac{1}{2}$ . The superpartners of fermions have Spin 0 and are referred to as sfermions. The name of each sfermion is given by the name of its Standard Model partner with an additional ``s-'' in front of it, e.g. selectron or up-squark. The superpartners of bosons have spin $\frac{1}{2}$ and get an additional ``-ino'' at the end of their name, e.g. higgsino as the superpartner of the Higgs or bino as superpartner of the $B$-boson.\\
+The field content of the MSSM is summarized in table \ref{tab:MSSMfieldcontent}. In comparison to the Standard Model each particle has a superpartner which differs in its spin by $\frac{1}{2}$ . The superpartners of fermions have Spin 0 and are referred to as sfermions. The name of each sfermion is given by the name of its Standard Model partner with an additional ``s-'' in front of it, e.g. selectron or up-squark. The superpartners of bosons have spin $\frac{1}{2}$ and get an additional ``-ino'' at the end of their name, e.g. Higgsino as the superpartner of the Higgs or bino as superpartner of the $B$-boson.\\
 Apart from this doubling of the field content of the Standard Model, there is one modification within the Higgs sector, i.e. there are two instead of one Higgs superfield. These are necessary to avoid an anomaly in the electroweak gauge symmetry and to give masses to both up- and down-type quarks \cite[page 8]{Martin:1997ns}.\\
 Note that the ``chirality'' of sfermions is understood to be the chirality of their superpartners. Of course scalar particles have no handedness.
 \begin{table}
@@ -115,8 +115,8 @@ $\hat{V}_Y$ & $\lambda_Y$, $B_\mu$ & (1, 1, 0)\\
 $\hat{V}_w^a$ & $\lambda_w^a$, $W_\mu^a$ & (1, 3, 0)\\
 $\hat{V}_s^a$ & $\lambda_s^a$, $G_\mu^a$ & (8, 1, 0)\\
 \end{tabular}
-\caption{The table shows the field content of the MSSM in terms of the superfields and their components. The first two lines show the decomposition of the generic superfields (cf. subsection \eqref{eq:superfielddecomp}).\newline
-The third column shows the representation (for $SU(3)_C$ and $SU(2)_L$) in which the fields transform and in which the generator in the covariant derivative needs to be inserted as well as the charges of the fields for $U(1)_Y$. For $SU(3)_C$ the ``8'' refers to the adjoint representation (see Appendix \ref{sec:coloralgebra}), the ``3'' to the fundamental and the ``3$^\ast$'' to the antifundamental representation $T^a_{antifund} = -\frac{\lambda^a}{2}$. For $SU(2)_L$ ``3'' refers to the adjoint representation and ``2'' to the fundamental representation. For both $SU(2)_L$ and $SU(3)_C$ a ``1'' indicates the the trivial representation.}\label{tab:MSSMfieldcontent}
+\caption{The table shows the field content of the MSSM in terms of the superfields and their components. The first two lines show the decomposition of the generic superfields (cf. eq. \eqref{eq:superfielddecomp}).\newline
+The third column shows the representation in which the fields transform under  $SU(3)_C$ and $SU(2)_L$ transformations and in which the generator in the covariant derivative needs to be inserted as well as the charges of the fields for $U(1)_Y$. For $SU(3)_C$ the ``8'' refers to the adjoint representation (see Appendix \ref{sec:coloralgebra}), the ``3'' to the fundamental and the ``3$^\ast$'' to the antifundamental representation $T^a_{antifund} = -\frac{\lambda^a}{2}$. For $SU(2)_L$ ``3'' refers to the adjoint representation and ``2'' to the fundamental representation. For both $SU(2)_L$ and $SU(3)_C$ a ``1'' indicates the the trivial representation.}\label{tab:MSSMfieldcontent}
 \end{center}
 \end{table}
 The Lagrangian\footnote{This is the Lagrangian on the classical level, i.e. there are neither gauge fixing nor ghost terms.} for the MSSM reads
@@ -128,11 +128,11 @@ The Lagrangian\footnote{This is the Lagrangian on the classical level, i.e. ther
  + \int \mathrm{d}^2\theta&\ W_{\mathrm{MSSM}} + h.c.\nonumber\\
  +\  \mathcal{L}_{\mathrm{soft}}.\ &\label{eq:L_MSSM}
 \end{align}
-Apart from the kinetic and minimal coupling terms in the first four lines of eq. \eqref{eq:L_MSSM} and the softly breaking part of the Lagrangian in the last line of eq. \eqref{eq:L_MSSM} which will be discussed in section \ref{sec:SUSYBreaking}, there is a superpotential $W_{\mathrm{MSSM}}$:
+Apart from the kinetic and minimal coupling terms in the first four lines of eq. \eqref{eq:L_MSSM} and the soft breaking part of the Lagrangian in the last line of eq. \eqref{eq:L_MSSM} which will be discussed in section \ref{sec:SUSYBreaking}, there is a superpotential $W_{\mathrm{MSSM}}$:
 \begin{align}
 W_\mathrm{{MSSM}} &= y_d \hat{H}_d \hat{Q} \hat{D} + y_u \hat{H}_u \hat{Q} \hat U + y_e \hat{H}_d \hat{L} \hat{E} - \mu \hat{H}_d \hat{H}_u,\label{eq:W_MSSM}
 \end{align}
-which will in regard of its form be justified in section \ref{sec:RParity}. After eliminating auxiliary fields the Higgs potential is generated. In contrast to the Standard Model the quadrilinear term in the Higgs potential is given in terms of the gauge couplings and therefore no independent parameter. From the Higgs potential both $H_u$ and $H_d$ acquire a vacuum expectation value:
+which will in regard of its form be justified in section \ref{sec:RParity}. After eliminating auxiliary fields the Higgs potential is generated. In contrast to the Standard Model, the quadrilinear term in the Higgs potential is given in terms of the gauge couplings and is therefore no independent parameter. From the Higgs potential both $H_u$ and $H_d$ acquire a vacuum expectation value:
 \begin{align}
 \left\langle H_u \right\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}
 0 \\ v_u
@@ -145,7 +145,7 @@ whose quotient is an important parameter of the electroweak MSSM.
 \begin{align}
 \tan \beta := \frac{v_u}{v_d}
 \end{align}
-As in the Standard Model this spontaneous symmetry breaking and the presence of Yukawa-terms (first three terms of eq. \eqref{eq:W_MSSM}) lead to masses of the fermions.\footnote{Note the sum convention of $SU_{\mathrm{L}}(2)$ doublets: $\hat{H}_u \hat{Q} =  (\hat{H}_u)_{\alpha}\hat{Q}_\beta \epsilon^{\alpha\beta}$ to ensure gauge invariance (see Appendix \ref{sec:2spinor_notation} for the definition of $\epsilon^{\alpha\beta}$). This convention was not used in the Standard Model.} Apart from that there are also other terms like quark-squark-higgsino interactions. In addition there is the $\mu$-term which is responsible for Higgsino and Higgs masses.\\
+As in the Standard Model this spontaneous symmetry breaking and the presence of Yukawa-terms (first three terms of eq. \eqref{eq:W_MSSM}) lead to masses of the fermions.\footnote{Note the sum convention of $SU_{\mathrm{L}}(2)$ doublets: $\hat{H}_u \hat{Q} =  (\hat{H}_u)_{\alpha}\hat{Q}_\beta \epsilon^{\alpha\beta}$ to ensure gauge invariance (see Appendix \ref{sec:2spinor_notation} for the definition of $\epsilon^{\alpha\beta}$). This convention was not used in the Standard Model.} Apart from that there are also other terms like quark-squark-Higgsino interactions. In addition there is the $\mu$-term which is responsible for Higgsino and Higgs masses.\\
 
 
 \subsubsection{Supersymmetry Breaking and Mass Eigenstates}\label{sec:SUSYBreaking}
@@ -157,8 +157,8 @@ Terms which break supersymmetry should be soft, i.e. they should have coupling c
 &\ \ \ +\frac{1}{2}\left( M_1 \lambda_Y\lambda_Y + M_2 \lambda_w^a\lambda_w^a + M_3 \lambda_s^a\lambda_s^a\right) + h.c.\nonumber\\
 &\ \ \ -\left( A_d y_d H_d \tilde{q}_L \tilde{d}^\dagger_R + A_u y_u H_u \tilde{q}_L \tilde{u}^\dagger_R + A_e y_e H_d \tilde{l}_L \tilde{e}^\dagger_R -B\mu H_d H_u \right) + h.c.\label{eq:L_soft}
 \end{align}
-The softly breaking terms in the MSSM comprise masses of the squarks, sleptons, Higgs-bosons and gauginos. The last line in eq. \eqref{eq:L_soft} resembles the superpotential in eq. \eqref{eq:W_MSSM}. In fact the only two differences are that the superfields are replaced by their scalar components and that additional parameters with mass dimension one have been added. $A_d$, $A_u$, $A_e$ are $3 \times 3$ matrices in family space.\\
-There are fields in the MSSM which are no eigenstate of the mass operator $P^\mu P_\mu$ but have a mass matrix which is non-diagonal. This is true for neutral higgsinos and gauginos which mix to neutralinos and charged higgsinos and gauginos which mix to charginos to yield physical particles with definite mass. However, for this thesis only the mass matrix for electrically charged sfermions is given because this will change significantly when introducing $R$-symmetry in the next section. The Lagrangian describing these masses reads
+The soft breaking terms in the MSSM comprise masses of the squarks, sleptons, Higgs-bosons and gauginos. The last line in eq. \eqref{eq:L_soft} resembles the superpotential in eq. \eqref{eq:W_MSSM}. In fact the only two differences are that the superfields are replaced by their scalar components and that additional parameters with mass dimension one have been added. $A_d$, $A_u$, $A_e$ are $3 \times 3$ matrices in family space.\\
+There are fields in the MSSM which are no eigenstate of the mass operator $P^\mu P_\mu$ but have a mass matrix which is non-diagonal. This is true for neutral Higgsinos and gauginos which mix to neutralinos and charged Higgsinos and gauginos which mix to charginos to yield physical particles with definite mass. However, for this thesis only the mass matrix for electrically charged sfermions is given because this will change significantly when introducing $R$-symmetry in the next section. The Lagrangian describing these masses reads
 \begin{align}
 \mathcal{L}_{m_{\tilde{q}},m_{\tilde{e}}} = - \begin{pmatrix}
 \tilde{u}^\dagger_L & \tilde{u}^\dagger_R 
@@ -184,11 +184,11 @@ M^2_{\tilde{f}LL} & m_f X_f^\ast \\
 m_f X_f &  M^2_{\tilde{f}RR}
 \end{pmatrix}.
 \end{align}
-The diagonal terms are given by the sum of the fermion mass squared $m_f^2$, the appropriate soft breaking term, e.g. $M_{\tilde{Q}}^2$ for left handed squarks and a contribution from the elimination of $D$-fields. In fact this last term splits the masses of fermions and sfermions already without explicit supersymmetry breaking. This is because the generation of fermion masses requires the breaking of gauge symmetry which is not possible without breaking supersymmetry. However the off-diagonal terms are given by
+The diagonal terms are given by the sum of the fermion mass squared $m_f^2$, the appropriate soft breaking term (e.g. $M_{\tilde{Q}}^2$ for left handed squarks) and a contribution from the elimination of $D$-fields. In fact, this last term splits the masses of fermions and sfermions already without explicit supersymmetry breaking. This is because the generation of fermion masses requires the breaking of gauge symmetry which is not possible without breaking supersymmetry. However the off-diagonal terms are given by
 \begin{align}
 X_f = A_f + \mu^\ast\left\{ \cot \beta, \tan \beta \right\} \label{eq:off_diagonal}
 \end{align}
-with $\cot \beta$ for up-type squarks and $\tan \beta$ for down-type sfermions and $A_f \in \left\{ A_d, A_u, A_e \right\}$.
+with $\cot \beta$ for up-type sfermions and $\tan \beta$ for down-type sfermions and $A_f \in \left\{ A_d, A_u, A_e \right\}$.
 
 \subsubsection{$R$-Parity}\label{sec:RParity}
 The MSSM does not include any terms which violate baryon (B) or lepton number (L)\footnote{The chiral superfield $\hat{Q}$ carries baryon number $\frac{1}{3}$, whereas $\mathrm{B} = -\frac{1}{3}$ for $\hat{D}$, $\hat{U}$ and $\mathrm{B} = 0$ for all other superfields. The only multiplets carrying a non-zero lepton number are $\hat{L}$ with $\mathrm{L} = 1$ and $\hat{E}$ with $\mathrm{L} = -1$.} like 

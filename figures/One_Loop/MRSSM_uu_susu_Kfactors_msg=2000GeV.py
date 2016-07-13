@@ -14,6 +14,7 @@ m_squark = np.array([], dtype=float);
 sigma_LO_Tree = np.array([], dtype=float);
 sigma_NLO_Tree = np.array([], dtype=float);
 sigma_NLO_1L   = np.array([], dtype=float);
+sigma_Virt   = np.array([], dtype=float);
 
 
 f_Tree = open('MRSSM_Tree_uu_susu_msg=2000GeV.txt', 'r')
@@ -32,6 +33,17 @@ for lines in f_1L.readlines():
     sigma_NLO_Tree = np.append(sigma_NLO_Tree, float(lines.split()[1]))
     sigma_NLO_1L = np.append(sigma_NLO_1L, float(lines.split()[2]))    
 f_1L.close()
+
+#######################
+
+f_1L = open('MRSSM_Virt_uu_susu_msg=2000GeV.txt', 'r')
+discard = f_1L.readline()
+for lines in f_1L.readlines():
+    discard = np.append(m_squark, float(lines.split()[0]))
+    sigma_Virt = np.append(sigma_Virt, float(lines.split()[1]))
+f_1L.close()
+
+#######################
 
 K_min = 0
 K_max = 2
@@ -61,7 +73,10 @@ facecolor=[1,70./100,70./100], color =[1,80./100,80./100], linestyle="-", label 
 first_window.fill_between(m_squark, sigma_NLO_Tree/sigma_LO_Tree, sigma_NLO_1L/sigma_LO_Tree, 
 facecolor=[1,90./100,90./100], color =[1,80./100,80./100], linestyle="-", label = "Real and virtual corrections")
 
-plt.plot(m_squark, sigma_NLO_1L/sigma_LO_Tree, lw=2, ls="-", c='red')#, label = "1L")
+plt.plot(m_squark, sigma_NLO_1L/sigma_LO_Tree, lw=2, ls="-", c='red', label = "total $K$-factor")
+#################
+#plt.plot(m_squark, sigma_Virt/sigma_LO_Tree, lw=2, ls="-", c='k',label="virtual contribution")
+#################
 
 plt.legend(loc='best',prop={'size':22})
 
