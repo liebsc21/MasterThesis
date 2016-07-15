@@ -1,5 +1,5 @@
 \section{Squark and Gluino Production at Tree Level}\label{sec:SquarkGluinoTree}
-This chapter considers the production of strongly interacting supersymmetric particles in the MRSSM.\footnote{In fact only the RSQCD is considered as contribution coming from the electroweak sector scale with $\mathcal{O(\alpha_w^2)}$ where $\alpha_w = \frac{g_w^2}{4\pi}$ or $\mathcal{O(\alpha_em^2)}$ where $\alpha_{\mathrm{em}} = \frac{e^2}{4\pi}$ and are therefore significantly smaller than contribution from the strongly interacting sector which scale with $\mathcal{O(\alpha_s^2)}$ where $\alpha_s = \frac{g_s^2}{4\pi}$.} The various processes and their associated cross sections are compared to their analogues in the MSSM.\\
+This chapter considers the production of strongly interacting supersymmetric particles in the MRSSM.\footnote{In fact only the RSQCD is considered as contribution coming from the electroweak sector scale with $\mathcal{O}(\alpha_w^2)$ where $\alpha_w = \frac{g_w^2}{4\pi}$ or $\mathcal{O}(\alpha_{\mathrm{em}}^2)$ where $\alpha_{\mathrm{em}} = \frac{e^2}{4\pi}$ and are therefore significantly smaller than contribution from the strongly interacting sector which scale with $\mathcal{O}(\alpha_s^2)$ where $\alpha_s = \frac{g_s^2}{4\pi}$.} The various processes and their associated cross sections are compared to their analogues in the MSSM.\\
 The production of sgluons is not included in the following analysis. However, there are two possible channels for sgluon production at tree-level: a quark-antiquark and a gluon-gluon initiated process:
 \begin{align}
 q\overline{q} \to \phi_0\phi_0\ (\sigma_0\sigma_0), \hspace{2cm} GG \to \phi_0\phi_0\ (\sigma_0\sigma_0).
@@ -10,7 +10,8 @@ To give a reasonable and consistent prediction of hadronic cross sections, a sce
 
 
 \subsection{Partonic Processes and their Cross Section}\label{sec:PartProcesses}
-\begin{figure}[!htbp]
+The tree-level Feynman diagrams for squark and gluino production in the MRSSM are shown in fig. \ref{fig:TreeDiagrams}. On the partonic level there are six different channels. For squark-antisquark  and gluino-antigluino production there are two possible partonic reactions respectively.
+\begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}[line width=1.0 pt, scale=1.3, arrow/.style={thick,->,shorten >=2pt,shorten <=2pt,>=stealth}]
 	\draw[fermion] (-1,0.5)--(-0.42,0);
@@ -214,8 +215,7 @@ To give a reasonable and consistent prediction of hadronic cross sections, a sce
 \end{tikzpicture}
 \caption{Tree level diagrams for squark and gluino production at tree level in the MRSSM. The processes $GG \to \tilde{q}\overline{\tilde{q}}$ and $qG \to \tilde{q}\tilde{g}$ are identical to those in the MSSM. The processes $q\overline{q} \to \tilde{q}\overline{\tilde{q}}$ and $qq \to \tilde{q}\tilde{q}$ involve the production of less ``chiralities'' than in the MSSM. Also in the $q\tilde{q} \to \tilde{g}\overline{\tilde{g}}$ channel only half of the t-channel squark ``chiralities'' occur in the MRSSM. (Anti-)Gluino production via initial gluons $GG \to \tilde{g}\overline{\tilde{g}}$ proceeds via the same diagrams like in the MSSM but its cross section is twice as much in the MRSSM for gluino and antigluino are distinguishable particles.}\label{fig:TreeDiagrams}
 \end{center}
-\end{figure}
-The tree-level Feynman diagrams for squark and gluino production in the MRSSM are shown in fig. \ref{fig:TreeDiagrams}. On the partonic level there are six different channels. For squark-antisquark  and gluino-antigluino production there are two possible partonic reactions respectively.\\
+\end{figure}\newpage
 For the following calculation the top quark is excluded from the initial state as it is too heavy to be significantly present in protons. %Therefore its pdf is approximately zero. 
 For consistency reasons also the stop is excluded from the final states. One therefore deals with $n_f-1 = 5$ quark flavors. In view of the renormalization and mass factorization to be performed at the one-loop level, the results are calculated in (conventional) dimensional regularization (see section \ref{sec:RegSchemes}) and are therefore given in $D = 4 - 2\epsilon$ dimensions. Furthermore it has been distinguished between the gauge coupling $g_s$ from the gluon-quark-quark vertex and its supersymmetric analogue $\hat{g}_s$ from the gluino-squark-quark vertex. So far, it has not been distinguished between them because supersymmetry dictates them to be identical. However, the loop corrections to their corresponding vertex differ in dimensional regularization by a finite amount, as will be shown in section \ref{sec:renMRSSM}. To rectify this, an additional finite (supersymmetry restoring) counterterm needs to be added to one of the renormalization constants of $g_s$ or $\hat{g}_s$. This will be done in \ref{sec:SUSYrestore}.\\
 To parametrize results, the usual Mandelstam variables $s,t,u$ and the following modifications of them are used\footnote{The kinematics of the process is denoted in fig. \ref{fig:TreeDiagrams}.}
@@ -226,6 +226,7 @@ To parametrize results, the usual Mandelstam variables $s,t,u$ and the following
 & t_{\tilde{g}} = t - m_{\tilde{g}}^2, && t_{\tilde{q}} = t- m_{\tilde{q}}^2,\nonumber\\
 & u_{\tilde{g}} = u - m_{\tilde{g}}^2, && u_{\tilde{q}} = u- m_{\tilde{q}}^2.
 \end{align}
+\newpage
 Applying the Feynman rules in the Appendix \ref{sec:FeynmanRules}, one obtains the following sums\footnote{The sum $\sum$ denotes the summation over all external spins and colors.} over absolute squared Feynman amplitudes:
 \begin{align}
 \sum|\mathcal{M}^B|^2(q_i\overline{q}_j \to \tilde{q}\tilde{q}^\dagger) &= \delta_{ij}  \left[ 8 N_c C(F) g_s^4\frac{(n_f-1)}{s^2} + 4 N_c C(F) \hat{g}_s^4\frac{1}{t_{\tilde{g}}^2} - 8 C(F)g_s^2\hat{g}_s^2\frac{1}{ t_{\tilde{g}} s} \right] (tu-m_{\tilde{q}}^4)\nonumber\\
@@ -528,7 +529,7 @@ In order to account for the confinement of quarks and gluons within hadrons, the
 
 Quarks, antiquarks and gluons are no free particles but are confined within hadrons. As hadrons consist of a variety of the just mentioned partons which share the hadron's momentum, one does not have a definite initial state in hadron collisions which is assumed in the previous section. Fortunately the hadronic cross section for the production of a final state $X$, e.g. $X = \tilde{q} \tilde{q}$, can be obtained by convolving the partonic cross section with parton density functions of the initial hadrons:
 \begin{align}
-\sigma^\mathrm{B}_{\mathrm{Had}}(P_1 P_2 \to X) = \int \mbox{d}x_1 \mbox{d}x_2\ f_{P_1/H_1}(x_1) f_{P_2/H_2}(x_2)\ \sigma^\mathrm{B}_{\mathrm{Part}} (P_1 P_2 \to X, s = x_ 1x_2 S).\label{eq:facTheorem}
+\sigma^\mathrm{B}_{\mathrm{Had}}(P_1 P_2 \to X) = \int \mbox{d}x_1\  \mbox{d}x_2\ f_{P_1/H_1}(x_1) f_{P_2/H_2}(x_2)\ \sigma^\mathrm{B}_{\mathrm{Part}} (P_1 P_2 \to X, s = x_ 1x_2 S).\label{eq:facTheorem}
 \end{align}
 The parton density functions $f_{P_i/H_j}(x)$ and the momentum fractions $x_i$ are explained below. The hadrons center-of-mass energy is denoted with $\sqrt{S}$ where $\sqrt{s} = \sqrt{S x_1 x_2}$ denotes the partons center-of-mass energy.\\
 As the production of the final state $X$ may proceed via various initial partons, one has to sum over all possibilities arising from the initial hadrons $H_1$ and $H_2$:
@@ -654,8 +655,8 @@ $\unit[2000]{GeV}$ & $\unit[2179]{fb}\ _{- 25.6\% \ignore{1735}- 1.9\%\ignore{21
 & $\unit[198.1]{fb}\ ^{+ 30.7\%\ignore{259} + 1.5\%\ignore{201}}_{- 28.6\% \ignore{154}- 2.1\%\ignore{194}}$ 
 & $\unit[25.75]{fb}\ ^{+ 33.2\%\ignore{34.3}+ 1.5\%\ignore{26.2}}_{- 30.7\% \ignore{19.7}- 2.0\%\ignore{25.3}}$\\
 \end{tabular}
-\caption{Same content as in table \ref{tab:squarkMRSSM} but for the MSSM.}
+\caption{Same content as in table \ref{tab:squarkMRSSM} but for the MSSM.}\label{tab:zweite}
 \end{center}
 \end{table}
-
+The cross sections for the production of squarks (and antisquarks) including five flavors are given for a representative set of masses in table \ref{tab:squarkMRSSM} for the MRSSM and in table \ref{tab:zweite} for the MSSM. In addition to the cross section, the relative uncertainty of the scale variation and the parton density functions are given.\\
 As a summary of the comparison between MSSM and MRSSM, one can say, that the gluino production is enhanced in the MRSSM due to distinguishable gluino and antigluino. In order to meet missing experimental evidence for supersymmerty, this suggests that in the MRSSM gluinos might be heavier than squarks. Focusing on $\frac{m_{\tilde{g}}}{m_{\tilde{q}}} \geq 2$ the most significant change between the considered models is the growing suppression of squark production for an increasing gluino mass. This is why this channel is going to be investigated at next-to-leading order within this thesis. The ensuing sections provide the prerequisites for this calculation.

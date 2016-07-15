@@ -127,7 +127,7 @@ and the on-shell renormalization condition
 \begin{align}
 \frac{\partial}{\partial \slashed{p}} \left[ \Re (\Gamma^{\mathrm{1L}}_{q_i\overline{q}_j}) + \Gamma^{\mathrm{1L,ct}}_{q_i\overline{q}_j}  \right]_{p^2 = 0} = 0,
 \end{align}
-where $\Re (\hdots)$ denotes the real part of $\hdots$, one finds
+where $\Re (\hdots)$ denotes the real part of $(\hdots)$, one finds
 \begin{align}
 \delta Z_q = 2 C(F) \frac{g_s^2}{16\pi^2} \Re \left[ B_1(0 ,m_{\tilde{g}}^2,m_{\tilde{q}}^2) \right].
 \end{align}
@@ -138,7 +138,6 @@ Doing the same calculation in DRED one finds that this very term $\frac{1}{2}$ i
 \end{align}
 
 \subsubsection*{The Squark Self-Energy}
-The contributions to the self-energy of the left- and right-handed squark, shown in fig. \ref{fig:SquarkSE}, are the same because electroweak effects are neglected. Therefore to avoid unnecessary labeling $\Gamma_{\tilde{q}\tilde{q}^\dagger}$ stands in the following for $\Gamma_{\tilde{q}_L\tilde{q}_L^\dagger} = \Gamma_{\tilde{q}_R\tilde{q}_R^\dagger}$. The one-particle irreducible Green function of the squark is given by
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -192,7 +191,8 @@ The contributions to the self-energy of the left- and right-handed squark, shown
 \end{tikzpicture}
 \caption{Diagrammatic contributions to the self-energy of the squark at 1-loop level.}\label{fig:SquarkSE}
 \end{center}
-\end{figure}\\
+\end{figure}
+The contributions to the self-energy of the left- and right-handed squark, shown in fig. \ref{fig:SquarkSE}, are the same because electroweak effects are neglected. Therefore to avoid unnecessary labeling $\Gamma_{\tilde{q}\tilde{q}^\dagger}$ stands in the following for $\Gamma_{\tilde{q}_L\tilde{q}_L^\dagger} = \Gamma_{\tilde{q}_R\tilde{q}_R^\dagger}$. The one-particle irreducible Green function of the squark is given by
 \begin{align}
 i\Gamma^{\mathrm{1L}}_{\tilde{q}_{i}\tilde{q}^\dagger_j} &= i \frac{g_s^2}{16\pi^2}\delta_{ij}C(F) \left[  A_0(m_{\tilde{q}}^2) + 0 - \left( 4A_0(m_{\tilde{g}}^2) + 4B_1(p^2,0,m_{\tilde{g}}^2)p^2 \right) \right.\nonumber\\
 & \left.+ 4m_{\tilde{g}}^2B_0(p^2,m_{\phi^0}^2,m_{\tilde{q}}^2) - \left(2B_1(p^2,0,m_{\tilde{q}}^2)p^2 + B_0(p^2,0,m_{\tilde{q}}^2)(m_{\tilde{q}}^2+3p^2) \right) \right].
@@ -289,7 +289,7 @@ From the Lagrangian in eq. \eqref{eq:L_RSQCD} one can see that the couplings of 
 \caption{Diagrammatic contributions to the self-energy of the squark at 1-loop level}\label{fig:GluinoSE}
 \end{center}
 \end{figure}
-As for the quarks, the fermion (and momentum) flow in a diagram is from the right to the left. The one-particle irreducible Green function is given by
+As for the quarks, the fermion (and momentum) flow in a diagram is from the right to the left. The Feynman diagrams for the gluino self-energy are shown in \ref{fig:GluinoSE}. The one-particle irreducible Green function is given by
 \begin{align}
 i\Gamma^{1L}_{\tilde{g}^a \overline{\tilde{g}}^b} &= i \frac{g_s^2}{16\pi^2}\delta_{ab} \left[-4T(F)\left( (n_f-1) B_1(p^2,0,m_{\tilde{q}}^2) + B_1(p^2,m_t^2,m_{\tilde{q}}^2) \right)P_L \slashed{p} \right.\nonumber\\
 & + C(A)\left( (B_0(p^2,m_{\tilde{g}}^2,m_{\phi^0}^2) - B_0(p^2,m_{\tilde{g}}^2,m_{\sigma^0}^2))m_{\tilde{g}} - (B_1(p^2,m_{\tilde{g}}^2,m_{\phi^0}^2) + B_1(p^2,m_{\tilde{g}}^2,m_{\sigma^0}^2))\slashed{p} \right) \nonumber\\
@@ -358,17 +358,8 @@ Again there is a transition counterterm
 \begin{align}
 \delta m_{\tilde{g}}^{\mathrm{trans}} = \delta m_{\tilde{g}}^{\mathrm{DREG}} - \delta m_{\tilde{g}}^{\mathrm{DRED}} = C(A) \frac{g_s^2}{16\pi^2} m_{\tilde{g}}.
 \end{align}
-Apart from the renormalization constant of the gauge coupling and the supersymmetry restoring counterterm these are all renormalization constants needed from squark production at next to leading order. In fact the field renormalization constants of the gluino are not needed as they drop out when summing up all three counterterm Feynman diagrams. This can be seen when writing down the matrix amplitudes for the counterterm Feynman diagrams shown in fig. \ref{fig:CounterTerm}:
-\begin{align}
-\mathcal{M}^{\mathrm{B}} &= -2g_s^2 \frac{\left\langle v_2 |P_R \slashed{k}_3|u_1\right\rangle}{t_{\tilde{g}}} T^a_{\delta \beta} T^a_{\gamma \alpha} + 2g_s^2 \frac{\left\langle v_2 |P_L \slashed{k}_3|u_1\right\rangle}{u_{\tilde{g}}} T^a_{\gamma\beta} T^a_{\delta\alpha}\\
-\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}} &= 2 \mathcal{M}^B  \left( \frac{\delta \hat{g}_s}{\hat{g}_s} + \frac{\delta Z_q}{2} + \frac{\delta Z^L_{\tilde{g}}}{2} + \frac{\delta Z_{\tilde{q}}}{2} \right)\\
-\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}} &= 2g_s^2 \left\langle v_2 \left| P_R\ i\frac{\slashed{p}+m_{\tilde{g}}}{t_{\tilde{g}}} \left[  i(\delta Z_{\tilde{g}}^L P_L + \delta Z_{\tilde{g}}^R P_R)\slashed{p}  \right.\right.\right.\nonumber\\
-& \hspace{2cm}\left.\left.\left.\left. -i\left( \frac{\delta Z_{\tilde{g}}^L + \delta Z_{\tilde{g}}^R}{2}m_{\tilde{g}} + \delta m_{\tilde{g}} \right) \right]i\frac{\slashed{p}+m_{\tilde{g}}}{t_{\tilde{g}}} P_L \right|u_1\right\rangle\right|_{p = p_1-p_3} + \mathrm{u-channel}\nonumber\\
-&= -\mathcal{M}^B  \delta Z_{\tilde{g}}^L + 2  \frac{ m_{\tilde{g}}}{t_{\tilde{g}}} \left( -2g_s^2 \frac{\left\langle v_2 |P_R \slashed{k}_3|u_1\right\rangle}{t_{\tilde{g}}} T^a_{\delta \beta} T^a_{\gamma \alpha} \right)\delta m_{\tilde{g}}\nonumber\\ 
-& \hspace{2cm}+ 2 \frac{ m_{\tilde{g}}}{u_{\tilde{g}}} \left( 2g_s^2 \frac{\left\langle v_2 |P_L \slashed{k}_3|u_1\right\rangle}{u_{\tilde{g}}} T^a_{\gamma\beta} T^a_{\delta\alpha} \right)\delta m_{\tilde{g}}.
-\end{align}
-$\delta Z^R_{\tilde{g}}$ drops out already in $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ as the octino does neither couple to quarks nor to squarks. The renormalization constant of the actual gluino $\delta Z^L_{\tilde{g}}$ drops out when $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ and $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}}$ are added. This is also true in a more general case, i.e. the renormalization constants of virtual particles do always drop out. This may be understood in the path integral approach of quantum field theory\cite{Peskin}: When considering a certain process, the Green function corresponding to this process, can be expressed as a path integral over fields within the theory. The field of virtual particles occurs only in the exponential, in contrast to the fields of external particles. This means that rescaling a field of an inner particle has no influence on the Green function. Ergo the field renormalization constants of any virtual particle must always drop out when considering a certain process.
-\begin{figure}[!htbp]
+Apart from the renormalization constant of the gauge coupling and the supersymmetry restoring counterterm these are all renormalization constants needed from squark production at next to leading order. In fact the field renormalization constants of the gluino are not needed as they drop out when summing up all three counterterm Feynman diagrams. 
+\begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}[line width=1 pt, scale=1]
 	\draw[fermion] (3,0.5)--(4,0.5);
@@ -416,6 +407,16 @@ $\delta Z^R_{\tilde{g}}$ drops out already in $\mathcal{M}^{\mathrm{1L,ct}}_{\ma
 \caption{1-Loop-level counterterm Feynman diagrams for squark production in the MRSSM. The Greek latters label the particle's color.}\label{fig:CounterTerm}
 \end{center}
 \end{figure}
+This can be seen when writing down the matrix amplitudes for the counterterm Feynman diagrams shown in fig. \ref{fig:CounterTerm}:
+\begin{align}
+\mathcal{M}^{\mathrm{B}} &= -2g_s^2 \frac{\left\langle v_2 |P_R \slashed{k}_3|u_1\right\rangle}{t_{\tilde{g}}} T^a_{\delta \beta} T^a_{\gamma \alpha} + 2g_s^2 \frac{\left\langle v_2 |P_L \slashed{k}_3|u_1\right\rangle}{u_{\tilde{g}}} T^a_{\gamma\beta} T^a_{\delta\alpha}\\
+\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}} &= 2 \mathcal{M}^B  \left( \frac{\delta \hat{g}_s}{\hat{g}_s} + \frac{\delta Z_q}{2} + \frac{\delta Z^L_{\tilde{g}}}{2} + \frac{\delta Z_{\tilde{q}}}{2} \right)\\
+\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}} &= 2g_s^2 \left\langle v_2 \left| P_R\ i\frac{\slashed{p}+m_{\tilde{g}}}{t_{\tilde{g}}} \left[  i(\delta Z_{\tilde{g}}^L P_L + \delta Z_{\tilde{g}}^R P_R)\slashed{p}  \right.\right.\right.\nonumber\\
+& \hspace{2cm}\left.\left.\left.\left. -i\left( \frac{\delta Z_{\tilde{g}}^L + \delta Z_{\tilde{g}}^R}{2}m_{\tilde{g}} + \delta m_{\tilde{g}} \right) \right]i\frac{\slashed{p}+m_{\tilde{g}}}{t_{\tilde{g}}} P_L \right|u_1\right\rangle\right|_{p = p_1-p_3} + \mathrm{u-channel}\nonumber\\
+&= -\mathcal{M}^B  \delta Z_{\tilde{g}}^L + 2  \frac{ m_{\tilde{g}}}{t_{\tilde{g}}} \left( -2g_s^2 \frac{\left\langle v_2 |P_R \slashed{k}_3|u_1\right\rangle}{t_{\tilde{g}}} T^a_{\delta \beta} T^a_{\gamma \alpha} \right)\delta m_{\tilde{g}}\nonumber\\ 
+& \hspace{2cm}+ 2 \frac{ m_{\tilde{g}}}{u_{\tilde{g}}} \left( 2g_s^2 \frac{\left\langle v_2 |P_L \slashed{k}_3|u_1\right\rangle}{u_{\tilde{g}}} T^a_{\gamma\beta} T^a_{\delta\alpha} \right)\delta m_{\tilde{g}}.
+\end{align}
+$\delta Z^R_{\tilde{g}}$ drops out already in $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ as the octino does neither couple to quarks nor to squarks. The renormalization constant of the actual gluino $\delta Z^L_{\tilde{g}}$ drops out when $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{self-energy}}$ and $\mathcal{M}^{\mathrm{1L,ct}}_{\mathrm{vertex}}$ are added. This is also true in a more general case, i.e. the renormalization constants of virtual particles do always drop out. This may be understood in the path integral approach of quantum field theory\cite{Peskin}: When considering a certain process, the Green function corresponding to this process, can be expressed as a path integral over fields within the theory. The field of virtual particles occurs only in the exponential, in contrast to the fields of external particles. This means that rescaling a field of an inner particle has no influence on the Green function. Ergo the field renormalization constants of any virtual particle must always drop out when considering a certain process.
 
 
 
@@ -439,7 +440,7 @@ and computes to
 \delta Z_q^{\mathrm{aux}} = \frac{g_s^2}{16\pi^2} C(F)\left[ -\Delta_\epsilon + 2B_1(0, m_{\tilde{g}}^2, m_{\tilde{q}}^2)\right] .
 \end{align}
 
-
+\subsubsection*{The Gluon Self-Energy}
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -487,16 +488,6 @@ and computes to
 \caption{Contribution to the self-energy of the gluon originating from light particles.}\label{fig:lightGluonSelfEnergy}
 \end{center}
 \end{figure}
-
-
-\subsubsection*{The Gluon Self-Energy}
-As for the quark self-energy, there are again contributions to the self-energy of the gluon originating from light and heavy particles. Again these are differently dealt with. The ultraviolet divergent one-particle irreducible Green function is given by
-\begin{align}
-\left.i\Gamma^{\mathrm{1L,light}}_{G_\mu^a G_\nu^b}\right|_{\mathrm{UV-div}} &= i\frac{g_s^2}{16\pi^2}\Delta_\epsilon \left[ 0 - \frac{4 (n_{f}-1)}{3} T(F) (p^2g^{\mu\nu}-p^\mu p^\nu) + \frac{C(A)}{12}(p^2g^{\mu\nu} + 2 p^\mu p^\nu) \right.\nonumber\\
-&+\left. \frac{C(A)}{12}(19 p^2g^{\mu\nu} - 22 p^\mu p^\nu) \right]\delta_{ab}\nonumber\\
-&=i\frac{g_s^2}{16\pi^2} \Delta_\epsilon \left[ - \frac{4 (n_{f}-1)}{3} T(F) + \frac{5}{3} C(A) \right](p^2g^{\mu\nu}-p^\mu p^\nu)\delta_{ab}.
-\end{align}
-Both the contribution from the gluon loop and the one from the ghost loop are not proportional to $(p^2g^{\mu\nu}-p^\mu p^\nu)$ but their sum is. This transversal form is an implication of gauge invariance\cite{dissertori2003quantum}.
 \begin{figure}[!htbp]
 \begin{center}
 \begin{tikzpicture}[line width=1.5 pt, scale=1.3]
@@ -562,6 +553,14 @@ Both the contribution from the gluon loop and the one from the ghost loop are no
 \caption{Contribution to the self-energy of the gluon originating from heavy particles, in the last diagram either $\phi^0$ or $\sigma^0$ are running in the loop.}
 \end{center}
 \end{figure}
+As for the quark self-energy, there are again contributions to the self-energy of the gluon originating from light and heavy particles. Again these are differently dealt with. The ultraviolet divergent one-particle irreducible Green function is given by
+\begin{align}
+\left.i\Gamma^{\mathrm{1L,light}}_{G_\mu^a G_\nu^b}\right|_{\mathrm{UV-div}} &= i\frac{g_s^2}{16\pi^2}\Delta_\epsilon \left[ 0 - \frac{4 (n_{f}-1)}{3} T(F) (p^2g^{\mu\nu}-p^\mu p^\nu) + \frac{C(A)}{12}(p^2g^{\mu\nu} + 2 p^\mu p^\nu) \right.\nonumber\\
+&+\left. \frac{C(A)}{12}(19 p^2g^{\mu\nu} - 22 p^\mu p^\nu) \right]\delta_{ab}\nonumber\\
+&=i\frac{g_s^2}{16\pi^2} \Delta_\epsilon \left[ - \frac{4 (n_{f}-1)}{3} T(F) + \frac{5}{3} C(A) \right](p^2g^{\mu\nu}-p^\mu p^\nu)\delta_{ab}.
+\end{align}
+Both the contribution from the gluon loop and the one from the ghost loop are not proportional to $(p^2g^{\mu\nu}-p^\mu p^\nu)$ but their sum is. This transversal form is an implication of gauge invariance\cite{dissertori2003quantum}.
+
 The heavy particle contributions are calculated in the zero-momentum subtraction:
 \begin{align}
 %i\Gamma^{\mathrm{1L,heavy}}_{G_\mu^a G_\nu^b}|_{\mathrm{UV-div, \mu-dep}} &= i\frac{g_s^2}{16\pi^2}\delta_{ab} \left[ - 4 T(F)n_f A_0(m_{\tilde{q}}^2) g^{\mu\nu} - C(A) A_0(m_{\phi^0}^2) g^{\mu\nu} - C(A) A_0(m_{\sigma^0}^2) g^{\mu\nu} \right.\nonumber\\
@@ -619,18 +618,18 @@ Like the self-energies, the vertex corrections are composed of loops from light 
 	\node at (0,0.2) {1L};
 	\node at (0,-0.18) {light};
 	\draw[fermionbar](45:0.5)--(45:1.3);
-	\draw[fermionbar](-45:0.5)--(-45:1.3);
+	\draw[fermion](-45:0.5)--(-45:1.3);
 	\node at (1.8,0) {=};
 \begin{scope}[shift={(3.5,0)}]
 	\draw[gluon](180:1.3)--(180:0.5);
 	\draw[fermionbar](180:0.5)--(45:0.5);
 	\node at (0,0.5) {$q$};
-	\draw[fermionbar](180:0.5)--(-45:0.5);
+	\draw[fermion](180:0.5)--(-45:0.5);
 	\node at (0,-0.5) {$q$};
 	\draw[gluon](45:0.5)--(-45:0.5);
 	\node at (0.7,0) {$G$};
 	\draw[fermionbar](45:0.5)--(45:1.3);
-	\draw[fermionbar](-45:0.5)--(-45:1.3);
+	\draw[fermion](-45:0.5)--(-45:1.3);
 	\node at (1.8,0) {+};
 \end{scope}
 \begin{scope}[shift={(7,0)}]
@@ -642,7 +641,7 @@ Like the self-energies, the vertex corrections are composed of loops from light 
 	\draw[fermion](45:0.5)--(-45:0.5);
 	\node at (0.7,0) {$q$};
 	\draw[fermionbar](45:0.5)--(45:1.3);
-	\draw[fermionbar](-45:0.5)--(-45:1.3);
+	\draw[fermion](-45:0.5)--(-45:1.3);
 \end{scope}
 \end{tikzpicture}
 \caption{Contribution from light (Standard Model) particles to the $q\overline{q}G$ vertex correction.}\label{fig:GaugeCouplingCorrectionL}
@@ -664,19 +663,19 @@ The term in the curved brackets of eq. \eqref{eq:qqGlight} corresponds to the fi
 	\node at (0,0.2) {1L};
 	\node at (0,-0.18) {heavy};
 	\draw[fermionbar](45:0.5)--(45:1.3);
-	\draw[fermionbar](-45:0.5)--(-45:1.3);
+	\draw[fermion](-45:0.5)--(-45:1.3);
 	\node at (1.8,0) {=};
 \begin{scope}[shift={(3.5,0)}]
 	\draw[gluon](180:1.3)--(180:0.5);
 	\draw[scalarbar](180:0.5)--(45:0.5);
 	\node at (0,0.5) {$\tilde{q}$};
-	\draw[scalarbar](180:0.5)--(-45:0.5);
+	\draw[scalar](180:0.5)--(-45:0.5);
 	\node at (0,-0.5) {$\tilde{q}$};
 	\draw[gluon](45:0.5)--(-45:0.5);
 	\draw[fermionnoarrow](45:0.5)--(-45:0.5);
 	\node at (0.7,0) {$\tilde{g}$};
 	\draw[fermionbar](45:0.5)--(45:1.3);
-	\draw[fermionbar](-45:0.5)--(-45:1.3);
+	\draw[fermion](-45:0.5)--(-45:1.3);
 	\node at (1.8,0) {+};
 \end{scope}
 \begin{scope}[shift={(7,0)}]
@@ -690,7 +689,7 @@ The term in the curved brackets of eq. \eqref{eq:qqGlight} corresponds to the fi
 	\draw[scalar](45:0.5)--(-45:0.5);
 	\node at (0.7,0) {$\tilde{q}$};
 	\draw[fermionbar](45:0.5)--(45:1.3);
-	\draw[fermionbar](-45:0.5)--(-45:1.3);
+	\draw[fermion](-45:0.5)--(-45:1.3);
 \end{scope}
 \end{tikzpicture}
 \caption{Contribution from heavy particles to the $q\overline{q}G$ vertex correction.}\label{fig:GaugeCouplingCorrectionH}
@@ -826,7 +825,7 @@ This section explains how the renormalization of the matrix element of squark pr
 
 \subsubsection{Implementation into the Model File}\label{sec:ModelFileImplementation}
 Within the automated calculation, the renormalization of the matrix element of squark production has been achieved by extending the model file generated by \texttt{SARAH} with counterterm Feynman rules and renormalization constants.\\ 
-The derivation of the counterterm Feynman rules has been performed by the author whereas the implementation into the model file was mainly done by Philip Dießner, another member of the group. To explain the implementation, the code extract describing the quark-squark-gluino vertex is considered, as an example.
+The derivation of the counterterm Feynman rules has been performed by the author whereas the implementation into the model file was mainly done by Philip Dießner, another member of the group. To explain the implementation, the code extract describing the quark-squark-gluino vertex is considered as an example.
 \begin{lstlisting}[style=MyMathematica]
 C[F[3, {gt1, ct1}], F[15, {ct2}], -S[13, {gt3, ct3}]] == {{
 ((-I)*g3*Lam[ct2, ct3, ct1]*(Conjugate[ZUL[gt1, 1]]*ZU[gt3, 1] + Conjugate[ZUL[gt1, 2]]*ZU[gt3, 2] + Conjugate[ZUL[gt1, 3]]*ZU[gt3, 3]))/Sqrt[2],
@@ -886,7 +885,7 @@ These renormalization constants have been checked with the above calculated reno
 After providing the model file with renormalization constants and counterterm Feynman rules, the matrix element for squark production can be renormalized. For more details on how the renormalization works within \texttt{FormCalc}, see the manual \cite{FormCalcManual}.
 To check whether all UV-divergences have been removed, the \texttt{FormCalc} function \texttt{UVDivergentPart} has been used.\\
 However, the matrix element still contains IR-divergences. To keep track of these divergences, the calculation in \texttt{FormCalc} has been performed with the option: \texttt{Dimension} $\to 0$ which is the only opportunity to really work in $D$ dimensions, i.e. the result contains a quantity \texttt{Dminus4} which equals $-2\epsilon$ in DREG. The expression $\sum 2 \Re (\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}\ast})$ coming from \texttt{FormCalc} is then given in terms of scalar integrals, like defined in Appendix \ref{sec:Passarino}. To display how the \texttt{FormCalc} output looks like, the following box shows the off-shell amplitude of the up-quark self-energy in terms of loop integrals and \texttt{Dminus4}.
-\begin{lstlisting}[style=MyMathematicaOutput]
+\begin{lstlisting}[style=MyMathematica]
 Amp[{{F[3, {1, Col1}], k[1], 0, {}}} -> {{F[3, {1, Col2}], k[2], 0, {}}}]
 [(1/([Pi]^2)) g3^2 ((1/6 + Dminus4/12) (B0i[bb0, Pair[k[1], k[1]], 0, 0] 
 + B0i[bb1, Pair[k[1], k[1]], 0, 0]) 
