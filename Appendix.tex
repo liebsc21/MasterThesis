@@ -235,7 +235,7 @@ The following Feynman rules (fig. \ref{fig:firstFeynmanRules} - \ref{fig:thirdFe
 	\draw[fermion] (0,0)--(45:1);
 	\draw[fermionbar] (0,0)--(-45:1);
 	\draw[gluon] (0,0)--(180:1);
-	\node at (45:1.3) {$\overline{q}i$};
+	\node at (45:1.3) {$\overline{q}_i$};
 	\node at (-45:1.3) {$q_j$};
 	\node at (180:1.3) {$G_\mu^a$};
 	\node at (2,0) {$\hat{=} -ig_s T^a_{ij}\gamma^\mu$};
@@ -477,25 +477,25 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 
 
 \subsection{Passarino-Veltman Integrals}\label{sec:Passarino}
-The definition of the momenta within the Passarino-Veltman integrals in this thesis agrees with the one from \texttt{Looptools} \cite{Hahn:1998} convention. The original paper \cite{Passarino:1978jh} uses slightly different conventions. A pedagogical introduction to the evaluation of one-loop integrals can be found in \cite{Ellis:2011cr}.  $A$, $B$ and $C$ integrals are defined by:
+The definition of the momenta within the Passarino-Veltman integrals in this thesis agrees with the one from \texttt{Looptools} \cite{Hahn:1998}. The original paper \cite{Passarino:1978jh} uses slightly different conventions. A pedagogical introduction to the evaluation of one-loop integrals can be found in \cite{Ellis:2011cr}.  $A$, $B$ and $C$ integrals are defined by:
 \begin{align}
-\frac{i}{16\pi^2} A_0(m^2) &= \int_l \frac{1}{l^2-m^2},\nonumber\\
-\frac{i}{16\pi^2} B_{0,\mu,\mu\nu}(p^2,m_1^2,m_2^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p)^2-m_2^2]},\\
-\frac{i}{16\pi^2} C_{0,\mu,\mu\nu}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2) &= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p_1)^2-m_2^2][(l+p_1+p_2)^2-m_3^2]},\nonumber\label{eq:LoopInt}
+\frac{i}{16\pi^2} A_0(m^2) &:= \int_l \frac{1}{l^2-m^2},\nonumber\\
+\frac{i}{16\pi^2} B_{0,\mu,\mu\nu}(p^2,m_1^2,m_2^2) &:= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p)^2-m_2^2]},\\
+\frac{i}{16\pi^2} C_{0,\mu,\mu\nu}(p_1^2,p_2^2,(p_1+p_2)^2,m_1^2,m_2^2,m_3^2) &:= \int_l \frac{\left\{1,l_\mu,l_\mu l_\nu \right\}}{[l^2-m_1^2][(l+p_1)^2-m_2^2][(l+p_1+p_2)^2-m_3^2]},\nonumber\label{eq:LoopInt}
 \end{align}
 with the shortcut $\int_l = \mu^{2\epsilon}\int\frac{\mathrm{d}^D l}{(2\pi)^D}$. Furthermore there are suppressed $\varepsilon$'s which prescribe how the poles in the complex plane are avoided. They are hidden in the infinitesimal shift of the masses: $m_i^2 \to m_i^2 - i \varepsilon$.\\
 The tensor integrals can be decomposed as
 \begin{align}
 B_\mu &:= p_\mu B_1,\nonumber\\
 B_{\mu\nu} &:= g_{\mu\nu}B_{00} + p_\mu p_\nu B_{11},\nonumber\\
-C_\mu &= p_{1\mu}C_1 + p_{2\mu}C_2,\\
+C_\mu &:= p_{1\mu}C_1 + p_{2\mu}C_2,\\
 C_{\mu\nu} &:= g_{\mu\nu}C_{00} + p_{1\mu}p_{1\nu}C_{11} + p_{2\mu}p_{2\nu}C_{22} + (p_{1\mu}p_{2\nu} + p_{2\mu}p_{1\nu})C_{12}.\nonumber
 \end{align}
 The $A$-integral reads
 \begin{align}
 A_0(m^2) = m^2\left( \Delta_\epsilon -\ln \frac{m^2}{\mu^2} + 1 \right) + \mathcal{O}(\epsilon).
 \end{align}
-where the typical UV-divergent constant $\Delta_\epsilon = \frac{1}{\epsilon} - \gamma_E+\ln 4\pi$ is defined. It comprises the Euler-Mascheroni constant $\gamma_{\mathrm{E}}$. In the special case of vanishing momenta, the further integrals take a succinct form. Some formulae which are needed for the calculation of renormalization constants are
+where the typical UV-divergent constant $\Delta_\epsilon = \frac{1}{\epsilon} - \gamma_E+\ln 4\pi$ is defined. It comprises the Euler-Mascheroni constant $\gamma_{\mathrm{E}}$. The relation between $\epsilon$ and the dimension $D$ is given by $D = 4-2\epsilon$. In the special case of vanishing momenta, the further integrals take a succinct form. Some formulae which are needed for the calculation of renormalization constants are
 \begin{align}
 B_0(0,m_1^2,m_2^2) &= \frac{A_0(m_1^2)-A_0(m_2^2)}{m_1^2-m_2^2} = \Delta_\epsilon + 1 -\frac{m_1^2\ln \frac{m_1^2}{\mu^2}-m_2^2\ln \frac{m_2^2}{\mu^2}}{m_1^2-m_2^2} + \mathcal{O}(\epsilon),\\
 B_0(0,m^2,m^2) &= \frac{\partial}{\partial m^2} A_0(m^2) = \Delta_\epsilon -\ln \frac{m^2}{\mu^2} + \mathcal{O}(\epsilon),\\
