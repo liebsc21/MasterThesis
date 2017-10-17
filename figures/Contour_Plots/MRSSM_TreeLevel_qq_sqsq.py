@@ -38,7 +38,8 @@ def contourdata():
     v = 10**np.linspace(-1, 7, 9, endpoint=True)
     fig = plt.figure(1,figsize=(9, 8)) 
     ax1 = plt.axes()
-    font_size = 18
+    font_size = 22
+    plt.title("MRSSM", size = 2*font_size)
     plt.xlabel(r"$m_{\tilde{q}}$ in GeV", size = font_size)
     plt.ylabel(r"$m_{\tilde{g}}$ in GeV", size = font_size)
     plt.xticks(fontsize = font_size)

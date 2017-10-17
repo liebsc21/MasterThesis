@@ -55,7 +55,8 @@ According to quantum field theory the $\mathcal{O}(\alpha_s)$ correction to a tr
 	\draw[scalar](0.5,-0.5)--(1.5,-0.5);
 \end{scope}
 \end{tikzpicture}
-\caption{A selection of diagrams contributing to the 1-loop matrix element for squark production. Each diagram is a representative of a certain topology. In the first line, an example for a self-energy and a vertex-correction diagram is shown. The second line lists typical box-diagrams: a three-point box and a four-point box.}\label{fig:1loopdiagrams}
+\caption{A selection of diagrams contributing to the 1-loop matrix element for squark production. Each diagram is a representative of a certain topology. In the first line, an example for a self-energy and a vertex-correction diagram is shown. The second line lists typical box-diagrams: a three-point box and a four-point box.\newline
+There are no loop corrections of external particles, which is expalined in section \ref{sec:LSZ}.}\label{fig:1loopdiagrams}
 \end{center}
 \end{figure}
 To yield $\mathcal{O}(\alpha_s)$ corrections in the cross section, the interference term between the one-loop amplitude $\mathcal{M}^{\mathrm{1L}}$ and the Born amplitude $\mathcal{M}^{\mathrm{B}}$ needs to be considered: 
@@ -142,7 +143,7 @@ Here, the indices $P_i$ label partons, i.e. quarks or the gluon, and $H$ labels 
 \begin{center}
 \begin{tikzpicture}
 	\node [block1a] (Mvirt) {$\mathcal{M}^{\mathrm{1L}}$ is UV- and  IR-divergent};
-	\node [block2a] at (6,0) (Mreal) {$\mathcal{M}^{\mathrm{real}}$ is IR-divergent};
+	\node [block2a] at (6,0) (Mreal) {$\mathcal{M}^{\mathrm{R}}$ is IR-divergent};
 	\node [block1a] at (0,-2) (Mvirtren) {$\mathcal{M}^{\mathrm{1L}}$ is IR-divergent};
 	\path [line, line width = 1] (Mvirt) --node[right] {renormalization} (Mvirtren);
 	\node [block1b] at (0,-4) (svirtren) {$\sigma^{\mathrm{V}}$ is IR-divergent};

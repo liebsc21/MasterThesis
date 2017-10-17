@@ -1,5 +1,5 @@
 \section{Squark Production at One-Loop}
-This section discusses the cross section for squark production at next-to-leading order $\sigma^{\mathrm{NLO}}$. To do so, the next section gives a justification why on-shell renormalization has been chosen in section \ref{sec:renMRSSM}. After that, the setup of the calculation of the different contributions to $\sigma^{\mathrm{NLO}}$, which has been performed by a \texttt{C++} program, is explained. This includes a remark on how the calculation was sped up. Finally the results of the computation are presented in the form of $K$-factors. These are then compared to the ones in the MSSM before the thesis closes with a discussion of the behavior of $\sigma^{\mathrm{NLO}}$ in the limit of large sgluon masses.
+This section discusses the cross section for squark production at next-to-leading order $\sigma^{\mathrm{NLO}}$. To comment on the calculation, the next section gives a justification why on-shell renormalization has been chosen in section \ref{sec:renMRSSM} and why loop corrections of external particles (see caption of {fig:1loopdiagrams}) are not taken into account. After that, the setup of the calculation of the different contributions to $\sigma^{\mathrm{NLO}}$, which has been performed by a \texttt{C++} program, is explained. This includes a remark on how the calculation was sped up. Finally the results of the computation are presented in the form of $K$-factors. These are then compared to the ones in the MSSM before the thesis closes with a discussion of the behavior of $\sigma^{\mathrm{NLO}}$ in the limit of large sgluon masses.
 
 \subsection{The LSZ Theorem}\label{sec:LSZ}
 The LSZ theorem\cite{Lehmann:1954rq} or LSZ reduction formula, named after  Harry Lehmann, Kurt Symanzik and Wolfhart Zimmermann, prescribes how to obtain the S-matrix element, i.e. a physical observable, from the time ordered correlation function of the respective field operators. The time ordered correlation function of fields in an interacting theory can be calculated perturbatively with the aid of the Gell-Mann and Low theorem and the Wick theorem. \\
@@ -162,7 +162,8 @@ introduces no further modification, when turning from the Green function to the 
 \begin{align}
 \left.\Sigma(p^2)\right|_{p^2 = m^2} = 0
 \end{align}
-means that the physical mass equals the tree level mass.
+means that the physical mass equals the tree level mass.\\
+Finally one can conclude that loop-corrections of the S-matrix-element correspond only to internal loops, i.e. self-energies of external particles do not contribute.%as the S-matrix-element is proportional to the amputated Green function
 
 \subsection{The Squark Production Cross Section at Next-to-Leading Order}
 The squark production cross section at next-to-leading order is composed out of three contributions. These are the Born (tree-level) cross section, the virtual and the real corrections. 
@@ -177,8 +178,8 @@ The setup of the calculation is summarized in fig. \ref{fig:CalcSetup}. Both the
 \begin{center}
 \begin{tikzpicture}
 	\node [block4] at (-1,0) (Mathematica) {Mathematica notebook};
-	\node [block1a] at (-1,-2.1) (notebookR) {soft/collinear limit: \newline \texttt{FeynArts} $\to \mathcal{M}^{\mathrm{R}}$ \newline \texttt{FormCalc} $\to$ $\sum |\mathcal{M}^{\mathrm{R}|^2}$};
-	\node [block1a] at (-1,-8) (notebookB) {\texttt{FeynArts} $\to \mathcal{M}^{\mathrm{B}}$ \newline \texttt{FormCalc} $\to$ $\sum |\mathcal{M}^{\mathrm{B}|^2}$};	
+	\node [block1a] at (-1,-2.1) (notebookR) {soft/collinear limit: \newline \texttt{FeynArts} $\to \mathcal{M}^{\mathrm{R}}$ \newline \texttt{FormCalc} $\to$ $\sum |\mathcal{M}^{\mathrm{R}}|^2$};
+	\node [block1a] at (-1,-8) (notebookB) {\texttt{FeynArts} $\to \mathcal{M}^{\mathrm{B}}$ \newline \texttt{FormCalc} $\to$ $\sum |\mathcal{M}^{\mathrm{B}}|^2$};	
 	\node [block1a] at (-1,-5.7) (notebookV) {\texttt{FeynArts} $\to \mathcal{M}^{\mathrm{1L}}$ \newline \texttt{FormCalc} $\to$ \newline $2\sum \Re(\mathcal{M}^{\mathrm{B}}\mathcal{M}^{\mathrm{1L}\ast})$};
 	\node [block5a] at (7.5,0) (C++) {\texttt{C++} code};
 	\node [block5b] at (3.7,-8.3) (Born) {\underline{Born contribution} \newline \texttt{CUBA} $\to$ \newline integration over \newline $t, x_1, x_2$ to $\sigma^{\mathrm{B}}$};
@@ -187,7 +188,7 @@ The setup of the calculation is summarized in fig. \ref{fig:CalcSetup}. Both the
 	\path [line, line width = 1] (1.2,-8.0) -- (1.9,-8.0);
 	\path [line, line width = 1] (1.2,-5.9) -- (5.7,-5.9);
 	\path [line, line width = 1] (1.2,-2.0) -- (9.5,-2.0);
-	\node [block6a] at (7.5,-10.7) (Sigma) {$\sigma^{\mathrm{NLO}} = \sigma^{\mathrm{B}} + \sigma^{\mathrm{V}} + \sigma^{\mathrm{R}} + \sigma^{\mathrm{R}}_{\mathrm{H} \overline{\mathrm{C}}}$};
+	\node [block6a] at (7.5,-10.7) (Sigma) {$\sigma^{\mathrm{NLO}} = \sigma^{\mathrm{B}} + \sigma^{\mathrm{V}} + \sigma^{\mathrm{R}}$};
 	\path [line, line width = 1] (Born) -- (Sigma);
 	\path [line, line width = 1] (Virt) -- (Sigma);
 	\path [line, line width = 1] (9.5,-9.45) -- (Sigma);

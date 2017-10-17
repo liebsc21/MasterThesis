@@ -13,7 +13,7 @@ Tha Casimir operator $C(R)\mathbbm{1}$ of a semi-simple Lie algebra in the irred
 \begin{align}
 g^{ab} T^a(R)T^b(R) = C(R)\mathbbm{1}, \label{eq:Casimir}
 \end{align}
-where $T^a(R)$ is the $a$-th generator of the matrix valued representation $R$, $g^{ab}$ is the metric of the group, $C(R)$ is the quadratic Casimir invariant of the representation $R$ and $\mathbbm{1}$ is the identity in the representation space.\\
+where $T^a(R)$ is the $a$-th generator of the matrix valued representation $R$, $g^{ab}$ is the metric of the group, $C(R)$ is the quadratic Casimir invariant of the representation $R$ and $\mathbbm{1}$ is the identity in representation space.\\
 Apart from $C(R)$ it is common to define the Dynkin-Index $T(R)$:
 \begin{align}
 \mathrm{Tr}\left[T^a(R)T^b(R)\right] = T(R)\delta^{ab}.
@@ -33,7 +33,7 @@ T^a_{ik} T^a_{kj} &= C(F)\mathbbm{1}_{ij} && \mbox{with}\ C(F) = \frac{N^2-1}{2N
 f^{abc} f^{dbc} &= C(A)\delta^{ad} && \mbox{with}\ C(A) = N = 3,\nonumber\\
 \mathrm{Tr}\left[T^aT^b\right] &= T(F)\delta^{ab} && \mbox{with}\ T(F) = \frac{1}{2},\label{eq:DynkinIndex}
 \end{align}
-where $\lambda^a_{ij}$ are for $N_c = 3$ the Gell-Mann matrices and $f_{abc}$ are the structure constants of $SU(N_c)$.
+where $\lambda^a_{ij}$ are for $N_c = 3$ the Gell-Mann matrices and $f_{abc}$ are the structure constants of $SU(N_c)$, defined in eq. \eqref{eq:struc_const}.
 %\begin{tabular}{c|c|c}
 %Quadratic Casimir Invariant and $T(R)$ & $SU(N)_c$ & $SU(3)_c$\\
 %\hline
@@ -221,6 +221,7 @@ The following Feynman rules (fig. \ref{fig:firstFeynmanRules} - \ref{fig:thirdFe
 	\node at (180:0.2) {$\tilde{g}^a$};
 	\node at (0:1.7) {$\overline{\tilde{g}}^b$};
 	\node at (3,0) {$\hat{=}\ i\frac{\slashed{p}+m_{\tilde{g}}}{p^2-m_{\tilde{g}}^2+i\varepsilon}\delta_{ab}$};
+	\path[line width=0.8pt,>-] (0.25,-0.3) edge [out=180, in=0](1.25,-0.3);
 \end{scope}
 \begin{scope}[shift={(0,-6)}]
 	\node at (-0.5,0.7) {\circled{7}};
@@ -262,6 +263,16 @@ The following Feynman rules (fig. \ref{fig:firstFeynmanRules} - \ref{fig:thirdFe
 	\node at (-135:1.4) {$G_\nu^b$};
 	\node at (3,0) {$\hat{=} \ ig_s^2 g^{\mu\nu} \left\{T^a,T^b\right\}_{ij}\delta_{AB}$};
 \end{scope}
+\begin{scope}[shift={(8,-10.5)}]
+	\node at (-1.5,0.7) {\circled{10a}};
+	\draw[ghost] (0,0)--(45:1);
+	\draw[ghostbar] (0,0)--(-45:1);
+	\draw[gluon] (0,0)--(180:1);
+	\node at (45:1.4) {$\overline{c}^a(-p_1)$};
+	\node at (-45:1.4) {$c^c$};
+	\node at (180:1.3) {$G_\mu^b$};
+	\node at (3,0) {$\hat{=} -g_s f^{abc}p_1^\mu$};
+\end{scope}
 \begin{scope}[shift={(1,-13.5)}]
 	\node at (-1.5,0.7) {\circled{11}};
 	\draw[gluon] (0,0)--(45:1);
@@ -274,7 +285,7 @@ The following Feynman rules (fig. \ref{fig:firstFeynmanRules} - \ref{fig:thirdFe
 \end{scope}
 \end{tikzpicture}
 \caption{In the Feynman diagrams of the propagators the momentum is flowing from the right to the left hand side. The gluon propagator is given in Feynman gauge.\newline
-In the Feynman diagrams of the vertices all momenta flow towards the vertex, i.e. in diagram 9: $-p_1$ flows towards the vertex.\newline
+In the Feynman diagrams of the vertices all momenta flow towards the vertex, i.e. in diagram 9 and 10a: $-p_1$ flows towards the vertex.\newline
 The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' of the squarks. The indices $i,j=1,2,3$ are the color indices in the (anti)fundamental representation where $a,b,c,\hdots = 1,\hdots,8$ are the color indices of the adjoint representation.}\label{fig:firstFeynmanRules}
 \end{center}
 \end{figure}
@@ -307,7 +318,7 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 	\node at (180:1.5) {$G_\mu^a$};
 	\node(gbar) at (0.9,0.6) {};
 	\node(g) at (0.9,-0.6) {};
-	\path[line width=0.8pt,<-] (g) edge [out=135, in=-135] (gbar);
+	\path[line width=0.8pt,->] (g) edge [out=135, in=-135] (gbar);
 	\node at (2,0) {$\hat{=}  - g_s f_{abc} \gamma^\mu$};
 \end{scope}
 \begin{scope}[shift={(7,-2.5)}]
@@ -343,7 +354,7 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 	\node at (180:1.3) {$\tilde{g}^a$};
 	\node(g) at (-0.7,-0.3) {};
 	\node(u) at (0.4,-0.8) {};
-	\path[line width=0.8pt,<-] (g) edge [out=0, in=135] (u);
+	\path[line width=0.8pt,->] (g) edge [out=0, in=135] (u);
 	\node at (3,0) {$\hat{=} -i\sqrt{2}g_s T^a_{ij}P_L$};
 \end{scope}
 \begin{scope}[shift={(7,-7.5)}]
@@ -357,7 +368,7 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 	\node at (180:1.3) {$\overline{\tilde{g}}^a$};
 	\node(g) at (-0.7,0.3) {};
 	\node(u) at (0.4,0.8) {};
-	\path[line width=0.8pt,->] (g) edge [out=0, in=225] (u);
+	\path[line width=0.8pt,<-] (g) edge [out=0, in=225] (u);
 	\node at (3,0) {$\hat{=} -i\sqrt{2}g_s T^a_{ij}P_R$};
 \end{scope}
 \begin{scope}[shift={(0,-10)}]
@@ -371,7 +382,7 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 	\node at (180:1.3) {$\tilde{g}^a$};
 	\node(g) at (-0.7,-0.3) {};
 	\node(u) at (0.4,-0.8) {};
-	\path[line width=0.8pt,<-] (g) edge [out=0, in=135] (u);
+	\path[line width=0.8pt,->] (g) edge [out=0, in=135] (u);
 	\node at (3,0) {$\hat{=} +i\sqrt{2}g_s T^a_{ij}P_L$};
 \end{scope}
 \begin{scope}[shift={(7,-10)}]
@@ -385,7 +396,7 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 	\node at (180:1.3) {$\overline{\tilde{g}}^a$};
 	\node(g) at (-0.7,0.3) {};
 	\node(u) at (0.4,0.8) {};
-	\path[line width=0.8pt,->] (g) edge [out=0, in=225] (u);
+	\path[line width=0.8pt,<-] (g) edge [out=0, in=225] (u);
 	\node at (3,0) {$\hat{=} +i\sqrt{2}g_s T^a_{ij}P_R$};
 \end{scope}
 \begin{scope}[shift={(0,-12.5)}]
@@ -400,7 +411,7 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 	\node at (180:1.3) {$\tilde{g}^a$};
 	\node(g) at (-0.7,-0.3) {};
 	\node(u) at (0.4,-0.8) {};
-	\path[line width=0.8pt,<-] (g) edge [out=0, in=135] (u);
+	\path[line width=0.8pt,->] (g) edge [out=0, in=135] (u);
 	\node at (3,0) {$\hat{=} -\sqrt{2}g_s f^{abc}P_L$};
 \end{scope}
 \begin{scope}[shift={(7,-12.5)}]
@@ -415,7 +426,7 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 	\node at (180:1.3) {$\overline{\tilde{g}}^a$};
 	\node(g) at (-0.7,0.3) {};
 	\node(u) at (0.4,0.8) {};
-	\path[line width=0.8pt,->] (g) edge [out=0, in=225] (u);
+	\path[line width=0.8pt,<-] (g) edge [out=0, in=225] (u);
 	\node at (3,0) {$\hat{=} +\sqrt{2}g_s f^{abc} P_R$};
 \end{scope}
 \begin{scope}[shift={(0,-15)}]
@@ -468,7 +479,7 @@ The indices $A,B \in \left\{ L,R \right\}$ label the left/right ``handedness'' o
 	\node at (-45:1.4) {$\sigma^e$};
 	\node at (135:1.4) {$\sigma^{\dagger b}$};
 	\node at (-135:1.4) {$\sigma^c$};
-	\node at (3,0) {$\hat{=} \ -g_s^2 (f^{abc}f^{ade} + f^{abc}f^{adc})$};
+	\node at (3,0) {$\hat{=} \ ig_s^2 (f^{abc}f^{ade} + f^{abe}f^{adc})$};
 \end{scope}
 \end{tikzpicture}
 \caption{Feynman rules involving only sgluons and other scalar fields.}\label{fig:thirdFeynmanRules}
@@ -564,7 +575,7 @@ it is useful to perform a change of coordinates yielding
 Inserting eq. \eqref{eq:PhaseTrafo} into eq. \eqref{eq:DPhi2} and using $2|\vec{k}_a| = \sqrt{s} = E_1 + E_2$ gives
 \begin{align}
 \int \mathrm{d}\Phi_2 = & \frac{1}{s} \frac{\pi^{-\frac{D}{2}+1}}{2^{D-3}\Gamma(\frac{D}{2}-1)} \int \mathrm{d}u\ \mathrm{d}t\ \left( \frac{tu-m_1^2m_2^2}{\mu^{2\epsilon} s} \right)^{\frac{D-4}{2}} \nonumber\\
-&\frac{1}{4}\Theta(tu-4m_1^2m_2^2)\delta \left(s+t+u-m_1^2-m_2^2\right)
+&\frac{1}{4}\Theta(tu-m_1^2m_2^2)\delta \left(s+t+u-m_1^2-m_2^2\right)
 \end{align}
 where the $\Theta$-function comes from the bounds of $|\vec{p}_1|$ and $\theta$, visible in eq. \eqref{eq:DPhi2} and the combination of eq. \eqref{eq:t} and eq. \eqref{eq:u}. Working in $D=4-2\epsilon$ dimensions and inserting $\Theta(s-4m^2)$ with $m = \frac{m_1 + m_2}{2}$ to account for the production threshold one finds
 \begin{align}

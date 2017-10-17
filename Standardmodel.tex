@@ -27,7 +27,7 @@ where $m$ denotes the particle's mass. To include interactions, one imposes a lo
 \end{align}
 where $U(x)$ is an element of the gauge group in question. Because the gauge group is an unitary matrix Lie group, it can be written like $U(x)=\mathrm{exp}(-igT^a\theta^a(x))$. Here, $T^a$ are the self-adjoint generators of the associated Lie algebra which obey
 \begin{align}
-[T^a,T^b] = if_{abc}T^c,
+[T^a,T^b] = if_{abc}T^c,\label{eq:struc_const}
 \end{align}
 with $f_{abc}$ being the structure constants of a Lie algebra, $g$ is the coupling constant of the gauge group and $\theta^a(x)$ are local parameters.\\
 As the parameters of the gauge group are local, the derivative in eq. \eqref{eq:DiracLagrangian} spoils gauge invariance. In order to rectify the gauge invariance of the Lagrangian, one introduces a further field for each index $a$ of the generators, the gauge vector $G^{a\mu}$. Defining the transformation of the matrix valued gauge vector $G^\mu := G^{a\mu}T^a$ as 
@@ -183,7 +183,7 @@ e_{iL}
 0\\
 -1
 \end{pmatrix}$\\
-right-handed leptons & $e_{iR}$ & - & 0 & $+1$ & $+1$\\
+right-handed leptons & $e_{iR}$ & - & 0 & $-1$ & $+1$\\
 \hline
 Higgs & $H$ & - & $-\frac{1}{2}$ & $+\frac{1}{2}$ & $0$
 \end{tabular}
@@ -208,7 +208,7 @@ $U(1)_Y$ & $g_Y$ & $B_\mu$ & $e = g_Y\cdot c_w$ & $A_\mu$ & photon
 \end{center}
 \end{table}
 The force particles are described by gauge fields. The gauge field of $SU(3)_C$ is the gluon field. Because the $SU_C(3)$ has eight generators there are eight gluons. Their coupling constant is denoted with $g_s$.\\
-For the other force particles in the Standard Model - the $W^\pm$ bosons, the $Z_0$ boson and the photon the situation is slightly more involved. They are obtained as a mixture of the $W^b_\mu$ ($b=1,2,3$) and the $B_\mu$ field which are the gauge fields of $SU_L(2)_L$ and $U_Y(1)_Y$ respectively. This mixing procedure is explained in section \ref{sec:EWSB}.\\
+For the other force particles in the Standard Model - the $W^\pm$ bosons, the $Z_0$ boson and the photon the situation is slightly more involved. They are obtained as a mixture of the $W^b_\mu$ ($b=1,2,3$) and the $B_\mu$ field which are the gauge fields of $SU(2)_L$ and $U(1)_Y$ respectively. This mixing procedure is explained in section \ref{sec:EWSB}.\\
 For the moment being, the coupling constants and gauge fields before and after this mixing are quoted in table \ref{tab:force_particles}.\bigbreak
 The Lagrangian of the SM is built up by qualitatively different terms. Firstly there are the kinetic and minimal coupling terms of the matter fields 
 \begin{align}
